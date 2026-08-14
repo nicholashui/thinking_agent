@@ -1,0 +1,34 @@
+[
+ {
+  "test_case_id": "m019-POS-01",
+  "human_model": "Red Teaming / Devil's Advocate",
+  "winner": "human",
+  "key_gap": "AI found 3 of 5 planted flaws (bonus gaming, open-gated-survey selection bias, premature newsletter publication) and approved the plan with conditions — but missed the two fatal ones sitting in plain text: the security/privacy hole (ticket PII + password-reset tokens copied to pre-SOC2 staging with a public unauthenticated export endpoint, shared admin login, no SSO, no DPIA) and the unmodeled stakeholder (enterprise customers' 60–90-day vendor-risk review vs a 2-week go-live; legal/DPO absent). Its conditional approval therefore approved the breach and the timeline collision. The human red team found all five, ranked them by likelihood × impact, and blocked as written with six conditions.",
+  "learning_signal": "Adversarial review earns its value in the non-obvious plane: incentive and metric flaws are pattern-recognizable (Goodhart, selection bias), but security/privacy and stakeholder-timeline flaws also sit in the plan's own text and are the fatal ones — 'fix the bonus and approve' while PII moves to an unauthenticated pre-SOC2 staging is approving a breach. Complete red teaming = attack every line item as hostile (data movement, auth model, publication, timeline vs external approval cycles), rank findings by likelihood × impact, and render a verdict where only a non-empty blocker list prevents conditional approval.",
+  "suggested_improvement": "Add a mandatory adversarial-review checklist to the HOW stage for any plan/migration proposal: (1) incentives — what each actor gains by gaming each metric; (2) metrics — population vs gated sample, direction of bias, vanity inputs; (3) data movement — every copy/migration: what data (PII, secrets/tokens), where it lands (staging/prod, certification state), auth model, DPIA and legal sign-off; (4) stakeholders — who outside the plan must approve (customer procurement/security reviews with their cycle times, legal/DPO, frontline operators) and what their timelines are; (5) publication — what is claimed publicly and what data validity supports it. Packet must label every finding blocker-vs-non-blocker; conditional approval requires an empty blocker list. Verification must re-read the plan text line by line, not just re-derive already-drawn conclusions."
+ },
+ {
+  "test_case_id": "m019-NEG-01",
+  "human_model": "Red Teaming / Devil's Advocate",
+  "winner": "ai",
+  "key_gap": "The human red team blocked a sound, reversible, urgent MFA rollout (EHR access with 41 shared passwords, 3 leaked credentials, and an active brute-force attempt last month) on unranked hypotheticals — key loss, auth-server outage, vendor firmware, missing SOC 2 addendum — treating every objection at full severity and password-only login as risk-free. The AI found the same objections but likelihood-ranked them (rejecting 4 of 5 as low-likelihood or already-mitigated), costed the status quo as the realized risk, and approved a staged rollout with rollback runbook and monitoring.",
+  "learning_signal": "Red teaming without calibration is hazard theater: 'nothing is 100% secure' is true and irrelevant — the decision compares baseline risk (password-only with shared/leaked credentials, actively attacked) against mitigation risk (MFA with 99.99% SLA, <15-min lockout recovery, tested one-flag rollback). Inaction is a decision with its own risk; every objection needs likelihood × impact, and 'could happen' is not a blocker where the baseline is already failing. The high-value move is the inaction-cost line, which the uncalibrated style never writes.",
+  "suggested_improvement": "Add a status-quo-costing gate to every go/no-go review path in the agent: before any objection may block, the packet must contain (1) an explicit baseline-risk line — what the current state costs, evidenced (audit findings, observed attacks), not asserted; (2) a likelihood × impact rank per objection; (3) a reject-objection log — each false alarm dismissed with its rejecting evidence (SLA, pilot data, rollback test, artifact-vs-functional distinction); (4) an inaction-cost sentence ('delay keeps exposure X active'). Blocking is permitted only when the blocker list survives this gate; otherwise the verdict must be a reversible, time-boxed approval with monitoring."
+ },
+ {
+  "test_case_id": "m019-POS-02",
+  "human_model": "Red Teaming / Devil's Advocate",
+  "winner": "human",
+  "key_gap": "Human caught all 4 planted flaws incl. code enumeration with quantified farm economics; AI never analyzed the enumeration vector.",
+  "learning_signal": "Adversary-modeling must include exploit-vector analysis (guessable formats, identity gates) with quantified exposure, not deferral.",
+  "suggested_improvement": "Add an adversary-modeling sub-step for money/fraud-adjacent gates: enumerated inputs, quantified exposure."
+ },
+ {
+  "test_case_id": "m019-NEG-02",
+  "human_model": "Red Teaming / Devil's Advocate",
+  "winner": "ai",
+  "key_gap": "Human blocked a sound go-live on unranked HIGHs; AI falsified inaction-is-risk-free and approved a staged canary.",
+  "learning_signal": "Adversarial attack must be calibrated against baseline risk: state do-nothing expected loss before alternatives.",
+  "suggested_improvement": "Add a baseline-risk gate: do-nothing loss, objections ranked by LxI, time-boxed decision bar with abort criteria."
+ }
+]

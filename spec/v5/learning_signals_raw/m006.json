@@ -1,0 +1,34 @@
+[
+ {
+  "test_case_id": "m006-POS-01",
+  "human_model": "Bayesian Updating",
+  "winner": "human",
+  "key_gap": "AI produced every exact number (36/59, 10/33, joint-verification) and the correct split-policy conclusion, but stopped at the computed values: it asserted conditional independence instead of demonstrating it, spot-checked prior sensitivity once (ad hoc) instead of running a formal pass, and reported the negative-evidence result as a routine likelihood swap without the interpretive translation (the B-pass halves the posterior; discarding passes as noise misgrades 30%-defective parts). The human won the margin entirely on depth and calibration: demonstrated order-invariance by recomputing the reversed path, decomposed the 30% residual into population masses, and quantified the prior band (9.3%–55.6%).",
+  "learning_signal": "Exact arithmetic is not the end of a computational task: after verification, an interpretation pass is required — (1) translate each posterior into a decision-relevant claim, including the non-obvious branch (negative evidence is load-bearing, not noise); (2) demonstrate at least one structural check (order invariance or direct joint recomputation) rather than asserting the statistical model; (3) run a formal prior-sensitivity pass over ≥2 plausible priors and report the band together with the point estimate.",
+  "suggested_improvement": "Add an 'interpretation gate' to HOW, after verification and before DO: require (a) one non-obvious implication stated in decision terms, (b) a formal prior-sensitivity pass (≥2 priors with recomputed posteriors), and (c) one structural cross-check (reversed order or joint likelihood) whenever conditional independence is assumed; gate progression to DO on all three being present."
+ },
+ {
+  "test_case_id": "m006-NEG-01",
+  "human_model": "Bayesian Updating",
+  "winner": "human",
+  "key_gap": "AI computed LR = 56.7 and both posteriors (5.4%, 98.3%) correctly, then stopped: it treated the prior as an unknowable subjective knob, concluded 'it depends on your prior,' and terminated in NEEDS_EVIDENCE — even though the prompt supplied the measured reference-class base rate (1/1000) as evidence. The update became noise relative to a floating prior, and the agent never asked where the prior should come from. The human's decisive move was auditing the prior's provenance first: anchoring on the reference-class measurement, computing the flip prior (1.7%, i.e., 17× the base rate), and committing to decline the feed.",
+  "learning_signal": "For any probability input whose provenance is not stated, the reasoner must run a prior-provenance audit BEFORE updating: identify the reference class, use the measured base rate as the anchor, report the posterior under that anchor, and state the prior required to flip the decision. A posterior reported purely as a function of an unanchored prior is the signature of prior-driven reasoning and should be flagged as update-is-noise, not reported as honest uncertainty.",
+  "suggested_improvement": "Add a prior-audit step to WHY: (1) for each probability input ask 'what reference class or measurement produced this?'; (2) if the prompt supplies one, it is evidence — anchor on it instead of presenting it as one option in a subjective range; (3) compute and report the flip prior (the prior at which the decision reverses) alongside the anchored posterior; (4) terminal status policy: SOLVED when an anchored posterior exists, NEEDS_EVIDENCE only when no reference class exists."
+ },
+ {
+  "test_case_id": "m006-POS-02",
+  "human_model": "Bayesian Updating",
+  "winner": "human",
+  "key_gap": "Correctness tied (2/13, 17/28); human added order-invariance, population decomposition of the residual, and formal prior-sensitivity.",
+  "learning_signal": "The AI stops at the computed posterior; the human's systematic sensitivity/calibration depth is the gap.",
+  "suggested_improvement": "Add a post-verify sensitivity pass: +/-2x prior, order swap, population restatement; band into the packet."
+ },
+ {
+  "test_case_id": "m006-NEG-02",
+  "human_model": "Bayesian Updating",
+  "winner": "human",
+  "key_gap": "Both refused a point estimate; human modeled the unmeasured likelihood as a parameter with threshold-flip + VOI; AI gave generic NEEDS_EVIDENCE.",
+  "learning_signal": "Audit the likelihood, not the prior: parameter scenarios -> posterior range -> decision-threshold flip demonstration.",
+  "suggested_improvement": "Add a likelihood-provenance audit (3+ parameter scenarios) converting evidence gaps into decision-anchoring analysis."
+ }
+]

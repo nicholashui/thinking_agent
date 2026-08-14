@@ -1,0 +1,24 @@
+{
+  "version": "1.0",
+  "model_id": "m047",
+  "human_model": "Bayesian Updating in Medical Diagnosis",
+  "date": "2026-08-07",
+  "signals": [
+    {
+      "test_case_id": "m047-POS-01",
+      "human_model": "Bayesian Updating in Medical Diagnosis",
+      "winner": "human",
+      "key_gap": "AI produced every exact number (87/2276 ≈ 3.8%, LR+ ranking 13.7 vs 4.9, 3567/10134 ≈ 35.2%), verified order-invariance by recomputation, and correctly selected ultrasound over MRI. But it stopped at the positive branch: it never computed the negative-evidence branch of its own recommended test (a normal ultrasound after a positive mammogram drops the posterior from 3.8% to ≈ 0.76%, near the screening baseline), ran the prior-sensitivity check once as an ad hoc spot check instead of a formal pass, and reported the ranking result without the interpretive core ('information value is LR+, not sensitivity — the most sensitive test is the worst next test'). The human won the margin on depth: LR− branch, formal 2-prior band (0.79%–7.4%), and the clinical translation of the non-event.",
+      "learning_signal": "In test-ordering problems, computing the positive branch of the selected test is not the end of the task: (1) compute BOTH branches of every selected test — the negative branch (LR−) is load-bearing in low-prevalence settings and can move the posterior more than another positive would; (2) rank tests by positive information value (LR+) and state explicitly that sensitivity alone does not order tests; (3) demonstrate order-invariance or joint recomputation instead of asserting conditional independence; (4) run a formal prior-sensitivity pass over ≥2 plausible prevalence estimates and report the band with the point estimate.",
+      "suggested_improvement": "Add a 'branch-completeness gate' to HOW, after verification and before DO: for every selected test, require (a) both LR+ and LR− branches computed with posteriors translated into decision terms, (b) an explicit LR+ ranking of all available tests with the criterion stated, and (c) a formal ≥2-prior sensitivity pass; gate progression to DO on all three being present."
+    },
+    {
+      "test_case_id": "m047-NEG-01",
+      "human_model": "Bayesian Updating in Medical Diagnosis",
+      "winner": "human",
+      "key_gap": "AI audited the prior's reference class correctly (anchored annual incidence 0.3%, rejected lifetime risk 40%) and computed PPV = 54/1051 ≈ 5.1% exactly — then stopped. It treated the manufacturer's quoted Se 0.90/Sp 0.95 as validated exact likelihoods, ran 'sensitivity' only as spot checks on those same unvalidated numbers, reported status SOLVED with the full decision packet, and recommended 'reassure' with false precision. It never audited the likelihoods' provenance: the 200-person study was an enriched development cohort (100 cases/100 controls = 50% cancer by construction), single-center, no external validation, no CIs — the quoted numbers are hypotheses about likelihoods, and the honest answer is a band (≈1.5%–5.1%) plus a demand for external validation, not a confident SOLVED.",
+      "learning_signal": "Likelihoods need provenance audits exactly like priors: before any Se/Sp enters a posterior, ask 'measured in what population, with what design, with what confidence intervals?'. Enriched development cohorts, single-center samples, and missing CIs mean the number is a hypothesis about a likelihood, not a likelihood: treat it as a band (recompute the posterior over credible bounds) and flag the point estimate as unvalidated. A decision packet that reports SOLVED on unvalidated test characteristics is false precision — the terminal status should be NEEDS_EVIDENCE for the test's likelihoods even when the safe clinical decision (no action from the result alone; demand external validation or standard-of-care workup) is still delivered.",
+      "suggested_improvement": "Extend the prior-provenance audit into a general input-provenance audit covering likelihoods: (1) in WHY, for each Se/Sp input, record provenance (population matched?, design, sample, CIs) as a first-class field; (2) if not externally validated in the target population, forbid treating it as exact — require computing a sensitivity band over credible bounds and label the point estimate 'unvalidated' in the packet; (3) status policy: SOLVED requires validated likelihoods; otherwise terminate in NEEDS_EVIDENCE with the safe no-action recommendation and the validation pathway stated."
+    }
+  ]
+}

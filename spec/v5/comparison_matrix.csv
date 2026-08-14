@@ -1,0 +1,213 @@
+test_case_id,human_model,family,case_type,goal_achievement,logical_validity,coherence_structure,depth,efficiency,uncertainty,insight,overall_quality,human_overall,ai_overall,winner
+m001-NEG-01,First Principles Thinking,Foundational & First-Principles,NEG,5.0,5.0,5.0,4.0,5.0,5.0,4.0,4.6,3.1,4.6,ai
+m001-POS-01,First Principles Thinking,Foundational & First-Principles,POS,5.0,5.0,5.0,4.0,5.0,4.0,4.0,4.6,4.7,4.6,human
+m002-NEG-01,Second-Order Consequences Thinking,Foundational & First-Principles,NEG,5.0,5.0,4.0,4.0,4.0,5.0,3.0,4.4,2.9,4.4,ai
+m002-POS-01,Second-Order Consequences Thinking,Foundational & First-Principles,POS,5.0,5.0,4.0,4.0,3.0,5.0,4.0,4.4,4.7,4.4,human
+m003-NEG-01,"Inversion (Invert, Always Invert)",Foundational & First-Principles,NEG,5.0,5.0,5.0,4.0,5.0,5.0,4.0,5.0,3.0,5.0,ai
+m003-POS-01,"Inversion (Invert, Always Invert)",Foundational & First-Principles,POS,4.0,5.0,5.0,4.0,4.0,4.0,4.0,4.0,5.0,4.0,human
+m004-NEG-01,Occam's Razor + Complexity Awareness,Foundational & First-Principles,NEG,5.0,5.0,4.0,5.0,3.0,5.0,5.0,4.6,2.7,4.6,ai
+m004-POS-01,Occam's Razor + Complexity Awareness,Foundational & First-Principles,POS,5.0,5.0,4.0,4.0,4.0,4.0,4.0,4.3,4.8,4.3,human
+m005-NEG-01,Fermi Estimation / Back-of-the-Envelope,Foundational & First-Principles,NEG,5.0,5.0,5.0,4.0,4.0,5.0,4.0,4.5,4.1,4.5,ai
+m005-POS-01,Fermi Estimation / Back-of-the-Envelope,Foundational & First-Principles,POS,5.0,5.0,4.0,4.0,3.0,4.0,4.0,4.2,4.8,4.2,human
+m006-NEG-01,Bayesian Updating,Probabilistic & Bayesian,NEG,3.0,4.0,4.0,3.0,4.0,3.0,3.0,3.4,4.9,3.4,human
+m006-POS-01,Bayesian Updating,Probabilistic & Bayesian,POS,5.0,5.0,5.0,4.0,4.0,4.0,4.0,4.4,4.9,4.4,human
+m007-NEG-01,Expected Value Thinking,Probabilistic & Bayesian,NEG,5.0,5.0,5.0,5.0,4.0,5.0,5.0,4.9,2.9,4.9,ai
+m007-POS-01,Expected Value Thinking,Probabilistic & Bayesian,POS,5.0,5.0,5.0,5.0,4.0,5.0,4.0,4.8,4.8,4.8,tie
+m008-NEG-01,Probabilistic Forecasting (Superforecasting),Probabilistic & Bayesian,NEG,5.0,5.0,5.0,4.0,3.0,5.0,4.0,4.4,2.9,4.4,ai
+m008-POS-01,Probabilistic Forecasting (Superforecasting),Probabilistic & Bayesian,POS,5.0,5.0,5.0,4.0,4.0,4.0,4.0,4.4,4.9,4.4,human
+m009-NEG-01,Base Rate Neglect Avoidance,Probabilistic & Bayesian,NEG,5.0,5.0,5.0,5.0,4.0,5.0,5.0,5.0,2.0,5.0,ai
+m009-POS-01,Base Rate Neglect Avoidance,Probabilistic & Bayesian,POS,5.0,5.0,5.0,4.0,4.0,4.0,4.0,4.0,5.0,4.0,human
+m010-NEG-01,Calibration & Confidence Intervals,Probabilistic & Bayesian,NEG,5.0,5.0,5.0,5.0,5.0,4.0,5.0,4.9,3.9,4.9,ai
+m010-POS-01,Calibration & Confidence Intervals,Probabilistic & Bayesian,POS,2.0,3.0,5.0,3.0,5.0,1.0,2.0,3.0,4.7,3.0,human
+m011-NEG-01,Systems Thinking,Systems & Causal,NEG,5.0,5.0,5.0,4.0,5.0,4.0,5.0,4.7,3.1,4.7,ai
+m011-POS-01,Systems Thinking,Systems & Causal,POS,3.0,4.0,5.0,3.0,5.0,3.0,3.0,3.7,4.6,3.7,human
+m012-NEG-01,Causal Reasoning (Pearl-style),Systems & Causal,NEG,5.0,5.0,5.0,4.0,5.0,4.0,5.0,4.7,3.3,4.7,ai
+m012-POS-01,Causal Reasoning (Pearl-style),Systems & Causal,POS,4.0,5.0,5.0,4.0,5.0,4.0,4.0,4.4,4.8,4.4,human
+m013-NEG-01,Root Cause Analysis (5 Whys + deeper),Systems & Causal,NEG,5.0,5.0,5.0,5.0,5.0,5.0,5.0,4.9,3.4,4.9,ai
+m013-POS-01,Root Cause Analysis (5 Whys + deeper),Systems & Causal,POS,3.0,4.0,5.0,3.0,5.0,3.0,2.0,3.6,4.7,3.6,human
+m014-NEG-01,Constraint Theory / Bottleneck Thinking,Systems & Causal,NEG,5.0,5.0,5.0,4.0,5.0,5.0,5.0,5.0,2.5,5.0,ai
+m014-POS-01,Constraint Theory / Bottleneck Thinking,Systems & Causal,POS,5.0,5.0,5.0,4.0,4.0,5.0,4.0,4.5,5.0,4.5,human
+m015-NEG-01,Emergence & Complexity Awareness,Systems & Causal,NEG,5.0,5.0,5.0,5.0,5.0,5.0,5.0,4.9,2.9,4.9,ai
+m015-POS-01,Emergence & Complexity Awareness,Systems & Causal,POS,2.0,3.0,5.0,3.0,2.0,3.0,2.0,2.9,4.7,2.9,human
+m016-NEG-01,Socratic Method / Question-Driven Inquiry,Dialectical & Critical,NEG,5.0,5.0,5.0,4.0,5.0,5.0,4.0,4.7,2.3,4.7,ai
+m016-POS-01,Socratic Method / Question-Driven Inquiry,Dialectical & Critical,POS,1.0,2.0,5.0,2.0,5.0,2.0,1.0,2.6,4.7,2.6,human
+m017-NEG-01,Dialectical Reasoning (Thesis → Antithesis → Synthesis),Dialectical & Critical,NEG,5.0,5.0,5.0,4.0,5.0,5.0,5.0,4.9,2.6,4.9,ai
+m017-POS-01,Dialectical Reasoning (Thesis → Antithesis → Synthesis),Dialectical & Critical,POS,5.0,5.0,4.0,4.0,5.0,4.0,4.0,4.4,4.9,4.4,human
+m018-NEG-01,Steel-manning,Dialectical & Critical,NEG,5.0,5.0,5.0,4.0,5.0,5.0,4.0,4.7,3.0,4.7,ai
+m018-POS-01,Steel-manning,Dialectical & Critical,POS,4.0,3.0,5.0,3.0,5.0,3.0,3.0,3.7,4.6,3.7,human
+m019-NEG-01,Red Teaming / Devil's Advocate,Dialectical & Critical,NEG,5.0,5.0,5.0,5.0,5.0,5.0,5.0,4.9,3.0,4.9,ai
+m019-POS-01,Red Teaming / Devil's Advocate,Dialectical & Critical,POS,3.0,4.0,5.0,3.0,5.0,3.0,2.0,3.6,4.8,3.6,human
+m020-NEG-01,Pre-Mortem Analysis,Dialectical & Critical,NEG,5.0,5.0,5.0,4.0,5.0,5.0,4.0,5.0,2.0,5.0,ai
+m020-POS-01,Pre-Mortem Analysis,Dialectical & Critical,POS,4.0,5.0,5.0,4.0,4.0,4.0,4.0,4.0,5.0,4.0,human
+m021-NEG-01,OODA Loop,Decision & Strategic,NEG,5.0,5.0,5.0,5.0,5.0,5.0,4.0,5.0,2.0,5.0,ai
+m021-POS-01,OODA Loop,Decision & Strategic,POS,4.0,5.0,5.0,4.0,3.0,4.0,4.0,4.0,5.0,4.0,human
+m022-NEG-01,Decision Trees & Scenario Planning,Decision & Strategic,NEG,4.0,4.0,5.0,4.0,3.0,4.0,4.0,4.0,5.0,4.0,human
+m022-POS-01,Decision Trees & Scenario Planning,Decision & Strategic,POS,5.0,4.0,5.0,4.0,4.0,4.0,4.0,4.0,5.0,4.0,human
+m023-NEG-01,Opportunity Cost Thinking,Decision & Strategic,NEG,5.0,5.0,5.0,4.0,5.0,5.0,4.0,5.0,2.0,5.0,ai
+m023-POS-01,Opportunity Cost Thinking,Decision & Strategic,POS,4.0,5.0,5.0,4.0,4.0,4.0,4.0,4.0,5.0,4.0,human
+m024-NEG-01,Regret Minimization Framework,Decision & Strategic,NEG,5.0,5.0,5.0,4.0,5.0,5.0,5.0,5.0,2.0,5.0,ai
+m024-POS-01,Regret Minimization Framework,Decision & Strategic,POS,4.0,5.0,5.0,4.0,3.0,5.0,4.0,4.0,5.0,4.0,human
+m025-NEG-01,Real Options Thinking,Decision & Strategic,NEG,5.0,5.0,5.0,5.0,5.0,5.0,5.0,5.0,2.0,5.0,ai
+m025-POS-01,Real Options Thinking,Decision & Strategic,POS,5.0,5.0,5.0,4.0,5.0,4.0,4.0,4.0,5.0,4.0,human
+m026-NEG-01,Analogical Reasoning / Pattern Transfer,Creative & Analogical,NEG,5.0,5.0,5.0,5.0,3.0,5.0,4.0,4.6,2.6,4.6,ai
+m026-POS-01,Analogical Reasoning / Pattern Transfer,Creative & Analogical,POS,2.0,4.0,5.0,3.0,5.0,3.0,2.0,3.4,4.6,3.4,human
+m027-NEG-01,Design Thinking,Creative & Analogical,NEG,5.0,5.0,5.0,4.0,5.0,4.0,4.0,5.0,2.0,5.0,ai
+m027-POS-01,Design Thinking,Creative & Analogical,POS,4.0,4.0,5.0,4.0,4.0,3.0,4.0,4.0,5.0,4.0,human
+m028-NEG-01,Lateral Thinking,Creative & Analogical,NEG,5.0,5.0,5.0,5.0,4.0,5.0,4.0,5.0,2.0,5.0,ai
+m028-POS-01,Lateral Thinking,Creative & Analogical,POS,4.0,4.0,5.0,4.0,3.0,4.0,3.0,4.0,5.0,4.0,human
+m029-NEG-01,Combinatorial Creativity,Creative & Analogical,NEG,5.0,5.0,5.0,4.0,5.0,5.0,4.0,5.0,3.0,5.0,ai
+m029-POS-01,Combinatorial Creativity,Creative & Analogical,POS,5.0,5.0,5.0,4.0,4.0,4.0,4.0,4.0,5.0,4.0,human
+m030-NEG-01,Constraint-Driven Creativity,Creative & Analogical,NEG,5.0,5.0,5.0,5.0,3.0,5.0,5.0,4.7,2.7,4.7,ai
+m030-POS-01,Constraint-Driven Creativity,Creative & Analogical,POS,5.0,5.0,5.0,4.0,4.0,5.0,4.0,4.4,4.6,4.4,human
+m031-NEG-01,Scientific Method (Hypothesis → Experiment → Update),Scientific & Empirical,NEG,5.0,5.0,5.0,5.0,4.0,5.0,5.0,4.9,2.3,4.9,ai
+m031-POS-01,Scientific Method (Hypothesis → Experiment → Update),Scientific & Empirical,POS,5.0,5.0,5.0,4.0,4.0,5.0,4.0,4.4,4.6,4.4,human
+m032-NEG-01,Falsificationism (Popper),Scientific & Empirical,NEG,5.0,5.0,5.0,5.0,4.0,5.0,5.0,4.9,2.9,4.9,ai
+m032-POS-01,Falsificationism (Popper),Scientific & Empirical,POS,5.0,5.0,5.0,4.0,3.0,5.0,4.0,4.4,4.6,4.4,human
+m033-NEG-01,Controlled Experiment Design,Scientific & Empirical,NEG,5.0,5.0,5.0,4.0,5.0,5.0,4.0,4.7,2.7,4.7,ai
+m033-POS-01,Controlled Experiment Design,Scientific & Empirical,POS,4.0,4.0,5.0,4.0,4.0,4.0,3.0,4.0,4.6,4.0,human
+m034-NEG-01,Measurement & Operationalization,Scientific & Empirical,NEG,5.0,5.0,5.0,5.0,4.0,5.0,5.0,4.8,2.6,4.8,ai
+m034-POS-01,Measurement & Operationalization,Scientific & Empirical,POS,5.0,5.0,5.0,4.0,5.0,4.0,5.0,4.5,4.6,4.5,human
+m035-NEG-01,Replication & Robustness Checks,Scientific & Empirical,NEG,5.0,5.0,5.0,5.0,4.0,5.0,5.0,4.9,2.3,4.9,ai
+m035-POS-01,Replication & Robustness Checks,Scientific & Empirical,POS,4.0,4.0,5.0,4.0,3.0,5.0,3.0,4.0,4.7,4.0,human
+m036-NEG-01,Mental Models Latticework (Munger),Additional High-Value,NEG,5.0,5.0,5.0,4.0,5.0,5.0,4.0,5.0,2.0,5.0,ai
+m036-POS-01,Mental Models Latticework (Munger),Additional High-Value,POS,4.0,5.0,5.0,4.0,4.0,4.0,4.0,4.0,5.0,4.0,human
+m037-NEG-01,Circle of Competence Awareness,Additional High-Value,NEG,5.0,5.0,4.0,5.0,5.0,5.0,5.0,4.9,3.4,4.9,ai
+m037-POS-01,Circle of Competence Awareness,Additional High-Value,POS,2.0,3.0,5.0,3.0,5.0,2.0,2.0,3.1,4.8,3.1,human
+m038-NEG-01,Margin of Safety,Additional High-Value,NEG,5.0,5.0,5.0,5.0,3.0,5.0,5.0,4.7,2.7,4.7,ai
+m038-POS-01,Margin of Safety,Additional High-Value,POS,4.0,5.0,5.0,4.0,5.0,4.0,4.0,4.4,4.7,4.4,human
+m039-NEG-01,Asymmetric Upside / Barbell Strategy,Additional High-Value,NEG,5.0,5.0,5.0,5.0,4.0,5.0,5.0,5.0,2.0,5.0,ai
+m039-POS-01,Asymmetric Upside / Barbell Strategy,Additional High-Value,POS,5.0,5.0,5.0,4.0,5.0,4.0,4.0,4.0,5.0,4.0,human
+m040-NEG-01,Leverage Points Identification,Additional High-Value,NEG,5.0,5.0,5.0,5.0,3.0,5.0,5.0,4.7,2.6,4.7,ai
+m040-POS-01,Leverage Points Identification,Additional High-Value,POS,5.0,5.0,5.0,4.0,4.0,4.0,4.0,4.4,4.6,4.4,human
+m041-NEG-01,Hierarchical Decomposition,Additional High-Value,NEG,5.0,5.0,5.0,5.0,5.0,5.0,5.0,5.0,3.0,5.0,ai
+m041-POS-01,Hierarchical Decomposition,Additional High-Value,POS,4.0,5.0,5.0,4.0,4.0,4.0,4.0,4.0,5.0,4.0,human
+m042-NEG-01,Abstraction Laddering,Additional High-Value,NEG,5.0,5.0,5.0,5.0,4.0,5.0,5.0,4.9,2.3,4.9,ai
+m042-POS-01,Abstraction Laddering,Additional High-Value,POS,5.0,5.0,5.0,4.0,4.0,4.0,4.0,4.4,4.7,4.4,human
+m043-NEG-01,Temporal Thinking (Short vs Long Term),Additional High-Value,NEG,5.0,5.0,5.0,5.0,4.0,5.0,5.0,4.9,2.3,4.9,ai
+m043-POS-01,Temporal Thinking (Short vs Long Term),Additional High-Value,POS,5.0,5.0,4.0,4.0,5.0,4.0,4.0,4.3,4.7,4.3,human
+m044-NEG-01,Multi-Perspective Taking (Stakeholder Analysis),Additional High-Value,NEG,5.0,5.0,5.0,5.0,5.0,5.0,5.0,5.0,2.3,5.0,ai
+m044-POS-01,Multi-Perspective Taking (Stakeholder Analysis),Additional High-Value,POS,5.0,4.0,5.0,4.0,4.0,4.0,4.0,4.3,4.7,4.3,human
+m045-NEG-01,Ethical Reasoning Frameworks,Additional High-Value,NEG,5.0,5.0,4.0,5.0,3.0,5.0,5.0,4.6,3.0,4.6,ai
+m045-POS-01,Ethical Reasoning Frameworks,Additional High-Value,POS,5.0,4.0,4.0,3.0,5.0,3.0,4.0,4.0,4.7,4.0,human
+m046-NEG-01,First Principles in Software Architecture,Domain-Specialized,NEG,5.0,5.0,5.0,5.0,4.0,5.0,5.0,4.9,2.6,4.9,ai
+m046-POS-01,First Principles in Software Architecture,Domain-Specialized,POS,5.0,5.0,5.0,4.0,4.0,4.0,4.0,4.4,4.6,4.4,human
+m047-NEG-01,Bayesian Updating in Medical Diagnosis,Domain-Specialized,NEG,4.0,5.0,5.0,3.0,4.0,3.0,3.0,3.9,4.9,3.9,human
+m047-POS-01,Bayesian Updating in Medical Diagnosis,Domain-Specialized,POS,5.0,5.0,5.0,3.0,4.0,3.0,3.0,4.0,4.9,4.0,human
+m048-NEG-01,Systems Thinking in Supply Chain,Domain-Specialized,NEG,5.0,5.0,5.0,4.0,5.0,4.0,4.0,4.6,2.0,4.6,ai
+m048-POS-01,Systems Thinking in Supply Chain,Domain-Specialized,POS,5.0,5.0,5.0,4.0,4.0,5.0,4.0,4.0,5.0,4.0,human
+m049-NEG-01,First Principles in Business Strategy,Domain-Specialized,NEG,5.0,5.0,5.0,5.0,4.0,4.0,5.0,4.7,3.0,4.7,ai
+m049-POS-01,First Principles in Business Strategy,Domain-Specialized,POS,5.0,5.0,5.0,4.0,4.0,4.0,4.0,4.4,4.6,4.4,human
+m050-NEG-01,Inversion in Product Design (Safety),Domain-Specialized,NEG,5.0,5.0,5.0,5.0,5.0,5.0,4.0,4.8,3.0,4.8,ai
+m050-POS-01,Inversion in Product Design (Safety),Domain-Specialized,POS,4.0,5.0,5.0,4.0,4.0,4.0,4.0,4.3,4.6,4.3,human
+m051-NEG-01,Expected Value in Startup Portfolios (VC),Domain-Specialized,NEG,5.0,5.0,5.0,5.0,4.0,5.0,5.0,4.9,2.9,4.9,ai
+m051-POS-01,Expected Value in Startup Portfolios (VC),Domain-Specialized,POS,5.0,5.0,5.0,5.0,4.0,5.0,4.0,4.8,4.7,4.8,tie
+m052-NEG-01,OODA in Competitive Markets,Domain-Specialized,NEG,5.0,5.0,5.0,5.0,5.0,5.0,5.0,5.0,2.4,5.0,ai
+m052-POS-01,OODA in Competitive Markets,Domain-Specialized,POS,4.0,5.0,5.0,5.0,3.0,4.0,4.0,4.3,4.1,4.3,human
+m053-NEG-01,Root Cause Analysis in Incident Response,Domain-Specialized,NEG,5.0,4.0,5.0,4.0,5.0,5.0,4.0,4.6,2.4,4.6,ai
+m053-POS-01,Root Cause Analysis in Incident Response,Domain-Specialized,POS,4.0,5.0,5.0,4.0,4.0,4.0,3.0,4.1,4.7,4.1,human
+m054-NEG-01,Fermi Estimation in Market Sizing,Domain-Specialized,NEG,5.0,5.0,5.0,5.0,5.0,5.0,5.0,4.8,3.0,4.8,ai
+m054-POS-01,Fermi Estimation in Market Sizing,Domain-Specialized,POS,5.0,5.0,5.0,4.0,4.0,4.0,4.0,4.4,4.6,4.4,human
+m055-NEG-01,Causal Reasoning in Economics,Domain-Specialized,NEG,4.0,4.0,5.0,3.0,4.0,4.0,3.0,3.9,4.9,3.9,human
+m055-POS-01,Causal Reasoning in Economics,Domain-Specialized,POS,4.0,4.0,5.0,4.0,4.0,4.0,4.0,4.1,4.9,4.1,human
+m056-NEG-01,Design Thinking for Consumer Products,Domain-Specialized,NEG,5.0,5.0,5.0,5.0,5.0,5.0,4.0,4.9,3.0,4.9,ai
+m056-POS-01,Design Thinking for Consumer Products,Domain-Specialized,POS,5.0,5.0,5.0,4.0,4.0,5.0,4.0,4.6,4.4,4.6,ai
+m057-NEG-01,Red Teaming in Cybersecurity (Threat Modeling),Domain-Specialized,NEG,5.0,5.0,5.0,5.0,5.0,5.0,4.0,4.9,3.0,4.9,ai
+m057-POS-01,Red Teaming in Cybersecurity (Threat Modeling),Domain-Specialized,POS,4.0,5.0,5.0,4.0,4.0,4.0,4.0,4.3,4.6,4.3,human
+m058-NEG-01,Real Options in R&D Investment,Domain-Specialized,NEG,5.0,5.0,5.0,5.0,4.0,5.0,5.0,4.9,2.6,4.9,ai
+m058-POS-01,Real Options in R&D Investment,Domain-Specialized,POS,4.0,5.0,5.0,3.0,4.0,4.0,3.0,4.0,4.6,4.0,human
+m059-NEG-01,Scenario Planning in Geopolitics,Domain-Specialized,NEG,5.0,5.0,5.0,4.0,4.0,4.0,5.0,4.5,2.4,4.5,ai
+m059-POS-01,Scenario Planning in Geopolitics,Domain-Specialized,POS,4.0,5.0,5.0,4.0,4.0,5.0,4.0,4.3,4.6,4.3,human
+m060-NEG-01,Base Rate Avoidance in Hiring,Domain-Specialized,NEG,5.0,5.0,5.0,5.0,3.0,4.0,5.0,4.6,2.6,4.6,ai
+m060-POS-01,Base Rate Avoidance in Hiring,Domain-Specialized,POS,5.0,5.0,5.0,4.0,3.0,4.0,3.0,4.1,4.4,4.1,human
+m061-NEG-01,Opportunity Cost in Personal Finance,Domain-Specialized,NEG,5.0,5.0,5.0,5.0,4.0,4.0,5.0,4.7,2.9,4.7,ai
+m061-POS-01,Opportunity Cost in Personal Finance,Domain-Specialized,POS,5.0,5.0,5.0,4.0,3.0,4.0,3.0,4.1,4.6,4.1,human
+m062-NEG-01,Temporal Thinking in Climate Policy,Domain-Specialized,NEG,5.0,5.0,5.0,5.0,4.0,5.0,5.0,4.9,2.3,4.9,ai
+m062-POS-01,Temporal Thinking in Climate Policy,Domain-Specialized,POS,5.0,5.0,5.0,4.0,3.0,4.0,3.0,4.1,4.4,4.1,human
+m063-NEG-01,Multi-Perspective in Legal Reasoning,Domain-Specialized,NEG,5.0,5.0,5.0,5.0,3.0,4.0,5.0,4.5,2.7,4.5,ai
+m063-POS-01,Multi-Perspective in Legal Reasoning,Domain-Specialized,POS,5.0,5.0,5.0,4.0,3.0,4.0,4.0,4.2,4.6,4.2,human
+m064-NEG-01,Ethical Frameworks in AI Deployment,Domain-Specialized,NEG,5.0,5.0,5.0,4.0,4.0,5.0,5.0,4.7,3.3,4.7,ai
+m064-POS-01,Ethical Frameworks in AI Deployment,Domain-Specialized,POS,4.0,5.0,5.0,4.0,5.0,4.0,3.0,4.3,4.4,4.3,human
+m065-NEG-01,Margin of Safety in Engineering Design,Domain-Specialized,NEG,5.0,5.0,5.0,5.0,5.0,5.0,5.0,5.0,3.0,5.0,ai
+m065-POS-01,Margin of Safety in Engineering Design,Domain-Specialized,POS,5.0,5.0,5.0,4.0,3.0,4.0,4.0,4.3,4.7,4.3,human
+m066-NEG-01,Strong Inference (Platt),Additional Expert Strategies,NEG,5.0,5.0,5.0,5.0,3.0,5.0,5.0,4.5,2.6,4.5,ai
+m066-POS-01,Strong Inference (Platt),Additional Expert Strategies,POS,5.0,5.0,5.0,4.0,3.0,4.0,4.0,4.2,4.6,4.2,human
+m067-NEG-01,Thought Experiment (Gedankenexperiment),Additional Expert Strategies,NEG,5.0,5.0,5.0,5.0,4.0,5.0,5.0,4.9,3.4,4.9,ai
+m067-POS-01,Thought Experiment (Gedankenexperiment),Additional Expert Strategies,POS,5.0,5.0,5.0,5.0,4.0,5.0,5.0,4.8,4.5,4.8,ai
+m068-NEG-01,Hypothesis-Driven Consulting (MECE),Additional Expert Strategies,NEG,5.0,5.0,5.0,5.0,2.0,4.0,5.0,4.6,2.7,4.6,ai
+m068-POS-01,Hypothesis-Driven Consulting (MECE),Additional Expert Strategies,POS,5.0,4.0,5.0,4.0,3.0,4.0,3.0,4.1,4.4,4.1,human
+m069-NEG-01,80/20 Pareto Analysis,Additional Expert Strategies,NEG,5.0,5.0,5.0,5.0,4.0,4.0,5.0,4.7,2.6,4.7,ai
+m069-POS-01,80/20 Pareto Analysis,Additional Expert Strategies,POS,5.0,5.0,5.0,4.0,4.0,4.0,4.0,4.4,4.6,4.4,human
+m070-NEG-01,Evidence-Weighted SWOT,Additional Expert Strategies,NEG,5.0,5.0,5.0,5.0,4.0,5.0,5.0,4.9,2.6,4.9,ai
+m070-POS-01,Evidence-Weighted SWOT,Additional Expert Strategies,POS,5.0,5.0,5.0,4.0,3.0,4.0,4.0,4.3,4.6,4.3,human
+m071-NEG-01,Porter's Five Forces,Additional Expert Strategies,NEG,5.0,5.0,5.0,5.0,5.0,4.0,5.0,5.0,3.0,5.0,ai
+m071-POS-01,Porter's Five Forces,Additional Expert Strategies,POS,5.0,5.0,4.0,4.0,4.0,4.0,4.0,4.0,5.0,4.0,human
+m072-NEG-01,Value Chain Analysis,Additional Expert Strategies,NEG,5.0,5.0,5.0,5.0,5.0,4.0,5.0,4.8,3.3,4.8,ai
+m072-POS-01,Value Chain Analysis,Additional Expert Strategies,POS,3.0,4.0,5.0,3.0,5.0,3.0,2.0,3.5,4.8,3.5,human
+m073-NEG-01,Game Theory / Strategic Interaction,Additional Expert Strategies,NEG,5.0,5.0,5.0,5.0,4.0,5.0,5.0,4.9,3.4,4.9,ai
+m073-POS-01,Game Theory / Strategic Interaction,Additional Expert Strategies,POS,5.0,5.0,5.0,4.0,3.0,4.0,4.0,4.1,4.6,4.1,human
+m074-NEG-01,Nash Equilibrium Reasoning,Additional Expert Strategies,NEG,5.0,5.0,5.0,5.0,4.0,4.0,5.0,4.7,2.7,4.7,ai
+m074-POS-01,Nash Equilibrium Reasoning,Additional Expert Strategies,POS,5.0,5.0,5.0,4.0,3.0,4.0,4.0,4.3,4.6,4.3,human
+m075-NEG-01,Bounded Rationality & Satisficing (Simon),Additional Expert Strategies,NEG,5.0,5.0,5.0,5.0,4.0,5.0,5.0,4.9,2.6,4.9,ai
+m075-POS-01,Bounded Rationality & Satisficing (Simon),Additional Expert Strategies,POS,5.0,5.0,5.0,4.0,3.0,5.0,4.0,4.3,4.6,4.3,human
+m076-NEG-01,Prospect Theory Awareness,Additional Expert Strategies,NEG,5.0,5.0,5.0,5.0,4.0,5.0,5.0,4.9,3.3,4.9,ai
+m076-POS-01,Prospect Theory Awareness,Additional Expert Strategies,POS,4.0,4.0,5.0,3.0,5.0,3.0,2.0,3.6,4.8,3.6,human
+m077-NEG-01,Sunk Cost Recognition,Additional Expert Strategies,NEG,5.0,5.0,5.0,5.0,4.0,5.0,5.0,4.9,2.7,4.9,ai
+m077-POS-01,Sunk Cost Recognition,Additional Expert Strategies,POS,5.0,5.0,5.0,4.0,3.0,4.0,4.0,4.3,4.7,4.3,human
+m078-NEG-01,Anchoring Avoidance,Additional Expert Strategies,NEG,5.0,5.0,5.0,5.0,4.0,5.0,5.0,4.9,2.7,4.9,ai
+m078-POS-01,Anchoring Avoidance,Additional Expert Strategies,POS,5.0,5.0,5.0,4.0,3.0,5.0,4.0,4.4,4.6,4.4,human
+m079-NEG-01,Confirmation Bias Hunting,Additional Expert Strategies,NEG,5.0,5.0,5.0,5.0,5.0,4.0,4.0,4.7,2.3,4.7,ai
+m079-POS-01,Confirmation Bias Hunting,Additional Expert Strategies,POS,5.0,5.0,5.0,4.0,3.0,4.0,4.0,4.3,4.6,4.3,human
+m080-NEG-01,Survivorship Bias Analysis,Additional Expert Strategies,NEG,5.0,5.0,5.0,5.0,4.0,5.0,5.0,4.9,2.9,4.9,ai
+m080-POS-01,Survivorship Bias Analysis,Additional Expert Strategies,POS,5.0,5.0,5.0,4.0,3.0,4.0,4.0,4.3,4.6,4.3,human
+m081-NEG-01,Narrative Fallacy Detection,Additional Expert Strategies,NEG,5.0,5.0,5.0,5.0,4.0,5.0,4.0,4.9,2.6,4.9,ai
+m081-POS-01,Narrative Fallacy Detection,Additional Expert Strategies,POS,4.0,4.0,5.0,3.0,4.0,4.0,3.0,3.9,4.9,3.9,human
+m082-NEG-01,Motivated Reasoning Detection,Additional Expert Strategies,NEG,5.0,5.0,5.0,4.0,4.0,5.0,4.0,4.6,2.7,4.6,ai
+m082-POS-01,Motivated Reasoning Detection,Additional Expert Strategies,POS,2.0,3.0,5.0,2.0,5.0,2.0,1.0,2.9,4.7,2.9,human
+m083-NEG-01,Principal-Agent Analysis,Additional Expert Strategies,NEG,5.0,5.0,5.0,5.0,4.0,5.0,5.0,4.9,3.0,4.9,ai
+m083-POS-01,Principal-Agent Analysis,Additional Expert Strategies,POS,5.0,5.0,5.0,4.0,4.0,4.0,4.0,4.3,4.8,4.3,human
+m084-NEG-01,Collective Action & Coordination,Additional Expert Strategies,NEG,5.0,5.0,5.0,4.0,5.0,5.0,5.0,4.9,2.6,4.9,ai
+m084-POS-01,Collective Action & Coordination,Additional Expert Strategies,POS,5.0,5.0,5.0,4.0,3.0,4.0,4.0,4.3,4.6,4.3,human
+m085-NEG-01,Tragedy of the Commons Analysis,Additional Expert Strategies,NEG,5.0,5.0,5.0,5.0,4.0,5.0,5.0,4.9,2.9,4.9,ai
+m085-POS-01,Tragedy of the Commons Analysis,Additional Expert Strategies,POS,5.0,5.0,5.0,4.0,3.0,4.0,4.0,4.3,4.6,4.3,human
+m086-NEG-01,Organizational Feedback Loop Analysis,Additional Expert Strategies,NEG,5.0,5.0,5.0,4.0,5.0,4.0,4.0,4.6,4.7,4.6,human
+m086-POS-01,Organizational Feedback Loop Analysis,Additional Expert Strategies,POS,3.0,4.0,5.0,3.0,4.0,4.0,2.0,3.6,4.9,3.6,human
+m087-NEG-01,BATNA Thinking (Negotiation),Additional Expert Strategies,NEG,5.0,5.0,5.0,5.0,4.0,5.0,5.0,4.9,2.6,4.9,ai
+m087-POS-01,BATNA Thinking (Negotiation),Additional Expert Strategies,POS,5.0,5.0,5.0,4.0,4.0,4.0,4.0,4.4,4.6,4.4,human
+m088-NEG-01,Pre-Commitment & Ulysses Contracts,Additional Expert Strategies,NEG,5.0,5.0,5.0,5.0,4.0,5.0,5.0,4.9,2.9,4.9,ai
+m088-POS-01,Pre-Commitment & Ulysses Contracts,Additional Expert Strategies,POS,5.0,5.0,5.0,4.0,3.0,4.0,4.0,4.3,4.6,4.3,human
+m089-NEG-01,Optionality Preservation,Additional Expert Strategies,NEG,5.0,5.0,5.0,5.0,4.0,4.0,5.0,4.7,2.7,4.7,ai
+m089-POS-01,Optionality Preservation,Additional Expert Strategies,POS,5.0,5.0,5.0,4.0,3.0,4.0,4.0,4.3,4.6,4.3,human
+m090-NEG-01,Minimum Viable Experiment (Build-Measure-Learn),Additional Expert Strategies,NEG,5.0,5.0,5.0,5.0,5.0,5.0,5.0,5.0,2.7,5.0,ai
+m090-POS-01,Minimum Viable Experiment (Build-Measure-Learn),Additional Expert Strategies,POS,5.0,5.0,5.0,4.0,3.0,4.0,4.0,4.3,4.6,4.3,human
+m091-NEG-01,Deliberate Practice & Chunking,Additional Expert Strategies,NEG,5.0,5.0,5.0,5.0,5.0,4.0,5.0,4.9,2.3,4.9,ai
+m091-POS-01,Deliberate Practice & Chunking,Additional Expert Strategies,POS,4.0,4.0,5.0,3.0,4.0,4.0,3.0,3.9,4.7,3.9,human
+m092-NEG-01,Spaced Repetition & Memory Science,Additional Expert Strategies,NEG,5.0,5.0,5.0,5.0,5.0,4.0,5.0,4.9,1.7,4.9,ai
+m092-POS-01,Spaced Repetition & Memory Science,Additional Expert Strategies,POS,5.0,5.0,5.0,4.0,3.0,4.0,4.0,4.3,4.6,4.3,human
+m093-NEG-01,Feynman Technique,Additional Expert Strategies,NEG,5.0,5.0,5.0,5.0,3.0,4.0,5.0,4.6,3.0,4.6,ai
+m093-POS-01,Feynman Technique,Additional Expert Strategies,POS,5.0,5.0,5.0,4.0,3.0,4.0,4.0,4.3,4.6,4.3,human
+m094-NEG-01,Critical Reading / Socratic Questioning of Texts,Additional Expert Strategies,NEG,5.0,5.0,5.0,4.0,5.0,4.0,5.0,4.7,2.6,4.7,ai
+m094-POS-01,Critical Reading / Socratic Questioning of Texts,Additional Expert Strategies,POS,5.0,5.0,5.0,4.0,5.0,4.0,4.0,4.5,4.6,4.5,human
+m095-NEG-01,Fast-and-Frugal Decision Trees (Gigerenzer),Additional Expert Strategies,NEG,5.0,4.0,5.0,5.0,3.0,5.0,5.0,4.6,2.9,4.6,ai
+m095-POS-01,Fast-and-Frugal Decision Trees (Gigerenzer),Additional Expert Strategies,POS,5.0,5.0,5.0,4.0,3.0,4.0,4.0,4.2,4.6,4.2,human
+m096-NEG-01,Ensemble Thinking (Diverse Views Averaging),Additional Expert Strategies,NEG,5.0,5.0,5.0,5.0,4.0,4.0,5.0,4.6,2.4,4.6,ai
+m096-POS-01,Ensemble Thinking (Diverse Views Averaging),Additional Expert Strategies,POS,5.0,5.0,5.0,4.0,3.0,4.0,4.0,4.2,4.6,4.2,human
+m097-NEG-01,Reference Class Forecasting (Kahneman),Additional Expert Strategies,NEG,5.0,5.0,5.0,5.0,4.0,5.0,5.0,4.9,2.9,4.9,ai
+m097-POS-01,Reference Class Forecasting (Kahneman),Additional Expert Strategies,POS,3.0,3.0,5.0,3.0,4.0,4.0,3.0,3.6,4.9,3.6,human
+m098-NEG-01,Decision Pre-registration / Journaling,Additional Expert Strategies,NEG,5.0,4.0,5.0,3.0,5.0,4.0,4.0,4.3,3.3,4.3,ai
+m098-POS-01,Decision Pre-registration / Journaling,Additional Expert Strategies,POS,3.0,3.0,5.0,3.0,4.0,3.0,2.0,3.3,4.6,3.3,human
+m099-NEG-01,Bayesian Knowledge Updating (Org Learning),Additional Expert Strategies,NEG,5.0,5.0,5.0,5.0,4.0,5.0,5.0,4.9,2.7,4.9,ai
+m099-POS-01,Bayesian Knowledge Updating (Org Learning),Additional Expert Strategies,POS,5.0,5.0,5.0,4.0,3.0,4.0,4.0,4.3,4.6,4.3,human
+m100-NEG-01,First Principles + Falsification Combo (Hypothesis Rebuild),Additional Expert Strategies,NEG,5.0,5.0,5.0,3.0,5.0,5.0,4.0,4.6,2.6,4.6,ai
+m100-POS-01,First Principles + Falsification Combo (Hypothesis Rebuild),Additional Expert Strategies,POS,5.0,5.0,5.0,4.0,3.0,4.0,4.0,4.3,4.6,4.3,human
+m001-POS-02,First Principles Thinking,Foundational & First-Principles,POS,5,5,4,4,5,4,4,4.4,4.7,4.4,human
+m001-NEG-02,First Principles Thinking,Foundational & First-Principles,NEG,5,5,5,4,5,4,4,4.6,3.0,4.6,ai
+m003-POS-02,Inversion,Foundational & First-Principles,POS,4,5,5,4,4,4,3,4.0,5.0,4.0,human
+m003-NEG-02,Inversion,Foundational & First-Principles,NEG,5,5,5,4,5,5,4,5.0,3.0,5.0,ai
+m006-POS-02,Bayesian Updating,Probabilistic & Bayesian,POS,5,5,5,4,4,4,4,4.0,5.0,4.0,human
+m006-NEG-02,Bayesian Updating,Probabilistic & Bayesian,NEG,5,4,5,4,5,4,3,4.0,5.0,4.0,human
+m007-POS-02,Expected Value Thinking,Decision & Strategic,POS,5,5,5,5,4,5,5,4.9,4.7,4.9,complementary
+m007-NEG-02,Expected Value Thinking,Decision & Strategic,NEG,5,5,5,5,4,5,5,4.9,3.0,4.9,ai
+m011-POS-02,Systems Thinking,Systems & Causal,POS,5,5,5,4,4,5,4,4.0,5.0,4.0,human
+m011-NEG-02,Systems Thinking,Systems & Causal,NEG,5,5,5,4,4,5,4,5.0,2.0,5.0,ai
+m019-POS-02,Red Teaming / Devil's Advocate,Dialectical & Critical,POS,4,5,5,4,5,4,4,4.1,4.6,4.1,human
+m019-NEG-02,Red Teaming / Devil's Advocate,Dialectical & Critical,NEG,5,5,5,5,5,4,5,4.8,2.5,4.8,ai

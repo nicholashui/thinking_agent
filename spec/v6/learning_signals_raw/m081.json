@@ -1,0 +1,18 @@
+[
+  {
+    "test_case_id": "m081-POS-01",
+    "human_model": "Narrative Fallacy Detection",
+    "winner": "ai",
+    "key_gap": "vs baseline: the non-routed v5 AI reached the right verdict but discovered the counter-data opportunistically — the temporal boundary check surfaced only at REVIEW (3.9 vs 4.9). The routed m081 pass turned the story-selection audit into a completion contract: all three counter-data classes (lateral: Region B +44.3% → differential +0.7 pp; temporal: both regions +35% at the launch boundary; compositional: Customer X = 69% of the delta) were demanded up front, and P1 provenance (memo author = interested party) plus the m084 org frame (replication as an attribution/adoption problem) added what the pure lens left out.",
+    "learning_signal": "On observational causal-claim signatures (finance/product decide+diagnose), a story-selection audit with three orthogonal sweeps (lateral control, temporal pre-launch, compositional concentration) demanded as a contract closes the opportunistic-discovery gap; the data-discipline clause (decompose the real growth, don't dismiss it) prevents over-claiming 'no effect'.",
+    "suggested_improvement": "Keep m081 top-1 on observational growth/verdict signatures; install the story-selection audit + data-discipline as a standing completion contract; pair every narrative audit with P1 provenance (who benefits from the story) and price the decision branches (replicate / hold / pilot) before DO."
+  },
+  {
+    "test_case_id": "m081-NEG-01",
+    "human_model": "Narrative Fallacy Detection",
+    "winner": "ai",
+    "key_gap": "vs baseline: the pure-style human baseline executed the registered failure mode — it dismissed a genuine RCT as 'self-reported neatness', demanded a 12-month all-platform trial, and declined the decision (2.6). The routed route excluded the trap style and ran steelman (m018) + red team (m019) with the baseline-risk gate: the skeptic's strongest form survived only as monitorable external-validity risk, the attack vectors were quantified (mobile-only, novelty fade, drift) and capped by the do-nothing cost (≈ 2,000 churned users/month), and the decision committed with a holdout + revert trigger.",
+    "learning_signal": "On decide-signatures with genuine experimental evidence, never route pure narrative skepticism — route the adversarial-critical family (steelman + red team) with the baseline-risk gate so the attack is calibrated against the cost of inaction; randomization + pre-specified mechanism IS the counter-data the skeptic's lens demands.",
+    "suggested_improvement": "Keep m018+m019 dual-route (m028 context) on product/medical decide signatures; enforce the m019 completion contract (enumerated vectors, quantified exposure, baseline-risk comparison) as the anti-paralysis gate; treat the RCT control arm as the answer to 'what does the story leave out', and price the do-nothing branch before any postponement."
+  }
+]

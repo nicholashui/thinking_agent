@@ -1,0 +1,18 @@
+[
+  {
+    "test_case_id": "m037-POS-01",
+    "human_model": "Circle of Competence Awareness",
+    "winner": "ai",
+    "key_gap": "vs baseline: the baseline drew the boundary and refused the unvalidatable rate in one pass; the v6 AI reached the same allocation only through routed structure (boundary pass + ruin screen + threshold flip p* = 17.5%) — the exact structure the non-routed v5 run lacked (it committed $1.5M direct on the deck's rate, realized 0.6x down-round). Residual baseline edge: it priced the delegation with realized-history humility in one line; the routed pass needed its full gate stack to get there.",
+    "learning_signal": "On decide/estimate signatures with finance/medical domains, the load-bearing-probability check (who certifies p, EV threshold flip, sensitivity to a corrected class rate) is what converts a competence boundary from narrative into a gate; a boundary pass without the threshold flip still lets a fluent EV win.",
+    "suggested_improvement": "Standing module on high_stakes decide/estimate tasks: force (1) provenance of the load-bearing probability, (2) its EV threshold flip, (3) the delegation price, before any EV is trusted; pair with the m007 ruin screen (full distribution + floor + one-shot)."
+  },
+  {
+    "test_case_id": "m037-NEG-01",
+    "human_model": "Circle of Competence Awareness",
+    "winner": "ai",
+    "key_gap": "vs baseline: the baseline's honest refusal is locally correct and globally destructive — it collapsed 'I cannot execute ML' into 'I cannot lead ML' (role-collapse category error) and its learn-first stance forfeits the 24-month window. The v6 AI's routed pre-commitment pass converts the competence gap into a delegation-with-verification contract and prices the decline (12-month drift = half the window) before the boundary is invoked.",
+    "learning_signal": "On adversarial/deadline signatures, a pure competence-boundary stance degrades into refusal unless gated by (1) execution-vs-orchestration role decomposition, (2) a priced decline option, (3) a pre-committed verification structure with a named technical authority and a graded exit.",
+    "suggested_improvement": "Keep m088 pre-commitment as top-1 for this signature (router already holds it there); make 'decline priced as a decision' and 'delegation with named authority + checkpoint exit' standing outputs of any competence-adjacent pass; never let 'I can't execute X' decide 'I can't lead X'."
+  }
+]

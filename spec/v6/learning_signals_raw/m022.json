@@ -1,0 +1,18 @@
+[
+  {
+    "test_case_id": "m022-POS-01",
+    "human_model": "Decision Trees & Scenario Planning",
+    "winner": "ai",
+    "key_gap": "vs baseline: the human baseline costed the failure branch and all thresholds in-frame (fold 170/27.5/73; p* 0.474; license threshold $170M; q* 0.088) while the non-routed v5 AI stubbed the failure branch (root 62, p* 0.56) and repaired it only at review; the routed run priced the failure branch in-frame via the P3 branch-completeness gate plus the m023 opportunity-cost lens (abandon-on-failure forgoes a rescue worth 27.5), matched every threshold, and added the m003 inversion gate (>=6 ranked failure categories, un-mitigable residual, never/always reframing) and the state-contingent-hedge reading of the $150M offer ($170M as renegotiation floor). Residual shared gap: the 0.6 trial-success estimate is calibration-band, not measured frequency; the tree cannot hold dilution, pipeline correlation, or regulatory tail.",
+    "learning_signal": "On decide/guarantee signatures with a buried-but-supplied option (rescue base rate present in the data but unflagged), branch completeness must run BEFORE selection: a tree with an unpriced failure branch overstates the root by 11 (62 vs 73) and the p* threshold by 0.09 (0.56 vs 0.474); the opportunity-cost framing ('what does abandoning forgo?') is the cheapest in-frame detector of a hidden branch.",
+    "suggested_improvement": "Keep the P3 branch-completeness gate as a standing pre-DO contract on decision-tree signatures (it converts the v5 review-repair into in-frame pricing); pair m023 opportunity-cost as the hidden-branch detector in HOW; add 'renegotiation floor at the indifference threshold' as a packet line whenever a firm outside offer stands (the $170M threshold is an action item, not a footnote)."
+  },
+  {
+    "test_case_id": "m022-NEG-01",
+    "human_model": "Decision Trees & Scenario Planning",
+    "winner": "ai",
+    "key_gap": "vs baseline: the human baseline ran calibration (p_crisis 0.2 -> 0.35), branch-value verifiability (A crisis node -13 -> -48), and the robust rule (maximin + ruin line -> C) all in-frame; the non-routed v5 AI calibrated only the probability, issued a false 'robust to misspecification' claim (A at 18.9 after p-only correction), selected A, and reversed to C only at review. The routed run put both perturbation axes and the ruin screen before selection (m007's probability+value provenance, P1's who-benefits audit catching the analyst's interest in a decisive A, m089's optionality preserving A-as-pilot, m021 tempo bounding the tree to 18 leaves), reaching C in-frame with no reversal. Residual shared gap: A's corrected crisis node (-48 ± 15) and the B/C order remain input-error-sensitive; no data exists to narrow them.",
+    "learning_signal": "On high-stakes one-shot decisions with an analyst-supplied tree, sensitivity is two-dimensional (probabilities AND branch values): one-dimensional perturbation is a false-reassurance engine that certifies the wrong rank, and when the pivot branch is unverifiable the robust rule (maximin, ruin line) decides, not the EV — with who-benefits as a first-class input property (the analyst's decisive recommendation is the interested-party signature to audit first).",
+    "suggested_improvement": "Extend the m007 ruin screen's probability-provenance item into a full input-provenance gate (values AND probabilities, plus who-benefits); install 'perturb values, not just probabilities' as a standing sensitivity contract on any tree with unverified branches; keep m044/m089 dual-route on analyst-supplied-tree signatures (stakeholder motive + optionality as the trap-escape), with m021 tempo capping enumeration (18 leaves suffice; 72 leaves change nothing)."
+  }
+]

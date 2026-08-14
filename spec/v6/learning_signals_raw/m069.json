@@ -1,0 +1,18 @@
+[
+  {
+    "test_case_id": "m069-POS-01",
+    "human_model": "80/20 Pareto Analysis",
+    "winner": "ai",
+    "key_gap": "vs baseline: the baseline executed the pure move in one pass (sort -> exact 20/80 claim -> collapse test -> act-first -> tail monitoring), while the non-routed v5 AI recovered the identical plan but re-walked the cumulative table inside WHY and reached the collapse-test framing late, losing on depth, efficiency and insight. The v6 routed pass made m069 first-class (split from data, 20/80 claim stated exactly, collapse test with coverage + temporal arms) and paired it with the m007 ruin gate (high_stakes), plus a provenance flag: the brief's tail figure (~177, 14%) does not reconcile with the stated counts (217, 17.5%).",
+    "learning_signal": "On diagnose/estimate signatures with a fully checkable count table, routing m069 as a first-class pass with its completion contract is what converts a recovered answer into a one-pass answer; the temporal collapse arm (does the tail feed the top — here NO, categories mutually exclusive) is the validity license separating action-map splits from snapshot splits, and the ±5% sampled coverages turn the ruin gate into a floor computation rather than theater.",
+    "suggested_improvement": "Keep m069 first-class on fully-specified count tables (P8 path); make the temporal collapse arm a standing part of the module contract on every run, not just revenue/cohort books; keep m007 paired on high_stakes; add given-counts reconciliation (input arithmetic check against the brief's stated aggregates) to the P1 provenance audit."
+  },
+  {
+    "test_case_id": "m069-NEG-01",
+    "human_model": "80/20 Pareto Analysis",
+    "winner": "ai",
+    "key_gap": "vs baseline: the pure style computed the split (2% -> 72%, 12% -> 90%, 88% -> 10%) and pounced on the 72% as an action map, dismissing the four verified counters as survivorship and soft currency. The v6 routed run kept the concentration-act module out of the pass set (router: m044, m070, m075; confident=no -> dual-route) and the stakeholder + evidence-ledger passes forced the four verified facts to be ordering authority, so the 72% was read as an output snapshot; the decisive insight — the top 18 has a 39% (7-of-18) tail-origin renewal rate — landed via the pass structure, not the general route's luck.",
+    "learning_signal": "On revenue books with a concentration split plus verified feed-the-top facts, the Pareto module's registered weakness (tail neglect) is exactly the trap the router's NEG protection exists to avoid; the temporal collapse question (where did the vital few come from, does the tail feed the top) is now guaranteed by the m044/m070 pass structure (renewal as a stakeholder fact, claims graded against the closed ledger) rather than left to the general loop.",
+    "suggested_improvement": "Confirm the route (m069 out of top-3 when concentration splits co-occur with verified tail-feeds-top facts); add the renewal-rate framing (tail-origin share of the vital few) as a standing question in the m044 pass on revenue signatures; keep the R4 falsifiable checkpoint (quarterly tail-origin converts metric) as the standing check the analysis was missing."
+  }
+]

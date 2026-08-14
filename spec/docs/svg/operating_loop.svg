@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 520" width="820" height="520">
+  <defs>
+    <style>
+      .stage { fill: #eff6ff; stroke: #1e40af; stroke-width: 2.5; rx: 12; }
+      .meta { fill: #fef3c7; stroke: #b45309; stroke-width: 2.5; rx: 12; }
+      .verify { fill: #fce7f3; stroke: #be185d; stroke-width: 2; rx: 8; stroke-dasharray: 6 3; }
+      .title { font-family: system-ui, sans-serif; font-size: 13px; font-weight: 700; fill: #0f172a; }
+      .sub { font-family: system-ui, sans-serif; font-size: 10px; fill: #475569; }
+      .hdr { font-family: system-ui, sans-serif; font-size: 16px; font-weight: 700; fill: #0f172a; }
+      .arrow { stroke: #334155; stroke-width: 2.5; fill: none; marker-end: url(#ah); }
+      .label { font-family: system-ui, sans-serif; font-size: 11px; fill: #1e293b; font-weight: 600; }
+    </style>
+    <marker id="ah" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#334155"/>
+    </marker>
+  </defs>
+  
+  <text x="410" y="28" text-anchor="middle" class="hdr">Central Operating Loop — Thinking Agent v5</text>
+  <text x="410" y="48" text-anchor="middle" class="sub">META-CONTROL → WHAT → WHY → HOW → DO → REVIEW   |   Continuous VERIFY surrounds every stage</text>
+  
+  <!-- META -->
+  <rect x="320" y="70" width="180" height="50" class="meta"/>
+  <text x="410" y="92" text-anchor="middle" class="title">0. META-CONTROL</text>
+  <text x="410" y="108" text-anchor="middle" class="sub">Route • Budget • Effort • Cynefin</text>
+  
+  <!-- Arrow to WHAT -->
+  <path d="M410 120 L410 150" class="arrow"/>
+  
+  <!-- WHAT -->
+  <rect x="80" y="155" width="160" height="55" class="stage"/>
+  <text x="160" y="178" text-anchor="middle" class="title">1. WHAT</text>
+  <text x="160" y="195" text-anchor="middle" class="sub">Frame the Problem</text>
+  
+  <!-- WHY -->
+  <rect x="280" y="155" width="160" height="55" class="stage"/>
+  <text x="360" y="178" text-anchor="middle" class="title">2. WHY</text>
+  <text x="360" y="195" text-anchor="middle" class="sub">Diagnose &amp; Model</text>
+  
+  <!-- HOW -->
+  <rect x="480" y="155" width="160" height="55" class="stage"/>
+  <text x="560" y="178" text-anchor="middle" class="title">3. HOW</text>
+  <text x="560" y="195" text-anchor="middle" class="sub">Generate • Test • Select</text>
+  
+  <!-- DO -->
+  <rect x="280" y="260" width="160" height="55" class="stage"/>
+  <text x="360" y="283" text-anchor="middle" class="title">4. DO</text>
+  <text x="360" y="300" text-anchor="middle" class="sub">Plan &amp; Execute</text>
+  
+  <!-- REVIEW -->
+  <rect x="480" y="260" width="160" height="55" class="stage"/>
+  <text x="560" y="283" text-anchor="middle" class="title">5. REVIEW</text>
+  <text x="560" y="300" text-anchor="middle" class="sub">Reflect • Learn • Evolve</text>
+  
+  <!-- Flow arrows -->
+  <path d="M240 182 L280 182" class="arrow"/>
+  <path d="M440 182 L480 182" class="arrow"/>
+  <path d="M560 210 L560 240 L440 240 L440 260" class="arrow"/>
+  <path d="M360 210 L360 260" class="arrow"/>
+  <path d="M440 287 L480 287" class="arrow"/>
+  
+  <!-- Back to meta / loop -->
+  <path d="M560 315 L560 360 L160 360 L160 210" class="arrow"/>
+  <text x="360" y="350" text-anchor="middle" class="label">loop / reframe (budgeted)</text>
+  
+  <!-- VERIFY layer -->
+  <rect x="70" y="390" width="680" height="70" class="verify"/>
+  <text x="410" y="415" text-anchor="middle" class="title">CONTINUOUS VERIFY LAYER</text>
+  <text x="410" y="435" text-anchor="middle" class="sub">External identity • Reliability ≥ class bar • Second-verifier rule (identity registry) • Delta caches</text>
+  <text x="410" y="452" text-anchor="middle" class="sub">Pre-DO bar check on selected decision • Outcome verification • Independent VerifierRegistry</text>
+  
+  <!-- States note -->
+  <text x="410" y="490" text-anchor="middle" class="sub">Every task terminates in exactly one of 8 graceful states + proof-carrying decision packet</text>
+</svg>

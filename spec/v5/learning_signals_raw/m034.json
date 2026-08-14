@@ -1,0 +1,18 @@
+[
+  {
+    "test_case_id": "m034-POS-01",
+    "human_model": "Measurement & Operationalization",
+    "winner": "human",
+    "key_gap": "Both reached the same verdict (do NOT ship B; template-clone leakage inverts naive +3 pp to corrected −10.2 pp: A 26.4% vs B 16.2%) with the same arithmetic, but the human performed the instrument audit as its default first act: decompose the construct, check what the event actually fires on, then read the number. The AI got there only as a hypothesis (H2) tested inside WHY, and its inline calibration was terser — the human priced the sensitivity bound ('verdict survives a 15-pp clone-share misspecification') and the sampling CI as part of the argument, not as bookkeeping.",
+    "learning_signal": "Measurement precedes reading: before comparing any two numbers, audit the semantic fidelity of the instrument — what trace event fires, under what trigger, and what it fails to capture. Instrument validity outranks statistics in metric decisions: a corrupted event inverts verdicts (naive +3 pp becomes −10.2 pp). The strongest move is not a better test but a check that the event cannot fire without the construct occurring.",
+    "suggested_improvement": "Add a mandatory 'instrument audit' sub-step in WHAT before any comparison: for the chosen primary metric record (a) the trace event and its trigger conditions, (b) leakage/gaming modes — can the event fire without the construct, or fail to fire with it? — (c) estimated leakage share per arm, (d) a sensitivity bound within which the verdict still stands. Compare arms only after the audit; if leakage is material, recompute on the corrected metric and flag 'metric validity failure' in the decision record."
+  },
+  {
+    "test_case_id": "m034-NEG-01",
+    "human_model": "Measurement & Operationalization",
+    "winner": "ai",
+    "key_gap": "The pure-style human defined the construct AS the contractual metric ('the construct for decision purposes is the claims-based rate'), verified the drop at ~5.5 standard errors, and recommended RENEW — the canonical measures-the-measurable failure. The AI separated indicator from construct, read the substitution fingerprints (+42% observation stays, +50% ER returns without admission = where the 200 'missing' patients went), and let the independent audit (15.6%, CI 14.9–16.3 bracketing 16.0%) falsify the headline, concluding conditional de-gamed renewal instead.",
+    "learning_signal": "When a number is the explicit target of incentives, the metric is a map under attack: cases must go somewhere, so read the ledger's neighbors — observation stays, exclusions, definitional migrations — and triangulate with an instrument independent of the incentive path. A 'statistically overwhelming' drop in an incentivized metric (5.5 SE) is a red flag, not evidence, when an independent instrument shows the construct flat. The winning move is an incentive-aware indicator audit before trusting any headline.",
+    "suggested_improvement": "Add a mandatory 'incentive/Goodhart check' in WHY whenever the outcome metric drives pay, bonuses, or policy: (a) is the metric the explicit target of incentives? (b) enumerate the paths by which cases can leave the counted definition and search adjacent numbers for their fingerprints; (c) is there an instrument independent of the incentive path — if so, reconcile the headline against it; (d) on disagreement, decide on the construct, not the contract, and record the divergence in the decision packet."
+  }
+]

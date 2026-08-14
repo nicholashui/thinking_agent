@@ -1,0 +1,18 @@
+[
+  {
+    "test_case_id": "m065-POS-01",
+    "human_model": "Margin of Safety in Engineering Design",
+    "winner": "ai",
+    "key_gap": "vs baseline: the baseline executed the full derating stack in one disciplined first pass and made the end-of-life event the acceptance test (load 1,191 N; A MS -0.10 fail; B MS +0.35 pass); the routed run now matches that discipline first-class (m065 derating in synthesis context) and adds an 8-category inversion gate with un-mitigable residual, a ruin screen with probability provenance (one-shot class: a plaza drop is not amortized over flights), and a steelman pass showing the junior FS-5 draft gates on a different event (static/nominal vs end-of-life/minimum) - closing v5's gaps (efficiency: D-branch exploration; depth: sensitivity ranking only at REVIEW) at zero cost via the P8 closed-scope fast path.",
+    "learning_signal": "On guarantee/high_stakes engineering signatures, routing the adversarial pair (m018+m019) with m065 derating as synthesis context plus standing m003/m007 gates reproduces the pure style's event-first discipline while adding uncertainty provenance, one-shot/ruin protection, and branch pricing the baseline lacks.",
+    "suggested_improvement": "Keep m018+m019 dual-route with m065 synthesis on guarantee signatures (R1/R2); keep m003 inversion and m007 ruin screen as standing R3/R4 gates on high_stakes design; hold the P8 fast path so the derating stack completes in one pass."
+  },
+  {
+    "test_case_id": "m065-NEG-01",
+    "human_model": "Margin of Safety in Engineering Design",
+    "winner": "ai",
+    "key_gap": "vs baseline: the pure style applied the blanket stack (worst x 3, generic 0.85 knockdown -> 95 g strut + 18 g mount) to a data-rich benign-failure case, converting measured certainty into 48 g of dead weight that blocks the 140 g pod (-$4,500/yr) and costs 2.3% flight energy (~8.5 min/day airtime); the routed run's discriminating test on the record (P(load > 93 N) < 1e-9), evidence-weighted SWOT (over-design as the highest-evidence threat, pod as the highest-evidence opportunity), and m098 pre-registration (falsification contract) hold the win with the economic framing as a first-class output.",
+    "learning_signal": "On diagnose/estimate signatures with measured data, the router correctly routes AWAY from the blanket-derating style to evidence-calibrated styles (m031/m070/m098) - routing, not style suppression, holds the protective split; margin must be proportional to measured uncertainty, and over-design must be priced in the system's own currency (payload allowance, $/yr, energy).",
+    "suggested_improvement": "Keep m031+m070 dual-route with m098 synthesis on data-rich benign-failure signatures; add the over-design cost check (weight/complexity priced) as a standing P3 branch-completeness item whenever a mass/cost constraint binds, even when m065/m038 is not routed."
+  }
+]

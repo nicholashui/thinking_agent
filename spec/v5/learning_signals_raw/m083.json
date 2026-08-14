@@ -1,0 +1,24 @@
+{
+  "version": "1.0",
+  "model_id": "m083",
+  "human_model": "Principal-Agent Analysis",
+  "date": "2026-08-07",
+  "signals": [
+    {
+      "test_case_id": "m083-POS-01",
+      "human_model": "Principal-Agent Analysis",
+      "winner": "human",
+      "key_gap": "AI computed the full status-quo equilibrium correctly (d = 25% -> revenue $15M, firm -$1M, manager $300k) and proposed the profit-share fix, but asserted the redesign's alignment instead of deriving it: it never derived the firm's break-even discount (d = 20%), never located the conflict explicitly in the d >= 20% value-destroying region ('the commission pays the agent 2% of every dollar the firm loses'), and folded the pay-neutrality check ($200k before and after) into one line instead of a formal verification that the agent's optimum under the new contract equals the firm's. The human won the margin on derived thresholds and interpretive framing.",
+      "learning_signal": "For contract-redesign tasks, equilibrium arithmetic is not the endpoint: after computing the agent's choice under the status quo, the reasoner must (1) derive the principal's break-even threshold from the payoff functions and state where the conflict lives (the value-destroying region), (2) verify the redesign by recomputing the agent's own optimum under the new contract — a formal check, not an assertion that 'incentives align' — and (3) check pay-neutrality at the aligned point so the redesign is incentive-compatible without asking the agent to take a haircut.",
+      "suggested_improvement": "Add a 'contract verification gate' to HOW for any incentive-design problem: require (a) break-even/threshold derivation from both payoff functions, (b) recomputation of the agent's optimum under the proposed contract with the resulting equilibrium stated, and (c) a pay-neutrality check (agent income under old vs new contract at the aligned point); gate DO on all three. Also add a WHAT-stage rule: when observed behavior is fully explained by a contract's payoffs, select the 'fix the contract, not the person' hypothesis (Occam) and state it explicitly."
+    },
+    {
+      "test_case_id": "m083-NEG-01",
+      "human_model": "Principal-Agent Analysis",
+      "winner": "ai",
+      "key_gap": "The pure principal-agent baseline priced protection against a divergence it never verified: it applied a generic 2%/yr defection base rate to a relationship with a 9-year incident-free record, a 30% profit share that co-aligns the agent's payoff derivative with the firm's, and a pending equity grant that closes the largest defection vector (portable client migration); and its cost-benefit ($30k expected harm vs $12k) excluded the monitoring's own economics — compliance time, the distrust signal, false-positive charges, and the outside-option loop that raises the defection probability the package prices. The AI won by running the alignment audit before the surveillance decision and pricing the monitoring's negative-signal effects.",
+      "learning_signal": "Principal-agent reasoning must be bidirectional: predict misbehavior where incentives diverge, and verify alignment where they appear to converge. Before any monitoring decision: (1) run an alignment audit on the ACTUAL payoff functions (agent's marginal take of the principal's residual) instead of assuming divergence a priori; (2) challenge base-rate transferability — a generic survey rate is not evidence about a relationship whose contract and record contradict it; (3) price the monitoring instrument itself: compliance time, signal cost (surveillance converts an intrinsically motivated agent into a compliance-minimizing one), false positives, and the perverse loop where monitoring raises the agent's outside option and increases the defection probability it targets. Trust earned by verified track record is a cheaper control than insurance against unverified divergence.",
+      "suggested_improvement": "Add a 'divergence audit' gate in WHY for all principal-agent and monitoring tasks, before any control is costed: (1) compare payoff derivatives (does the agent's income co-move with the principal's residual?); (2) test the defection base rate against relationship-specific evidence (record length, incidents, retention, pending equity) and require a transferability statement; (3) require a full monitoring-cost line including compliance time, signal cost, false-positive charges, and outside-option effects; (4) recommend monitoring only if expected prevented loss exceeds the FULL cost line; otherwise route to alignment-deepening alternatives (vesting, floors, succession)."
+    }
+  ]
+}

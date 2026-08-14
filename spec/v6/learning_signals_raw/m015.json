@@ -1,0 +1,18 @@
+[
+  {
+    "test_case_id": "m015-POS-01",
+    "human_model": "Emergence & Complexity Awareness",
+    "winner": "ai",
+    "key_gap": "vs baseline: no correctness gap — the routed pass converged on the scheduled-invalidation cache stampede in 5 probes with the same fix, matching the elite baseline's home turf; the v5 AI gap (plan-first, DB contention ranked #1, decisive experiment buried at step 5, 2.9) is closed because the emergent classification and the probe-sense-respond narrowing chain now run in-frame at WHY/HOW instead of being absent; remaining delta is structure/efficiency only.",
+    "learning_signal": "On diagnose+maximize+deadline signatures with an interaction signature (intermittent, clock-aligned, healthy parts), the m015 first-class pass with the probe-sense-respond completion contract converts plan-first runs into probe-first runs and matches the elite baseline; the classification must fire at WHY from the signature, never as a REVIEW correction.",
+    "suggested_improvement": "Keep m015 top-1 on diagnose+maximize+deadline with clock-aligned/intermittent cues; make probe-narrowing statements (each probe states its effect on the hypothesis space) and the R4 falsifiable checkpoint standing contract items; add a budget-reserve rule (end with >=1 probe unspent) and cross-telemetry fingerprint checks (e.g., CDN hit-ratio collapse confirming origin offload) to the pass."
+  },
+  {
+    "test_case_id": "m015-NEG-01",
+    "human_model": "Emergence & Complexity Awareness",
+    "winner": "ai",
+    "key_gap": "vs baseline: the pure style rationalized inaction — 25 min of honest probing bought zero new information and cost ~$300K (42 vs 17 min down); the routed run held the v5 AI's win because the m015 pass gate-checked its own registered weakness at contract time: the evidence-driven classification (deterministic 100%, single path, fresh change = simple) and the priced probe plan make rollback-as-cheapest-probe the style's own conclusion.",
+    "learning_signal": "Routing m015 top-1 on its own negative case is safe ONLY if the pass's completion contract forces (a) an evidence-driven complex-vs-complicated classification and (b) a priced probe plan — every probe must buy new information; unpriced sensing is exactly how the style converts a 4-min reversible action into 29 minutes of probing.",
+    "suggested_improvement": "Add a discriminating-action check to m015's contract (is there a cheap reversible action that both discriminates and resolves? act first, sense after, verify post-action); keep tempo mode (P2) and a post-action verification alarm mandatory on deadline signatures; retain the calibration note (intermittent/clock-aligned/healthy-parts = probe) so the pass does not over-correct into ignoring complexity forever."
+  }
+]

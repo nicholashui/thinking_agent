@@ -1,0 +1,100 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 460" font-family="Segoe UI, sans-serif">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#5f6368"/>
+    </marker>
+  </defs>
+  <rect width="860" height="460" fill="#ffffff"/>
+
+  <text x="430" y="24" font-size="13.5" font-weight="bold" fill="#202124" text-anchor="middle">spec requirement → implementation component → primary tests (all rows TESTED)</text>
+
+  <rect x="30" y="42" width="250" height="380" rx="8" fill="#f3e8fd" stroke="#9334e6"/>
+  <text x="155" y="64" font-size="12.5" font-weight="bold" fill="#7627bb" text-anchor="middle">SPEC REQUIREMENTS</text>
+  <g font-size="11" fill="#7627bb">
+    <text x="46" y="86">V1 world-facts read path</text>
+    <text x="46" y="104">V2 competence provenance</text>
+    <text x="46" y="122">V3 static allowlist</text>
+    <text x="46" y="140">V4 identity registry</text>
+    <text x="46" y="158">V5 attest-time L3</text>
+    <text x="46" y="176">V6 real retrieval</text>
+    <text x="46" y="194">V7 caches / gated reviews</text>
+    <text x="46" y="212">V8 dead-branch coverage</text>
+    <text x="46" y="230">V10 E5 stabilization</text>
+    <text x="46" y="248">V11 real gap clearing</text>
+    <text x="46" y="266">V14 selected-candidate bar</text>
+    <text x="46" y="292">v6 style library · router · gates</text>
+    <text x="46" y="310">v6 contracts · divergence</text>
+    <text x="46" y="328">v7 invariant 12 · rules 39–41</text>
+    <text x="46" y="346">v8 FR-1…6 · invariants 13–14</text>
+    <text x="46" y="364">rule 48 follow-through</text>
+    <text x="46" y="390">eight states · packet · no CoT</text>
+    <text x="46" y="408">no Docker</text>
+  </g>
+
+  <rect x="320" y="42" width="250" height="380" rx="8" fill="#e8f0fe" stroke="#1a73e8"/>
+  <text x="445" y="64" font-size="12.5" font-weight="bold" fill="#174ea6" text-anchor="middle">IMPLEMENTATION COMPONENT</text>
+  <g font-size="11" fill="#174ea6">
+    <text x="336" y="86">kernel/world_facts + AST scan</text>
+    <text x="336" y="104">kernel/safety_kernel + memory</text>
+    <text x="336" y="122">kernel pending_allowed_subset</text>
+    <text x="336" y="140">kernel second-verifier rule</text>
+    <text x="336" y="158">kernel authorize (L3)</text>
+    <text x="336" y="176">memory/manager retrieve</text>
+    <text x="336" y="194">graphs (caches, delta review)</text>
+    <text x="336" y="212">terminal classifier</text>
+    <text x="336" y="230">stabilize node</text>
+    <text x="336" y="248">gap-fill with exact terms</text>
+    <text x="336" y="266">pre-DO bar check</text>
+    <text x="336" y="292">styles/registry · router · idf</text>
+    <text x="336" y="310">contract_validator · module_runner</text>
+    <text x="336" y="328">router DESIGN exclusion · solo/home-turf · interpretation_pricing</text>
+    <text x="336" y="346">sdl/* · ledger · planner · review</text>
+    <text x="336" y="364">review_cycle follow-through</text>
+    <text x="336" y="390">domain/enums · packet_builder</text>
+    <text x="336" y="408">no-Docker acceptance test</text>
+  </g>
+
+  <rect x="610" y="42" width="220" height="380" rx="8" fill="#e6f4ea" stroke="#188038"/>
+  <text x="720" y="64" font-size="12.5" font-weight="bold" fill="#137333" text-anchor="middle">PRIMARY TESTS</text>
+  <g font-size="11" fill="#137333">
+    <text x="626" y="86">read-path · S45</text>
+    <text x="626" y="104">S22 · S45</text>
+    <text x="626" y="122">S20 · S38</text>
+    <text x="626" y="140">S26 · S39</text>
+    <text x="626" y="158">S29</text>
+    <text x="626" y="176">S34 · S40</text>
+    <text x="626" y="194">S2 · S35 · S36</text>
+    <text x="626" y="212">S41–S44</text>
+    <text x="626" y="230">S35</text>
+    <text x="626" y="248">S34 · S40</text>
+    <text x="626" y="266">S4 · S28 · S39</text>
+    <text x="626" y="292">registry · routing suites</text>
+    <text x="626" y="310">style-pass · disagreement</text>
+    <text x="626" y="328">KB aggregation · m071 · m014</text>
+    <text x="626" y="346">S46–S50</text>
+    <text x="626" y="364">review-cycle tests</text>
+    <text x="626" y="390">S1–S50 · packet tests</text>
+    <text x="626" y="408">test_no_docker.py</text>
+  </g>
+
+  <g stroke="#9aa0a6" stroke-width="1" opacity="0.5">
+    <line x1="280" y1="80" x2="317" y2="80"/><line x1="570" y1="80" x2="607" y2="80"/>
+    <line x1="280" y1="98" x2="317" y2="98"/><line x1="570" y1="98" x2="607" y2="98"/>
+    <line x1="280" y1="116" x2="317" y2="116"/><line x1="570" y1="116" x2="607" y2="116"/>
+    <line x1="280" y1="134" x2="317" y2="134"/><line x1="570" y1="134" x2="607" y2="134"/>
+    <line x1="280" y1="152" x2="317" y2="152"/><line x1="570" y1="152" x2="607" y2="152"/>
+    <line x1="280" y1="170" x2="317" y2="170"/><line x1="570" y1="170" x2="607" y2="170"/>
+    <line x1="280" y1="188" x2="317" y2="188"/><line x1="570" y1="188" x2="607" y2="188"/>
+    <line x1="280" y1="206" x2="317" y2="206"/><line x1="570" y1="206" x2="607" y2="206"/>
+    <line x1="280" y1="224" x2="317" y2="224"/><line x1="570" y1="224" x2="607" y2="224"/>
+    <line x1="280" y1="242" x2="317" y2="242"/><line x1="570" y1="242" x2="607" y2="242"/>
+    <line x1="280" y1="260" x2="317" y2="260"/><line x1="570" y1="260" x2="607" y2="260"/>
+    <line x1="280" y1="286" x2="317" y2="286"/><line x1="570" y1="286" x2="607" y2="286"/>
+    <line x1="280" y1="304" x2="317" y2="304"/><line x1="570" y1="304" x2="607" y2="304"/>
+    <line x1="280" y1="322" x2="317" y2="322"/><line x1="570" y1="322" x2="607" y2="322"/>
+    <line x1="280" y1="340" x2="317" y2="340"/><line x1="570" y1="340" x2="607" y2="340"/>
+    <line x1="280" y1="358" x2="317" y2="358"/><line x1="570" y1="358" x2="607" y2="358"/>
+    <line x1="280" y1="384" x2="317" y2="384"/><line x1="570" y1="384" x2="607" y2="384"/>
+    <line x1="280" y1="402" x2="317" y2="402"/><line x1="570" y1="402" x2="607" y2="402"/>
+  </g>
+</svg>

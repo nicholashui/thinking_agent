@@ -1,0 +1,18 @@
+[
+  {
+    "test_case_id": "m089-POS-01",
+    "human_model": "Optionality Preservation",
+    "winner": "ai",
+    "key_gap": "vs baseline: the pure-style human trace is near-gold — doors counted first, priced as p x impact, meta-door named, deferral premium and cost-of-optionality stated — and the routed m089 pass matched every move first-class (the v5 AI's gaps: door inventory after the cost model, meta-door late, mechanical insights). Residual gap: the door values rest on documented-but-estimated probabilities (no measured frequency data), and the 12-month-or-first-trigger checkpoint is a judgment, not calibrated.",
+    "learning_signal": "Optionality is a first-class analytical move on decide/guarantee signatures with priced future scenarios: count the doors FIRST (before any cost arithmetic), price every door as p x exposure, count the meta-door (deferring the decision itself), state the cost of optionality, and bind the optionality with an exercise checkpoint — a door without an exercise plan is hoarding, which is exactly the board-history risk the case punishes.",
+    "suggested_improvement": "Keep single-route m089 on decide/guarantee signatures with deadline/high_stakes context, paired with the R3 m003+m007 gates; add 'meta-door count' and 'cost of optionality stated' to the m089 completion contract (the two signature human moves the v5 AI missed); make the exercise checkpoint a contract output, not a suggestion."
+  },
+  {
+    "test_case_id": "m089-NEG-01",
+    "human_model": "Optionality Preservation",
+    "winner": "ai",
+    "key_gap": "vs baseline: the pure-style trace executed its documented failure — dithering rationalized as optionality (deadline dismissed as pressure, 'expensive != closed' applied to a door that expires in 10 days, the protected door never tested for survival under commitment). The routed dual-route (m044 incentives + m063 contract structure) plus the m019 adversary gate caught the expiry asymmetry structurally: the protected door (Honkoh) survives signing; the door deferral closes (Nordik) is certain, time-limited, and irreplaceable in the window.",
+    "learning_signal": "On deadline signatures with an optionality-flavored framing, run the DOOR-INVARIANCE test: does the door being protected stay open under commitment? If yes, non-commitment is option-destroying, not option-preserving — commit-with-escape (a contract clause) beats non-commitment; price the deferral branch (negative here) and treat expiry as a fact, not a pressure tactic.",
+    "suggested_improvement": "Install the door-invariance test as a mandatory sub-check of the m089 guard and of any optionality-framed case routed elsewhere (m089 was correctly absent from top-3 here); on deadline+adversarial signatures dual-route m044+m063 with the m019 adversary pass quantifying the deadline — keeps the trap-exit structural rather than emergent; add 'expiry class' (now-or-never vs evergreen) to the router's context triggers."
+  }
+]

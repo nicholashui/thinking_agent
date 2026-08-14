@@ -1,0 +1,34 @@
+[
+ {
+  "test_case_id": "m001-POS-01",
+  "human_model": "First Principles Thinking",
+  "winner": "human",
+  "key_gap": "The AI matched every checkable number (p = 30.2 MPa, t = 22.6 mm, mass 69 kg, ballast ≈ 47 kg) and even converted the inherited 12 mm into a scaled cross-check (22.5 mm), but framed the flotation/ballast consequence out of scope in WHAT and reached it only via a REVIEW correction, and quantified uncertainty with a single ad hoc perturbation (±10% σ_allow → 20.6–25.0 mm was the human's, not the AI's, contribution).",
+  "learning_signal": "On checkable derivation problems the style's edge is (a) model-validity bounds checked before use (t/r ≤ 0.1, not assumed), (b) converting inherited experience by scaling instead of copying (12 mm → 22.5 mm ≈ derived 22.6 mm — a free verification route), and (c) operational consequences of the artifact (floats? sinks? fits?) treated as first-class design outputs. The AI exhibited (a) and (b) but needed process prompting for (c) and produced thinner calibration.",
+  "suggested_improvement": "Extend the WHAT-stage default frame for physical/engineering design tasks to include 'operational consequences of the artifact' (floats/sinks/fits/survives) as a mandatory output, and require ≥ 2 quantified perturbations of the dominant design assumption (here σ_allow) in the decision packet's uncertainty block instead of one ad hoc case."
+ },
+ {
+  "test_case_id": "m001-NEG-01",
+  "human_model": "First Principles Thinking",
+  "winner": "ai",
+  "key_gap": "Pure first-principles reasoning breached a hard SLA: it refused to act without mechanism, discarded the 85%/60% base rates as unmeasured correlation, re-derived what the runbook already encoded, and delivered a certain root cause 27 minutes late (healthy at T = 47 vs 20-min deadline). The AI won by carrying the deadline into every alternative's arithmetic (P×time per step), using the base rates as priors with a recurrence-based falsification rule, and designing each restart as remedy-plus-probe, resolving at T = 12.",
+  "learning_signal": "For time-boxed operational decisions, empirical base rates are evidence, not noise: 'understand before act' must be bounded by deadline arithmetic, a runbook is a prior to be updated rather than a shortcut to be re-derived, and action-as-probe (restart = remedy + diagnosis) is the correct synthesis of rigor and speed. The style's failure here was structural (time cost and prior-blindness), not a reasoning error.",
+  "suggested_improvement": "Add a TIME-BOXED decision mode in META for deadline-bearing tasks: compute elapsed-time × success-probability per alternative before selection; require an explicit update/falsification rule (recurrence → next step) wired into HOW; and cap open-ended investigation at a deadline-safe budget with a defined fallback action (here: recur → rollback) — and treat provided empirical base rates as mandatory priors unless directly contradicted."
+ },
+ {
+  "test_case_id": "m001-POS-02",
+  "human_model": "First Principles Thinking",
+  "winner": "human",
+  "key_gap": "AI matched the reference answer but collapsed the derivation behind a shortcut; human added a derived-constant verification route and physical calibration (container tare).",
+  "learning_signal": "Adopt a mandatory bottom-up derivation pass with units carried and real-world calibration anchors for estimation tasks.",
+  "suggested_improvement": "Add a post-verify calibration pass in WHY: derived-constant cross-check + priced uncertainty range."
+ },
+ {
+  "test_case_id": "m001-NEG-02",
+  "human_model": "First Principles Thinking",
+  "winner": "ai",
+  "key_gap": "Style-pure FP spent 27 min verifying the motor was fine; AI's base-rate EV ordering with reset-as-probe restored the pump in ~4 min.",
+  "learning_signal": "First-principles is anti-Bayesian when it refuses empirical priors; the probe-as-diagnostic + EV-ordered sequencing is the load-bearing move.",
+  "suggested_improvement": "Keep the cheap-fix-as-decisive-experiment reflex explicit; add base-rate-first ordering to HOW."
+ }
+]

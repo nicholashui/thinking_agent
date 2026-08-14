@@ -1,0 +1,18 @@
+[
+  {
+    "test_case_id": "m045-POS-01",
+    "human_model": "Ethical Reasoning Frameworks",
+    "winner": "human",
+    "key_gap": "The AI reached the same decision (disclose + hold) as the human and found the regulator trap, but it processed obligations as constraints inside a consequentialist frame: it never let the utilitarian reading run to its conclusion (under the company's optimistic prior the calculus licenses silent distribution), never stated the conflict between consequence-weighted welfare and categorical duty as a conflict, and quoted the 30/30 sample as 'clean' instead of its confidence bound (~10% 95% upper bound) with the prior made explicit. The conflict was the entire case; the AI's trace resolves it without ever naming it.",
+    "learning_signal": "The elite move in ethical reasoning is to let the lenses disagree on purpose: run each lens to its verdict with its priors stated, then decide against the named conflict and admit the cost of the non-chosen values. Consequence analysis is prior-dependent (an optimistic prior licenses the wrong answer on a clean sample); duty/virtue constraints bound the option set and collapse fake middles (here: disclosure makes the hold mandatory, deleting option (b)). Merging the lenses into 'welfare subject to constraints' produces the right answer while skipping the moral content.",
+    "suggested_improvement": "Add an ethical-frameworks pass to the WHY/HOW stages: (a) run the decision through utilitarian, deontological, and virtue readings separately, recording each verdict and its explicit priors; (b) require a conflict statement whenever the verdicts differ, as a mandatory packet field; (c) check option-set constraints (rules that collapse an alternative on disclosure or action) before scoring alternatives; (d) quote sampling evidence as confidence bounds, not point estimates."
+  },
+  {
+    "test_case_id": "m045-NEG-01",
+    "human_model": "Ethical Reasoning Frameworks",
+    "winner": "ai",
+    "key_gap": "The pure-framework baseline was decision-impotent and became the smokescreen it was commissioned to produce: it applied all three lenses earnestly, demonstrated (unwittingly) that each can justify either candidate, declared the choice 'a value judgment the frameworks cannot make,' and delivered the certification document for the board record — exactly the post-hoc justification the CEO ordered. It never questioned the premise that a review commissioned after the economics were fixed is ethics-washing.",
+    "learning_signal": "Ethical frameworks cannot rank conflicting values; expecting them to is what makes framework shopping possible. The first move on any 'ethics review' is a framing screen: who commissioned it, what decision was already made, and what the deliverable will be used for. When the lenses can justify every option, the honest output is not a certification but a memo that separates economics from ethics, demonstrates the shopping risk, and forces the decision-maker to state the prioritized value on the record.",
+    "suggested_improvement": "Add a framing screen before deep analysis in META/WHAT: (a) is this a genuine dilemma (lenses disagree on facts or values) or a decision dressed in ethics language? (b) if the lenses are outcome-insensitive, state that and refuse to certify a single answer; (c) when the deliverable is a justification for a fixed choice, flag the ethics-washing risk and reframe the deliverable (economics vs. ethics split, prioritization owned by the decision-maker); (d) log the red-flag pattern 'review ordered to justify whichever choice' for early detection."
+  }
+]

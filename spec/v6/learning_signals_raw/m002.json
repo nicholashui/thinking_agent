@@ -1,0 +1,18 @@
+[
+  {
+    "test_case_id": "m002-POS-01",
+    "human_model": "Second-Order Consequences Thinking",
+    "winner": "ai",
+    "key_gap": "vs baseline: the human baseline carried the full recursion (rebound-after-success, metric-gaming audit, 'market for rat production') early in a single elegant chain, while the non-routed v5 AI reached the same chains only as REVIEW risk notes and lost on depth, efficiency and insight. The routed pass made effects-of-effects a first-class contract output (2+ levels, backfire-chain check, time-horizon separation) and added what the human lacks: a falsifiable payment-vs-census observable, a structural robustness bound (any amateur ceiling < 600/mo leaves growth positive), and quantified exposure per exploit vector from the m019 adversary gate.",
+    "learning_signal": "On incentive/policy signatures with checkable arithmetic, an uncontracted consequences pass produces the deep chains late or partially; making 2-level tracing + backfire-chain check + time-horizon separation a completion contract, paired with a systems scan (falsifiable observable) and an adversary pass (quantified vectors), closes the home-turf gap at small narration cost.",
+    "suggested_improvement": "Keep m002 as a first-class pass on estimate/guarantee/adversarial signatures with its completion contract; pair with m019 (quantified exposure per vector) and m003 (ranked failure categories) whenever a payment metric drives policy; require the falsifiable observable (payment traceability vs census) as the m011 scan output, and treat the backfire-robustness bound as a mandatory packet evidence item."
+  },
+  {
+    "test_case_id": "m002-NEG-01",
+    "human_model": "Second-Order Consequences Thinking",
+    "winner": "ai",
+    "key_gap": "vs baseline: the human baseline generated five individually plausible downstream chains (vendor-channel trust, change-window consumption, 'patched = targeted', staging-vs-production, regulator signaling), never tested them, and let them accumulate into deferral — the case's reference outcome is a breach before the deferred install. The routed run held the trap with machinery: the m021 tempo pass framed a two-clock race (deploy latency ≈ 50 min vs exploit arrival) with cost-of-delay ≈ $1.7k/hr, the m007 ruin screen priced full distributions and floors (−$12k vs −$420k), the m044 stakeholder pass refuted or bounded every chain against given facts, and the m018 steel-manned deferral was rejected with its own arithmetic (EV ≈ $80k, telemetry given as unavailable in-window) — the v6 AI's step beyond the v5 AI is pricing the deferral position explicitly rather than only refuting it.",
+    "learning_signal": "On deadline/high-stakes signatures the second-order style's registered failure — paralysis by chain accumulation — is held by tempo mode (commit at DO), a ruin screen (floors + full distribution + probability provenance), and a refute-or-bound rule for every chain; chain generation without a decision-flip test and an EV/floor comparison is a deferral engine.",
+    "suggested_improvement": "For any consequence-tracing style on deadline signatures, gate every downstream chain with a decision-flip test before it may block an action; make the m007 ruin screen (floors, distribution, provenance) mandatory with c:high_stakes; run tempo mode committing at DO; and steel-man the deferral position so its rejection carries its own cost arithmetic in the packet."
+  }
+]

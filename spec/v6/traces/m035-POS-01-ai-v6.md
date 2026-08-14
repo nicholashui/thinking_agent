@@ -1,0 +1,44 @@
+# v6 Routed AI Trace — m035-POS-01 (blinded)
+## SaaS onboarding Flow B rollout — ship/no-ship on a single A/B result (+12.4% activation)
+### META (routing — blind router output)
+- Signature: d:engineering,medical,organization,product,science,security,software | g:decide,maximize | c:deadline,high_stakes
+- Router top3: m035, m094, m018; confidence gap <= 0.5 → AMBIGUOUS → DUAL-ROUTE: m035 + m094 first-class passes in HOW, synthesized (m018 = context). Gates (R3): high_stakes → m007 ruin screen (mandatory). Context deadline → TEMPO MODE (P2: cost-of-delay, commit at DO). No P8 (clickstream described, not enumerated).
+### WHAT — frame + structure-first scan (S1)
+- Frame: not "is +2.4 pp nonzero" (the dashboard already answered that) but "is the measured difference a behavior difference or an instrument difference?" Structure first: the two arms carry DIFFERENT instruments for the same labeled metric — Flow B auto-marks tutorial complete on final-screen tap, Flow A requires a quiz answer; the dashboard counts tutorial completion as "activation." The comparison is between constructs, not behaviors, until invariance is shown. Friday launch review = binding tempo.
+### WHY — P1 input-provenance audit
+- The report's claims: p = 0.003, CI [0.8, 4.0], dashboard "significant" flag — provenance: analytics dashboard, correct arithmetic on the dashboard's metric; the metric's construct validity is never established by the arithmetic (significance validates a metric, never the construct). The team recommending shipping is an interested party (rollout ownership). Given-data-first (P10): the clickstream (tutorial events, quiz responses, core actions) and day-level metrics are GIVEN — every robustness check below runs on data already held; no new-data alternative may be selected while a held-data check remains (P3 gate, m035-NEG lesson).
+### HOW — style passes (dual-route, synthesize)
+- Pass S1 (m035 replication & robustness — contract: replication-conditions named (settings/samples/methods variations); robustness battery run (>=2 perturbations, P4 calibration); artifact-vs-effect discrimination):
+  - Vary sample: 40% paid-search / 60% organic — paid A 17.0% → B 23.0% (+6.0 pp, p < 0.001); organic A 21.0% → B 21.0% (+0.0 pp, n.s.). Recomposition: 0.4×17.0 + 0.6×21.0 = 19.4% ✓; 0.4×23.0 + 0.6×21.0 = 21.8% ✓ — the whole effect lives in 40% of the sample.
+  - Vary definition (P4 perturbation #2, decisive): recompute outcome as "first core action within 7 days" from the same clickstream — paid A 16.8% → B 17.0%; organic A 20.8% → B 20.6%; aggregate ≈ 19.2% → 19.4% (+0.2 pp, n.s.). The effect does not survive any honest operationalization.
+  - Vary window (P4 perturbation #3): week 1 lift +17.5% rel (p < 0.01); week 2 +4.5% rel (n.s.) — decaying, novelty-shaped.
+  - Replication conditions named: what it would take to trust a future result — pre-registered core-action definition, per-segment reporting, >= 5% second-week stability gate. Artifact-vs-effect discrimination: the +12.4% is a DEFINITIONAL ARTIFACT — Flow B's auto-complete inflates its tutorial-completion metric, concentrated in the paid-search segment; no plausible variation of settings/sample/method/definition survives.
+- Pass S2 (m094 critical reading — interrogate the report as a text): the report asserts "statistically significant → ship." Question the premise: significant relative to WHAT construct? The dashboard counts tutorial completion, but the two arms measured different things (tap vs quiz answer) — the comparison is invalid before statistics. Who benefits from the framing? The team recommending the rollout; the flag is a dashboard artifact of the metric's definition. The corrected number is already in the report's own data.
+- Divergence (V1–V3): m035 and m094 AGREE (do not ship; artifact established in held data); general route agrees once the invariance check is run — agreement recorded.
+### GATES — m007 ruin screen (R3, high_stakes)
+- Ship-to-100k outcome distribution: best case — real lift (contradicted: no effect under honest definition); likely case — phantom adoption, inflated onboarding metrics, churn of confused users, costly re-rollout; worst case — team trusts the inflated number, doubles down on a broken flow, re-rollout + trust loss at the Friday review. Ruin check: asymmetric downside (rollout of an artifact) vs cost of holding (nothing — the answer is in the data). Floor: don't ship = preserves the current base with zero exposure. Decline/restructure alternative: decline the ship; restructure = report the corrected number + pre-registered definition for any future test. No Kelly/monetary floor applies (non-financial product decision) — exposure is user trust and rework, both bounded by not shipping.
+### DO — tempo mode (P2) + branch-completeness (P3)
+- Commit: block the rollout at Friday's review; deliver the corrected conclusion from existing data (no new experiment). Failure branch priced: if the definition-invariance recompute had NOT been computable (it was), only then hold + re-run; as it stands, the re-run alternative is suppressed (P3: no new-data alternative while held-data check available) — the v5 plan's 2-week re-run was paying for information already in hand.
+### REVIEW — insight pass (S2, packet gate)
+- I1: the +12.4% was never a measurement error — it was two different instruments wearing the same label; the arms compared tap-counting to quiz-grading, so the "lift" was the difference of the instruments, not of the flows.
+- I2: the p = 0.003 was perfectly correct arithmetic on a defective comparison — significance is a property of a fixed metric, never a warrant for the metric; the artifact was fully computable from the report's own clickstream, so "hold + re-run" was the most expensive way to read the answer the team already held.
+### DECISION PACKET
+- Conclusion: do NOT ship Flow B. Corrected conclusion from existing data: no effect under any honest operationalization; the +12.4% is a definitional artifact (auto-completed tutorial inflating Flow B's activation, concentrated in paid-search). Status: SOLVED (decision with verified artifact mechanism; recommendation — no external execution).
+- Assumptions: clickstream events reflect true behavior; experiment traffic mix ≈ production mix; dashboard metric counts tutorial completion as stated.
+- Evidence: segment recomposition (paid +6.0 pp / organic +0.0 pp; recomposition ✓), definition invariance (≈ +0.2 pp, n.s.), window split (+17.5% → +4.5% rel), instrument difference (tap vs quiz answer).
+- Alternatives: A ship to all (rejected — artifact exposure to 100k users) · B hold + pre-registered re-run (rejected — definition-invariance check on held data available; P3 suppresses new-data alternatives) · C ship paid-search only (rejected — the paid effect is itself definition-driven) · D don't ship + corrected report, trust conditions stated (selected).
+- Uncertainty: true core-action lift bounded (≈ +0.2 pp, n.s.); segment-share drift ±10% — does not change the conclusion (effect absent in every perturbation).
+- Risks: Friday review pressure to ship (mitigated: memo with recomputed numbers); metric drift in future tests (pre-registration); team morale after corrected result (framed as measurement win).
+## Comparison
+| Dimension | Human | AI | Winner | Notes |
+|---|---|---|---|---|
+| Goal Achievement | 5 | 5 | Tie | both deliver corrected conclusion (artifact, don't ship) from existing data |
+| Logical Validity | 5 | 5 | Tie | both chains reach the mechanism; AI adds instrument-invalidity framing |
+| Coherence & Structure | 4 | 5 | AI | contract-structured battery + packet vs linear narrative battery |
+| Depth of Reasoning | 5 | 5 | Tie | definition invariance + recomposition + mechanism on both sides |
+| Efficiency | 5 | 5 | Tie | zero new data both; routed pass computes artifact from held data (v5 was 3 — re-run plan suppressed) |
+| Handling of Uncertainty | 4 | 5 | AI | AI formalizes trust conditions + ruin screen + falsifiable packet lines; human states conditions narratively |
+| Insight / Non-obviousness | 5 | 5 | Tie | human: auto-complete mechanism; AI: instruments-differ framing + significance-validates-metric |
+| Overall Quality | 4.7 | 4.8 | AI | margin 0.1 <= 0.3 → J1 second-judge flag noted |
+
+Winner: AI (narrow). Why: the routed m035 pass made the definition-invariance check a first-class HOW output (contract: replication conditions + >=2 P4 perturbations + artifact-vs-effect discrimination), so the +12.4% is overturned in held data and the v5 run's "hold + re-run" alternative is suppressed by the P3 gate — the v5 gap (AI 4.0, stopped at instability) closes to parity-plus: the m094 dual pass interrogated the significance framing, and the m007 ruin screen priced the ship-artifact downside that the human baseline leaves implicit.

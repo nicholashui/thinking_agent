@@ -1,0 +1,4 @@
+# file: C:\Project\thinking_agent\thinking_agent_v8\src\thinking_agent\sdl\ledger.py
+# hypothesis_version: 6.151.12
+
+[0.0, 'challenge_id', 'dimensions', 'entry_type', 'gap_delta', 'lessons', 'plan_ref', 'routed_styles', 'signature', 'source', 'supersedes_entry_id', 'timestamp', 'verdict', 'when_to_use_triggers']

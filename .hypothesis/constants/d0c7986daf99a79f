@@ -1,0 +1,4 @@
+# file: C:\Project\thinking_agent\thinking_agent_v8\src\thinking_agent\graphs\evaluation_episode_graph.py
+# hypothesis_version: 6.151.12
+
+[0.0, 4.3, 'Overall Quality', 'ai', 'challenge_id', 'configurable', 'ctx', 'decision_packet', 'dimension_gap', 'dimensions', 'error', 'first', 'gap_id', 'gap_update', 'human_overall', 'human_packet', 'judge_episode', 'judge_failed', 'learning_signal', 'ledger_entry_id', 'magnitude', 'packet', 'plan_ref', 'request', 'routed_styles', 'run_task', 'signature', 'source', 'task_graph', 'task_request', 'thread_id', 'verdict', 'winner']

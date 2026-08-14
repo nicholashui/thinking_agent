@@ -1,0 +1,4 @@
+# file: C:\Project\thinking_agent\thinking_agent_v8\src\thinking_agent\styles\router.py
+# hypothesis_version: 6.151.12
+
+[0.5, 1.0, 'AMBIGUOUS', 'CLEAR', 'G1', 'G2', 'HOME_TURF', 'NEG', 'POS', 'adversarial', 'data', 'design_records.jsonl', 'engineering', 'guarantee', 'high_stakes', 'human', 'm003', 'm006', 'm007', 'm012', 'm014', 'm019', 'm022', 'm071', 'm101', 'm102', 'm103', 'm104', 'maximize', 'medical', 'one_shot', 'routing_records', 'science', 'score', 'software', 'strategy', 'supply', 'unmeasured', 'utf-8', 'v8-import', 'weighted_match']

@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 420" font-family="Segoe UI, sans-serif">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#5f6368"/>
+    </marker>
+  </defs>
+  <rect width="860" height="420" fill="#ffffff"/>
+
+  <text x="430" y="26" font-size="14" font-weight="bold" fill="#202124" text-anchor="middle">Native service processes (production — impl §29.3) · no Docker</text>
+
+  <!-- services -->
+  <g text-anchor="middle" font-size="12">
+    <rect x="30"  y="50" width="150" height="96" rx="8" fill="#e8f0fe" stroke="#1a73e8"/>
+    <text x="105" y="74" font-weight="bold" fill="#174ea6">API / RUNTIME</text>
+    <text x="105" y="93" fill="#174ea6">task graph</text>
+    <text x="105" y="109" fill="#174ea6">public API</text>
+    <text x="105" y="125" fill="#174ea6">own OS user</text>
+
+    <rect x="200" y="50" width="150" height="96" rx="8" fill="#fce8e6" stroke="#d93025"/>
+    <text x="275" y="74" font-weight="bold" fill="#a50e0e">KERNEL POLICY</text>
+    <text x="275" y="93" fill="#a50e0e">World Facts</text>
+    <text x="275" y="109" fill="#a50e0e">signed versions</text>
+    <text x="275" y="125" fill="#a50e0e">least privilege</text>
+
+    <rect x="370" y="50" width="150" height="96" rx="8" fill="#f3e8fd" stroke="#9334e6"/>
+    <text x="445" y="74" font-weight="bold" fill="#7627bb">TOOL EXECUTION</text>
+    <text x="445" y="93" fill="#7627bb">broker</text>
+    <text x="445" y="109" fill="#7627bb">isolated</text>
+    <text x="445" y="125" fill="#7627bb">no shell</text>
+
+    <rect x="540" y="50" width="150" height="96" rx="8" fill="#e6f4ea" stroke="#188038"/>
+    <text x="615" y="74" font-weight="bold" fill="#137333">EVALUATION</text>
+    <text x="615" y="93" fill="#137333">judge worker</text>
+    <text x="615" y="109" fill="#137333">verdicts only</text>
+    <text x="615" y="125" fill="#137333">calibration</text>
+
+    <rect x="710" y="50" width="130" height="96" rx="8" fill="#fef7e0" stroke="#f9ab00"/>
+    <text x="775" y="74" font-weight="bold" fill="#b06000">SDL</text>
+    <text x="775" y="93" fill="#b06000">scheduler</text>
+    <text x="775" y="109" fill="#b06000">discovery</text>
+    <text x="775" y="125" fill="#b06000">review</text>
+  </g>
+
+  <!-- scheduled jobs -->
+  <rect x="30" y="176" width="800" height="130" rx="8" fill="#e8eaed" stroke="#5f6368"/>
+  <text x="430" y="198" font-size="13" font-weight="bold" fill="#3c4043" text-anchor="middle">SCHEDULED OPERATIONS (systemd timer · launchd · Task Scheduler)</text>
+  <g font-size="11.5" fill="#3c4043" text-anchor="middle">
+    <rect x="50" y="214" width="180" height="74" rx="6" fill="#ffffff" stroke="#5f6368"/>
+    <text x="140" y="235" font-weight="bold">EVERY 5 MIN</text>
+    <text x="140" y="253">pending-approval</text>
+    <text x="140" y="269">timeout checks</text>
+    <rect x="248" y="214" width="180" height="74" rx="6" fill="#ffffff" stroke="#5f6368"/>
+    <text x="338" y="235" font-weight="bold">PER PLAN / 10 TRIALS</text>
+    <text x="338" y="253">quick SDL review</text>
+    <text x="338" y="269">follow-through</text>
+    <rect x="446" y="214" width="180" height="74" rx="6" fill="#ffffff" stroke="#5f6368"/>
+    <text x="536" y="235" font-weight="bold">MONTHLY</text>
+    <text x="536" y="253">deep review</text>
+    <text x="536" y="269">judge calibration</text>
+    <rect x="644" y="214" width="172" height="74" rx="6" fill="#ffffff" stroke="#5f6368"/>
+    <text x="730" y="235" font-weight="bold">QUARTERLY / DAILY</text>
+    <text x="730" y="253">blind reruns</text>
+    <text x="730" y="269">backups · ledger verify</text>
+  </g>
+
+  <!-- backup -->
+  <rect x="30" y="326" width="800" height="70" rx="8" fill="#fce8e6" stroke="#d93025"/>
+  <text x="430" y="348" font-size="12.5" font-weight="bold" fill="#a50e0e" text-anchor="middle">BACKUP / RESTORE</text>
+  <text x="430" y="368" font-size="11" fill="#a50e0e" text-anchor="middle">SQLite DBs · checkpoints · kernel policy versions · ledger · routing KB · memory · packets · improvement records · audit logs · manifests</text>
+  <text x="430" y="384" font-size="11" fill="#a50e0e" text-anchor="middle">restore test into a scratch path BEFORE production acceptance — required</text>
+</svg>

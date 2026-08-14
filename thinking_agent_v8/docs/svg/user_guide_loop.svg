@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 460" font-family="Segoe UI, sans-serif">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#5f6368"/>
+    </marker>
+  </defs>
+  <rect width="860" height="460" fill="#ffffff"/>
+
+  <!-- governed loop stages -->
+  <g font-size="15" text-anchor="middle">
+    <rect x="40"   y="180" width="110" height="46" rx="8" fill="#e8f0fe" stroke="#1a73e8"/>
+    <text x="95"  y="208" fill="#174ea6" font-weight="bold">META</text>
+    <rect x="175"  y="180" width="110" height="46" rx="8" fill="#e8f0fe" stroke="#1a73e8"/>
+    <text x="230" y="208" fill="#174ea6" font-weight="bold">WHAT</text>
+    <rect x="310"  y="180" width="110" height="46" rx="8" fill="#e8f0fe" stroke="#1a73e8"/>
+    <text x="365" y="208" fill="#174ea6" font-weight="bold">WHY</text>
+    <rect x="445"  y="180" width="110" height="46" rx="8" fill="#e8f0fe" stroke="#1a73e8"/>
+    <text x="500" y="208" fill="#174ea6" font-weight="bold">HOW</text>
+    <rect x="580"  y="180" width="110" height="46" rx="8" fill="#e8f0fe" stroke="#1a73e8"/>
+    <text x="635" y="208" fill="#174ea6" font-weight="bold">DO</text>
+    <rect x="715"  y="180" width="110" height="46" rx="8" fill="#e8f0fe" stroke="#1a73e8"/>
+    <text x="770" y="208" fill="#174ea6" font-weight="bold">REVIEW</text>
+  </g>
+  <g stroke="#5f6368" stroke-width="1.6" fill="none" marker-end="url(#arrow)">
+    <line x1="150" y1="203" x2="172" y2="203"/>
+    <line x1="285" y1="203" x2="307" y2="203"/>
+    <line x1="420" y1="203" x2="442" y2="203"/>
+    <line x1="555" y1="203" x2="577" y2="203"/>
+    <line x1="690" y1="203" x2="712" y2="203"/>
+  </g>
+  <!-- loop back -->
+  <path d="M 770 226 C 770 300, 95 300, 95 230" stroke="#5f6368" stroke-width="1.4" fill="none" marker-end="url(#arrow)"/>
+  <text x="432" y="316" font-size="13" fill="#5f6368" text-anchor="middle">governed loop — budgets · gates · plateau · reframe (bounded, wait-exempt)</text>
+
+  <!-- verify band -->
+  <rect x="40" y="72" width="785" height="46" rx="8" fill="#e6f4ea" stroke="#188038"/>
+  <text x="432" y="92" font-size="14" fill="#137333" text-anchor="middle" font-weight="bold">CONTINUOUS VERIFY — candidate · outcome · second-verifier rule · class bars · caches</text>
+  <text x="432" y="109" font-size="12" fill="#137333" text-anchor="middle">SOLVED only from outcome verification · escalation never passes through verify</text>
+  <line x1="432" y1="118" x2="432" y2="177" stroke="#188038" stroke-width="1.2" stroke-dasharray="4 3" marker-end="url(#arrow)"/>
+
+  <!-- terminal states -->
+  <g font-size="12.5" text-anchor="middle">
+    <rect x="40"  y="350" width="92" height="40" rx="8" fill="#e6f4ea" stroke="#188038"/>
+    <text x="86"  y="375" fill="#137333">SOLVED</text>
+    <rect x="141" y="350" width="92" height="40" rx="8" fill="#e6f4ea" stroke="#188038"/>
+    <text x="187" y="375" fill="#137333">APPROXIMATED</text>
+    <rect x="242" y="350" width="92" height="40" rx="8" fill="#fef7e0" stroke="#f9ab00"/>
+    <text x="288" y="368" fill="#b06000">NEEDS_</text>
+    <text x="288" y="383" fill="#b06000">EVIDENCE</text>
+    <rect x="343" y="350" width="92" height="40" rx="8" fill="#fef7e0" stroke="#f9ab00"/>
+    <text x="389" y="368" fill="#b06000">NEEDS_</text>
+    <text x="389" y="383" fill="#b06000">EXPERIMENT</text>
+    <rect x="444" y="350" width="92" height="40" rx="8" fill="#fef7e0" stroke="#f9ab00"/>
+    <text x="490" y="375" fill="#b06000">INFEASIBLE</text>
+    <rect x="545" y="350" width="92" height="40" rx="8" fill="#fce8e6" stroke="#d93025"/>
+    <text x="591" y="375" fill="#a50e0e">UNSAFE</text>
+    <rect x="646" y="350" width="92" height="40" rx="8" fill="#fce8e6" stroke="#d93025"/>
+    <text x="692" y="375" fill="#a50e0e">ESCALATED</text>
+    <rect x="747" y="350" width="92" height="40" rx="8" fill="#e8eaed" stroke="#5f6368"/>
+    <text x="793" y="368" fill="#3c4043">RESOURCE_</text>
+    <text x="793" y="383" fill="#3c4043">LIMITED</text>
+  </g>
+  <line x1="432" y1="245" x2="432" y2="347" stroke="#5f6368" stroke-width="1.2" stroke-dasharray="4 3" marker-end="url(#arrow)"/>
+  <text x="432" y="418" font-size="12.5" fill="#5f6368" text-anchor="middle">eight — and only eight — terminal states, each with a proof-carrying decision packet</text>
+
+  <!-- packet -->
+  <rect x="240" y="8" width="380" height="42" rx="8" fill="#f3e8fd" stroke="#9334e6"/>
+  <text x="430" y="26" font-size="13" fill="#7627bb" text-anchor="middle" font-weight="bold">DECISION PACKET</text>
+  <text x="430" y="42" font-size="11.5" fill="#7627bb" text-anchor="middle">route · diagnosis · solution · safety · verification · execution · review · provenance</text>
+  <line x1="430" y1="50" x2="430" y2="69" stroke="#9334e6" stroke-width="1.2" stroke-dasharray="4 3" marker-end="url(#arrow)"/>
+</svg>

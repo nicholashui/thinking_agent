@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 300" font-family="Segoe UI, sans-serif">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#5f6368"/>
+    </marker>
+  </defs>
+  <rect width="860" height="300" fill="#ffffff"/>
+
+  <g text-anchor="middle" font-size="12.5">
+    <rect x="20"  y="40" width="150" height="110" rx="8" fill="#e8f0fe" stroke="#1a73e8"/>
+    <text x="95" y="64" font-weight="bold" fill="#174ea6">1. ENVIRONMENT</text>
+    <text x="95" y="84" fill="#174ea6">Python ≥ 3.12</text>
+    <text x="95" y="100" fill="#174ea6">python -m venv .venv</text>
+    <text x="95" y="116" fill="#174ea6">Windows: Scripts\activate</text>
+    <text x="95" y="132" fill="#174ea6">Unix: source bin/activate</text>
+
+    <rect x="190" y="40" width="150" height="110" rx="8" fill="#e8f0fe" stroke="#1a73e8"/>
+    <text x="265" y="64" font-weight="bold" fill="#174ea6">2. INSTALL</text>
+    <text x="265" y="84" fill="#174ea6">pip install</text>
+    <text x="265" y="100" fill="#174ea6">-e ".[dev,sqlite]"</text>
+    <text x="265" y="120" fill="#174ea6">no Docker —</text>
+    <text x="265" y="136" fill="#174ea6">native processes</text>
+
+    <rect x="360" y="40" width="150" height="110" rx="8" fill="#e8f0fe" stroke="#1a73e8"/>
+    <text x="435" y="64" font-weight="bold" fill="#174ea6">3. VERIFY</text>
+    <text x="435" y="84" fill="#174ea6">pytest tests/ -q</text>
+    <text x="435" y="100" fill="#174ea6">120 tests</text>
+    <text x="435" y="116" fill="#174ea6">ruff check src/</text>
+    <text x="435" y="132" fill="#174ea6">CLI smoke run</text>
+
+    <rect x="530" y="40" width="150" height="110" rx="8" fill="#fce8e6" stroke="#d93025"/>
+    <text x="605" y="64" font-weight="bold" fill="#a50e0e">4. POLICY</text>
+    <text x="605" y="84" fill="#a50e0e">kernel YAML</text>
+    <text x="605" y="100" fill="#a50e0e">fail-closed load</text>
+    <text x="605" y="116" fill="#a50e0e">operator-written</text>
+    <text x="605" y="132" fill="#a50e0e">never task-written</text>
+
+    <rect x="700" y="40" width="140" height="110" rx="8" fill="#e6f4ea" stroke="#188038"/>
+    <text x="770" y="64" font-weight="bold" fill="#137333">5. PROVIDERS</text>
+    <text x="770" y="84" fill="#137333">optional extras</text>
+    <text x="770" y="100" fill="#137333">keys from env</text>
+    <text x="770" y="116" fill="#137333">never in repo</text>
+    <text x="770" y="132" fill="#137333">runtime wiring</text>
+  </g>
+
+  <g stroke="#5f6368" stroke-width="1.4" marker-end="url(#arrow)">
+    <line x1="170" y1="95" x2="187" y2="95"/>
+    <line x1="340" y1="95" x2="357" y2="95"/>
+    <line x1="510" y1="95" x2="527" y2="95"/>
+    <line x1="680" y1="95" x2="697" y2="95"/>
+  </g>
+
+  <rect x="240" y="180" width="380" height="80" rx="8" fill="#fef7e0" stroke="#f9ab00"/>
+  <text x="430" y="204" font-size="12.5" font-weight="bold" fill="#b06000" text-anchor="middle">OPTIONAL: DURABLE CHECKPOINTS</text>
+  <text x="430" y="224" font-size="11" fill="#b06000" text-anchor="middle">--sqlite data/agent.db → cross-process resume · owner-only 0600 (POSIX)</text>
+  <text x="430" y="242" font-size="11" fill="#b06000" text-anchor="middle">Windows: keep inside the account-scoped profile — never a shared volume</text>
+
+  <text x="430" y="284" font-size="11" fill="#5f6368" text-anchor="middle">platform scheduling: Windows Task Scheduler · Linux systemd timers · macOS launchd</text>
+</svg>

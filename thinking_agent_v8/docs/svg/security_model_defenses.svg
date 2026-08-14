@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 500" font-family="Segoe UI, sans-serif">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#5f6368"/>
+    </marker>
+  </defs>
+  <rect width="860" height="500" fill="#ffffff"/>
+
+  <rect x="20" y="12" width="390" height="60" rx="8" fill="#fce8e6" stroke="#d93025"/>
+  <text x="215" y="34" font-size="13.5" font-weight="bold" fill="#a50e0e" text-anchor="middle">UNTRUSTED TASK MODEL</text>
+  <text x="215" y="52" font-size="11" fill="#a50e0e" text-anchor="middle">may propose, frame, generate, suggest — never authorize, verify, or write learning state</text>
+  <text x="215" y="66" font-size="10.5" fill="#a50e0e" text-anchor="middle">(prompt-injected or malicious)</text>
+
+  <!-- attack list -->
+  <text x="215" y="96" font-size="12.5" font-weight="bold" fill="#3c4043" text-anchor="middle">ATTACK VECTORS</text>
+  <g font-size="11" fill="#3c4043">
+    <text x="60" y="118">raise own budget / change policy</text>
+    <text x="60" y="136">inject verifier identities</text>
+    <text x="60" y="154">skip the second verifier</text>
+    <text x="60" y="172">execute unregistered tools</text>
+    <text x="60" y="190">token below action class</text>
+    <text x="60" y="208">SSRF via retrieval tools</text>
+    <text x="60" y="226">code injection via calculator</text>
+    <text x="60" y="244">replicate itself</text>
+    <text x="60" y="262">tamper the ledger / KB</text>
+    <text x="60" y="280">execute a DRAFT learning plan</text>
+    <text x="60" y="298">judge its own trials</text>
+    <text x="60" y="316">leak chain-of-thought</text>
+  </g>
+
+  <!-- defenses -->
+  <text x="645" y="96" font-size="12.5" font-weight="bold" fill="#3c4043" text-anchor="middle">DEFENSES (code-enforced)</text>
+  <g font-size="11" fill="#3c4043">
+    <text x="420" y="118">FrozenModel deep-freeze (FrozenDict + tuples)</text>
+    <text x="420" y="136">frozen identity tuple · kernel policy only</text>
+    <text x="420" y="154">2 distinct registered verifiers must actually verify</text>
+    <text x="420" y="172">broker allowlist — unregistered never runs</text>
+    <text x="420" y="190">rank check: token class ≥ tool class</text>
+    <text x="420" y="208">domain allowlist before any request leaves</text>
+    <text x="420" y="226">AST-whitelist evaluator — no eval</text>
+    <text x="420" y="244">REPLICATE → UNSAFE at attestation</text>
+    <text x="420" y="262">append-only hash chain · judge-pipeline writes</text>
+    <text x="420" y="280">invariant 14 gate raises on DRAFT</text>
+    <text x="420" y="298">judge is a separate identity; failure → zero writes</text>
+    <text x="420" y="316">packet schema has no CoT fields; audit hashes only</text>
+  </g>
+
+  <g stroke="#5f6368" stroke-width="1.2" marker-end="url(#arrow)">
+    <line x1="330" y1="115" x2="410" y2="115"/>
+    <line x1="330" y1="133" x2="410" y2="133"/>
+    <line x1="330" y1="151" x2="410" y2="151"/>
+    <line x1="330" y1="169" x2="410" y2="169"/>
+    <line x1="330" y1="187" x2="410" y2="187"/>
+    <line x1="330" y1="205" x2="410" y2="205"/>
+    <line x1="330" y1="223" x2="410" y2="223"/>
+    <line x1="330" y1="241" x2="410" y2="241"/>
+    <line x1="330" y1="259" x2="410" y2="259"/>
+    <line x1="330" y1="277" x2="410" y2="277"/>
+    <line x1="330" y1="295" x2="410" y2="295"/>
+    <line x1="330" y1="313" x2="410" y2="313"/>
+  </g>
+
+  <!-- trust boundary band -->
+  <rect x="20" y="340" width="820" height="56" rx="8" fill="#e6f4ea" stroke="#188038"/>
+  <text x="430" y="362" font-size="13" font-weight="bold" fill="#137333" text-anchor="middle">KERNEL TRUST BOUNDARY</text>
+  <text x="430" y="381" font-size="11" fill="#137333" text-anchor="middle">frozen policy snapshot · kernel facade · attestation · authorization tokens · static PENDING allowlist</text>
+
+  <rect x="20" y="412" width="820" height="70" rx="8" fill="#fef7e0" stroke="#f9ab00"/>
+  <text x="430" y="432" font-size="12.5" font-weight="bold" fill="#b06000" text-anchor="middle">VERDICT-DERIVED WRITE PATH</text>
+  <text x="430" y="449" font-size="11" fill="#b06000" text-anchor="middle">judge pipeline → ledger appends · gap-map entries · routing KB rates — the task model has NO write credential</text>
+  <text x="430" y="465" font-size="11" fill="#b06000" text-anchor="middle">invariants 11 · 12 · 13 · 14</text>
+
+  <text x="430" y="494" font-size="10.5" fill="#5f6368" text-anchor="middle">every row above has a dedicated regression test (tests/security/, tests/sdl/ S46–S50)</text>
+</svg>

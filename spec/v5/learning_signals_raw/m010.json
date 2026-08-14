@@ -1,0 +1,18 @@
+[
+  {
+    "test_case_id": "m010-POS-01",
+    "human_model": "Calibration & Confidence Intervals",
+    "winner": "human",
+    "key_gap": "AI quoted 90% intervals using the standard error of the mean (tomorrow 91 ± 1.645×12/√9 = [84.4, 97.6]; week [692.7, 713.3]) instead of prediction intervals with observation-level noise; both grader-held true values (74, 688) fell outside its intervals, while the human's t-corrected prediction intervals ([67.5, 114.5], [642.4, 763.6]) covered both. AI stated one edge case without recalibrating the bounds, ran no overconfidence audit, and its verification pass merely re-derived the same formula instead of checking the quantity being predicted.",
+    "learning_signal": "Forecasting a single future observation requires a prediction interval (mean ± t·s·√(1+1/n)), not a confidence interval on the mean (±z·s/√n) — the SE-of-mean error shrinks the interval by ~√n and is the canonical overconfidence failure; coverage is directly gradeable against reference realizations. Calibration discipline = PI-vs-CI discrimination + finite-sample t-correction (n < 30) + stated expected long-run coverage (~90%) + edge cases that shift the bounds, with the direction and size of each shift.",
+    "suggested_improvement": "Add a REVIEW-stage calibration gate to the agent: (1) classify the target — mean or single observation; if a single observation, the interval must include observation noise s·√(1+1/n); (2) use t(df = n−1) when n < 30; (3) state expected long-run coverage; (4) require ≥3 edge cases with direction and rough size of bound shift; (5) require the self-audit sentence 'what would make this interval miss, and how often should it miss' before declaring SOLVED. The verification pass must validate the quantity (observation vs mean), not just re-derive the formula."
+  },
+  {
+    "test_case_id": "m010-NEG-01",
+    "human_model": "Calibration & Confidence Intervals",
+    "winner": "ai",
+    "key_gap": "Pure calibration produced an honest but inert 90%+ interval ([$270K, $450K]; E[cost] $324K) and, facing a take-it-or-leave-it 24 h deadline, declined to commit ('no defensible number; recommend discovery phase') — the contract went to the competitor and the default choice (EV 0) was never costed. The AI kept the honest range AND converted it into a committed bid ($387K, EV +$39.7K, 20% loss probability, change-order/exit clause for the volume tail).",
+    "learning_signal": "A calibrated range is a state, not an action: when a decision is required within bounded information, the interval must be converted via EV/threshold arithmetic into a committed number with a stated loss probability and conditional clauses; 'decline because the range is wide' is itself a decision with EV ≈ 0 and must be justified as such. The decisive move is running the EV pass after (not instead of) the interval pass.",
+    "suggested_improvement": "Add a commitment gate at the DO boundary: if the task demands a decision by deadline and evidence is bounded, require (1) the honest interval first, then (2) an EV table over the stated distribution for ≥2 committed alternatives including decline (costed at EV 0), then (3) a selected number + loss probability + renegotiation/exit clause. The gate fails if the packet ends at an interval without a committed action."
+  }
+]

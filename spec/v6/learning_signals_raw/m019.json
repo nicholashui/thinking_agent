@@ -1,0 +1,34 @@
+[
+  {
+    "test_case_id": "m019-POS-01",
+    "human_model": "Red Teaming / Devil's Advocate",
+    "winner": "ai",
+    "key_gap": "vs baseline: the human attacked every line item (data movement, auth model, publication, external timelines) and ranked LxI; the v5 AI found only the pattern-recognizable flaws (bonus gaming, survey gating, premature publication) and conditionally approved — approving the breach (PII + password-reset tokens to pre-SOC2 staging with a public unauthenticated export endpoint, shared admin login, no DPIA) and the timeline collision (60-90-day customer vendor-risk review vs 2-week go-live). The routed m019 pass contract (exploit-vector enumeration with identity gates and guessable formats, quantified exposure per vector, unconsulted-stakeholder inventory, do-nothing-loss baseline, LxI-ranked objections) plus the m006/m007 gates closed the find set to all 5 planted flaws and flipped the verdict to block-as-written.",
+    "learning_signal": "On adversarial plan reviews the adversary pass must be a line-item attack with a completion contract: exploit-vector enumeration (identity gates, guessable formats) with quantified exposure per vector, unconsulted-stakeholder and external-approval-cycle inventory, do-nothing-loss baseline, and LxI-ranked objections — otherwise the pattern-recognizable incentive/metric flaws are found while the fatal security and stakeholder-timeline items sitting in plain text get approved.",
+    "suggested_improvement": "Keep the m019 pass contract as a standing contract for any adversarial/high-stakes plan review; require a per-line-item data-movement audit (what data, where it lands, auth model, certification state, legal sign-off) and an external-stakeholder timeline inventory in the packet before any conditional approval; verify by re-reading the plan text line by line, not by re-deriving already-drawn conclusions."
+  },
+  {
+    "test_case_id": "m019-NEG-01",
+    "human_model": "Red Teaming / Devil's Advocate",
+    "winner": "ai",
+    "key_gap": "vs baseline: the human baseline is the style's trap executed — every hypothetical (key loss, auth-server outage, firmware, SOC 2 addendum) at full severity, inaction treated as risk-free while password-only EHR access with 41 shared accounts, 3 leaked credentials, and an active brute-force attempt last month continues. The routed dual-run (m018 steelman vs m019 adversary, synthesized) prices inaction first (do-nothing-loss line), likelihood-ranks all six objections, and rejects >=3 false alarms with their rejecting evidence (SLA, recovery workflow, rollback test, artifact-vs-functional), reaching a reversible time-boxed approval with monitoring and named abort criteria.",
+    "learning_signal": "Red teaming without calibration is hazard theater: 'could happen' is not a blocker where the baseline is already failing; the completion contract's do-nothing-loss-first rule and reject-objection log are what convert attack into decision — the decision compares baseline risk vs mitigation risk, never absolute safety.",
+    "suggested_improvement": "Dual-route m018+m019 on go/no-go signatures (steelman vs attack, divergence resolved by branch-completeness + calibration); keep the m003 inversion gate's never/always reframing (delay is a decision) and the m007 floor/abort-criteria checks as standing gates on high_stakes reversible decisions; require an inaction-cost sentence in every go/no-go packet."
+  },
+  {
+    "test_case_id": "m019-POS-02",
+    "human_model": "Red Teaming / Devil's Advocate",
+    "winner": "ai",
+    "key_gap": "vs baseline: both found all 4 planted flaws and the farm arithmetic; the closed gap is the v5 AI's — it deferred the sequential-code enumeration vector (F2) to a follow-up check and conditionally approved. The routed m019 contract (guessable-format enumeration with identity gates, per-vector quantified exposure, baseline-risk comparison, LxI-ranked objections) made F2 a mandatory pass output, and the m003/m007 gates added >=6 LxI-ranked failure categories, an outcome distribution, and a threshold-flip stability argument, flipping the verdict to block-as-written with a redesign. Human craft moves (press story, honest-referrer crowding) are matched by the routed run's insights (referrer-pays-the-adversary; metric-as-product).",
+    "learning_signal": "On adversarial plan reviews the difference between flagging and finding an exploit vector is the contract: guessable formats and identity gates must be enumerated as vectors with a cost-to-exploit per vector (sequential code: $0 per extra code) and quantified exposure, not deferred to follow-up — the completion contract converts the strongest human move into a structural requirement.",
+    "suggested_improvement": "Keep the m019 exploit-vector contract as written; add a cost-to-exploit line per vector to the contract (exploit cost, not only dollar exposure) and a mandatory threshold-flip sentence in the packet for the key unmeasured parameter; verify by re-reading the plan for formats and gates line by line."
+  },
+  {
+    "test_case_id": "m019-NEG-02",
+    "human_model": "Red Teaming / Devil's Advocate",
+    "winner": "ai",
+    "key_gap": "vs baseline: the human baseline is the style's trap executed — every hypothetical at full severity, inaction treated as risk-free while an EOL mainframe with two unpatched critical CVEs (RCE, privilege escalation) continues. The routed run prices inaction first (do-nothing-loss line), rejects >=3 manufactured/already-mitigated objections with their rejecting evidence (rollback test, SLA, multi-AZ fallback, canary-as-productionization), runs m006's 3-scenario range (5/25/55%) with a threshold flip at ~15% that kills the delay branch, m007's ruin screen (the ruin tail lives in the delay branch), and tempo mode's cost-of-delay line (~$1.25M/month carry), reaching a reversible staged go-live with named abort criteria. The v5 AI reached the same verdict; v6 makes the delay-cost sentence, scenario range, and abort criteria structural rather than emergent.",
+    "learning_signal": "Red teaming without calibration is hazard theater: could-happen is not a blocker where the baseline is already failing; the completion contract's baseline-first rule, reject-objections-log, and threshold-flip demonstration are what convert attack into decision — the decision compares baseline risk vs mitigation risk, never absolute safety.",
+    "suggested_improvement": "Dual-route m019+m018 on go/no-go signatures (attack vs steelman, divergence resolved by branch completeness + calibration); keep m003 never/always reframing (delay is a decision), the m006 threshold-flip, and m007 floor/abort-criteria as standing R3 gates on high_stakes reversible decisions; require a cost-of-delay sentence in every deadline-mode packet."
+  }
+]

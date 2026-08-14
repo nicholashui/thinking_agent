@@ -1,0 +1,18 @@
+[
+  {
+    "test_case_id": "m043-POS-01",
+    "human_model": "Temporal Thinking (Short vs Long Term)",
+    "winner": "ai",
+    "key_gap": "vs baseline: the baseline's whole trace WAS the horizon table (verdict + weight per horizon, flip identified, 6-month cost mitigated in the plan); the non-routed v5 AI reached the same decision but horizon separation arrived only as a verification device, named the 6-month suffering a 'transition cost' (corrected in REVIEW), and weighted horizons by intuition. The v6 routed run closed every gap first-class: the horizon-separated pass produced the 1-day/1-year/10-year verdict+weight table with the stated primary-endpoint rule (10-year survival) before selection, the honesty guard priced months 1-6 as a mitigated plan item, and the m007 ruin screen added probability provenance, a one-shot check, and the priced S-with-fallback alternative.",
+    "learning_signal": "On time-staggered decisions the routed horizon-separated pass (1 day / 1 year / 10 years evaluated separately, per-horizon verdict + weight, discounting rule explicit, intertemporal-honesty guard) executes the style's winning moves as a first-class contract — no horizon collapsed, near-term costs priced rather than rationalized — and matches the pure-style baseline on every rubric line (a)-(e), where the non-routed run failed three of the five structurally.",
+    "suggested_improvement": "Keep the horizon-separated pass routed for decide/estimate signatures carrying stated time horizons; make the per-horizon verdict+weight table and the discounting rule ('a later benefit never erases a certain near-term cost; it appears as a mitigated plan item') completion-contract outputs; pair with the m007 ruin screen whenever high_stakes; the insight pass should name the horizon flip itself as the analysis."
+  },
+  {
+    "test_case_id": "m043-NEG-01",
+    "human_model": "Temporal Thinking (Short vs Long Term)",
+    "winner": "ai",
+    "key_gap": "vs baseline: the baseline anchored on the 10-year horizon (800 jobs, plant survival), declared the near-term costs 'the price of the future,' computed $4.5M/yr only to dismiss it as tail-event noise, and never noticed the stated causal fact that an incident shuts the plant and destroys the 10-year goal itself. The v6 routed run ran the CEO's narrative as a claim to test (P1 provenance: interested-party anchor), applied the certainty×recurrence discounting rule (certain recurring harm at face value vs P = 0.25 speculative gain), added the m085 depletion frame (10 years of 0 incidents = silence of a working guard), and the m003 inversion gate enumerated 6 ranked failure categories including irreversibility and the self-defeating shutdown link before DO.",
+    "learning_signal": "Long-termism's failure mode is asymmetric discounting — speculative long-term gains weighted at face value while certain, recurring near-term harm is discounted away. The corrective is the intertemporal-honesty guard as a first-class pass (certainty×recurrence audit; probability attached to the speculative term; 'does the present harm defeat the future goal?' causality check) plus an inversion gate on guarantee signatures; with both, the trap the pure style fell into is gate-checked by construction.",
+    "suggested_improvement": "For any temporal trade-off narrative, route the horizon-separated pass with the honesty guard and pair it with m003 inversion (R4 guarantee): require (1) near-term EV vs near-term gain computed before long-horizon framing dominates selection, (2) a probability attached to every speculative benefit, (3) the incident-kills-the-goal causality check whenever a present sacrifice is proposed, (4) ≥6 ranked failure categories with the un-mitigable residual named."
+  }
+]

@@ -1,0 +1,18 @@
+[
+  {
+    "test_case_id": "m073-POS-01",
+    "human_model": "Game Theory / Strategic Interaction",
+    "winner": "ai",
+    "key_gap": "vs baseline: the pure human baseline executed the game-form-first pass in one clean sweep with the sunkness check landing as the signature insight (it is L's inability to resell, not the technology, that deters); the non-routed v5 AI reached the game form late and burned a pass screening a data-less partnership alternative. The routed v6 run installed the game form as the first move (structure-first scan + m073 completion contract: players/strategies/payoffs -> equilibrium -> commitment -> payoff-assumption fragility), priced the break-even on the +4 effect (e > 3, margin 1), and added the never-used insight and the boundary-niche point via the m019 gate and insight pass.",
+    "learning_signal": "On closed-payoff commitment cases the game form is the first move and the sunkness/observability (binding-property) test is a mandatory contract output, not a REVIEW-stage afterthought; dual-route with an evidence-weighting pass adds robustness at zero depth cost, and the closed-scope fast path eliminates data-less alternative screening that a non-routed run wastes effort on.",
+    "suggested_improvement": "Install m073's completion contract as a standing module for strategy/finance + decide/maximize + adversarial signatures: require players-strategies-payoffs enumeration, base-game backward induction with non-credible-threat flag, commitment re-solve, binding-property counterfactual (resellable variant), and payoff-assumption fragility notes; keep the m019 adversary gate on adversarial signatures; keep P8 fast path for closed verified inputs."
+  },
+  {
+    "test_case_id": "m073-NEG-01",
+    "human_model": "Game Theory / Strategic Interaction",
+    "winner": "ai",
+    "key_gap": "vs baseline: the pure baseline produced the correct equilibrium on an axiom (utility = money, atomized, one-shot; p = 1) and approved the epsilon-offer, treating the 41% pilot walk-off as noise — the style's registered weakness (payoff assumptions fragile) operating as designed. The routed run treated the model's prediction as a claim, audited provenance (p = 1 is an axiom with zero provenance; p ~ 0.6 is measured from the same company's pilot at a smaller cut), priced the walk-off tail (EV 1.1 vs 2.13, break-even p >= 0.85), and — new vs the v5 run — named the mechanism via the m084 synthesis context: the 4,200-member chat (2.2x the fleet) converts the 1,900-player one-shot into a repeated collective-action game, so the model solves the wrong game form.",
+    "learning_signal": "An equilibrium prediction that rests on utility = money + atomized + one-shot is a bound, not a forecast: when the case's own verified field data contradicts it, the field acceptance probability is the decision-relevant quantity, and the fragility must be diagnosed at the game-form level (coordination institutions, repeated vs one-shot) before any EV is computed — pure play alone yields the confident wrong recommendation.",
+    "suggested_improvement": "Keep the m019 + m070 dual-route with m007 + m019 gates on adversarial/high_stakes/one_shot signatures; add a standing 'wrong-game-form diagnosis' check to the m073 module (coordination institutions, reputation channels, repeated-vs-one-shot, who-benefits provenance on the model champion); the 4,200-chat > 2.2x-fleet atomization falsifier is a reusable observable for wage/gig-economy scenarios."
+  }
+]

@@ -1,0 +1,18 @@
+[
+  {
+    "test_case_id": "m100-POS-01",
+    "human_model": "First Principles + Falsification Combo (Hypothesis Rebuild)",
+    "winner": "ai",
+    "key_gap": "vs baseline: the v5 AI reached the right plan (20 vans + 8 drivers, ~$1.4M) but ran its falsification as a post-selection premortem, while the baseline ran the attack pass first-class (utilization-as-headroom, norm constancy, cap flexibility — each tested with recorded outcomes, the norm attack revising the rebuild upward). The routed v6 pass makes that contract first-class (falsifier per load-bearing claim, pass may revise the rebuild) and closes the gap; residual baseline edge: first-pass naming of the trap (efficiency).",
+    "learning_signal": "On capacity/pool-constraint signatures the combo's value is the ORDER of the passes: rebuild the binding-pool arithmetic (min(vans, drivers, docks, pick) x deliveries/van-day), then attack each load-bearing claim with a stated falsifier and recorded outcome BEFORE finalizing — the falsification pass must be allowed to change the rebuild (norm-degradation attack -> margin + re-measure point), and utilization/headroom evidence must be provenance-graded as interested-party reading.",
+    "suggested_improvement": "Keep m100 first-class on decide/estimate/maximize + deadline capacity signatures (route confident=yes); make 'falsifier per load-bearing claim + tested outcome, pass may revise the rebuild' the standing m100/m032 completion contract; grade utilization/headroom evidence by provenance (who benefits) at WHY via the P1 audit."
+  },
+  {
+    "test_case_id": "m100-NEG-01",
+    "human_model": "First Principles + Falsification Combo (Hypothesis Rebuild)",
+    "winner": "ai",
+    "key_gap": "vs baseline: the baseline's registered weakness operated exactly as designed — the double pass manufactured elasticity/COGS/fixed-cost attacks on a closed-scope arithmetic request, hedged the verdict ('depends on elasticity >= 3.6'), and blew the 5-minute deadline. The routed v6 run spent the dual route (m018 steel-man + m019 adversary) attacking the PROPOSAL with quantified exposure (break-even 5,455 units, 5% cushion, elasticity >= 3.6 bound), ran the m003 inversion gate, and the P8 closed-scope fast path + tempo mode delivered the direct number in-window.",
+    "learning_signal": "On closed-scope + deadline signatures there is no hypothesis to rebuild and nothing to falsify — the answer IS the computation; a falsification pass aimed at given inputs manufactures scope. Protective passes must attack the decision/proposal, not the arithmetic; the P8 fast path must compress the stages under tempo; the deferral of out-of-scope sensitivity is a packet line, not a hedge.",
+    "suggested_improvement": "Route m018+m019 dual-route with the m003 gate on estimate/guarantee + deadline arithmetic signatures (router confident=no), always paired with P8 closed-scope fast path; add 'quantified exposure vs baseline (break-even distance, cushion %, threshold bound)' as the m019 completion contract line; keep the post-call sensitivity deferral as a mandatory packet line so scope discipline never suppresses a needed follow-up."
+  }
+]

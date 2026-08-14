@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 420" width="960" height="420">
+  <defs>
+    <style>
+      .vbox { stroke-width: 2; rx: 8; }
+      .v1 { fill: #f1f5f9; stroke: #64748b; }
+      .v2 { fill: #e0f2fe; stroke: #0284c7; }
+      .v3 { fill: #dcfce7; stroke: #16a34a; }
+      .v4 { fill: #fef3c7; stroke: #d97706; }
+      .v5 { fill: #fce7f3; stroke: #db2777; }
+      .title { font-family: system-ui, sans-serif; font-size: 13px; font-weight: 700; fill: #0f172a; }
+      .sub { font-family: system-ui, sans-serif; font-size: 10px; fill: #334155; }
+      .hdr { font-family: system-ui, sans-serif; font-size: 16px; font-weight: 700; fill: #0f172a; }
+      .line { stroke: #94a3b8; stroke-width: 3; }
+      .dot { fill: #0f172a; }
+    </style>
+  </defs>
+  
+  <text x="480" y="28" text-anchor="middle" class="hdr">Thinking Agent Evolution — v1 → v5 (Aug 2026)</text>
+  
+  <!-- Timeline line -->
+  <line x1="60" y1="80" x2="900" y2="80" class="line"/>
+  <circle cx="100" cy="80" r="8" class="dot"/>
+  <circle cx="290" cy="80" r="8" class="dot"/>
+  <circle cx="480" cy="80" r="8" class="dot"/>
+  <circle cx="670" cy="80" r="8" class="dot"/>
+  <circle cx="860" cy="80" r="8" class="dot"/>
+  
+  <!-- Labels -->
+  <text x="100" y="60" text-anchor="middle" class="title">v1.0</text>
+  <text x="290" y="60" text-anchor="middle" class="title">v2.0</text>
+  <text x="480" y="60" text-anchor="middle" class="title">v3.0</text>
+  <text x="670" y="60" text-anchor="middle" class="title">v4.0</text>
+  <text x="860" y="60" text-anchor="middle" class="title">v5.0</text>
+  
+  <!-- v1 card -->
+  <rect x="20" y="110" width="160" height="140" class="vbox v1"/>
+  <text x="100" y="132" text-anchor="middle" class="title">Blueprint</text>
+  <text x="30" y="155" class="sub">• Prose architecture</text>
+  <text x="30" y="172" class="sub">• while True risks</text>
+  <text x="30" y="189" class="sub">• 5/8 states unreachable</text>
+  <text x="30" y="206" class="sub">• No budget enforcement</text>
+  <text x="30" y="223" class="sub">• Gates without call sites</text>
+  <text x="30" y="240" class="sub">Theme: description</text>
+  
+  <!-- v2 card -->
+  <rect x="210" y="110" width="160" height="140" class="vbox v2"/>
+  <text x="290" y="132" text-anchor="middle" class="title">Governed Loop</text>
+  <text x="220" y="155" class="sub">• LoopMonitor + Budget</text>
+  <text x="220" y="172" class="sub">• classify_terminal</text>
+  <text x="220" y="189" class="sub">• All 8 states reachable</text>
+  <text x="220" y="206" class="sub">• Decision packet always</text>
+  <text x="220" y="223" class="sub">• Executable harness</text>
+  <text x="220" y="240" class="sub">Theme: terminability</text>
+  
+  <!-- v3 card -->
+  <rect x="400" y="110" width="160" height="140" class="vbox v3"/>
+  <text x="480" y="132" text-anchor="middle" class="title">Enforcement</text>
+  <text x="410" y="155" class="sub">• Thresholds consumed</text>
+  <text x="410" y="172" class="sub">• Producers for fields</text>
+  <text x="410" y="189" class="sub">• PENDING defined</text>
+  <text x="410" y="206" class="sub">• Gates have call sites</text>
+  <text x="410" y="223" class="sub">• Delta verification</text>
+  <text x="410" y="240" class="sub">Theme: fidelity</text>
+  
+  <!-- v4 card -->
+  <rect x="590" y="110" width="160" height="140" class="vbox v4"/>
+  <text x="670" y="132" text-anchor="middle" class="title">Trust Boundaries</text>
+  <text x="600" y="155" class="sub">• Kernel reliability</text>
+  <text x="600" y="172" class="sub">• Pre-DO bar check</text>
+  <text x="600" y="189" class="sub">• Progress gating</text>
+  <text x="600" y="206" class="sub">• L3 ladder complete</text>
+  <text x="600" y="223" class="sub">• Fast-path governed</text>
+  <text x="600" y="240" class="sub">Theme: security knobs</text>
+  
+  <!-- v5 card -->
+  <rect x="780" y="110" width="160" height="140" class="vbox v5"/>
+  <text x="860" y="132" text-anchor="middle" class="title">Completion</text>
+  <text x="790" y="155" class="sub">• World-facts store</text>
+  <text x="790" y="172" class="sub">• Code-level assert</text>
+  <text x="790" y="189" class="sub">• Real retrieval hits</text>
+  <text x="790" y="206" class="sub">• No allowlist backdoor</text>
+  <text x="790" y="223" class="sub">• Dead branches live</text>
+  <text x="790" y="240" class="sub">Theme: honesty</text>
+  
+  <!-- Summary bar -->
+  <rect x="20" y="280" width="920" height="110" fill="#f8fafc" stroke="#94a3b8" stroke-width="1.5" rx="8"/>
+  <text x="480" y="305" text-anchor="middle" class="title">Core Progression Logic</text>
+  <text x="40" y="330" class="sub">v1 asserted properties in prose. v2 made the loop terminable and complete. v3 forced the reference algorithm to satisfy the document’s own standards (thresholds, producers, gates).</text>
+  <text x="40" y="350" class="sub">v4 moved security-critical numbers out of task-declarable scope into kernel-held registries and pre-execution checks. v5 completed the trust boundary at the code level:</text>
+  <text x="40" y="370" class="sub">every security knob is read only through the world-facts store (asserted by the harness), competence is provenance-gated, retrieval is priced and effective, and previously dead mechanisms have scenarios.</text>
+</svg>

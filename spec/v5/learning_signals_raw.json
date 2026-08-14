@@ -1,0 +1,98 @@
+[
+  {
+    "test_case_id": "inversion-POS-01",
+    "human_model": "Inversion",
+    "winner": "human",
+    "key_gap": "AI generated mitigations from general engineering knowledge in a technology-first sweep (data/software/hardware) and missed the physical-stocking category until a late coverage check; it also treated the CEO's 'never' mandate as a high-reliability target and reached the impossibility reframing (bounded residual risk, quantified) only in REVIEW instead of as a WHAT-stage framing move.",
+    "learning_signal": "For impossibility/guarantee-style goals, a mandatory pre-solution enumeration pass — 'list every distinct way to guarantee the opposite outcome,' category-complete and then ranked by likelihood × impact — materially improves coverage, and the 'never/absolute' claim must be reframed to a bounded residual-risk target at framing time, with at least one honestly un-mitigable residual named.",
+    "suggested_improvement": "Add a mandatory inverted-question pass in WHY for guarantee-style goals: before proposing mitigations, require enumeration of >=6 distinct failure-mode categories (a category-completeness check), rank them, and gate progression to HOW on (a) the ranking and (b) an explicit residual-risk statement. Surface 'absolute guarantee words' (never, always, guaranteed) in WHAT as a signal to force bounded-risk reframing early."
+  },
+  {
+    "test_case_id": "inversion-NEG-01",
+    "human_model": "Inversion",
+    "winner": "ai",
+    "key_gap": "Strict inversion produced an equal-weighted defensive to-do list (12 workstreams, one mitigation per enumerated failure cause) with no wedge, no activation metric, and no falsifiable checkpoint — it answered 'how not to fail' instead of 'how to maximize,' spreading 2 FTE so thin that no positive lever received the resources to actually win.",
+    "learning_signal": "Inversion is a completeness tool, not a selection tool: for maximization goals it underweights positive-space levers (wedge segment, activation path, distribution) and its equal-weight enumeration systematically misallocates effort. Failure-avoidance must be bounded (top-N risks, one mitigation each) and run AFTER a positive bet is chosen, with a falsifiable checkpoint; the AI's win came from goal-type discrimination plus base-rate reasoning, not from more enumeration.",
+    "suggested_improvement": "Add a goal-type discriminator in WHAT (maximization vs. guarantee/reliability): for maximization goals, cap the failure-mode pass at top-5 risks with a single mitigation each, route selection through positive-space alternatives first, and require a falsifiable checkpoint (metric + date + decision rule). Retain a quick governance/risk scan even in the bounded pass — the human's IT/security procurement insight was real and missed by the AI until AAR."
+  },
+  {
+    "test_case_id": "expectedvalue-POS-01",
+    "human_model": "Expected Value Thinking",
+    "winner": "ai",
+    "key_gap": "Marginal (roughly equal, complementary strengths). AI matched the human's arithmetic and both found the non-obvious twist (the market test has exactly zero information value — EV(test-then-decide) = EV(direct) − price), but the AI burned roughly 1.5x the steps on process passes (verification, packet) that a fully specified numeric problem does not need; the human computed every strategy's EV in one direct pass.",
+    "learning_signal": "For fully specified numeric problems, the pure EV move — enumerate all strategies, compute each EV, pick the max — is the bottleneck-free path; the agent's value-add is a single falsification pass on the intuitive option ('test first' was arithmetic-killed), not multi-stage ceremony. EV thinking shines when every probability and payoff is given.",
+    "suggested_improvement": "Add a fast-path flag in META: if the problem is fully specified numerically (all probabilities and payoffs present, no missing evidence), drop effort to routine and compress stages to 'compute EVs for all strategies -> verify via one independent path (e.g., Bayes recompute) -> land on the checkable number', matching the human's one-pass efficiency while keeping the falsification-of-intuition step."
+  },
+  {
+    "test_case_id": "expectedvalue-NEG-01",
+    "human_model": "Expected Value Thinking",
+    "winner": "ai",
+    "key_gap": "The pure-EV baseline maximized expected dollars ($180M vs $100M) and said 'take the bet', ignoring: one-shot-ness (no law of large numbers), ruin (10% total irreversible loss; expected log utility = −infinity for any positive stake), the hard $100M floor (any stake s>0 breaches it with p=0.10; only s=0 admissible), non-monetary value (children's lives, contracts), and the fact that the 90% probability is a self-serving, unverifiable counterparty claim. The mean hid a $200M-or-$0 bimodal distribution.",
+    "learning_signal": "EV is necessary but not sufficient: after any expected-value computation, run a distribution-shape/ruin screen (report the full outcome distribution, not just the mean), a one-shot/replication check, a probability-provenance check (who supplied the probabilities, are they falsifiable), and a non-monetary/floor-constraint screen before recommending a high-variance action. EV-positive does not imply acceptable.",
+    "suggested_improvement": "Add a mandatory 'EV + ruin screen' step to HOW: before selecting a high-variance alternative, require (a) full outcome distribution, not just mean; (b) expected-log-utility / ruin bound (any +infinity-mean, −infinity-utility pattern must block selection); (c) constraint-floor check (is any positive stake admissible? Kelly fraction as a sanity bound); (d) probability provenance + falsifiability; (e) an explicit decline/restructure alternative when EV-positive but ruin-prone, with required human actions."
+  },
+  {
+    "test_case_id": "systems-POS-01",
+    "human_model": "Systems Thinking",
+    "winner": "human",
+    "key_gap": "AI reached the same correct conclusion (65 -> 85 min equilibrium, don't build) but only after explicit equilibrium arithmetic and an initial sympathy with the linear 'more capacity helps' frame; the human baseline recognized the stock-flow/user-equilibrium structure at first sight, generated the paradox hypothesis from structure, and verified it in half the moves.",
+    "learning_signal": "For problems with congestion feedback or user incentives, a mandatory structural scan at the WHAT stage (stocks, flows, loops, delays, equilibria, and 'does the naive fix create a perverse incentive?') converts correct-but-late analysis into early, cheap insight; the no-deviation equilibrium check is a reusable verification move for any network/incentive problem.",
+    "suggested_improvement": "Add a second-order-consequences gate to WHAT: whenever the trivial answer is 'add capacity / fix locally,' explicitly ask whether feedback loops or strategic user equilibria could invert the effect, and require an equilibrium/no-deviation verification for any incentive-coupled problem."
+  },
+  {
+    "test_case_id": "systems-NEG-01",
+    "human_model": "Systems Thinking",
+    "winner": "ai",
+    "key_gap": "Human baseline substituted a causal-loop diagram for measurement: dismissed the station-3 printer (30% error rate, r=0.97 with the delay timeline, wear flagged 4 weeks before onset) as 'a symptom that will move elsewhere,' ignored flat volume contradicting its reinforcing-loop story, and prescribed an 8-12-week structural redesign for a $150 local failure. The AI's evidence gate caught all three.",
+    "learning_signal": "Systemic frames must be gated on data: specify the observable that would falsify the loop story, check the most local/station-level data first, and prefer cheap direct fixes that double as decisive experiments. Diagramming without measurement is the signature failure of over-applied systems thinking; the AI must not adopt it.",
+    "suggested_improvement": "Add a measurement gate to WHY: every systemic hypothesis must cite supporting and killing evidence; a single local failure that explains the pattern rejects the systemic claim until local fixes fail. Add the 'cheap fix as decisive experiment' move to HOW with an explicit escalation rule."
+  },
+  {
+    "test_case_id": "bayesian-POS-01",
+    "human_model": "Bayesian Updating",
+    "winner": "human",
+    "key_gap": "AI produced the exact correct posterior (2/13, 17/28) and verified it by dual-route computation, but treated the prior and the conditional-independence assumption as givens: it spot-checked the prior once (2% -> 75.7%) yet never systematically demonstrated order-invariance, decomposed the 39% residual into population fractions, or ran a formal sensitivity pass, so its packet lists assumptions without the arithmetic that quantifies them.",
+    "learning_signal": "The elite human baseline computed the answer, then re-verified it three ways: recomputed with a 2x prior, swapped the evidence order, and decomposed the residual probability into diseased true-positives vs healthy false-positives (0.00765 vs 0.00495 -> 11/28). Pattern to absorb: after any posterior computation, run a mandatory sensitivity pass over the two assumptions with the largest influence (the prior, the conditioning structure) and report how far the answer moves.",
+    "suggested_improvement": "Add a POST-VERIFY sensitivity sub-step to the HOW/VERIFY stage: after the selected posterior is computed, (a) recompute at a perturbed prior (e.g., +/-2x), (b) recompute with the evidence order reversed, and (c) restate the posterior in population terms; include the resulting band in the decision packet's Uncertainty section so assumptions are quantified, not merely declared."
+  },
+  {
+    "test_case_id": "bayesian-NEG-01",
+    "human_model": "Bayesian Updating",
+    "winner": "human",
+    "key_gap": "AI correctly classified NEEDS_EVIDENCE and refused to act, but as a generic evidence-gap call: it computed the scenario range (5%/50%/100%) yet never formally modeled the unmeasured likelihood as an unknown parameter, never demonstrated the decision flip at the 40% threshold (naive 0.50 -> treat with 8% SAE vs true 0.05 -> no treat), and never computed expected utility / value of information — the load-bearing justification for the decision.",
+    "learning_signal": "The elite move when a decision-relevant probability depends on an unmeasured parameter is likelihood-decomposition: enumerate >=3 scenarios for the parameter (noise / assumed / extreme), compute the posterior range, and demonstrate which decisions an assumption would flip. This converts 'missing data' into a quantified, decision-anchoring statement and exposes that a point update under an assumed likelihood is an artifact (0.50 vs true 0.05 = 10x error).",
+    "suggested_improvement": "Extend the WHY evidence audit with a likelihood-provenance check: if P(observation | hypothesis) is not measured, (a) flag the likelihood itself as uncertain, (b) enumerate >=3 parameter scenarios and compute the posterior range, (c) apply the decision threshold to the range to show the flip, and (d) carry the range plus the assumption-artifact demonstration in the NEEDS_EVIDENCE packet instead of a bare missing-evidence list."
+  },
+  {
+    "test_case_id": "redteaming-POS-01",
+    "human_model": "Red Teaming / Devil's Advocate",
+    "winner": "human",
+    "key_gap": "AI found the incentive/verification gaming (F1) and the metric/bonus misalignment (F3) and flagged the unmodeled support cost (F4), but treated the sequential referral-code structure (F2) as a flagged follow-up rather than an analyzed exploit vector, and asserted cost magnitudes instead of quantifying the farming economics. Human caught all four planted flaws and quantified the abuse-rate floor and dollar exposure.",
+    "learning_signal": "On plans with money flows, an explicit adversarial pass over identity gates, input-format details (codes/IDs), and unconsulted stakeholders closes holes that incentive analysis alone leaves open; adversarial review outperforms process alone when the flaw lives in exploitability and quantification rather than business-process logic.",
+    "suggested_improvement": "Add a mandatory adversary-modeling sub-step to the WHY phase for money/fraud-adjacent gates: enumerate (a) who can profit by deviating from the plan, (b) input formats that are guessable/enumerable, (c) stakeholders affected but not consulted; and require a quantified exposure estimate (abuse rate x unit cost) before any Approve-with-conditions verdict."
+  },
+  {
+    "test_case_id": "redteaming-NEG-01",
+    "human_model": "Red Teaming / Devil's Advocate",
+    "winner": "ai",
+    "key_gap": "Human baseline blocked a sound, reversible go-live on unranked hypotheticals (all HIGH, no likelihood, no cost-to-mitigate) and treated delay/status-quo as risk-free - never comparing go-live risk against the EOL mainframe's two unpatched critical CVEs, and never challenging its own attack-the-new-trust-the-old frame. AI avoided the trap by falsifying the baseline (inaction) hypothesis and weighting objections by likelihood x impact.",
+    "learning_signal": "Uncalibrated adversarial review manufactures false alarms and paralysis; the binding requirement is comparing every option - including inaction - against the baseline risk, and ranking objections by likelihood x impact instead of by how many are raised. The red team's own frame (status quo = safe) is its blind spot.",
+    "suggested_improvement": "Add a baseline-risk gate to WHAT/WHY for any decision with an implicit status quo: state the do-nothing option's expected loss explicitly (deadlines, unpatched CVEs, carry cost) before evaluating alternatives; require likelihood x impact ranking of all objections and a time-boxed decision bar with explicit abort criteria so the process cannot defer indefinitely."
+  },
+  {
+    "test_case_id": "first-principles-POS-01",
+    "human_model": "First Principles Thinking",
+    "winner": "human",
+    "key_gap": "On a fully checkable mass/cost derivation the AI matched the reference answer exactly (2,359 kg, $2,595) but was shallower in form: it front-loaded the 15.7 kg/m2 unit-weight shortcut and collapsed the bottom-up derivation, so its trace is less auditable, and it omitted the term-by-term calibration against a real 40-ft container tare that the human used to validate directionality. Its uncertainty band was also thinner (no priced range on plate-price volatility).",
+    "learning_signal": "When inputs are complete and the answer is derivable, the AI's efficiency shortcut converges correctly but trades away derivation discipline and calibration: the human's per-face, per-unit bottom-up trace plus an independent derived-constant verification plus a physical-world calibration anchor is the gold standard a quote-auditing customer can trust. The AI's gap is form and calibration, not correctness.",
+    "suggested_improvement": "Add a mandatory 'bottom-up derivation pass' (enumerate components, carry units, derive from physical constants, not from precomputed shortcuts) for quantitative-estimation task classes, with the shortcut allowed only as an independent verifier; and extend the REVIEW stage to require one explicit real-world calibration anchor (e.g., compare against a known physical object of similar scale) before attesting an estimate."
+  },
+  {
+    "test_case_id": "first-principles-NEG-01",
+    "human_model": "First Principles Thinking",
+    "winner": "ai",
+    "key_gap": "The human baseline decomposed the pump into its physical energy chain and verified every link in dependency order (supply, then motor integrity before touching the relay), discounting the 70% relay base rate as 'history, not a principle'; it consumed the full 20-minute window plus 7 more minutes and left the pump off, resolving only that the motor was probably fine. It failed the case's own success criteria (time-bounded resolution, EV-consistent ordering).",
+    "learning_signal": "A style-pure first-principles analysis is anti-Bayesian when it refuses empirical priors: recomputation-from-scratch costs more than it is worth when base rates and cheap tests are available. The decisive insight the human missed is that the relay reset is a diagnostic probe, not just a fix: it costs 2 minutes, resolves the 70% case, and cleanly partitions the remaining hypotheses. EV ordering (relay-first: E[time-to-resolve] 4.7 min vs 7.9-11.6 min) is the load-bearing move.",
+    "suggested_improvement": "For the human-model registry: document that First Principles Thinking must be complemented by base-rate-aware sequencing on time-constrained diagnosis (use priors as the primary ordering input; use chain decomposition only as tie-breaker). For the AI agent: retain and make explicit its EV-ordering pass (one-line EV table when base rates are given) — it was the winning move here and should be a standing reflex in diagnostic task classes; no change needed to the agent's own behavior, which already resolved the case in ~4 minutes."
+  }
+]

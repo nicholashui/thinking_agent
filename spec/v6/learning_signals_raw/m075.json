@@ -1,0 +1,18 @@
+[
+  {
+    "test_case_id": "m075-POS-01",
+    "human_model": "Bounded Rationality & Satisficing (Simon)",
+    "winner": "ai",
+    "key_gap": "vs baseline: the human set the aspiration ex ante from the index and executed first-pass, locking $2,424 at H3; the v5 AI reached the same stop only after a WHY-stage self-correction (it first drafted a verify-per-offer strategy that would have consumed each offer's hour). The routed pass closes that gap: satisficing runs as the first-class HOW pass with its completion contract (explicit aspiration <= $2.05, mechanical first-meeting, aspiration-check on outcome, no-unbounded-search guard), and the dual-route adds stakeholder grounding (m044: hourly expiry is the search-cost mechanism; broker rate the only unacceptable outcome) and the falsifiable continuation observable (m011: no quote <= $2.02 appears in H4-H6).",
+    "learning_signal": "On expiring-search/deadline signatures, satisficing is a first-class method, not a corrective insight: the pass must run BEFORE generation with its completion contract, or the agent pays a WHY-stage correction for what the style does in its first move — position determines efficiency.",
+    "suggested_improvement": "Install m075 as a first-class pass with the four-part completion contract (aspiration set, first-meeting accepted, aspiration-check, no-unbounded-search guard); dual-route m044 on supply-chain signatures (expiry = cost mechanism); keep m011's falsifiable continuation observable as the R4 checkpoint."
+  },
+  {
+    "test_case_id": "m075-NEG-01",
+    "human_model": "Bounded Rationality & Satisficing (Simon)",
+    "winner": "ai",
+    "key_gap": "vs baseline: the human executed the ritual flawlessly (bar $3.00, accept S2 at $2.95, $708,000 locked) and never tested the rule's premise — arbitrary round-number bar + free parallel non-expiring search = $79,200 (11.2%) left on the table. The routed pass catches it inside the passes: m088's pre-commitment audit shows the announced rule is a Ulysses contract binding the WRONG procedure (a stopping rule instead of a screening rule; its inflexibility and commitment-regret weaknesses gate-checked), and the mandatory m003 gate enumerates >= 6 ranked failure categories including the adverse-selection loop, with the never/always validity condition.",
+    "learning_signal": "Satisficing is valid only when search is costly/sequential/expiring; a pre-announced rule must bind the screening procedure, never an unanchored stopping price — pre-commitment CONTENT is itself auditable, and the contract's object is the failure mode.",
+    "suggested_improvement": "Keep m088 as the routed pass on guarantee/estimate signatures with a mandatory m003 inversion gate; add the commitment-content audit (what procedure does the rule bind?) and the search-affordability test as standing contract items; never/always: never set an aspiration before free data, always full-screen at ~zero marginal search cost."
+  }
+]

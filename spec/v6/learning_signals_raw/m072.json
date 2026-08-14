@@ -1,0 +1,18 @@
+[
+  {
+    "test_case_id": "m072-POS-01",
+    "human_model": "Value Chain Analysis",
+    "winner": "ai",
+    "key_gap": "vs baseline: the human baseline already owns the full two-pass chain discipline (concentration math, premium mapping to heat treatment + inspection, boundary discipline, mitigations) — the routed v6 AI now matches it by contract, where the non-routed v5 run lost: v5 inferred rather than derived that tolerance lives in heat treatment + inspection, seriously weighed offshoring the tolerance cells (Alternative B, $5.6M/yr), and never quantified the premium risk. The routed pass makes the chain contract (decompose activity chain, locate value/cost concentration, name differentiation sources, chain-boundary note with 'what not to move') mandatory, and the ruin screen converts the boundary rule into arithmetic: premium loss = −$8M/yr floor vs +$4.8M/yr upside → breakeven drift probability 37.5%.",
+    "learning_signal": "Value-chain tasks are two-pass operations — cost pass (concentration %: machining 32.3%, top-2 61.5%) and value pass (premium test per cell: which activities create the price premium and what happens to price if they move). The winning lever is the cost-concentrated commodity cell, and boundary discipline is enforced by an asymmetric floor (downside >> upside), not by intuition; concentration alone is not a lever — lever = cost share x premium sensitivity.",
+    "suggested_improvement": "Install the m072 completion contract (chain decomposition + value/cost concentration + differentiation sources + chain-boundary note) as a standing first-class pass on supply/finance chain signatures, paired with the m007 ruin screen so the 'do not move' cells are anchored by quantified floor-vs-upside (breakeven threshold); every candidate touching a premium-creating cell must carry a premium-re-verification line before selection."
+  },
+  {
+    "test_case_id": "m072-NEG-01",
+    "human_model": "Value Chain Analysis",
+    "winner": "ai",
+    "key_gap": "vs baseline: the human baseline's pure chain decomposition was descriptively flawless (23.7%/21.1%/44.7%; bundle ≈ $0.9M/yr) but treated the chain boundary as fixed: the retailer's 21.1% share was a 'structural given', the acquisition 'outside our chain → monitor', and the closing 6-month window (60% rival-closure) never entered the decision. The routed dual-route (m011 systems scan + m044 stakeholder + m020 ranked pre-mortem + m019 adversary + tempo mode) classified the share as a transferable rent on a bypassable link, priced each actor's moves — including that renegotiation (c) gives back shelf and strengthens the private-label loop — scenario'd the rival probability (40/60/80), and committed the $12M bid at DO.",
+    "learning_signal": "The value chain is a snapshot whose boundary is itself the decision variable: cells that are transferable rents (the retail link) are misread by descriptive decomposition as fixed cost, and a closing window on a structural move outranks in-chain optimization. A chain pass without a boundary question and a window scan can be perfectly accurate and produce the wrong decision — descriptive accuracy and decision relevance are decoupled.",
+    "suggested_improvement": "Upgrade the m072 chain-boundary note to a boundary QUESTION on decide/strategy signatures (which cells are cost vs rent vs bypassable, and what would redraw the chain?), pair chain tasks with the m011 systems scan whenever a channel/structural-shift context appears (falsifiable observable on the shift), and apply tempo mode (P2) so a closing window commits at DO with a ranked pre-mortem instead of monitoring."
+  }
+]

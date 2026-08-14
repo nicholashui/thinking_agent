@@ -1,0 +1,34 @@
+[
+ {
+  "test_case_id": "m003-POS-01",
+  "human_model": "Inversion",
+  "winner": "human",
+  "key_gap": "The AI produced a competent defense-in-depth plan but generated it from a technology-first sweep (retries, idempotency, webhooks), missing the refund-cascade and multi-provider-failover categories until a late coverage check; it also treated the CEO's 'NEVER' mandate as a high-reliability target and reached the bounded-residual reframe (<=1 double-charge per 10^6 sessions with a detect-and-auto-refund backstop) only in REVIEW instead of as a WHAT-stage framing move.",
+  "learning_signal": "For impossibility/guarantee-style goals, a mandatory inverted pre-solution pass — 'list every distinct way to guarantee the opposite outcome,' category-complete (>=6 categories, each with a concrete example), ranked by likelihood x impact, mitigations tagged prevent/detect/respond — materially improves coverage; and absolute words (never, always, guaranteed) must be reframed to a bounded residual target at framing time, with at least one detect-and-remediate-only residual named.",
+  "suggested_improvement": "Add a mandatory inverted-question pass in WHAT/WHY for guarantee-style goals: require category-complete enumeration before proposing mitigations, gate progression to HOW on (a) the ranking and (b) an explicit bounded-residual statement, and force bounded-risk reframing of 'never/always/guaranteed' at framing time with >=1 un-mitigable (detect-and-remediate-only) residual named. Surface absolute-guarantee words in WHAT as a trigger for this pass."
+ },
+ {
+  "test_case_id": "m003-NEG-01",
+  "human_model": "Inversion",
+  "winner": "ai",
+  "key_gap": "Strict inversion converted 'maximize first-year profit' into 'don't lose money': a 16-item equal-weight defensive workstream list (rent burn, staffing, supply, licensing, theft, competition, ...) with no wedge chosen among the positive levers (wholesale vs cafe vs subscription), no profit target, and no falsifiable checkpoint — two people spread over 16 workstreams so no positive lever received enough resource to win; the AI won via goal-type discrimination (maximization != guarantee), base-rate reasoning on the domain's dominant failure-cause class (no wedge / under-capitalized ramp, not point-defects), a chosen wedge with margin rationale, and a deliberately bounded top-5 risk pass.",
+  "learning_signal": "Inversion is a completeness tool, not a selection tool: for maximization goals it exhaustively enumerates failure space and, under its own 'no unmitigated cause' pressure, equal-weights mitigations, systematically misallocating scarce resources. Failure-avoidance must be bounded (top-N risks, one mitigation each) and run AFTER a positive bet (wedge) is chosen, with a profit target, a falsifiable checkpoint, and base-rate reasoning on the domain's dominant failure-cause class.",
+  "suggested_improvement": "Add a goal-type discriminator in WHAT (maximization vs guarantee/reliability): for maximization goals, require a target number, >=1 explicit wedge choice with rationale, and a falsifiable checkpoint before any risk pass; cap inverted enumeration at top-N risks with a stated resource budget; use base-rate reasoning on the domain's dominant failure-cause class instead of symptom enumeration."
+ },
+ {
+  "test_case_id": "m003-POS-02",
+  "human_model": "Inversion",
+  "winner": "human",
+  "key_gap": "Human's mandatory inverted-question enumeration produced 8 ranked categories and the never-reframing; AI reached the impossibility reframing only at REVIEW.",
+  "learning_signal": "Inversion is a completeness tool: category-first enumeration before design converts late coverage checks into first-pass completeness.",
+  "suggested_improvement": "Add a mandatory inverted-question pass (6+ ranked categories) + never/always detection at WHAT."
+ },
+ {
+  "test_case_id": "m003-NEG-02",
+  "human_model": "Inversion",
+  "winner": "ai",
+  "key_gap": "Strict inversion converted a maximization goal into an equal-weight avoidance list; AI stayed on-goal with a wedge + falsifiable checkpoint.",
+  "learning_signal": "Goal displacement is inversion's failure mode; maximize-vs-guarantee discrimination must gate the risk pass.",
+  "suggested_improvement": "Add a goal-type discriminator (maximize vs guarantee) capping the risk pass at top-5 for maximization goals."
+ }
+]

@@ -1,0 +1,18 @@
+# Human Baseline — m046-NEG-01
+## Style: First Principles in Software Architecture (pure) — visible reasoning trace
+
+**Step 1 — State the fundamental constraints.** (1) Data: ledger entries and balances; the candidate pattern is a SQL double-entry ledger, one transaction per mutation. (2) Scale: 50k → 1M txns/day ≈ 12/s steady, 200/s peak — an explicitly small number; log-append in object storage is unbounded; a single RDBMS is a ceiling that will demand partitioning, sharding, and pattern payments. (3) Latency: none binding for internal accounting; balances served from memory. (4) Failure modes: duplicates from retries — solved by idempotency keys; lost entries — solved by the reconciliation job. (5) Change rate: the core is frozen.
+
+**Step 2 — Derive storage from scale.** Throughput is the binding constraint. At 1M/day the append-only log in S3 gives unbounded scale at near-zero cost; a single RDBMS instance is a scalability tax. Derivation: the log is the system of record; the balance cache is a derived projection; the SQL transaction is a primitive we have re-derived out of existence.
+
+**Step 3 — Derive consistency from value.** Balance totals need strong consistency for checks; per-transaction entries can be eventually consistent. Idempotency keys make retries safe; the hourly reconciliation job makes divergence transient. Every edge case the SQL transaction protected has a derived equivalent: idempotency for duplicates, reconciliation for loss, cache invalidation for stale reads.
+
+**Step 4 — Derive the module boundary from change rate.** The frozen core: append + cache + reconcile. The pattern's ceremony — journal, WAL, undo logs, locking, double-entry — is the cargo-cult residue of a 1970s database built for a world without object storage. A derived system has the same guarantees by construction, with 10% of the machinery.
+
+**Step 5 — Select.** The S3 log as system of record + in-memory balance cache + hourly reconciliation. The SQL ledger is retired. Expected: unbounded scale at ≈ 10% of the ops cost; the accounting semantics are preserved because the log's append-only nature is itself the audit trail.
+
+**Step 6 — The tell (the constraint that never enters the trace).** Between "append to log" and "apply to cache," a process crash leaves partial state with no transaction boundary to attribute it to. The reconciliation job detects a mismatch but cannot classify it: was the entry applied, half-applied, or duplicated on retry? With 40 partitions the repair search is multiplicative and unbounded. The audit trail — the one thing monetary software cannot reconstruct — lives in a log that repair jobs reorder and patch. Throughput was derived as THE constraint because it is the number the exercise began with; crash atomicity at the mutation boundary and a single source of truth per mutation are never enumerated, and the pattern is dismissed as cargo-cult before asking what forty years of monetary failure it encodes.
+
+**Trace summary box.** Constraints → throughput binding → S3 log + cache + reconciliation selected → SQL ledger retired as cargo-cult. Derivation complete, constraint list incomplete, and wrong.
+
+*Baseline integrity note (grader metadata, not part of the reasoning): pure First Principles applied faithfully — every design choice is derived from a named constraint, and the pattern is rejected by derivation. That is exactly the negative case's point (registry weakness: "ignores ecosystem experience"). The binding constraints the enumeration misses — crash atomicity at the mutation boundary, auditable single source of truth — are what the battle-tested pattern encodes; the derived design is a correct answer to a non-binding constraint.*

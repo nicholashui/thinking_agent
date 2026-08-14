@@ -1,0 +1,18 @@
+[
+  {
+    "test_case_id": "m009-POS-01",
+    "human_model": "Base Rate Neglect Avoidance",
+    "winner": "ai",
+    "key_gap": "vs baseline: the pure-style human executed the discipline perfectly (base rate first, posterior 8/65, anecdote priced at LR = 1, flip-point LR ≈ 19) and the v5 AI matched every number but only as asserted steps — redundancy surfaced at verification, no population decomposition, no instrument-validity anchor; the routed m009 contract made the discipline moves mandatory pass outputs (base rate first as ordering authority, posterior computed, adjustment justified by how much, salience-bias check) and the m003/m006 gates added >= 6 ranked failure categories and a likelihood-scenario posterior range (7.8–21.9% across FPR 0.15–0.50), converting the v5 depth/calibration gap into a narrow AI win.",
+    "learning_signal": "On fully-specified base-rate problems the discipline moves must be pass outputs, not improvised: base rate stated first as ordering authority, posterior computed from prior → likelihood → posterior, every case adjustment priced by how much (a restatement has LR = 1 exactly → adjustment zero), and a salience-bias check that defines information as measured posterior change — asserted-correct math without the formalized discipline leaves depth and calibration on the table.",
+    "suggested_improvement": "Keep the m009 pass contract and the m003/m006 gates for estimate/guarantee/predict signatures with unmeasured context; require the salience-bias check (every anecdote priced as an LR) and the ranked-failure-category gate before any fast-path approval; verify by re-deriving prior → likelihood → posterior with the odds check and population decomposition."
+  },
+  {
+    "test_case_id": "m009-NEG-01",
+    "human_model": "Base Rate Neglect Avoidance",
+    "winner": "ai",
+    "key_gap": "vs baseline: the style-pure human anchored on the flag's 2%, dismissed the 693/700 forged-document cohort as vendor-selected anecdote, adjusted to 5–8% and let the wire clear — a 10–20x error against the case's checkable anchors; the routed dual-run (m019 adversary vs m044 stakeholder, divergence resolved as agreement) re-classified the case into the evidence-defined reference class (693/700 ≈ 99%), priced the do-nothing branch first (release at ~99% fraud probability = willful blindness), and held + froze + filed SAR.",
+    "learning_signal": "On adversarial base-rate cases the failure is reference-class selection: the flag's 2% is the base rate of the selection mechanism, not of the evidence — once quantified case evidence defines a more specific class the discipline re-anchors to it; the P1 provenance audit must grade the evidence's independence from the flag as VALIDITY (the opposite of the style's 'selection defect' reflex), and the adversary pass's baseline-risk comparison makes the wrong-class error visible before DO.",
+    "suggested_improvement": "Keep dual-route m019+m044 for adversarial finance signatures when the router is unconfident (confident=no); add a standing reference-class audit step to every base-rate decision: name the anchor's class, ask which class the strongest quantified evidence selects, then price the do-nothing branch first; the 693/700 cohort + hold/SAR decision is a regression scenario for the m009 module (ex-post ground truth available)."
+  }
+]

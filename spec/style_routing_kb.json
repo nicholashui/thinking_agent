@@ -1,0 +1,2993 @@
+{
+ "version": "1.0",
+ "note": "Learned from 212-case evaluation. pos_win_rate = fraction of positive cases won by the style (its home-turf reliability). neg_loss_rate = fraction of negative cases where the style's failure mode fired (avoid-combined-without-gates). route when signature matches triggers AND pos_win_rate is high; add protective gates when neg_loss_rate is high.",
+ "models": [
+  {
+   "id": "m001",
+   "name": "First Principles Thinking",
+   "family": "Foundational & First-Principles",
+   "triggers": {
+    "domains": [
+     "engineering",
+     "finance",
+     "medical",
+     "product",
+     "software"
+    ],
+    "goals": [
+     "decide",
+     "estimate",
+     "guarantee",
+     "maximize",
+     "predict"
+    ],
+    "context": [
+     "deadline",
+     "high_stakes"
+    ]
+   },
+   "pos_win_rate": 1.0,
+   "neg_failure_rate": 0.0,
+   "win_cases": [
+    "m001-POS-01",
+    "m001-POS-02"
+   ],
+   "loss_cases": []
+  },
+  {
+   "id": "m002",
+   "name": "Second-Order Consequences Thinking",
+   "family": "Foundational & First-Principles",
+   "triggers": {
+    "domains": [
+     "engineering",
+     "finance",
+     "medical",
+     "organization",
+     "product",
+     "science",
+     "strategy",
+     "supply"
+    ],
+    "goals": [
+     "estimate",
+     "guarantee",
+     "maximize"
+    ],
+    "context": [
+     "adversarial"
+    ]
+   },
+   "pos_win_rate": 1.0,
+   "neg_failure_rate": 0.0,
+   "win_cases": [
+    "m002-POS-01"
+   ],
+   "loss_cases": []
+  },
+  {
+   "id": "m003",
+   "name": "Inversion (Invert, Always Invert)",
+   "family": "Foundational & First-Principles",
+   "triggers": {
+    "domains": [
+     "engineering",
+     "finance",
+     "medical",
+     "organization",
+     "product",
+     "security",
+     "software",
+     "strategy"
+    ],
+    "goals": [
+     "diagnose",
+     "guarantee",
+     "maximize",
+     "predict"
+    ],
+    "context": []
+   },
+   "pos_win_rate": 1.0,
+   "neg_failure_rate": 0.0,
+   "win_cases": [
+    "m003-POS-01",
+    "m003-POS-02"
+   ],
+   "loss_cases": []
+  },
+  {
+   "id": "m004",
+   "name": "Occam's Razor + Complexity Awareness",
+   "family": "Foundational & First-Principles",
+   "triggers": {
+    "domains": [
+     "engineering",
+     "finance",
+     "medical",
+     "science",
+     "security",
+     "strategy",
+     "supply"
+    ],
+    "goals": [
+     "decide",
+     "estimate",
+     "guarantee",
+     "maximize"
+    ],
+    "context": [
+     "deadline"
+    ]
+   },
+   "pos_win_rate": 1.0,
+   "neg_failure_rate": 0.0,
+   "win_cases": [
+    "m004-POS-01"
+   ],
+   "loss_cases": []
+  },
+  {
+   "id": "m005",
+   "name": "Fermi Estimation / Back-of-the-Envelope",
+   "family": "Foundational & First-Principles",
+   "triggers": {
+    "domains": [
+     "engineering",
+     "finance",
+     "medical"
+    ],
+    "goals": [
+     "estimate"
+    ],
+    "context": [
+     "deadline",
+     "high_stakes"
+    ]
+   },
+   "pos_win_rate": 1.0,
+   "neg_failure_rate": 0.0,
+   "win_cases": [
+    "m005-POS-01"
+   ],
+   "loss_cases": []
+  },
+  {
+   "id": "m006",
+   "name": "Bayesian Updating",
+   "family": "Probabilistic & Bayesian",
+   "triggers": {
+    "domains": [
+     "engineering",
+     "medical",
+     "organization",
+     "product",
+     "science"
+    ],
+    "goals": [
+     "diagnose",
+     "guarantee",
+     "predict"
+    ],
+    "context": []
+   },
+   "pos_win_rate": 1.0,
+   "neg_failure_rate": 1.0,
+   "win_cases": [
+    "m006-POS-01",
+    "m006-POS-02"
+   ],
+   "loss_cases": [
+    "m006-NEG-01",
+    "m006-NEG-02"
+   ]
+  },
+  {
+   "id": "m007",
+   "name": "Expected Value Thinking",
+   "family": "Probabilistic & Bayesian",
+   "triggers": {
+    "domains": [],
+    "goals": [],
+    "context": []
+   },
+   "pos_win_rate": 0.0,
+   "neg_failure_rate": 0.0,
+   "win_cases": [],
+   "loss_cases": [
+    "m007-POS-01",
+    "m007-POS-02"
+   ]
+  },
+  {
+   "id": "m008",
+   "name": "Probabilistic Forecasting (Superforecasting)",
+   "family": "Probabilistic & Bayesian",
+   "triggers": {
+    "domains": [
+     "engineering",
+     "finance",
+     "medical",
+     "software",
+     "strategy"
+    ],
+    "goals": [
+     "estimate",
+     "maximize",
+     "predict"
+    ],
+    "context": []
+   },
+   "pos_win_rate": 1.0,
+   "neg_failure_rate": 0.0,
+   "win_cases": [
+    "m008-POS-01"
+   ],
+   "loss_cases": []
+  },
+  {
+   "id": "m009",
+   "name": "Base Rate Neglect Avoidance",
+   "family": "Probabilistic & Bayesian",
+   "triggers": {
+    "domains": [
+     "engineering",
+     "finance",
+     "medical",
+     "science",
+     "strategy"
+    ],
+    "goals": [
+     "estimate",
+     "guarantee",
+     "predict"
+    ],
+    "context": [
+     "unmeasured"
+    ]
+   },
+   "pos_win_rate": 1.0,
+   "neg_failure_rate": 0.0,
+   "win_cases": [
+    "m009-POS-01"
+   ],
+   "loss_cases": []
+  },
+  {
+   "id": "m010",
+   "name": "Calibration & Confidence Intervals",
+   "family": "Probabilistic & Bayesian",
+   "triggers": {
+    "domains": [
+     "engineering",
+     "finance",
+     "medical",
+     "science",
+     "supply"
+    ],
+    "goals": [
+     "diagnose",
+     "guarantee",
+     "predict"
+    ],
+    "context": []
+   },
+   "pos_win_rate": 1.0,
+   "neg_failure_rate": 0.0,
+   "win_cases": [
+    "m010-POS-01"
+   ],
+   "loss_cases": []
+  },
+  {
+   "id": "m011",
+   "name": "Systems Thinking",
+   "family": "Systems & Causal",
+   "triggers": {
+    "domains": [
+     "engineering",
+     "finance",
+     "medical",
+     "organization",
+     "product",
+     "strategy",
+     "supply"
+    ],
+    "goals": [
+     "decide",
+     "diagnose",
+     "estimate",
+     "maximize",
+     "predict"
+    ],
+    "context": [
+     "adversarial",
+     "deadline"
+    ]
+   },
+   "pos_win_rate": 1.0,
+   "neg_failure_rate": 0.0,
+   "win_cases": [
+    "m011-POS-01",
+    "m011-POS-02"
+   ],
+   "loss_cases": []
+  },
+  {
+   "id": "m012",
+   "name": "Causal Reasoning (Pearl-style)",
+   "family": "Systems & Causal",
+   "triggers": {
+    "domains": [
+     "finance",
+     "medical",
+     "product",
+     "science",
+     "software",
+     "strategy"
+    ],
+    "goals": [
+     "estimate",
+     "maximize",
+     "predict"
+    ],
+    "context": [
+     "unmeasured"
+    ]
+   },
+   "pos_win_rate": 1.0,
+   "neg_failure_rate": 0.0,
+   "win_cases": [
+    "m012-POS-01"
+   ],
+   "loss_cases": []
+  },
+  {
+   "id": "m013",
+   "name": "Root Cause Analysis (5 Whys + deeper)",
+   "family": "Systems & Causal",
+   "triggers": {
+    "domains": [
+     "engineering",
+     "medical",
+     "product",
+     "software"
+    ],
+    "goals": [
+     "decide",
+     "diagnose",
+     "guarantee",
+     "predict"
+    ],
+    "context": [
+     "deadline"
+    ]
+   },
+   "pos_win_rate": 1.0,
+   "neg_failure_rate": 0.0,
+   "win_cases": [
+    "m013-POS-01"
+   ],
+   "loss_cases": []
+  },
+  {
+   "id": "m014",
+   "name": "Constraint Theory / Bottleneck Thinking",
+   "family": "Systems & Causal",
+   "triggers": {
+    "domains": [
+     "engineering",
+     "finance",
+     "medical",
+     "organization",
+     "science",
+     "security"
+    ],
+    "goals": [
+     "estimate",
+     "guarantee",
+     "maximize",
+     "predict"
+    ],
+    "context": [
+     "deadline"
+    ]
+   },
+   "pos_win_rate": 1.0,
+   "neg_failure_rate": 0.0,
+   "win_cases": [
+    "m014-POS-01"
+   ],
+   "loss_cases": []
+  },
+  {
+   "id": "m015",
+   "name": "Emergence & Complexity Awareness",
+   "family": "Systems & Causal",
+   "triggers": {
+    "domains": [
+     "engineering",
+     "finance",
+     "medical",
+     "organization",
+     "product",
+     "science",
+     "software"
+    ],
+    "goals": [
+     "diagnose",
+     "estimate",
+     "maximize"
+    ],
+    "context": [
+     "deadline"
+    ]
+   },
+   "pos_win_rate": 1.0,
+   "neg_failure_rate": 0.0,
+   "win_cases": [
+    "m015-POS-01"
+   ],
+   "loss_cases": []
+  },
+  {
+   "id": "m016",
+   "name": "Socratic Method / Question-Driven Inquiry",
+   "family": "Dialectical & Critical",
+   "triggers": {
+    "domains": [
+     "finance",
+     "medical",
+     "product"
+    ],
+    "goals": [
+     "decide",
+     "guarantee",
+     "maximize"
+    ],
+    "context": [
+     "high_stakes"
+    ]
+   },
+   "pos_win_rate": 1.0,
+   "neg_failure_rate": 0.0,
+   "win_cases": [
+    "m016-POS-01"
+   ],
+   "loss_cases": []
+  },
+  {
+   "id": "m017",
+   "name": "Dialectical Reasoning (Thesis → Antithesis → Synthesis)",
+   "family": "Dialectical & Critical",
+   "triggers": {
+    "domains": [
+     "engineering",
+     "finance",
+     "medical"
+    ],
+    "goals": [
+     "decide",
+     "estimate",
+     "guarantee",
+     "maximize"
+    ],
+    "context": [
+     "deadline",
+     "high_stakes"
+    ]
+   },
+   "pos_win_rate": 1.0,
+   "neg_failure_rate": 0.0,
+   "win_cases": [
+    "m017-POS-01"
+   ],
+   "loss_cases": []
+  },
+  {
+   "id": "m018",
+   "name": "Steel-manning",
+   "family": "Dialectical & Critical",
+   "triggers": {
+    "domains": [
+     "engineering",
+     "finance",
+     "medical",
+     "organization",
+     "product",
+     "science",
+     "security",
+     "software"
+    ],
+    "goals": [
+     "decide",
+     "estimate",
+     "guarantee",
+     "maximize",
+     "predict"
+    ],
+    "context": [
+     "high_stakes"
+    ]
+   },
+   "pos_win_rate": 1.0,
+   "neg_failure_rate": 0.0,
+   "win_cases": [
+    "m018-POS-01"
+   ],
+   "loss_cases": []
+  },
+  {
+   "id": "m019",
+   "name": "Red Teaming / Devil's Advocate",
+   "family": "Dialectical & Critical",
+   "triggers": {
+    "domains": [
+     "engineering",
+     "finance",
+     "medical",
+     "organization",
+     "product",
+     "science",
+     "security",
+     "software"
+    ],
+    "goals": [
+     "decide",
+     "estimate",
+     "guarantee",
+     "maximize",
+     "predict"
+    ],
+    "context": [
+     "adversarial",
+     "high_stakes",
+     "unmeasured"
+    ]
+   },
+   "pos_win_rate": 1.0,
+   "neg_failure_rate": 0.0,
+   "win_cases": [
+    "m019-POS-01",
+    "m019-POS-02"
+   ],
+   "loss_cases": []
+  },
+  {
+   "id": "m020",
+   "name": "Pre-Mortem Analysis",
+   "family": "Dialectical & Critical",
+   "triggers": {
+    "domains": [
+     "engineering",
+     "finance",
+     "medical",
+     "organization",
+     "product",
+     "strategy",
+     "supply"
+    ],
+    "goals": [
+     "decide",
+     "guarantee",
+     "maximize",
+     "predict"
+    ],
+    "context": [
+     "adversarial",
+     "deadline"
+    ]
+   },
+   "pos_win_rate": 1.0,
+   "neg_failure_rate": 0.0,
+   "win_cases": [
+    "m020-POS-01"
+   ],
+   "loss_cases": []
+  },
+  {
+   "id": "m021",
+   "name": "OODA Loop",
+   "family": "Decision & Strategic",
+   "triggers": {
+    "domains": [
+     "engineering",
+     "finance",
+     "medical",
+     "organization",
+     "product",
+     "security",
+     "software"
+    ],
+    "goals": [
+     "decide",
+     "diagnose",
+     "estimate",
+     "maximize"
+    ],
+    "context": [
+     "adversarial",
+     "deadline",
+     "high_stakes"
+    ]
+   },
+   "pos_win_rate": 1.0,
+   "neg_failure_rate": 0.0,
+   "win_cases": [
+    "m021-POS-01"
+   ],
+   "loss_cases": []
+  },
+  {
+   "id": "m022",
+   "name": "Decision Trees & Scenario Planning",
+   "family": "Decision & Strategic",
+   "triggers": {
+    "domains": [
+     "engineering",
+     "finance",
+     "medical",
+     "strategy"
+    ],
+    "goals": [
+     "decide",
+     "estimate",
+     "guarantee",
+     "predict"
+    ],
+    "context": []
+   },
+   "pos_win_rate": 1.0,
+   "neg_failure_rate": 1.0,
+   "win_cases": [
+    "m022-POS-01"
+   ],
+   "loss_cases": [
+    "m022-NEG-01"
+   ]
+  },
+  {
+   "id": "m023",
+   "name": "Opportunity Cost Thinking",
+   "family": "Decision & Strategic",
+   "triggers": {
+    "domains": [
+     "engineering",
+     "finance",
+     "medical",
+     "organization",
+     "product",
+     "security",
+     "strategy"
+    ],
+    "goals": [
+     "decide",
+     "estimate",
+     "guarantee",
+     "maximize",
+     "predict"
+    ],
+    "context": [
+     "adversarial",
+     "deadline"
+    ]
+   },
+   "pos_win_rate": 1.0,
+   "neg_failure_rate": 0.0,
+   "win_cases": [
+    "m023-POS-01"
+   ],
+   "loss_cases": []
+  },
+  {
+   "id": "m024",
+   "name": "Regret Minimization Framework",
+   "family": "Decision & Strategic",
+   "triggers": {
+    "domains": [
+     "engineering",
+     "finance",
+     "medical",
+     "product",
+     "strategy",
+     "supply"
+    ],
+    "goals": [
+     "decide",
+     "diagnose",
+     "estimate",
+     "guarantee",
+     "maximize",
+     "predict"
+    ],
+    "context": [
+     "high_stakes"
+    ]
+   },
+   "pos_win_rate": 1.0,
+   "neg_failure_rate": 0.0,
+   "win_cases": [
+    "m024-POS-01"
+   ],
+   "loss_cases": []
+  },
+  {
+   "id": "m025",
+   "name": "Real Options Thinking",
+   "family": "Decision & Strategic",
+   "triggers": {
+    "domains": [
+     "engineering",
+     "finance",
+     "medical",
+     "product",
+     "software",
+     "strategy"
+    ],
+    "goals": [
+     "decide",
+     "estimate",
+     "maximize"
+    ],
+    "context": [
+     "adversarial"
+    ]
+   },
+   "pos_win_rate": 1.0,
+   "neg_failure_rate": 0.0,
+   "win_cases": [
+    "m025-POS-01"
+   ],
+   "loss_cases": []
+  },
+  {
+   "id": "m026",
+   "name": "Analogical Reasoning / Pattern Transfer",
+   "family": "Creative & Analogical",
+   "triggers": {
+    "domains": [
+     "engineering",
+     "finance",
+     "medical",
+     "organization",
+     "science"
+    ],
+    "goals": [
+     "decide",
+     "estimate",
+     "guarantee",
+     "maximize",
+     "predict"
+    ],
+    "context": [
+     "deadline"
+    ]
+   },
+   "pos_win_rate": 1.0,
+   "neg_failure_rate": 0.0,
+   "win_cases": [
+    "m026-POS-01"
+   ],
+   "loss_cases": []
+  },
+  {
+   "id": "m027",
+   "name": "Design Thinking",
+   "family": "Creative & Analogical",
+   "triggers": {
+    "domains": [
+     "engineering",
+     "medical",
+     "product",
+     "software",
+     "strategy"
+    ],
+    "goals": [
+     "decide"
+    ],
+    "context": []
+   },
+   "pos_win_rate": 1.0,
+   "neg_failure_rate": 0.0,
+   "win_cases": [
+    "m027-POS-01"
+   ],
+   "loss_cases": []
+  },
+  {
+   "id": "m028",
+   "name": "Lateral Thinking",
+   "family": "Creative & Analogical",
+   "triggers": {
+    "domains": [
+     "engineering",
+     "finance",
+     "medical",
+     "organization",
+     "product",
+     "science",
+     "software",
+     "strategy"
+    ],
+    "goals": [
+     "decide",
+     "diagnose",
+     "estimate",
+     "guarantee"
+    ],
+    "context": [
+     "high_stakes"
+    ]
+   },
+   "pos_win_rate": 1.0,
+   "neg_failure_rate": 0.0,
+   "win_cases": [
+    "m028-POS-01"
+   ],
+   "loss_cases": []
+  },
+  {
+   "id": "m029",
+   "name": "Combinatorial Creativity",
+   "family": "Creative & Analogical",
+   "triggers": {
+    "domains": [
+     "engineering",
+     "finance",
+     "medical",
+     "science",
+     "supply"
+    ],
+    "goals": [
+     "diagnose",
+     "estimate",
+     "guarantee",
+     "maximize"
+    ],
+    "context": [
+     "deadline"
+    ]
+   },
+   "pos_win_rate": 1.0,
+   "neg_failure_rate": 0.0,
+   "win_cases": [
+    "m029-POS-01"
+   ],
+   "loss_cases": []
+  },
+  {
+   "id": "m030",
+   "name": "Constraint-Driven Creativity",
+   "family": "Creative & Analogical",
+   "triggers": {
+    "domains": [
+     "engineering",
+     "finance",
+     "medical",
+     "science",
+     "supply"
+    ],
+    "goals": [
+     "diagnose",
+     "estimate",
+     "guarantee",
+     "predict"
+    ],
+    "context": [
+     "high_stakes"
+    ]
+   },
+   "pos_win_rate": 1.0,
+   "neg_failure_rate": 0.0,
+   "win_cases": [
+    "m030-POS-01"
+   ],
+   "loss_cases": []
+  },
+  {
+   "id": "m031",
+   "name": "Scientific Method (Hypothesis → Experiment → Update)",
+   "family": "Scientific & Empirical",
+   "triggers": {
+    "domains": [
+     "engineering",
+     "finance",
+     "medical",
+     "organization",
+     "science",
+     "security",
+     "software",
+     "supply"
+    ],
+    "goals": [
+     "diagnose",
+     "estimate",
+     "guarantee",
+     "maximize",
+     "predict"
+    ],
+    "context": [
+     "deadline"
+    ]
+   },
+   "pos_win_rate": 1.0,
+   "neg_failure_rate": 0.0,
+   "win_cases": [
+    "m031-POS-01"
+   ],
+   "loss_cases": []
+  },
+  {
+   "id": "m032",
+   "name": "Falsificationism (Popper)",
+   "family": "Scientific & Empirical",
+   "triggers": {
+    "domains": [
+     "engineering",
+     "finance",
+     "medical",
+     "product",
+     "software"
+    ],
+    "goals": [
+     "decide",
+     "estimate",
+     "maximize",
+     "predict"
+    ],
+    "context": [
+     "deadline"
+    ]
+   },
+   "pos_win_rate": 1.0,
+   "neg_failure_rate": 0.0,
+   "win_cases": [
+    "m032-POS-01"
+   ],
+   "loss_cases": []
+  },
+  {
+   "id": "m033",
+   "name": "Controlled Experiment Design",
+   "family": "Scientific & Empirical",
+   "triggers": {
+    "domains": [
+     "engineering",
+     "finance",
+     "medical",
+     "organization",
+     "product",
+     "science",
+     "software"
+    ],
+    "goals": [
+     "decide",
+     "estimate",
+     "guarantee",
+     "maximize"
+    ],
+    "context": [
+     "deadline"
+    ]
+   },
+   "pos_win_rate": 1.0,
+   "neg_failure_rate": 0.0,
+   "win_cases": [
+    "m033-POS-01"
+   ],
+   "loss_cases": []
+  },
+  {
+   "id": "m034",
+   "name": "Measurement & Operationalization",
+   "family": "Scientific & Empirical",
+   "triggers": {
+    "domains": [
+     "engineering",
+     "medical",
+     "organization",
+     "product",
+     "science"
+    ],
+    "goals": [
+     "decide",
+     "guarantee",
+     "maximize"
+    ],
+    "context": [
+     "deadline"
+    ]
+   },
+   "pos_win_rate": 1.0,
+   "neg_failure_rate": 0.0,
+   "win_cases": [
+    "m034-POS-01"
+   ],
+   "loss_cases": []
+  },
+  {
+   "id": "m035",
+   "name": "Replication & Robustness Checks",
+   "family": "Scientific & Empirical",
+   "triggers": {
+    "domains": [
+     "engineering",
+     "medical",
+     "organization",
+     "product",
+     "science",
+     "security",
+     "software"
+    ],
+    "goals": [
+     "decide",
+     "maximize"
+    ],
+    "context": [
+     "deadline",
+     "high_stakes"
+    ]
+   },
+   "pos_win_rate": 1.0,
+   "neg_failure_rate": 0.0,
+   "win_cases": [
+    "m035-POS-01"
+   ],
+   "loss_cases": []
+  },
+  {
+   "id": "m036",
+   "name": "Mental Models Latticework (Munger)",
+   "family": "Additional High-Value",
+   "triggers": {
+    "domains": [
+     "engineering",
+     "finance",
+     "medical",
+     "organization",
+     "product",
+     "software",
+     "strategy"
+    ],
+    "goals": [
+     "decide",
+     "guarantee",
+     "predict"
+    ],
+    "context": [
+     "adversarial"
+    ]
+   },
+   "pos_win_rate": 1.0,
+   "neg_failure_rate": 0.0,
+   "win_cases": [
+    "m036-POS-01"
+   ],
+   "loss_cases": []
+  },
+  {
+   "id": "m037",
+   "name": "Circle of Competence Awareness",
+   "family": "Additional High-Value",
+   "triggers": {
+    "domains": [
+     "engineering",
+     "finance",
+     "medical",
+     "product",
+     "software",
+     "strategy"
+    ],
+    "goals": [
+     "decide",
+     "estimate",
+     "maximize"
+    ],
+    "context": [
+     "deadline",
+     "high_stakes"
+    ]
+   },
+   "pos_win_rate": 1.0,
+   "neg_failure_rate": 0.0,
+   "win_cases": [
+    "m037-POS-01"
+   ],
+   "loss_cases": []
+  },
+  {
+   "id": "m038",
+   "name": "Margin of Safety",
+   "family": "Additional High-Value",
+   "triggers": {
+    "domains": [
+     "engineering",
+     "finance",
+     "medical",
+     "science"
+    ],
+    "goals": [
+     "estimate",
+     "guarantee",
+     "maximize"
+    ],
+    "context": []
+   },
+   "pos_win_rate": 1.0,
+   "neg_failure_rate": 0.0,
+   "win_cases": [
+    "m038-POS-01"
+   ],
+   "loss_cases": []
+  },
+  {
+   "id": "m039",
+   "name": "Asymmetric Upside / Barbell Strategy",
+   "family": "Additional High-Value",
+   "triggers": {
+    "domains": [
+     "finance",
+     "medical",
+     "product",
+     "software",
+     "strategy",
+     "supply"
+    ],
+    "goals": [
+     "decide",
+     "diagnose",
+     "estimate",
+     "guarantee",
+     "maximize",
+     "predict"
+    ],
+    "context": [
+     "high_stakes"
+    ]
+   },
+   "pos_win_rate": 1.0,
+   "neg_failure_rate": 0.0,
+   "win_cases": [
+    "m039-POS-01"
+   ],
+   "loss_cases": []
+  },
+  {
+   "id": "m040",
+   "name": "Leverage Points Identification",
+   "family": "Additional High-Value",
+   "triggers": {
+    "domains": [
+     "engineering",
+     "finance",
+     "medical",
+     "product",
+     "science",
+     "security",
+     "software",
+     "supply"
+    ],
+    "goals": [
+     "diagnose",
+     "guarantee",
+     "maximize",
+     "predict"
+    ],
+    "context": []
+   },
+   "pos_win_rate": 1.0,
+   "neg_failure_rate": 0.0,
+   "win_cases": [
+    "m040-POS-01"
+   ],
+   "loss_cases": []
+  },
+  {
+   "id": "m041",
+   "name": "Hierarchical Decomposition",
+   "family": "Additional High-Value",
+   "triggers": {
+    "domains": [
+     "finance",
+     "medical",
+     "product",
+     "strategy"
+    ],
+    "goals": [
+     "guarantee",
+     "predict"
+    ],
+    "context": [
+     "high_stakes"
+    ]
+   },
+   "pos_win_rate": 1.0,
+   "neg_failure_rate": 0.0,
+   "win_cases": [
+    "m041-POS-01"
+   ],
+   "loss_cases": []
+  },
+  {
+   "id": "m042",
+   "name": "Abstraction Laddering",
+   "family": "Additional High-Value",
+   "triggers": {
+    "domains": [
+     "engineering",
+     "medical",
+     "organization",
+     "product"
+    ],
+    "goals": [
+     "diagnose",
+     "maximize"
+    ],
+    "context": [
+     "unmeasured"
+    ]
+   },
+   "pos_win_rate": 1.0,
+   "neg_failure_rate": 0.0,
+   "win_cases": [
+    "m042-POS-01"
+   ],
+   "loss_cases": []
+  },
+  {
+   "id": "m043",
+   "name": "Temporal Thinking (Short vs Long Term)",
+   "family": "Additional High-Value",
+   "triggers": {
+    "domains": [
+     "finance",
+     "medical",
+     "software"
+    ],
+    "goals": [
+     "decide",
+     "estimate",
+     "maximize"
+    ],
+    "context": [
+     "high_stakes"
+    ]
+   },
+   "pos_win_rate": 1.0,
+   "neg_failure_rate": 0.0,
+   "win_cases": [
+    "m043-POS-01"
+   ],
+   "loss_cases": []
+  },
+  {
+   "id": "m044",
+   "name": "Multi-Perspective Taking (Stakeholder Analysis)",
+   "family": "Additional High-Value",
+   "triggers": {
+    "domains": [
+     "engineering",
+     "finance",
+     "medical",
+     "organization",
+     "product",
+     "security",
+     "software",
+     "strategy",
+     "supply"
+    ],
+    "goals": [
+     "decide",
+     "diagnose",
+     "estimate",
+     "maximize",
+     "predict"
+    ],
+    "context": [
+     "adversarial",
+     "deadline"
+    ]
+   },
+   "pos_win_rate": 1.0,
+   "neg_failure_rate": 0.0,
+   "win_cases": [
+    "m044-POS-01"
+   ],
+   "loss_cases": []
+  },
+  {
+   "id": "m045",
+   "name": "Ethical Reasoning Frameworks",
+   "family": "Additional High-Value",
+   "triggers": {
+    "domains": [
+     "engineering",
+     "finance",
+     "medical",
+     "product",
+     "science",
+     "supply"
+    ],
+    "goals": [
+     "decide",
+     "estimate",
+     "guarantee",
+     "maximize",
+     "predict"
+    ],
+    "context": [
+     "deadline"
+    ]
+   },
+   "pos_win_rate": 1.0,
+   "neg_failure_rate": 0.0,
+   "win_cases": [
+    "m045-POS-01"
+   ],
+   "loss_cases": []
+  },
+  {
+   "id": "m046",
+   "name": "First Principles in Software Architecture",
+   "family": "Domain-Specialized",
+   "triggers": {
+    "domains": [
+     "engineering",
+     "finance",
+     "medical",
+     "organization",
+     "product",
+     "software",
+     "strategy",
+     "supply"
+    ],
+    "goals": [
+     "diagnose",
+     "estimate",
+     "guarantee"
+    ],
+    "context": []
+   },
+   "pos_win_rate": 1.0,
+   "neg_failure_rate": 0.0,
+   "win_cases": [
+    "m046-POS-01"
+   ],
+   "loss_cases": []
+  },
+  {
+   "id": "m047",
+   "name": "Bayesian Updating in Medical Diagnosis",
+   "family": "Domain-Specialized",
+   "triggers": {
+    "domains": [
+     "medical",
+     "organization",
+     "science",
+     "supply"
+    ],
+    "goals": [
+     "decide",
+     "diagnose",
+     "maximize",
+     "predict"
+    ],
+    "context": []
+   },
+   "pos_win_rate": 1.0,
+   "neg_failure_rate": 1.0,
+   "win_cases": [
+    "m047-POS-01"
+   ],
+   "loss_cases": [
+    "m047-NEG-01"
+   ]
+  },
+  {
+   "id": "m048",
+   "name": "Systems Thinking in Supply Chain",
+   "family": "Domain-Specialized",
+   "triggers": {
+    "domains": [
+     "engineering",
+     "finance",
+     "medical",
+     "product",
+     "software",
+     "supply"
+    ],
+    "goals": [
+     "decide",
+     "diagnose",
+     "estimate",
+     "maximize",
+     "predict"
+    ],
+    "context": []
+   },
+   "pos_win_rate": 1.0,
+   "neg_failure_rate": 0.0,
+   "win_cases": [
+    "m048-POS-01"
+   ],
+   "loss_cases": []
+  },
+  {
+   "id": "m049",
+   "name": "First Principles in Business Strategy",
+   "family": "Domain-Specialized",
+   "triggers": {
+    "domains": [
+     "engineering",
+     "finance",
+     "medical",
+     "product",
+     "science",
+     "strategy"
+    ],
+    "goals": [
+     "decide",
+     "estimate",
+     "guarantee",
+     "maximize"
+    ],
+    "context": [
+     "high_stakes"
+    ]
+   },
+   "pos_win_rate": 1.0,
+   "neg_failure_rate": 0.0,
+   "win_cases": [
+    "m049-POS-01"
+   ],
+   "loss_cases": []
+  },
+  {
+   "id": "m050",
+   "name": "Inversion in Product Design (Safety)",
+   "family": "Domain-Specialized",
+   "triggers": {
+    "domains": [
+     "engineering",
+     "finance",
+     "medical",
+     "product",
+     "security",
+     "software",
+     "strategy",
+     "supply"
+    ],
+    "goals": [
+     "decide",
+     "estimate",
+     "guarantee",
+     "predict"
+    ],
+    "context": [
+     "high_stakes"
+    ]
+   },
+   "pos_win_rate": 1.0,
+   "neg_failure_rate": 0.0,
+   "win_cases": [
+    "m050-POS-01"
+   ],
+   "loss_cases": []
+  },
+  {
+   "id": "m051",
+   "name": "Expected Value in Startup Portfolios (VC)",
+   "family": "Domain-Specialized",
+   "triggers": {
+    "domains": [],
+    "goals": [],
+    "context": []
+   },
+   "pos_win_rate": 0.0,
+   "neg_failure_rate": 0.0,
+   "win_cases": [],
+   "loss_cases": [
+    "m051-POS-01"
+   ]
+  },
+  {
+   "id": "m052",
+   "name": "OODA in Competitive Markets",
+   "family": "Domain-Specialized",
+   "triggers": {
+    "domains": [
+     "engineering",
+     "finance",
+     "medical",
+     "organization",
+     "product",
+     "security",
+     "software",
+     "strategy"
+    ],
+    "goals": [
+     "decide",
+     "maximize"
+    ],
+    "context": [
+     "adversarial",
+     "deadline"
+    ]
+   },
+   "pos_win_rate": 1.0,
+   "neg_failure_rate": 0.0,
+   "win_cases": [
+    "m052-POS-01"
+   ],
+   "loss_cases": []
+  },
+  {
+   "id": "m053",
+   "name": "Root Cause Analysis in Incident Response",
+   "family": "Domain-Specialized",
+   "triggers": {
+    "domains": [
+     "engineering",
+     "medical",
+     "product",
+     "software"
+    ],
+    "goals": [
+     "decide",
+     "diagnose",
+     "guarantee",
+     "maximize"
+    ],
+    "context": [
+     "deadline"
+    ]
+   },
+   "pos_win_rate": 1.0,
+   "neg_failure_rate": 0.0,
+   "win_cases": [
+    "m053-POS-01"
+   ],
+   "loss_cases": []
+  },
+  {
+   "id": "m054",
+   "name": "Fermi Estimation in Market Sizing",
+   "family": "Domain-Specialized",
+   "triggers": {
+    "domains": [
+     "engineering",
+     "finance",
+     "medical",
+     "product",
+     "strategy"
+    ],
+    "goals": [
+     "decide",
+     "estimate",
+     "maximize"
+    ],
+    "context": []
+   },
+   "pos_win_rate": 1.0,
+   "neg_failure_rate": 0.0,
+   "win_cases": [
+    "m054-POS-01"
+   ],
+   "loss_cases": []
+  },
+  {
+   "id": "m055",
+   "name": "Causal Reasoning in Economics",
+   "family": "Domain-Specialized",
+   "triggers": {
+    "domains": [
+     "engineering",
+     "finance",
+     "medical",
+     "product",
+     "science",
+     "security",
+     "software",
+     "strategy",
+     "supply"
+    ],
+    "goals": [
+     "decide",
+     "estimate",
+     "maximize"
+    ],
+    "context": [
+     "deadline"
+    ]
+   },
+   "pos_win_rate": 1.0,
+   "neg_failure_rate": 1.0,
+   "win_cases": [
+    "m055-POS-01"
+   ],
+   "loss_cases": [
+    "m055-NEG-01"
+   ]
+  },
+  {
+   "id": "m056",
+   "name": "Design Thinking for Consumer Products",
+   "family": "Domain-Specialized",
+   "triggers": {
+    "domains": [],
+    "goals": [],
+    "context": []
+   },
+   "pos_win_rate": 0.0,
+   "neg_failure_rate": 0.0,
+   "win_cases": [],
+   "loss_cases": [
+    "m056-POS-01"
+   ]
+  },
+  {
+   "id": "m057",
+   "name": "Red Teaming in Cybersecurity (Threat Modeling)",
+   "family": "Domain-Specialized",
+   "triggers": {
+    "domains": [
+     "engineering",
+     "finance",
+     "medical",
+     "organization",
+     "product",
+     "security",
+     "software",
+     "supply"
+    ],
+    "goals": [
+     "estimate",
+     "guarantee"
+    ],
+    "context": [
+     "adversarial"
+    ]
+   },
+   "pos_win_rate": 1.0,
+   "neg_failure_rate": 0.0,
+   "win_cases": [
+    "m057-POS-01"
+   ],
+   "loss_cases": []
+  },
+  {
+   "id": "m058",
+   "name": "Real Options in R&D Investment",
+   "family": "Domain-Specialized",
+   "triggers": {
+    "domains": [
+     "engineering",
+     "finance",
+     "medical",
+     "product",
+     "software",
+     "strategy"
+    ],
+    "goals": [
+     "decide",
+     "estimate",
+     "maximize",
+     "predict"
+    ],
+    "context": [
+     "deadline",
+     "high_stakes"
+    ]
+   },
+   "pos_win_rate": 1.0,
+   "neg_failure_rate": 0.0,
+   "win_cases": [
+    "m058-POS-01"
+   ],
+   "loss_cases": []
+  },
+  {
+   "id": "m059",
+   "name": "Scenario Planning in Geopolitics",
+   "family": "Domain-Specialized",
+   "triggers": {
+    "domains": [
+     "engineering",
+     "finance",
+     "medical",
+     "product",
+     "software",
+     "strategy",
+     "supply"
+    ],
+    "goals": [
+     "estimate",
+     "maximize",
+     "predict"
+    ],
+    "context": [
+     "deadline"
+    ]
+   },
+   "pos_win_rate": 1.0,
+   "neg_failure_rate": 0.0,
+   "win_cases": [
+    "m059-POS-01"
+   ],
+   "loss_cases": []
+  },
+  {
+   "id": "m060",
+   "name": "Base Rate Avoidance in Hiring",
+   "family": "Domain-Specialized",
+   "triggers": {
+    "domains": [
+     "engineering",
+     "finance",
+     "medical",
+     "product",
+     "science",
+     "software"
+    ],
+    "goals": [
+     "diagnose",
+     "estimate",
+     "maximize",
+     "predict"
+    ],
+    "context": []
+   },
+   "pos_win_rate": 1.0,
+   "neg_failure_rate": 0.0,
+   "win_cases": [
+    "m060-POS-01"
+   ],
+   "loss_cases": []
+  },
+  {
+   "id": "m061",
+   "name": "Opportunity Cost in Personal Finance",
+   "family": "Domain-Specialized",
+   "triggers": {
+    "domains": [
+     "finance",
+     "medical",
+     "product",
+     "software",
+     "strategy"
+    ],
+    "goals": [
+     "decide",
+     "estimate",
+     "guarantee"
+    ],
+    "context": [
+     "high_stakes"
+    ]
+   },
+   "pos_win_rate": 1.0,
+   "neg_failure_rate": 0.0,
+   "win_cases": [
+    "m061-POS-01"
+   ],
+   "loss_cases": []
+  },
+  {
+   "id": "m062",
+   "name": "Temporal Thinking in Climate Policy",
+   "family": "Domain-Specialized",
+   "triggers": {
+    "domains": [
+     "engineering",
+     "finance",
+     "medical",
+     "product",
+     "software",
+     "strategy",
+     "supply"
+    ],
+    "goals": [
+     "decide",
+     "estimate",
+     "guarantee"
+    ],
+    "context": [
+     "high_stakes"
+    ]
+   },
+   "pos_win_rate": 1.0,
+   "neg_failure_rate": 0.0,
+   "win_cases": [
+    "m062-POS-01"
+   ],
+   "loss_cases": []
+  },
+  {
+   "id": "m063",
+   "name": "Multi-Perspective in Legal Reasoning",
+   "family": "Domain-Specialized",
+   "triggers": {
+    "domains": [
+     "engineering",
+     "finance",
+     "medical",
+     "organization",
+     "product",
+     "software",
+     "supply"
+    ],
+    "goals": [
+     "decide",
+     "estimate",
+     "maximize",
+     "predict"
+    ],
+    "context": [
+     "adversarial",
+     "deadline",
+     "high_stakes"
+    ]
+   },
+   "pos_win_rate": 1.0,
+   "neg_failure_rate": 0.0,
+   "win_cases": [
+    "m063-POS-01"
+   ],
+   "loss_cases": []
+  },
+  {
+   "id": "m064",
+   "name": "Ethical Frameworks in AI Deployment",
+   "family": "Domain-Specialized",
+   "triggers": {
+    "domains": [
+     "engineering",
+     "finance",
+     "medical",
+     "organization",
+     "product",
+     "software",
+     "strategy",
+     "supply"
+    ],
+    "goals": [
+     "decide",
+     "estimate",
+     "maximize"
+    ],
+    "context": [
+     "adversarial",
+     "deadline",
+     "high_stakes"
+    ]
+   },
+   "pos_win_rate": 1.0,
+   "neg_failure_rate": 0.0,
+   "win_cases": [
+    "m064-POS-01"
+   ],
+   "loss_cases": []
+  },
+  {
+   "id": "m065",
+   "name": "Margin of Safety in Engineering Design",
+   "family": "Domain-Specialized",
+   "triggers": {
+    "domains": [
+     "engineering",
+     "finance",
+     "medical",
+     "product",
+     "science",
+     "software"
+    ],
+    "goals": [
+     "guarantee",
+     "maximize"
+    ],
+    "context": [
+     "high_stakes"
+    ]
+   },
+   "pos_win_rate": 1.0,
+   "neg_failure_rate": 0.0,
+   "win_cases": [
+    "m065-POS-01"
+   ],
+   "loss_cases": []
+  },
+  {
+   "id": "m066",
+   "name": "Strong Inference (Platt)",
+   "family": "Additional Expert Strategies",
+   "triggers": {
+    "domains": [
+     "engineering",
+     "finance",
+     "medical",
+     "product",
+     "science",
+     "security",
+     "software",
+     "supply"
+    ],
+    "goals": [
+     "estimate",
+     "guarantee",
+     "maximize"
+    ],
+    "context": [
+     "deadline"
+    ]
+   },
+   "pos_win_rate": 1.0,
+   "neg_failure_rate": 0.0,
+   "win_cases": [
+    "m066-POS-01"
+   ],
+   "loss_cases": []
+  },
+  {
+   "id": "m067",
+   "name": "Thought Experiment (Gedankenexperiment)",
+   "family": "Additional Expert Strategies",
+   "triggers": {
+    "domains": [],
+    "goals": [],
+    "context": []
+   },
+   "pos_win_rate": 0.0,
+   "neg_failure_rate": 0.0,
+   "win_cases": [],
+   "loss_cases": [
+    "m067-POS-01"
+   ]
+  },
+  {
+   "id": "m068",
+   "name": "Hypothesis-Driven Consulting (MECE)",
+   "family": "Additional Expert Strategies",
+   "triggers": {
+    "domains": [
+     "engineering",
+     "finance",
+     "medical",
+     "product",
+     "science",
+     "software",
+     "strategy",
+     "supply"
+    ],
+    "goals": [
+     "estimate",
+     "maximize",
+     "predict"
+    ],
+    "context": [
+     "deadline"
+    ]
+   },
+   "pos_win_rate": 1.0,
+   "neg_failure_rate": 0.0,
+   "win_cases": [
+    "m068-POS-01"
+   ],
+   "loss_cases": []
+  },
+  {
+   "id": "m069",
+   "name": "80/20 Pareto Analysis",
+   "family": "Additional Expert Strategies",
+   "triggers": {
+    "domains": [
+     "engineering",
+     "finance",
+     "medical",
+     "product",
+     "science",
+     "software"
+    ],
+    "goals": [
+     "diagnose",
+     "estimate",
+     "predict"
+    ],
+    "context": [
+     "deadline",
+     "high_stakes"
+    ]
+   },
+   "pos_win_rate": 1.0,
+   "neg_failure_rate": 0.0,
+   "win_cases": [
+    "m069-POS-01"
+   ],
+   "loss_cases": []
+  },
+  {
+   "id": "m070",
+   "name": "Evidence-Weighted SWOT",
+   "family": "Additional Expert Strategies",
+   "triggers": {
+    "domains": [
+     "engineering",
+     "finance",
+     "medical",
+     "organization",
+     "product",
+     "science",
+     "security",
+     "software",
+     "strategy",
+     "supply"
+    ],
+    "goals": [
+     "decide",
+     "estimate",
+     "guarantee",
+     "maximize",
+     "predict"
+    ],
+    "context": [
+     "adversarial"
+    ]
+   },
+   "pos_win_rate": 1.0,
+   "neg_failure_rate": 0.0,
+   "win_cases": [
+    "m070-POS-01"
+   ],
+   "loss_cases": []
+  },
+  {
+   "id": "m071",
+   "name": "Porter's Five Forces",
+   "family": "Additional Expert Strategies",
+   "triggers": {
+    "domains": [
+     "engineering",
+     "finance",
+     "medical",
+     "organization",
+     "security",
+     "software",
+     "strategy",
+     "supply"
+    ],
+    "goals": [
+     "decide",
+     "estimate"
+    ],
+    "context": []
+   },
+   "pos_win_rate": 1.0,
+   "neg_failure_rate": 0.0,
+   "win_cases": [
+    "m071-POS-01"
+   ],
+   "loss_cases": []
+  },
+  {
+   "id": "m072",
+   "name": "Value Chain Analysis",
+   "family": "Additional Expert Strategies",
+   "triggers": {
+    "domains": [
+     "engineering",
+     "finance",
+     "medical",
+     "product",
+     "science",
+     "supply"
+    ],
+    "goals": [
+     "estimate",
+     "guarantee",
+     "maximize"
+    ],
+    "context": [
+     "adversarial",
+     "high_stakes"
+    ]
+   },
+   "pos_win_rate": 1.0,
+   "neg_failure_rate": 0.0,
+   "win_cases": [
+    "m072-POS-01"
+   ],
+   "loss_cases": []
+  },
+  {
+   "id": "m073",
+   "name": "Game Theory / Strategic Interaction",
+   "family": "Additional Expert Strategies",
+   "triggers": {
+    "domains": [
+     "engineering",
+     "finance",
+     "medical",
+     "product",
+     "science",
+     "security",
+     "software",
+     "strategy"
+    ],
+    "goals": [
+     "decide",
+     "estimate",
+     "maximize"
+    ],
+    "context": [
+     "adversarial"
+    ]
+   },
+   "pos_win_rate": 1.0,
+   "neg_failure_rate": 0.0,
+   "win_cases": [
+    "m073-POS-01"
+   ],
+   "loss_cases": []
+  },
+  {
+   "id": "m074",
+   "name": "Nash Equilibrium Reasoning",
+   "family": "Additional Expert Strategies",
+   "triggers": {
+    "domains": [
+     "engineering",
+     "finance",
+     "medical",
+     "product",
+     "software"
+    ],
+    "goals": [
+     "guarantee"
+    ],
+    "context": [
+     "adversarial",
+     "high_stakes",
+     "one_shot"
+    ]
+   },
+   "pos_win_rate": 1.0,
+   "neg_failure_rate": 0.0,
+   "win_cases": [
+    "m074-POS-01"
+   ],
+   "loss_cases": []
+  },
+  {
+   "id": "m075",
+   "name": "Bounded Rationality & Satisficing (Simon)",
+   "family": "Additional Expert Strategies",
+   "triggers": {
+    "domains": [
+     "engineering",
+     "finance",
+     "medical",
+     "organization",
+     "product",
+     "software",
+     "strategy",
+     "supply"
+    ],
+    "goals": [
+     "decide",
+     "estimate",
+     "maximize",
+     "predict"
+    ],
+    "context": [
+     "deadline"
+    ]
+   },
+   "pos_win_rate": 1.0,
+   "neg_failure_rate": 0.0,
+   "win_cases": [
+    "m075-POS-01"
+   ],
+   "loss_cases": []
+  },
+  {
+   "id": "m076",
+   "name": "Prospect Theory Awareness",
+   "family": "Additional Expert Strategies",
+   "triggers": {
+    "domains": [
+     "engineering",
+     "finance",
+     "medical",
+     "organization",
+     "product",
+     "supply"
+    ],
+    "goals": [
+     "decide",
+     "diagnose",
+     "guarantee",
+     "maximize",
+     "predict"
+    ],
+    "context": []
+   },
+   "pos_win_rate": 1.0,
+   "neg_failure_rate": 0.0,
+   "win_cases": [
+    "m076-POS-01"
+   ],
+   "loss_cases": []
+  },
+  {
+   "id": "m077",
+   "name": "Sunk Cost Recognition",
+   "family": "Additional Expert Strategies",
+   "triggers": {
+    "domains": [
+     "finance",
+     "medical",
+     "organization",
+     "product",
+     "software",
+     "strategy"
+    ],
+    "goals": [
+     "decide",
+     "estimate",
+     "maximize",
+     "predict"
+    ],
+    "context": [
+     "adversarial"
+    ]
+   },
+   "pos_win_rate": 1.0,
+   "neg_failure_rate": 0.0,
+   "win_cases": [
+    "m077-POS-01"
+   ],
+   "loss_cases": []
+  },
+  {
+   "id": "m078",
+   "name": "Anchoring Avoidance",
+   "family": "Additional Expert Strategies",
+   "triggers": {
+    "domains": [
+     "finance",
+     "medical",
+     "product",
+     "software",
+     "strategy",
+     "supply"
+    ],
+    "goals": [
+     "estimate",
+     "guarantee",
+     "maximize"
+    ],
+    "context": [
+     "adversarial",
+     "high_stakes",
+     "one_shot"
+    ]
+   },
+   "pos_win_rate": 1.0,
+   "neg_failure_rate": 0.0,
+   "win_cases": [
+    "m078-POS-01"
+   ],
+   "loss_cases": []
+  },
+  {
+   "id": "m079",
+   "name": "Confirmation Bias Hunting",
+   "family": "Additional Expert Strategies",
+   "triggers": {
+    "domains": [
+     "engineering",
+     "medical",
+     "organization",
+     "product",
+     "science",
+     "software",
+     "strategy"
+    ],
+    "goals": [
+     "decide",
+     "diagnose",
+     "guarantee",
+     "maximize",
+     "predict"
+    ],
+    "context": []
+   },
+   "pos_win_rate": 1.0,
+   "neg_failure_rate": 0.0,
+   "win_cases": [
+    "m079-POS-01"
+   ],
+   "loss_cases": []
+  },
+  {
+   "id": "m080",
+   "name": "Survivorship Bias Analysis",
+   "family": "Additional Expert Strategies",
+   "triggers": {
+    "domains": [
+     "engineering",
+     "finance",
+     "medical",
+     "product",
+     "software",
+     "strategy"
+    ],
+    "goals": [
+     "decide",
+     "maximize",
+     "predict"
+    ],
+    "context": []
+   },
+   "pos_win_rate": 1.0,
+   "neg_failure_rate": 0.0,
+   "win_cases": [
+    "m080-POS-01"
+   ],
+   "loss_cases": []
+  },
+  {
+   "id": "m081",
+   "name": "Narrative Fallacy Detection",
+   "family": "Additional Expert Strategies",
+   "triggers": {
+    "domains": [
+     "finance",
+     "medical",
+     "product",
+     "science",
+     "software",
+     "strategy"
+    ],
+    "goals": [
+     "decide",
+     "diagnose",
+     "maximize"
+    ],
+    "context": []
+   },
+   "pos_win_rate": 1.0,
+   "neg_failure_rate": 0.0,
+   "win_cases": [
+    "m081-POS-01"
+   ],
+   "loss_cases": []
+  },
+  {
+   "id": "m082",
+   "name": "Motivated Reasoning Detection",
+   "family": "Additional Expert Strategies",
+   "triggers": {
+    "domains": [
+     "engineering",
+     "finance",
+     "medical",
+     "organization",
+     "product",
+     "security",
+     "software"
+    ],
+    "goals": [
+     "decide",
+     "diagnose",
+     "estimate",
+     "maximize"
+    ],
+    "context": [
+     "adversarial",
+     "deadline"
+    ]
+   },
+   "pos_win_rate": 1.0,
+   "neg_failure_rate": 0.0,
+   "win_cases": [
+    "m082-POS-01"
+   ],
+   "loss_cases": []
+  },
+  {
+   "id": "m083",
+   "name": "Principal-Agent Analysis",
+   "family": "Additional Expert Strategies",
+   "triggers": {
+    "domains": [
+     "engineering",
+     "finance",
+     "medical",
+     "organization",
+     "strategy"
+    ],
+    "goals": [
+     "decide",
+     "estimate",
+     "maximize"
+    ],
+    "context": [
+     "adversarial"
+    ]
+   },
+   "pos_win_rate": 1.0,
+   "neg_failure_rate": 0.0,
+   "win_cases": [
+    "m083-POS-01"
+   ],
+   "loss_cases": []
+  },
+  {
+   "id": "m084",
+   "name": "Collective Action & Coordination",
+   "family": "Additional Expert Strategies",
+   "triggers": {
+    "domains": [
+     "engineering",
+     "finance",
+     "medical",
+     "organization",
+     "product",
+     "science",
+     "software",
+     "strategy"
+    ],
+    "goals": [
+     "decide",
+     "diagnose",
+     "estimate",
+     "maximize"
+    ],
+    "context": [
+     "adversarial",
+     "high_stakes",
+     "one_shot"
+    ]
+   },
+   "pos_win_rate": 1.0,
+   "neg_failure_rate": 0.0,
+   "win_cases": [
+    "m084-POS-01"
+   ],
+   "loss_cases": []
+  },
+  {
+   "id": "m085",
+   "name": "Tragedy of the Commons Analysis",
+   "family": "Additional Expert Strategies",
+   "triggers": {
+    "domains": [
+     "engineering",
+     "finance",
+     "medical",
+     "organization",
+     "product",
+     "software"
+    ],
+    "goals": [
+     "decide",
+     "diagnose",
+     "estimate",
+     "guarantee",
+     "predict"
+    ],
+    "context": []
+   },
+   "pos_win_rate": 1.0,
+   "neg_failure_rate": 0.0,
+   "win_cases": [
+    "m085-POS-01"
+   ],
+   "loss_cases": []
+  },
+  {
+   "id": "m086",
+   "name": "Organizational Feedback Loop Analysis",
+   "family": "Additional Expert Strategies",
+   "triggers": {
+    "domains": [
+     "engineering",
+     "finance",
+     "medical",
+     "organization",
+     "strategy"
+    ],
+    "goals": [
+     "estimate",
+     "guarantee",
+     "predict"
+    ],
+    "context": []
+   },
+   "pos_win_rate": 1.0,
+   "neg_failure_rate": 1.0,
+   "win_cases": [
+    "m086-POS-01"
+   ],
+   "loss_cases": [
+    "m086-NEG-01"
+   ]
+  },
+  {
+   "id": "m087",
+   "name": "BATNA Thinking (Negotiation)",
+   "family": "Additional Expert Strategies",
+   "triggers": {
+    "domains": [
+     "engineering",
+     "finance",
+     "medical",
+     "organization",
+     "product",
+     "software",
+     "strategy"
+    ],
+    "goals": [
+     "decide",
+     "estimate",
+     "maximize"
+    ],
+    "context": [
+     "adversarial",
+     "deadline",
+     "high_stakes"
+    ]
+   },
+   "pos_win_rate": 1.0,
+   "neg_failure_rate": 0.0,
+   "win_cases": [
+    "m087-POS-01"
+   ],
+   "loss_cases": []
+  },
+  {
+   "id": "m088",
+   "name": "Pre-Commitment & Ulysses Contracts",
+   "family": "Additional Expert Strategies",
+   "triggers": {
+    "domains": [
+     "engineering",
+     "finance",
+     "medical",
+     "organization",
+     "product",
+     "software",
+     "strategy"
+    ],
+    "goals": [
+     "decide",
+     "estimate",
+     "guarantee",
+     "maximize",
+     "predict"
+    ],
+    "context": [
+     "adversarial",
+     "deadline"
+    ]
+   },
+   "pos_win_rate": 1.0,
+   "neg_failure_rate": 0.0,
+   "win_cases": [
+    "m088-POS-01"
+   ],
+   "loss_cases": []
+  },
+  {
+   "id": "m089",
+   "name": "Optionality Preservation",
+   "family": "Additional Expert Strategies",
+   "triggers": {
+    "domains": [
+     "finance",
+     "medical",
+     "organization",
+     "product",
+     "security",
+     "software",
+     "strategy",
+     "supply"
+    ],
+    "goals": [
+     "decide",
+     "estimate",
+     "guarantee",
+     "maximize",
+     "predict"
+    ],
+    "context": [
+     "deadline",
+     "high_stakes"
+    ]
+   },
+   "pos_win_rate": 1.0,
+   "neg_failure_rate": 0.0,
+   "win_cases": [
+    "m089-POS-01"
+   ],
+   "loss_cases": []
+  },
+  {
+   "id": "m090",
+   "name": "Minimum Viable Experiment (Build-Measure-Learn)",
+   "family": "Additional Expert Strategies",
+   "triggers": {
+    "domains": [
+     "engineering",
+     "finance",
+     "medical",
+     "product",
+     "science",
+     "software",
+     "strategy"
+    ],
+    "goals": [
+     "decide",
+     "estimate",
+     "maximize"
+    ],
+    "context": [
+     "adversarial"
+    ]
+   },
+   "pos_win_rate": 1.0,
+   "neg_failure_rate": 0.0,
+   "win_cases": [
+    "m090-POS-01"
+   ],
+   "loss_cases": []
+  },
+  {
+   "id": "m091",
+   "name": "Deliberate Practice & Chunking",
+   "family": "Additional Expert Strategies",
+   "triggers": {
+    "domains": [
+     "engineering",
+     "medical",
+     "organization",
+     "product",
+     "science",
+     "software",
+     "supply"
+    ],
+    "goals": [
+     "decide",
+     "diagnose",
+     "guarantee",
+     "maximize",
+     "predict"
+    ],
+    "context": [
+     "deadline"
+    ]
+   },
+   "pos_win_rate": 1.0,
+   "neg_failure_rate": 0.0,
+   "win_cases": [
+    "m091-POS-01"
+   ],
+   "loss_cases": []
+  },
+  {
+   "id": "m092",
+   "name": "Spaced Repetition & Memory Science",
+   "family": "Additional Expert Strategies",
+   "triggers": {
+    "domains": [
+     "engineering",
+     "medical",
+     "organization",
+     "product",
+     "software"
+    ],
+    "goals": [
+     "diagnose",
+     "guarantee",
+     "maximize"
+    ],
+    "context": [
+     "deadline",
+     "high_stakes"
+    ]
+   },
+   "pos_win_rate": 1.0,
+   "neg_failure_rate": 0.0,
+   "win_cases": [
+    "m092-POS-01"
+   ],
+   "loss_cases": []
+  },
+  {
+   "id": "m093",
+   "name": "Feynman Technique",
+   "family": "Additional Expert Strategies",
+   "triggers": {
+    "domains": [
+     "engineering",
+     "finance",
+     "medical",
+     "product",
+     "software",
+     "strategy"
+    ],
+    "goals": [
+     "decide",
+     "diagnose"
+    ],
+    "context": []
+   },
+   "pos_win_rate": 1.0,
+   "neg_failure_rate": 0.0,
+   "win_cases": [
+    "m093-POS-01"
+   ],
+   "loss_cases": []
+  },
+  {
+   "id": "m094",
+   "name": "Critical Reading / Socratic Questioning of Texts",
+   "family": "Additional Expert Strategies",
+   "triggers": {
+    "domains": [
+     "engineering",
+     "finance",
+     "medical",
+     "organization",
+     "product",
+     "science",
+     "security",
+     "software",
+     "strategy"
+    ],
+    "goals": [
+     "decide",
+     "estimate",
+     "maximize"
+    ],
+    "context": [
+     "adversarial",
+     "deadline",
+     "high_stakes"
+    ]
+   },
+   "pos_win_rate": 1.0,
+   "neg_failure_rate": 0.0,
+   "win_cases": [
+    "m094-POS-01"
+   ],
+   "loss_cases": []
+  },
+  {
+   "id": "m095",
+   "name": "Fast-and-Frugal Decision Trees (Gigerenzer)",
+   "family": "Additional Expert Strategies",
+   "triggers": {
+    "domains": [
+     "medical",
+     "product"
+    ],
+    "goals": [
+     "decide",
+     "diagnose",
+     "guarantee",
+     "predict"
+    ],
+    "context": []
+   },
+   "pos_win_rate": 1.0,
+   "neg_failure_rate": 0.0,
+   "win_cases": [
+    "m095-POS-01"
+   ],
+   "loss_cases": []
+  },
+  {
+   "id": "m096",
+   "name": "Ensemble Thinking (Diverse Views Averaging)",
+   "family": "Additional Expert Strategies",
+   "triggers": {
+    "domains": [
+     "engineering",
+     "medical",
+     "organization",
+     "product",
+     "science",
+     "security",
+     "supply"
+    ],
+    "goals": [
+     "diagnose",
+     "estimate",
+     "maximize",
+     "predict"
+    ],
+    "context": []
+   },
+   "pos_win_rate": 1.0,
+   "neg_failure_rate": 0.0,
+   "win_cases": [
+    "m096-POS-01"
+   ],
+   "loss_cases": []
+  },
+  {
+   "id": "m097",
+   "name": "Reference Class Forecasting (Kahneman)",
+   "family": "Additional Expert Strategies",
+   "triggers": {
+    "domains": [
+     "engineering",
+     "finance",
+     "medical",
+     "organization",
+     "product",
+     "software",
+     "supply"
+    ],
+    "goals": [
+     "diagnose",
+     "estimate",
+     "predict"
+    ],
+    "context": []
+   },
+   "pos_win_rate": 1.0,
+   "neg_failure_rate": 0.0,
+   "win_cases": [
+    "m097-POS-01"
+   ],
+   "loss_cases": []
+  },
+  {
+   "id": "m098",
+   "name": "Decision Pre-registration / Journaling",
+   "family": "Additional Expert Strategies",
+   "triggers": {
+    "domains": [
+     "engineering",
+     "finance",
+     "medical",
+     "organization",
+     "product",
+     "science",
+     "software",
+     "supply"
+    ],
+    "goals": [
+     "estimate",
+     "guarantee",
+     "maximize",
+     "predict"
+    ],
+    "context": []
+   },
+   "pos_win_rate": 1.0,
+   "neg_failure_rate": 0.0,
+   "win_cases": [
+    "m098-POS-01"
+   ],
+   "loss_cases": []
+  },
+  {
+   "id": "m099",
+   "name": "Bayesian Knowledge Updating (Org Learning)",
+   "family": "Additional Expert Strategies",
+   "triggers": {
+    "domains": [
+     "finance",
+     "medical",
+     "product",
+     "science",
+     "software"
+    ],
+    "goals": [
+     "decide",
+     "estimate",
+     "guarantee",
+     "predict"
+    ],
+    "context": []
+   },
+   "pos_win_rate": 1.0,
+   "neg_failure_rate": 0.0,
+   "win_cases": [
+    "m099-POS-01"
+   ],
+   "loss_cases": []
+  },
+  {
+   "id": "m100",
+   "name": "First Principles + Falsification Combo (Hypothesis Rebuild)",
+   "family": "Additional Expert Strategies",
+   "triggers": {
+    "domains": [
+     "engineering",
+     "finance",
+     "medical",
+     "organization",
+     "product",
+     "science",
+     "security",
+     "software",
+     "supply"
+    ],
+    "goals": [
+     "decide",
+     "estimate",
+     "maximize"
+    ],
+    "context": [
+     "deadline"
+    ]
+   },
+   "pos_win_rate": 1.0,
+   "neg_failure_rate": 0.0,
+   "win_cases": [
+    "m100-POS-01"
+   ],
+   "loss_cases": []
+  },
+  {
+   "id": "m101",
+   "name": "Solo-Contract Bayesian Precision",
+   "family": "Counter Models (v7 residual closure)",
+   "triggers": {
+    "domains": [],
+    "goals": [],
+    "context": []
+   },
+   "pos_win_rate": 0.0,
+   "neg_failure_rate": 0.0,
+   "win_cases": [],
+   "loss_cases": []
+  },
+  {
+   "id": "m102",
+   "name": "Likelihood-Audit Gatekeeper",
+   "family": "Counter Models (v7 residual closure)",
+   "triggers": {
+    "domains": [],
+    "goals": [],
+    "context": []
+   },
+   "pos_win_rate": 0.0,
+   "neg_failure_rate": 0.0,
+   "win_cases": [],
+   "loss_cases": []
+  },
+  {
+   "id": "m103",
+   "name": "Sequential Constraint Engine",
+   "family": "Counter Models (v7 residual closure)",
+   "triggers": {
+    "domains": [],
+    "goals": [],
+    "context": []
+   },
+   "pos_win_rate": 0.0,
+   "neg_failure_rate": 0.0,
+   "win_cases": [],
+   "loss_cases": []
+  },
+  {
+   "id": "m104",
+   "name": "Dynamic Five-Forces Verdict",
+   "family": "Counter Models (v7 residual closure)",
+   "triggers": {
+    "domains": [],
+    "goals": [],
+    "context": []
+   },
+   "pos_win_rate": 0.0,
+   "neg_failure_rate": 0.0,
+   "win_cases": [],
+   "loss_cases": []
+  }
+ ]
+}

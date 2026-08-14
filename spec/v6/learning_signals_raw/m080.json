@@ -1,0 +1,18 @@
+[
+  {
+    "test_case_id": "m080-POS-01",
+    "human_model": "Survivorship Bias Analysis",
+    "winner": "ai",
+    "key_gap": "vs baseline (v5 human won 4.6/4.3): the routed run now produces the baseline's canonical artifact — full-denominator demand, falsified headline (4 slow winners incl. 7.2x exit), 2x2 base rates (27% vs 40% vs 30% base rate), hidden cohort (22/30 = 73% of fast-launchers failed) — as first-class contracted outputs, and the P1 pass flags the partner's memo as interested-party before the math, m058 prices the rejected option (adopt now = option killed on salience), and the insight pass adds the self-amputating-mandate move (a 90-day mandate would delete the slow cohort whose 7.2x exit is the fund's best outcome) the baseline lacked. Residual gap: the human's one-pass failure-side opening is leaner (efficiency 5 vs 4); verdict, math, and decision (reject mandate, commission the discriminative analysis) are identical.",
+    "learning_signal": "On closed-ledger decide signatures, the failures-inventory + base-rate pass must run as first-class contracted outputs (full denominator, falsified headline, conditional rates vs portfolio base rate, hidden-cohort count), and the survivor-pattern claim is best killed by showing the mandate would destroy the very variation the data needs — a self-amputation argument no salience story survives.",
+    "suggested_improvement": "Add the m080 contract to II.2.9 (failures-inventory before trusting survivor patterns; conditional base rates vs portfolio base rate; hidden-cohort count; counterfactual-data caveat — or its explicit absence on closed ledgers) and require an interested-party provenance flag (P1) on the claim under review before any survivor-pattern endorsement; on fully-specified ledger cases the closed-scope fast path (P8) may compress stages but never the failure-side pass."
+  },
+  {
+    "test_case_id": "m080-NEG-01",
+    "human_model": "Survivorship Bias Analysis",
+    "winner": "ai",
+    "key_gap": "vs baseline (human 2.9 / v6 routed 4.9): the baseline's registered weakness — counterfactual data genuinely missing — operated as designed and stalled the decision (withheld ratification, demanded evidence that cannot exist); the routed run executed the same inventory (treated failures 2/141 complete, counterfactual structural, pre-hospital unobservable) but the mandatory m006 gate (unmeasured context) converted the gap into a bound: 3 likelihood scenarios, posterior range, unreachable threshold flip, plus the stakeholder asymmetry (withholding's cost certain, expanding's monitorable) and the forward-data insight (the counterfactual can only be built by expanding). Residual gap: none material — tempo mode held the 48h clock; the true counterfactual stays unmeasurable and is named as such.",
+    "learning_signal": "When failure data structurally cannot exist, the survivorship move must end in a decision-bound rather than a refusal: weight the complete-cohort gradient + mechanism, demonstrate the threshold flip is unreachable at any decision bar, and manufacture the missing data prospectively; 'no counterfactual ⇒ no decision' is the failure signature, not the evidence.",
+    "suggested_improvement": "Keep the m006 provenance gate on all unmeasured/decision-under-clock signatures and add 'counterfactual unobtainable ⇒ manufacture forward' as the mandatory closing step of the m080 contract, so the style's registered weakness is gate-checked on its own home turf; route m044+m011+m063 on deadline+unmeasured decide signatures as the asymmetric-stakes + delay-loop pairing."
+  }
+]

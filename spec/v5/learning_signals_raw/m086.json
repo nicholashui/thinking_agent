@@ -1,0 +1,24 @@
+{
+  "version": "1.0",
+  "model_id": "m086",
+  "human_model": "Organizational Feedback Loop Analysis",
+  "date": "2026-08-07",
+  "signals": [
+    {
+      "test_case_id": "m086-POS-01",
+      "human_model": "Organizational Feedback Loop Analysis",
+      "winner": "human",
+      "key_gap": "The AI caught the structural infeasibility (20×33 = 660 > 480 min) and predicted metric gaming — the headline resistance call — but then treated the HQ mandate as a fixed constraint and designed inside it: it selected 'keep the quota, add anomaly analytics, coaching, quality-weighted bonuses,' which intensifies monitoring and feeds the KPI-illusion loop instead of changing the loop structure. It missed the support-bottleneck amplifier (8 agents at 90%, 15 min per dispute), gave no falsifiable markers or timing (paper-vs-real divergence by Q2-Q3, conversion 12% → ~9-10%, attrition 8% → ~13%), and its own REVIEW flagged the error it could not correct. The human's decisive moves: locating resistance in the time stock as a conservation law rather than attitude, signing 5 loops, and redesigning the policy itself — outcome contract + peer deal-review + support-capacity lever + pre-committed reset triggers honoring the 2019/2021 rollback history.",
+      "learning_signal": "When a policy is structurally infeasible, the policy is a decision variable, not a constraint. After locating resistance, the reasoner must: (1) state the mechanism as a stock-level conservation law (time/effort-budget arithmetic), (2) generate alternatives that change loop structure (remove the quota, rewire compensation, add capacity) as first-class options alongside 'make the mandate work' options, (3) run a downstream-capacity scan (which adjacent teams absorb the side effects), and (4) attach falsifiable markers with timing to every prediction, so the divergence between paper metrics and real outcomes is a checkable signal, not a surprise.",
+      "suggested_improvement": "Add a 'resistance pass' to HOW after alternatives are generated: (1) check each alternative against the binding-constraint arithmetic and mark infeasible ones; (2) require at least one alternative that changes loop structure (adds or removes a lever) rather than intensifying enforcement; (3) require falsifiable markers with timing in the packet's Uncertainty/Risks before DO; (4) add a downstream-capacity scan (adjacent teams affected) to WHY for any policy change."
+    },
+    {
+      "test_case_id": "m086-NEG-01",
+      "human_model": "Organizational Feedback Loop Analysis",
+      "winner": "human",
+      "key_gap": "Both sides correctly refused the reductionist trap: the AI signed off the patch, deferred the 4-month council, and gated residual levers on measurement — the case's core test — and beat the human on efficiency and structure. The residual gap: the AI stopped at the lever. It mentioned freed support capacity in one clause but never quantified it (8 agents × 90% ≈ 7.2 agent-equivalents; a 45% volume cut frees ≈ 3.2 agent-equivalents), did not name the make-work loop (freed capacity + no plan → new metrics → value-destroying work) or the morale/utilization cliff (ticket hoarding, scope-expanded tickets), and had no redeployment ladder (cut 1.5 h/day OT, then backlog, then proactive work). The human's 'aftermath pass' — mapping the org's response to the change itself — is org-change realism the AI lacks: it treated the decision packet as complete at the moment of choice.",
+      "learning_signal": "Selecting a lever is not the end of a change task: a mandatory aftermath pass must follow. For the chosen intervention: (1) quantify the capacity or stock released by the change (arithmetic, not adjectives); (2) name at least two response loops the org will run on the change itself (make-work under freed capacity, morale/utilization cliffs, metric migration); (3) specify a redeployment, not just 'monitor.' The human side also shows the guardrail to preserve when adopting loop analysis: a data gate — no loop claim that contradicts a measurement, and the direct measured lever always comes first.",
+      "suggested_improvement": "Add a mandatory 'aftermath pass' to HOW, after selection and before DO, for any change or intervention: (1) quantify freed or displaced capacity with arithmetic; (2) enumerate at least two second-order org responses (make-work loop, morale/utilization cliff, metric migration) as named, signed loops; (3) specify a redeployment or countermeasure for each; (4) record that no loop map is drawn over measured causes — the direct lever executes first, and loop analysis applies to the residual only."
+    }
+  ]
+}

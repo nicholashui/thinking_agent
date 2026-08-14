@@ -1,0 +1,18 @@
+[
+  {
+    "test_case_id": "m027-POS-01",
+    "human_model": "Design Thinking",
+    "winner": "ai",
+    "key_gap": "vs baseline: the baseline executed the full design cycle (empathize → define → ideate → prototype → test → iterate) at near-ideal depth — v1 latch failure 4/5, v2 retest 5/5 — and the routed v6 pass matched it move-for-move via the m027 completion contract, which the non-routed v5 run had failed (it selected the strip untested and logged latch ergonomics as an open risk its AAR admitted only testing could resolve). Residual gap: the human's narrative compression (insight density per line) still exceeds the packet's, and the human's watch-based empathy phrasing remains more vivid; the AI's dual-route m025 option framing added pilot go/no-go pricing the human never made explicit.",
+    "learning_signal": "On user-centered product tasks (product/decide signatures), the empathize step must treat the stated need as an interested-party artifact: run a P1 provenance audit on the survey itself (who benefits from the stated solution; does the instrument pre-assume a product category), and let observation-vs-stated-preference conflict resolution decide the need — the highest-value move is the contradiction, not the survey.",
+    "suggested_improvement": "Keep m027 design-cycle as a first-class completion contract on product/decide signatures — prototype, test with real users, and iterate are mandatory outputs, never optional (the v5 run's single biggest loss cause); extend the P1 audit to the need-source; pair with m025 real-options whenever the deliverable is a pilot go/no-go (caps downside, prices the negative branch)."
+  },
+  {
+    "test_case_id": "m027-NEG-01",
+    "human_model": "Design Thinking",
+    "winner": "ai",
+    "key_gap": "vs baseline: the baseline ran a genuine, full-cycle engagement whose prototype tests showed 10/12 resident delight and zero movement in the wait arithmetic — the constraint (Car B 30% outage, 6-week repair backlog, 5-day SLA, two 25-person cars vs ~300-person surge → single-car ≥12 loads ≈ 6–8 min) sat unread in data the brief supplied. The routed pass ran m019+m021 with m003/m007 gates: the trap style was routed out of top-3 entirely, so no empathy theater ran; the baseline's single genuine insight (residents want the truth about Car B) arrived as a byproduct of theater, while the v6 pass made it a first-class output.",
+    "learning_signal": "On guarantee/maximize signatures with engineering domains, user-empathy passes must be subordinate to constraint arithmetic — no UX change adds a car; a design cycle that never reads the ops logs is theater. The router's trigger design (trap style out of top-3 when g:estimate/guarantee/maximize) is the protective mechanism that converted this from a loss into a non-loss.",
+    "suggested_improvement": "Keep the router's trap-avoidance verified on this signature (m027 triggers fire only on g:decide); add an explicit constraint-before-preference gate (P5 hard-constraint screen) to any style whose registry weakness is constraint-blindness; route truthful-status-type insights through the insight pass (S2) so the human's byproduct insight becomes a mandatory output."
+  }
+]

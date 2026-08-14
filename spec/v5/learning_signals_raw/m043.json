@@ -1,0 +1,18 @@
+[
+  {
+    "test_case_id": "m043-POS-01",
+    "human_model": "Temporal Thinking (Short vs Long Term)",
+    "winner": "human",
+    "key_gap": "The AI reached the correct decision (L + bridging adjunct) and matched every outcome number, but horizon separation arrived as a verification device rather than a first-class structure: it had no explicit 1-day/1-year/10-year verdict table with per-horizon weights, initially framed the 6-month patient suffering as a 'transition cost' instead of a priced clinical cost (corrected only in REVIEW), and combined horizons by intuition until the verification pass forced each cell into view. The human's trace was literally the horizon table — verdict and weight per horizon, flip identified, near-term cost mitigated in the plan.",
+    "learning_signal": "On time-staggered decisions the style's edge is (a) a mandatory per-horizon verdict table (short/medium/long, each with its own verdict and weight) that keeps every outcome cell live, (b) an explicit rule for combining horizons with the primary endpoint named (here: 10-year survival dominates, 1-day comfort counted but bounded), and (c) intertemporal honesty: a certain near-term cost that cannot be removed must appear as a mitigated item in the plan, never dismissed as transition noise.",
+    "suggested_improvement": "Add a TIME-HORIZON pass to the WHAT stage for decisions carrying stated time horizons: enumerate the decision at each given horizon (1 day / 1 year / 10 years), record a verdict and a weight per horizon, and require the final selection to be consistent with every horizon cell; add the rule that a certain near-term cost may not be discounted solely because a later benefit is larger — if unavoidable, it must be mitigated in the plan and its mitigation itemized."
+  },
+  {
+    "test_case_id": "m043-NEG-01",
+    "human_model": "Temporal Thinking (Short vs Long Term)",
+    "winner": "ai",
+    "key_gap": "The pure style rationalized present harm exactly as its registry entry predicts: it anchored on the 10-year horizon first (800 jobs, plant survival), declared the near-term costs 'the price of the future,' computed the $4.5M/yr expected incident cost only to dismiss it as tail-event noise, and never noticed the stated causal fact that an incident shuts the plant and destroys the 10-year goal itself — inverting the certainty structure (certain, recurring near-term cost vs P = 0.25 speculative benefit). The AI won by running the CEO's 'sacrifice now' framing as a claim to test: EV first ($4.5M > $2M), then the certainty–recurrence check, then the shutdown link.",
+    "learning_signal": "Long-termism's failure mode is asymmetric discounting: weighting speculative long-term gains at face value while discounting certain, recurring near-term harm. The corrective is a certainty-and-recurrence audit before any 'sacrifice now' frame is accepted: (1) compute the near-term cost as annual EV and compare against the near-term gain, (2) attach a probability to the long-term benefit and check the decision does not rest on it, (3) ask whether the present harm defeats the future goal itself — if the harm kills the plan, the trade-off is self-defeating, not brave.",
+    "suggested_improvement": "Add a PROBABILISTIC-TIME gate in WHY for any decision containing a temporal trade-off narrative: classify every cost/benefit as {certain vs speculative} × {recurring vs one-time}; require the near-term EV to be compared with the near-term gain before any long-horizon framing is allowed to dominate selection; and make 'does the present harm defeat the future goal?' a mandatory causality check whenever a present sacrifice is proposed."
+  }
+]

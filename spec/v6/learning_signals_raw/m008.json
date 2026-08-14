@@ -1,0 +1,18 @@
+[
+  {
+    "test_case_id": "m008-POS-01",
+    "human_model": "Probabilistic Forecasting (Superforecasting style)",
+    "winner": "ai",
+    "key_gap": "vs baseline: the baseline computed the same posterior (0.87, [0.80, 0.92]) but as a single-scenario trace; the routed run added what it did not: a likelihood-scenario posterior band (residual 5 pp → 0.71; mapping-drift slope 1.1 → 0.25), a calibrated threshold-flip point (day-14 rate 15.9% ⇔ predicted final 25 pp) that operationalizes the revision rule, an in-sample-mapping provenance flag (the residual sd is mildly optimistic), and a priced day-14 decision option (m058). The v5 AI's ordering gap — outside view used as a post-hoc sanity check instead of the prior — is closed by the m008 completion contract.",
+    "learning_signal": "On estimate/predict signatures with a given reference class and evidence-to-outcome mapping, the superforecasting completion contract (reference class FIRST as the prior, >= 3 likelihood scenarios, posterior range, threshold flip, Brier-scoreable forecast, revision rules) converts a single-number posterior into a robust, decision-priced forecast; the canonical loss on this case was quoting one posterior without scenario sensitivity and treating the reference class as a check rather than the prior.",
+    "suggested_improvement": "Keep m008 top-1 on estimate/predict signatures (trigger match 8/8); make reference-class-FIRST + >= 3 likelihood scenarios + a calibrated threshold-flip point standing contract items on all probability-of-outcome tasks; pair forecast with the m058 option pass whenever a later checkpoint (day 14) can re-price the decision; log in-sample optimism of given mappings as a provenance note."
+  },
+  {
+    "test_case_id": "m008-NEG-01",
+    "human_model": "Probabilistic Forecasting (Superforecasting style)",
+    "winner": "ai",
+    "key_gap": "vs baseline: the baseline ran the pure discipline into its blind spot — theater 0.33 with CI [8.2k, 11.5k] on 2 points, three logged probability moves on non-events, no decision lever; the routed run excluded m008 from the top-3 (decide-heavy signature) and ran m044/m070/m011 with mandatory m006 + m019 gates, producing a base-rate-anchored wide forecast (P ≈ 0.15, [1k–30k], contains the 2,900 realization), an explicit no-update rule, named evidence triggers, and a staged-ramp decision lever the baseline never reached.",
+    "learning_signal": "On one-off/no-reference-class signatures, the superforecasting style's reflexive machinery (probabilities, ranges, logged updates) converts thin data into precision theater when the meta-question 'is precision warranted at all?' is not asked; the fix is structural, not stylistic — route away from the style, and gate with m006 (likelihood-scenario band + threshold flip) + m019 (quantified exposure per vector) so the decision lever, not the interval, carries the commitment.",
+    "suggested_improvement": "Keep m008 out of the top-3 on one_off/category-new/no-reference-class signatures (trap routing; decide-heavy signatures pull m044/m070/m011 instead); make the no-update-without-new-information rule and base-rate-anchored interval width standing items whenever n < 5 or a fit has 0 residual df; pair such cases with the m011 cheap-decisive-experiment (week-2 retention dashboard) as the revision vehicle."
+  }
+]

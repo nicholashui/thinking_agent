@@ -1,0 +1,2988 @@
+{
+  "registry_version": "1.0",
+  "note": "Living registry per training_agent_evaluation.md §3.2. 100 named Human Thinking Models: core set (1-45 from the protocol) + domain-specialized variants (46-65) + additional expert strategies (66-100). Fields: id, name, family, description, strengths, weaknesses, example_prompt.",
+  "models": [
+    {
+      "id": "m001",
+      "name": "First Principles Thinking",
+      "family": "Foundational & First-Principles",
+      "description": "Decompose to fundamental truths and rebuild from them; reject analogy-as-argument.",
+      "strengths": [
+        "uncovers hidden assumptions",
+        "novel solutions in new domains"
+      ],
+      "weaknesses": [
+        "slow",
+        "ignores empirical priors",
+        "re-derives known results"
+      ],
+      "example_prompt": "Ignore how things are usually done. Break this problem into axioms and rebuild.",
+      "triggers": [
+        "engineering",
+        "finance",
+        "medical",
+        "product",
+        "software",
+        "decide",
+        "estimate",
+        "guarantee",
+        "maximize",
+        "predict",
+        "deadline",
+        "high_stakes"
+      ],
+      "pos_win_rate": 1.0,
+      "neg_failure_rate": 0.0
+    },
+    {
+      "id": "m002",
+      "name": "Second-Order Consequences Thinking",
+      "family": "Foundational & First-Principles",
+      "description": "Trace the effects of the effects; ask what happens after the obvious result.",
+      "strengths": [
+        "catches unintended consequences",
+        "long-horizon view"
+      ],
+      "weaknesses": [
+        "paralysis",
+        "conspiratorial over-elaboration"
+      ],
+      "example_prompt": "After this decision produces its intended result, what happens next? And after that?",
+      "triggers": [
+        "engineering",
+        "finance",
+        "medical",
+        "organization",
+        "product",
+        "science",
+        "strategy",
+        "supply",
+        "estimate",
+        "guarantee",
+        "maximize",
+        "adversarial"
+      ],
+      "pos_win_rate": 1.0,
+      "neg_failure_rate": 0.0
+    },
+    {
+      "id": "m003",
+      "name": "Inversion (Invert, Always Invert)",
+      "family": "Foundational & First-Principles",
+      "description": "Solve by asking how to guarantee failure, then avoid those paths.",
+      "strengths": [
+        "completeness on risk",
+        "breaks confirmation lock"
+      ],
+      "weaknesses": [
+        "paralysis",
+        "goal displacement on maximization tasks"
+      ],
+      "example_prompt": "List every way this could fail catastrophically; design against each.",
+      "triggers": [
+        "engineering",
+        "finance",
+        "medical",
+        "organization",
+        "product",
+        "security",
+        "software",
+        "strategy",
+        "diagnose",
+        "guarantee",
+        "maximize",
+        "predict"
+      ],
+      "pos_win_rate": 1.0,
+      "neg_failure_rate": 0.0
+    },
+    {
+      "id": "m004",
+      "name": "Occam's Razor + Complexity Awareness",
+      "family": "Foundational & First-Principles",
+      "description": "Prefer the simplest explanation consistent with evidence; charge for added complexity.",
+      "strengths": [
+        "parsimony",
+        "avoids overfitting explanations"
+      ],
+      "weaknesses": [
+        "under-explains multi-cause phenomena"
+      ],
+      "example_prompt": "What is the simplest hypothesis that fully explains these observations? What would justify a more complex one?",
+      "triggers": [
+        "engineering",
+        "finance",
+        "medical",
+        "science",
+        "security",
+        "strategy",
+        "supply",
+        "decide",
+        "estimate",
+        "guarantee",
+        "maximize",
+        "deadline"
+      ],
+      "pos_win_rate": 1.0,
+      "neg_failure_rate": 0.0
+    },
+    {
+      "id": "m005",
+      "name": "Fermi Estimation / Back-of-the-Envelope",
+      "family": "Foundational & First-Principles",
+      "description": "Bound answers with order-of-magnitude arithmetic from known quantities.",
+      "strengths": [
+        "fast sanity checks",
+        "teaches error structure"
+      ],
+      "weaknesses": [
+        "precision illusion",
+        "wrong if a factor is wildly off"
+      ],
+      "example_prompt": "Estimate X within an order of magnitude using only quantities you know; state your factors.",
+      "triggers": [
+        "engineering",
+        "finance",
+        "medical",
+        "estimate",
+        "deadline",
+        "high_stakes"
+      ],
+      "pos_win_rate": 1.0,
+      "neg_failure_rate": 0.0
+    },
+    {
+      "id": "m006",
+      "name": "Bayesian Updating",
+      "family": "Probabilistic & Bayesian",
+      "description": "Revise beliefs proportional to likelihood × prior; compute posteriors.",
+      "strengths": [
+        "principled evidence combination",
+        "calibrated uncertainty"
+      ],
+      "weaknesses": [
+        "prior misspecification",
+        "overweights unvalidated likelihoods"
+      ],
+      "example_prompt": "State prior, likelihoods, and compute the posterior; show sensitivity to the prior.",
+      "triggers": [
+        "engineering",
+        "medical",
+        "organization",
+        "product",
+        "science",
+        "diagnose",
+        "guarantee",
+        "predict"
+      ],
+      "pos_win_rate": 1.0,
+      "neg_failure_rate": 1.0
+    },
+    {
+      "id": "m007",
+      "name": "Expected Value Thinking",
+      "family": "Probabilistic & Bayesian",
+      "description": "Decide by probability × payoff, summed over outcomes.",
+      "strengths": [
+        "disciplined under uncertainty",
+        "kills squeamishness about variance"
+      ],
+      "weaknesses": [
+        "ignores ruin/one-shot constraints",
+        "false precision on unknown probabilities"
+      ],
+      "example_prompt": "Enumerate outcomes with probabilities and payoffs; compute EVs; compare.",
+      "triggers": [],
+      "pos_win_rate": 0.0,
+      "neg_failure_rate": 0.0
+    },
+    {
+      "id": "m008",
+      "name": "Probabilistic Forecasting (Superforecasting)",
+      "family": "Probabilistic & Bayesian",
+      "description": "Express beliefs as calibrated probabilities with ranges and revision rules.",
+      "strengths": [
+        "calibration",
+        "trackable accuracy"
+      ],
+      "weaknesses": [
+        "slow",
+        "needs feedback loops"
+      ],
+      "example_prompt": "Give a probability (not a point prediction) with a range and the evidence that would move it.",
+      "triggers": [
+        "engineering",
+        "finance",
+        "medical",
+        "software",
+        "strategy",
+        "estimate",
+        "maximize",
+        "predict"
+      ],
+      "pos_win_rate": 1.0,
+      "neg_failure_rate": 0.0
+    },
+    {
+      "id": "m009",
+      "name": "Base Rate Neglect Avoidance",
+      "family": "Probabilistic & Bayesian",
+      "description": "Anchor on population frequencies before case evidence.",
+      "strengths": [
+        "resists salience bias",
+        "corrects rare-event reasoning"
+      ],
+      "weaknesses": [
+        "dismisses legitimate case specifics"
+      ],
+      "example_prompt": "Start from the base rate; only then adjust for case-specific evidence, and say by how much.",
+      "triggers": [
+        "engineering",
+        "finance",
+        "medical",
+        "science",
+        "strategy",
+        "estimate",
+        "guarantee",
+        "predict",
+        "unmeasured"
+      ],
+      "pos_win_rate": 1.0,
+      "neg_failure_rate": 0.0
+    },
+    {
+      "id": "m010",
+      "name": "Calibration & Confidence Intervals",
+      "family": "Probabilistic & Bayesian",
+      "description": "Attach honest ranges to estimates; track calibration over time.",
+      "strengths": [
+        "honest uncertainty",
+        "detects overconfidence"
+      ],
+      "weaknesses": [
+        "ranges can be so wide as to be useless"
+      ],
+      "example_prompt": "Give a 90% confidence interval for X and explain the edge cases that set its bounds.",
+      "triggers": [
+        "engineering",
+        "finance",
+        "medical",
+        "science",
+        "supply",
+        "diagnose",
+        "guarantee",
+        "predict"
+      ],
+      "pos_win_rate": 1.0,
+      "neg_failure_rate": 0.0
+    },
+    {
+      "id": "m011",
+      "name": "Systems Thinking",
+      "family": "Systems & Causal",
+      "description": "Model stocks, flows, feedback loops, and delays; find leverage points.",
+      "strengths": [
+        "sees dynamics linear analysis misses",
+        "unintended-consequence radar"
+      ],
+      "weaknesses": [
+        "diagram substitutes for measurement",
+        "over-application to simple problems"
+      ],
+      "example_prompt": "Draw the feedback structure: stocks, flows, loops, delays; identify where intervention would actually move the system.",
+      "triggers": [
+        "engineering",
+        "finance",
+        "medical",
+        "organization",
+        "product",
+        "strategy",
+        "supply",
+        "decide",
+        "diagnose",
+        "estimate",
+        "maximize",
+        "predict",
+        "adversarial",
+        "deadline"
+      ],
+      "pos_win_rate": 1.0,
+      "neg_failure_rate": 0.0
+    },
+    {
+      "id": "m012",
+      "name": "Causal Reasoning (Pearl-style)",
+      "family": "Systems & Causal",
+      "description": "Distinguish correlation from causation; reason with interventions (do-calculus).",
+      "strengths": [
+        "correct interventional reasoning",
+        "exposes confounders"
+      ],
+      "weaknesses": [
+        "demands data structure that may not exist"
+      ],
+      "example_prompt": "Separate the causal graph from the observed correlations; what would an intervention reveal?",
+      "triggers": [
+        "finance",
+        "medical",
+        "product",
+        "science",
+        "software",
+        "strategy",
+        "estimate",
+        "maximize",
+        "predict",
+        "unmeasured"
+      ],
+      "pos_win_rate": 1.0,
+      "neg_failure_rate": 0.0
+    },
+    {
+      "id": "m013",
+      "name": "Root Cause Analysis (5 Whys + deeper)",
+      "family": "Systems & Causal",
+      "description": "Drill from symptom to mechanism through causal chains.",
+      "strengths": [
+        "finds fixable causes",
+        "prevents symptom patching"
+      ],
+      "weaknesses": [
+        "can stop too early or over-theorize"
+      ],
+      "example_prompt": "Ask why five times; verify each link with evidence before continuing.",
+      "triggers": [
+        "engineering",
+        "medical",
+        "product",
+        "software",
+        "decide",
+        "diagnose",
+        "guarantee",
+        "predict",
+        "deadline"
+      ],
+      "pos_win_rate": 1.0,
+      "neg_failure_rate": 0.0
+    },
+    {
+      "id": "m014",
+      "name": "Constraint Theory / Bottleneck Thinking",
+      "family": "Systems & Causal",
+      "description": "Find the binding constraint; improve the system by lifting it.",
+      "strengths": [
+        "high-leverage focus",
+        "prevents wasted effort elsewhere"
+      ],
+      "weaknesses": [
+        "constraint moves",
+        "single-bottleneck tunnel vision"
+      ],
+      "example_prompt": "Identify the system's binding constraint and design the smallest change that lifts it.",
+      "triggers": [
+        "engineering",
+        "finance",
+        "medical",
+        "organization",
+        "science",
+        "security",
+        "estimate",
+        "guarantee",
+        "maximize",
+        "predict",
+        "deadline"
+      ],
+      "pos_win_rate": 1.0,
+      "neg_failure_rate": 0.0
+    },
+    {
+      "id": "m015",
+      "name": "Emergence & Complexity Awareness",
+      "family": "Systems & Causal",
+      "description": "Expect aggregate behavior not predictable from components; probe, don't plan.",
+      "strengths": [
+        "correct humility in complex domains",
+        "probe-sense-respond"
+      ],
+      "weaknesses": [
+        "defeats planning tools",
+        "can rationalize inaction"
+      ],
+      "example_prompt": "Is this system complex (emergent) or complicated (decomposable)? Adjust your strategy accordingly.",
+      "triggers": [
+        "engineering",
+        "finance",
+        "medical",
+        "organization",
+        "product",
+        "science",
+        "software",
+        "diagnose",
+        "estimate",
+        "maximize",
+        "deadline"
+      ],
+      "pos_win_rate": 1.0,
+      "neg_failure_rate": 0.0
+    },
+    {
+      "id": "m016",
+      "name": "Socratic Method / Question-Driven Inquiry",
+      "family": "Dialectical & Critical",
+      "description": "Reach truth by relentless questioning of definitions and implications.",
+      "strengths": [
+        "exposes unexamined premises",
+        "teaches by discovery"
+      ],
+      "weaknesses": [
+        "slow",
+        "can be antagonistic or endless"
+      ],
+      "example_prompt": "Do not answer directly; interrogate the definitions and premises until the real question emerges.",
+      "triggers": [
+        "finance",
+        "medical",
+        "product",
+        "decide",
+        "guarantee",
+        "maximize",
+        "high_stakes"
+      ],
+      "pos_win_rate": 1.0,
+      "neg_failure_rate": 0.0
+    },
+    {
+      "id": "m017",
+      "name": "Dialectical Reasoning (Thesis → Antithesis → Synthesis)",
+      "family": "Dialectical & Critical",
+      "description": "Generate the strongest opposing position, then integrate.",
+      "strengths": [
+        "escapes binary thinking",
+        "produces integrated solutions"
+      ],
+      "weaknesses": [
+        "forced synthesis can paper over real conflict"
+      ],
+      "example_prompt": "State the thesis, construct the strongest antithesis, then produce a genuine synthesis.",
+      "triggers": [
+        "engineering",
+        "finance",
+        "medical",
+        "decide",
+        "estimate",
+        "guarantee",
+        "maximize",
+        "deadline",
+        "high_stakes"
+      ],
+      "pos_win_rate": 1.0,
+      "neg_failure_rate": 0.0
+    },
+    {
+      "id": "m018",
+      "name": "Steel-manning",
+      "family": "Dialectical & Critical",
+      "description": "Rebuild the opposing view in its strongest defensible form before critiquing.",
+      "strengths": [
+        "accurate critique",
+        "productive disagreement"
+      ],
+      "weaknesses": [
+        "time cost",
+        "can legitimize bad arguments"
+      ],
+      "example_prompt": "Restate the opposing position so strongly that its proponent would accept your version; then evaluate it.",
+      "triggers": [
+        "engineering",
+        "finance",
+        "medical",
+        "organization",
+        "product",
+        "science",
+        "security",
+        "software",
+        "decide",
+        "estimate",
+        "guarantee",
+        "maximize",
+        "predict",
+        "high_stakes"
+      ],
+      "pos_win_rate": 1.0,
+      "neg_failure_rate": 0.0
+    },
+    {
+      "id": "m019",
+      "name": "Red Teaming / Devil's Advocate",
+      "family": "Dialectical & Critical",
+      "description": "Deliberately attack the plan, assumptions, and metrics.",
+      "strengths": [
+        "finds flaws early",
+        "breaks groupthink"
+      ],
+      "weaknesses": [
+        "false alarms",
+        "paralysis without calibration"
+      ],
+      "example_prompt": "Attack this plan as an adversary would: assumptions, incentives, metrics, security, stakeholders.",
+      "triggers": [
+        "engineering",
+        "finance",
+        "medical",
+        "organization",
+        "product",
+        "science",
+        "security",
+        "software",
+        "decide",
+        "estimate",
+        "guarantee",
+        "maximize",
+        "predict",
+        "adversarial",
+        "high_stakes",
+        "unmeasured"
+      ],
+      "pos_win_rate": 1.0,
+      "neg_failure_rate": 0.0
+    },
+    {
+      "id": "m020",
+      "name": "Pre-Mortem Analysis",
+      "family": "Dialectical & Critical",
+      "description": "Assume the plan failed; work backward to plausible causes; mitigate.",
+      "strengths": [
+        "proactive risk detection",
+        "cheap"
+      ],
+      "weaknesses": [
+        "lists risks without ranking"
+      ],
+      "example_prompt": "It is one year later and this failed badly. What happened? Now mitigate the top causes.",
+      "triggers": [
+        "engineering",
+        "finance",
+        "medical",
+        "organization",
+        "product",
+        "strategy",
+        "supply",
+        "decide",
+        "guarantee",
+        "maximize",
+        "predict",
+        "adversarial",
+        "deadline"
+      ],
+      "pos_win_rate": 1.0,
+      "neg_failure_rate": 0.0
+    },
+    {
+      "id": "m021",
+      "name": "OODA Loop",
+      "family": "Decision & Strategic",
+      "description": "Observe → Orient → Decide → Act, at the tempo of the environment.",
+      "strengths": [
+        "works under dynamism",
+        "tempo advantage"
+      ],
+      "weaknesses": [
+        "reaction bias",
+        "underspecified without feedback"
+      ],
+      "example_prompt": "Run the OODA cycle: what changed, how do you re-orient, what do you decide, what do you do — and how fast?",
+      "triggers": [
+        "engineering",
+        "finance",
+        "medical",
+        "organization",
+        "product",
+        "security",
+        "software",
+        "decide",
+        "diagnose",
+        "estimate",
+        "maximize",
+        "adversarial",
+        "deadline",
+        "high_stakes"
+      ],
+      "pos_win_rate": 1.0,
+      "neg_failure_rate": 0.0
+    },
+    {
+      "id": "m022",
+      "name": "Decision Trees & Scenario Planning",
+      "family": "Decision & Strategic",
+      "description": "Map decision nodes, chance nodes, and scenarios with branch values.",
+      "strengths": [
+        "explicit structure",
+        "sensitivity-ready"
+      ],
+      "weaknesses": [
+        "tree explosion",
+        "garbage probabilities"
+      ],
+      "example_prompt": "Build the decision tree: choices, chance events, branch values, and the expected value at each node.",
+      "triggers": [
+        "engineering",
+        "finance",
+        "medical",
+        "strategy",
+        "decide",
+        "estimate",
+        "guarantee",
+        "predict"
+      ],
+      "pos_win_rate": 1.0,
+      "neg_failure_rate": 1.0
+    },
+    {
+      "id": "m023",
+      "name": "Opportunity Cost Thinking",
+      "family": "Decision & Strategic",
+      "description": "Value any choice by the best forgone alternative.",
+      "strengths": [
+        "prevents sunk-cost love",
+        "disciplines resource use"
+      ],
+      "weaknesses": [
+        "counting everything can freeze action"
+      ],
+      "example_prompt": "What is the best alternative this choice forgoes? Compare against that, not against nothing.",
+      "triggers": [
+        "engineering",
+        "finance",
+        "medical",
+        "organization",
+        "product",
+        "security",
+        "strategy",
+        "decide",
+        "estimate",
+        "guarantee",
+        "maximize",
+        "predict",
+        "adversarial",
+        "deadline"
+      ],
+      "pos_win_rate": 1.0,
+      "neg_failure_rate": 0.0
+    },
+    {
+      "id": "m024",
+      "name": "Regret Minimization Framework",
+      "family": "Decision & Strategic",
+      "description": "Choose the option minimizing future regret (Bezos test).",
+      "strengths": [
+        "long-horizon clarity",
+        "cuts analysis paralysis"
+      ],
+      "weaknesses": [
+        "regret is emotionally biased",
+        "hindsight contamination"
+      ],
+      "example_prompt": "At 80, which choice would you regret more? Use that as the tiebreaker.",
+      "triggers": [
+        "engineering",
+        "finance",
+        "medical",
+        "product",
+        "strategy",
+        "supply",
+        "decide",
+        "diagnose",
+        "estimate",
+        "guarantee",
+        "maximize",
+        "predict",
+        "high_stakes"
+      ],
+      "pos_win_rate": 1.0,
+      "neg_failure_rate": 0.0
+    },
+    {
+      "id": "m025",
+      "name": "Real Options Thinking",
+      "family": "Decision & Strategic",
+      "description": "Value keeping choices open; stage investments to buy information.",
+      "strengths": [
+        "correct on irreversibility",
+        "information-value aware"
+      ],
+      "weaknesses": [
+        "overstaging",
+        "option value hard to quantify"
+      ],
+      "example_prompt": "How can we structure this to keep future options open while learning cheaply?",
+      "triggers": [
+        "engineering",
+        "finance",
+        "medical",
+        "product",
+        "software",
+        "strategy",
+        "decide",
+        "estimate",
+        "maximize",
+        "adversarial"
+      ],
+      "pos_win_rate": 1.0,
+      "neg_failure_rate": 0.0
+    },
+    {
+      "id": "m026",
+      "name": "Analogical Reasoning / Pattern Transfer",
+      "family": "Creative & Analogical",
+      "description": "Transfer structure from a known domain to a new one.",
+      "strengths": [
+        "fast insight",
+        "cross-domain novelty"
+      ],
+      "weaknesses": [
+        "superficial similarity traps"
+      ],
+      "example_prompt": "What known situation has the same underlying structure? Map it explicitly before transferring.",
+      "triggers": [
+        "engineering",
+        "finance",
+        "medical",
+        "organization",
+        "science",
+        "decide",
+        "estimate",
+        "guarantee",
+        "maximize",
+        "predict",
+        "deadline"
+      ],
+      "pos_win_rate": 1.0,
+      "neg_failure_rate": 0.0
+    },
+    {
+      "id": "m027",
+      "name": "Design Thinking",
+      "family": "Creative & Analogical",
+      "description": "Empathize → Define → Ideate → Prototype → Test.",
+      "strengths": [
+        "user-centered",
+        "iterative empiricism"
+      ],
+      "weaknesses": [
+        "process theater",
+        "weak on hard constraints"
+      ],
+      "example_prompt": "Run the full design cycle: who is the user, what is the real need, prototype, test, iterate.",
+      "triggers": [
+        "engineering",
+        "medical",
+        "product",
+        "software",
+        "strategy",
+        "decide"
+      ],
+      "pos_win_rate": 1.0,
+      "neg_failure_rate": 0.0
+    },
+    {
+      "id": "m028",
+      "name": "Lateral Thinking",
+      "family": "Creative & Analogical",
+      "description": "Break the problem's framing assumptions to find new entry points.",
+      "strengths": [
+        "escapes fixation",
+        "generates non-obvious options"
+      ],
+      "weaknesses": [
+        "unfocused",
+        "can ignore constraints"
+      ],
+      "example_prompt": "What assumption is this problem making that we could break? Generate options from the break.",
+      "triggers": [
+        "engineering",
+        "finance",
+        "medical",
+        "organization",
+        "product",
+        "science",
+        "software",
+        "strategy",
+        "decide",
+        "diagnose",
+        "estimate",
+        "guarantee",
+        "high_stakes"
+      ],
+      "pos_win_rate": 1.0,
+      "neg_failure_rate": 0.0
+    },
+    {
+      "id": "m029",
+      "name": "Combinatorial Creativity",
+      "family": "Creative & Analogical",
+      "description": "Generate novelty by recombining existing elements in new configurations.",
+      "strengths": [
+        "systematic ideation",
+        "high volume"
+      ],
+      "weaknesses": [
+        "quality filter needed",
+        "derivative risk"
+      ],
+      "example_prompt": "List the elements of the current solution; recombine them in at least 10 new configurations.",
+      "triggers": [
+        "engineering",
+        "finance",
+        "medical",
+        "science",
+        "supply",
+        "diagnose",
+        "estimate",
+        "guarantee",
+        "maximize",
+        "deadline"
+      ],
+      "pos_win_rate": 1.0,
+      "neg_failure_rate": 0.0
+    },
+    {
+      "id": "m030",
+      "name": "Constraint-Driven Creativity",
+      "family": "Creative & Analogical",
+      "description": "Impose deliberate constraints to force novel solutions.",
+      "strengths": [
+        "focuses ideation",
+        "produces simpler designs"
+      ],
+      "weaknesses": [
+        "artificial constraints can bite"
+      ],
+      "example_prompt": "Solve this under a deliberately severe constraint (one material, no new dependencies, 24 hours).",
+      "triggers": [
+        "engineering",
+        "finance",
+        "medical",
+        "science",
+        "supply",
+        "diagnose",
+        "estimate",
+        "guarantee",
+        "predict",
+        "high_stakes"
+      ],
+      "pos_win_rate": 1.0,
+      "neg_failure_rate": 0.0
+    },
+    {
+      "id": "m031",
+      "name": "Scientific Method (Hypothesis → Experiment → Update)",
+      "family": "Scientific & Empirical",
+      "description": "Formulate, test, update — with controlled observation.",
+      "strengths": [
+        "self-correcting",
+        "cumulative"
+      ],
+      "weaknesses": [
+        "slow",
+        "hypothesis space can be blind"
+      ],
+      "example_prompt": "State the hypothesis, design the discriminating test, run it, update the hypothesis.",
+      "triggers": [
+        "engineering",
+        "finance",
+        "medical",
+        "organization",
+        "science",
+        "security",
+        "software",
+        "supply",
+        "diagnose",
+        "estimate",
+        "guarantee",
+        "maximize",
+        "predict",
+        "deadline"
+      ],
+      "pos_win_rate": 1.0,
+      "neg_failure_rate": 0.0
+    },
+    {
+      "id": "m032",
+      "name": "Falsificationism (Popper)",
+      "family": "Scientific & Empirical",
+      "description": "A claim is scientific only if falsifiable; seek the disconfirming test.",
+      "strengths": [
+        "kills unfalsifiable reasoning",
+        "asymmetric verification"
+      ],
+      "weaknesses": [
+        "can be nihilistic",
+        "naive on probabilistic claims"
+      ],
+      "example_prompt": "What observation would prove this claim false? If none exists, it is not a scientific claim.",
+      "triggers": [
+        "engineering",
+        "finance",
+        "medical",
+        "product",
+        "software",
+        "decide",
+        "estimate",
+        "maximize",
+        "predict",
+        "deadline"
+      ],
+      "pos_win_rate": 1.0,
+      "neg_failure_rate": 0.0
+    },
+    {
+      "id": "m033",
+      "name": "Controlled Experiment Design",
+      "family": "Scientific & Empirical",
+      "description": "Isolate variables with controls, randomization, and blinding.",
+      "strengths": [
+        "causal identification",
+        "confounder control"
+      ],
+      "weaknesses": [
+        "ecological validity gap",
+        "expensive"
+      ],
+      "example_prompt": "Design the experiment: intervention, control, randomization, blinding, and the exact outcome measure.",
+      "triggers": [
+        "engineering",
+        "finance",
+        "medical",
+        "organization",
+        "product",
+        "science",
+        "software",
+        "decide",
+        "estimate",
+        "guarantee",
+        "maximize",
+        "deadline"
+      ],
+      "pos_win_rate": 1.0,
+      "neg_failure_rate": 0.0
+    },
+    {
+      "id": "m034",
+      "name": "Measurement & Operationalization",
+      "family": "Scientific & Empirical",
+      "description": "Define constructs as measurable quantities before arguing about them.",
+      "strengths": [
+        "kills vague disputes",
+        "enables testing"
+      ],
+      "weaknesses": [
+        "measures the measurable, not the important"
+      ],
+      "example_prompt": "Define the key construct operationally: exactly what would you measure, how, and with what instrument?",
+      "triggers": [
+        "engineering",
+        "medical",
+        "organization",
+        "product",
+        "science",
+        "decide",
+        "guarantee",
+        "maximize",
+        "deadline"
+      ],
+      "pos_win_rate": 1.0,
+      "neg_failure_rate": 0.0
+    },
+    {
+      "id": "m035",
+      "name": "Replication & Robustness Checks",
+      "family": "Scientific & Empirical",
+      "description": "Distrust single results; vary settings, samples, and methods.",
+      "strengths": [
+        "guards against artifacts",
+        "establishes generality"
+      ],
+      "weaknesses": [
+        "time cost",
+        "can become ritual"
+      ],
+      "example_prompt": "What would it take for this result to replicate? Which plausible changes should we test?",
+      "triggers": [
+        "engineering",
+        "medical",
+        "organization",
+        "product",
+        "science",
+        "security",
+        "software",
+        "decide",
+        "maximize",
+        "deadline",
+        "high_stakes"
+      ],
+      "pos_win_rate": 1.0,
+      "neg_failure_rate": 0.0
+    },
+    {
+      "id": "m036",
+      "name": "Mental Models Latticework (Munger)",
+      "family": "Additional High-Value",
+      "description": "Apply the key models from many disciplines to one problem.",
+      "strengths": [
+        "cross-disciplinary depth",
+        "reduces blind spots"
+      ],
+      "weaknesses": [
+        "model soup without synthesis"
+      ],
+      "example_prompt": "Run this through the lattice: economics, psychology, physics, biology, math — which models apply?",
+      "triggers": [
+        "engineering",
+        "finance",
+        "medical",
+        "organization",
+        "product",
+        "software",
+        "strategy",
+        "decide",
+        "guarantee",
+        "predict",
+        "adversarial"
+      ],
+      "pos_win_rate": 1.0,
+      "neg_failure_rate": 0.0
+    },
+    {
+      "id": "m037",
+      "name": "Circle of Competence Awareness",
+      "family": "Additional High-Value",
+      "description": "Know the boundary of your reliable knowledge; act inside it or learn first.",
+      "strengths": [
+        "honest capability assessment",
+        "avoids confident error"
+      ],
+      "weaknesses": [
+        "misses growth by staying inside"
+      ],
+      "example_prompt": "Map what you actually know vs. what you assume; where does this decision sit?",
+      "triggers": [
+        "engineering",
+        "finance",
+        "medical",
+        "product",
+        "software",
+        "strategy",
+        "decide",
+        "estimate",
+        "maximize",
+        "deadline",
+        "high_stakes"
+      ],
+      "pos_win_rate": 1.0,
+      "neg_failure_rate": 0.0
+    },
+    {
+      "id": "m038",
+      "name": "Margin of Safety",
+      "family": "Additional High-Value",
+      "description": "Require a cushion between estimate and threshold before acting.",
+      "strengths": [
+        "absorbs estimation error",
+        "survives bad luck"
+      ],
+      "weaknesses": [
+        "over-conservatism",
+        "opportunity cost"
+      ],
+      "example_prompt": "How wrong could the estimates be before the decision flips? Require a margin beyond that.",
+      "triggers": [
+        "engineering",
+        "finance",
+        "medical",
+        "science",
+        "estimate",
+        "guarantee",
+        "maximize"
+      ],
+      "pos_win_rate": 1.0,
+      "neg_failure_rate": 0.0
+    },
+    {
+      "id": "m039",
+      "name": "Asymmetric Upside / Barbell Strategy",
+      "family": "Additional High-Value",
+      "description": "Avoid middle-risk bets; combine safe core with high-upside tails.",
+      "strengths": [
+        "ruin avoidance",
+        "fat-tail capture"
+      ],
+      "weaknesses": [
+        "needs tail-friendliness",
+        "counterintuitive to EV purists"
+      ],
+      "example_prompt": "Can this be structured as safe core + optional upside instead of a symmetric bet?",
+      "triggers": [
+        "finance",
+        "medical",
+        "product",
+        "software",
+        "strategy",
+        "supply",
+        "decide",
+        "diagnose",
+        "estimate",
+        "guarantee",
+        "maximize",
+        "predict",
+        "high_stakes"
+      ],
+      "pos_win_rate": 1.0,
+      "neg_failure_rate": 0.0
+    },
+    {
+      "id": "m040",
+      "name": "Leverage Points Identification",
+      "family": "Additional High-Value",
+      "description": "Find where a small shift produces large system change (Meadows).",
+      "strengths": [
+        "high-leverage focus"
+      ],
+      "weaknesses": [
+        "leverage misidentified"
+      ],
+      "example_prompt": "Rank the system's intervention points by leverage; which one gives the most change per effort?",
+      "triggers": [
+        "engineering",
+        "finance",
+        "medical",
+        "product",
+        "science",
+        "security",
+        "software",
+        "supply",
+        "diagnose",
+        "guarantee",
+        "maximize",
+        "predict"
+      ],
+      "pos_win_rate": 1.0,
+      "neg_failure_rate": 0.0
+    },
+    {
+      "id": "m041",
+      "name": "Hierarchical Decomposition",
+      "family": "Additional High-Value",
+      "description": "Break goals into subgoals recursively until tractable.",
+      "strengths": [
+        "tames complexity",
+        "parallelizable"
+      ],
+      "weaknesses": [
+        "over-decomposition",
+        "loses cross-cutting issues"
+      ],
+      "example_prompt": "Decompose this goal into subgoals until each is directly actionable; note the dependencies.",
+      "triggers": [
+        "finance",
+        "medical",
+        "product",
+        "strategy",
+        "guarantee",
+        "predict",
+        "high_stakes"
+      ],
+      "pos_win_rate": 1.0,
+      "neg_failure_rate": 0.0
+    },
+    {
+      "id": "m042",
+      "name": "Abstraction Laddering",
+      "family": "Additional High-Value",
+      "description": "Move up and down abstraction levels to reframe and specify.",
+      "strengths": [
+        "reframing power",
+        "connects vision to detail"
+      ],
+      "weaknesses": [
+        "ladder drift",
+        "lost concreteness"
+      ],
+      "example_prompt": "Climb the ladder: what is this an instance of? Descend: what does this mean concretely on Monday?",
+      "triggers": [
+        "engineering",
+        "medical",
+        "organization",
+        "product",
+        "diagnose",
+        "maximize",
+        "unmeasured"
+      ],
+      "pos_win_rate": 1.0,
+      "neg_failure_rate": 0.0
+    },
+    {
+      "id": "m043",
+      "name": "Temporal Thinking (Short vs Long Term)",
+      "family": "Additional High-Value",
+      "description": "Explicitly separate immediate, medium, and long-horizon effects.",
+      "strengths": [
+        "intertemporal honesty",
+        "discounting awareness"
+      ],
+      "weaknesses": [
+        "long-termism can rationalize harm now"
+      ],
+      "example_prompt": "Evaluate the decision at 1 day, 1 year, 10 years — separately and explicitly.",
+      "triggers": [
+        "finance",
+        "medical",
+        "software",
+        "decide",
+        "estimate",
+        "maximize",
+        "high_stakes"
+      ],
+      "pos_win_rate": 1.0,
+      "neg_failure_rate": 0.0
+    },
+    {
+      "id": "m044",
+      "name": "Multi-Perspective Taking (Stakeholder Analysis)",
+      "family": "Additional High-Value",
+      "description": "Model each stakeholder's incentives, constraints, and likely moves.",
+      "strengths": [
+        "predicts reactions",
+        "finds hidden requirements"
+      ],
+      "weaknesses": [
+        "stakeholder inflation",
+        "paralysis by empathy"
+      ],
+      "example_prompt": "For each stakeholder: what do they want, what can they do, what will they do?",
+      "triggers": [
+        "engineering",
+        "finance",
+        "medical",
+        "organization",
+        "product",
+        "security",
+        "software",
+        "strategy",
+        "supply",
+        "decide",
+        "diagnose",
+        "estimate",
+        "maximize",
+        "predict",
+        "adversarial",
+        "deadline"
+      ],
+      "pos_win_rate": 1.0,
+      "neg_failure_rate": 0.0
+    },
+    {
+      "id": "m045",
+      "name": "Ethical Reasoning Frameworks",
+      "family": "Additional High-Value",
+      "description": "Apply utilitarian, deontological, and virtue lenses explicitly.",
+      "strengths": [
+        "principled moral analysis",
+        "surfaces value conflicts"
+      ],
+      "weaknesses": [
+        "framework shopping",
+        "no resolution algorithm"
+      ],
+      "example_prompt": "Evaluate under each lens — consequences, duties, character — and state where they conflict.",
+      "triggers": [
+        "engineering",
+        "finance",
+        "medical",
+        "product",
+        "science",
+        "supply",
+        "decide",
+        "estimate",
+        "guarantee",
+        "maximize",
+        "predict",
+        "deadline"
+      ],
+      "pos_win_rate": 1.0,
+      "neg_failure_rate": 0.0
+    },
+    {
+      "id": "m046",
+      "name": "First Principles in Software Architecture",
+      "family": "Domain-Specialized",
+      "description": "Derive architecture from fundamental constraints (latency, scale, change) rather than patterns.",
+      "strengths": [
+        "fits architecture to reality",
+        "avoids cargo-cult patterns"
+      ],
+      "weaknesses": [
+        "ignores ecosystem experience",
+        "slow"
+      ],
+      "example_prompt": "Derive the architecture from the fundamental constraints: data, scale, failure modes, change rate.",
+      "triggers": [
+        "engineering",
+        "finance",
+        "medical",
+        "organization",
+        "product",
+        "software",
+        "strategy",
+        "supply",
+        "diagnose",
+        "estimate",
+        "guarantee"
+      ],
+      "pos_win_rate": 1.0,
+      "neg_failure_rate": 0.0
+    },
+    {
+      "id": "m047",
+      "name": "Bayesian Updating in Medical Diagnosis",
+      "family": "Domain-Specialized",
+      "description": "Posterior = prevalence × test characteristics; order tests by information value.",
+      "strengths": [
+        "correct screening logic",
+        "prevents test-order bias"
+      ],
+      "weaknesses": [
+        "needs validated likelihoods",
+        "prior is population-dependent"
+      ],
+      "example_prompt": "Given prevalence and test sensitivity/specificity, compute the posterior and the next-best test.",
+      "triggers": [
+        "medical",
+        "organization",
+        "science",
+        "supply",
+        "decide",
+        "diagnose",
+        "maximize",
+        "predict"
+      ],
+      "pos_win_rate": 1.0,
+      "neg_failure_rate": 1.0
+    },
+    {
+      "id": "m048",
+      "name": "Systems Thinking in Supply Chain",
+      "family": "Domain-Specialized",
+      "description": "Model inventory, lead-time, variability loops; find policy leverage (bullwhip).",
+      "strengths": [
+        "bullwhip detection",
+        "policy design"
+      ],
+      "weaknesses": [
+        "data-hungry",
+        "over-modeling"
+      ],
+      "example_prompt": "Model the chain: stocks, flows, delays, information distortion. Where is the bullwhip coming from?",
+      "triggers": [
+        "engineering",
+        "finance",
+        "medical",
+        "product",
+        "software",
+        "supply",
+        "decide",
+        "diagnose",
+        "estimate",
+        "maximize",
+        "predict"
+      ],
+      "pos_win_rate": 1.0,
+      "neg_failure_rate": 0.0
+    },
+    {
+      "id": "m049",
+      "name": "First Principles in Business Strategy",
+      "family": "Domain-Specialized",
+      "description": "Derive strategy from unit economics and customer fundamentals, not benchmarks.",
+      "strengths": [
+        "true differentiation",
+        "kills copycat strategy"
+      ],
+      "weaknesses": [
+        "ignores competitive response"
+      ],
+      "example_prompt": "Derive the strategy from unit economics, customer acquisition cost, and retention physics.",
+      "triggers": [
+        "engineering",
+        "finance",
+        "medical",
+        "product",
+        "science",
+        "strategy",
+        "decide",
+        "estimate",
+        "guarantee",
+        "maximize",
+        "high_stakes"
+      ],
+      "pos_win_rate": 1.0,
+      "neg_failure_rate": 0.0
+    },
+    {
+      "id": "m050",
+      "name": "Inversion in Product Design (Safety)",
+      "family": "Domain-Specialized",
+      "description": "Design against every way users can be harmed or the product can fail.",
+      "strengths": [
+        "safety completeness",
+        "failure-mode coverage"
+      ],
+      "weaknesses": [
+        "feature bloat from risk aversion"
+      ],
+      "example_prompt": "Enumerate every credible way users get harmed or the product fails; design against each.",
+      "triggers": [
+        "engineering",
+        "finance",
+        "medical",
+        "product",
+        "security",
+        "software",
+        "strategy",
+        "supply",
+        "decide",
+        "estimate",
+        "guarantee",
+        "predict",
+        "high_stakes"
+      ],
+      "pos_win_rate": 1.0,
+      "neg_failure_rate": 0.0
+    },
+    {
+      "id": "m051",
+      "name": "Expected Value in Startup Portfolios (VC)",
+      "family": "Domain-Specialized",
+      "description": "Portfolio math: power-law outcomes, hit rates, follow-on optionality.",
+      "strengths": [
+        "correct venture math",
+        "portfolio-level thinking"
+      ],
+      "weaknesses": [
+        "unmeasurable probabilities",
+        "power-law noise"
+      ],
+      "example_prompt": "Model the portfolio: hit rate, power-law outcomes, follow-on value; what does portfolio EV say?",
+      "triggers": [],
+      "pos_win_rate": 0.0,
+      "neg_failure_rate": 0.0
+    },
+    {
+      "id": "m052",
+      "name": "OODA in Competitive Markets",
+      "family": "Domain-Specialized",
+      "description": "Compete on decision tempo and orientation quality in market dynamics.",
+      "strengths": [
+        "tempo advantage",
+        "competitive adaptation"
+      ],
+      "weaknesses": [
+        "reactive thrash",
+        "ignores structural moats"
+      ],
+      "example_prompt": "Run the OODA cycle against the competitor's likely moves; where can tempo beat them?",
+      "triggers": [
+        "engineering",
+        "finance",
+        "medical",
+        "organization",
+        "product",
+        "security",
+        "software",
+        "strategy",
+        "decide",
+        "maximize",
+        "adversarial",
+        "deadline"
+      ],
+      "pos_win_rate": 1.0,
+      "neg_failure_rate": 0.0
+    },
+    {
+      "id": "m053",
+      "name": "Root Cause Analysis in Incident Response",
+      "family": "Domain-Specialized",
+      "description": "Post-incident: timeline, causal chain, prevention vs detection gaps.",
+      "strengths": [
+        "prevents recurrence",
+        "blameless rigor"
+      ],
+      "weaknesses": [
+        "over-theorizing",
+        "action-item sprawl"
+      ],
+      "example_prompt": "Build the incident timeline and causal chain; separate prevention gaps from detection gaps.",
+      "triggers": [
+        "engineering",
+        "medical",
+        "product",
+        "software",
+        "decide",
+        "diagnose",
+        "guarantee",
+        "maximize",
+        "deadline"
+      ],
+      "pos_win_rate": 1.0,
+      "neg_failure_rate": 0.0
+    },
+    {
+      "id": "m054",
+      "name": "Fermi Estimation in Market Sizing",
+      "family": "Domain-Specialized",
+      "description": "Order-of-magnitude TAM/SAM from population, penetration, price chains.",
+      "strengths": [
+        "fast market bounds",
+        "testable factors"
+      ],
+      "weaknesses": [
+        "penetration guesses dominate"
+      ],
+      "example_prompt": "Size this market from population × segment × penetration × price; show each factor.",
+      "triggers": [
+        "engineering",
+        "finance",
+        "medical",
+        "product",
+        "strategy",
+        "decide",
+        "estimate",
+        "maximize"
+      ],
+      "pos_win_rate": 1.0,
+      "neg_failure_rate": 0.0
+    },
+    {
+      "id": "m055",
+      "name": "Causal Reasoning in Economics",
+      "family": "Domain-Specialized",
+      "description": "Natural experiments, confounders, and identification before policy claims.",
+      "strengths": [
+        "identification discipline",
+        "confounder awareness"
+      ],
+      "weaknesses": [
+        "identification often impossible"
+      ],
+      "example_prompt": "What is the identification strategy? Which confounders survive it, which don't?",
+      "triggers": [
+        "engineering",
+        "finance",
+        "medical",
+        "product",
+        "science",
+        "security",
+        "software",
+        "strategy",
+        "supply",
+        "decide",
+        "estimate",
+        "maximize",
+        "deadline"
+      ],
+      "pos_win_rate": 1.0,
+      "neg_failure_rate": 1.0
+    },
+    {
+      "id": "m056",
+      "name": "Design Thinking for Consumer Products",
+      "family": "Domain-Specialized",
+      "description": "Empathy-driven discovery, prototyping, and user testing loops for products.",
+      "strengths": [
+        "user truth",
+        "rapid iteration"
+      ],
+      "weaknesses": [
+        "survey theater",
+        "weak on technical constraints"
+      ],
+      "example_prompt": "Empathize with the user's job-to-be-done; prototype; test with real users; iterate.",
+      "triggers": [],
+      "pos_win_rate": 0.0,
+      "neg_failure_rate": 0.0
+    },
+    {
+      "id": "m057",
+      "name": "Red Teaming in Cybersecurity (Threat Modeling)",
+      "family": "Domain-Specialized",
+      "description": "Adversarial attack simulation over assets, attack surfaces, and controls.",
+      "strengths": [
+        "exploitability realism",
+        "control prioritization"
+      ],
+      "weaknesses": [
+        "attacker-obsession",
+        "false confidence in controls"
+      ],
+      "example_prompt": "Threat-model this system as an attacker: assets, surfaces, likely exploits, and the controls that stop them.",
+      "triggers": [
+        "engineering",
+        "finance",
+        "medical",
+        "organization",
+        "product",
+        "security",
+        "software",
+        "supply",
+        "estimate",
+        "guarantee",
+        "adversarial"
+      ],
+      "pos_win_rate": 1.0,
+      "neg_failure_rate": 0.0
+    },
+    {
+      "id": "m058",
+      "name": "Real Options in R&D Investment",
+      "family": "Domain-Specialized",
+      "description": "Stage research funding to buy information; kill early, scale winners.",
+      "strengths": [
+        "information value",
+        "early kill discipline"
+      ],
+      "weaknesses": [
+        "understaged portfolio",
+        "option math on fantasy probabilities"
+      ],
+      "example_prompt": "Structure the R&D portfolio as options: stage gates, information bought per stage, kill criteria.",
+      "triggers": [
+        "engineering",
+        "finance",
+        "medical",
+        "product",
+        "software",
+        "strategy",
+        "decide",
+        "estimate",
+        "maximize",
+        "predict",
+        "deadline",
+        "high_stakes"
+      ],
+      "pos_win_rate": 1.0,
+      "neg_failure_rate": 0.0
+    },
+    {
+      "id": "m059",
+      "name": "Scenario Planning in Geopolitics",
+      "family": "Domain-Specialized",
+      "description": "Build 3-4 plausible futures with signposts, not predictions.",
+      "strengths": [
+        "robustness across futures",
+        "signpost monitoring"
+      ],
+      "weaknesses": [
+        "scenario drift",
+        "planning theater"
+      ],
+      "example_prompt": "Build 3-4 divergent futures, each with driving forces and observable signposts.",
+      "triggers": [
+        "engineering",
+        "finance",
+        "medical",
+        "product",
+        "software",
+        "strategy",
+        "supply",
+        "estimate",
+        "maximize",
+        "predict",
+        "deadline"
+      ],
+      "pos_win_rate": 1.0,
+      "neg_failure_rate": 0.0
+    },
+    {
+      "id": "m060",
+      "name": "Base Rate Avoidance in Hiring",
+      "family": "Domain-Specialized",
+      "description": "Anchor selection on base-rate validity of signals (work samples > interviews).",
+      "strengths": [
+        "corrects interview illusions",
+        "evidence-based selection"
+      ],
+      "weaknesses": [
+        "ignores candidate specifics"
+      ],
+      "example_prompt": "Rank the hiring signals by predictive validity from base rates; design the process around the top ones.",
+      "triggers": [
+        "engineering",
+        "finance",
+        "medical",
+        "product",
+        "science",
+        "software",
+        "diagnose",
+        "estimate",
+        "maximize",
+        "predict"
+      ],
+      "pos_win_rate": 1.0,
+      "neg_failure_rate": 0.0
+    },
+    {
+      "id": "m061",
+      "name": "Opportunity Cost in Personal Finance",
+      "family": "Domain-Specialized",
+      "description": "Every spend is a foregone investment; discount and compare.",
+      "strengths": [
+        "long-term compounding view",
+        "kills lifestyle creep"
+      ],
+      "weaknesses": [
+        "miserliness",
+        "misapplied discount rates"
+      ],
+      "example_prompt": "Compare this purchase to its compounded alternative over 10 years.",
+      "triggers": [
+        "finance",
+        "medical",
+        "product",
+        "software",
+        "strategy",
+        "decide",
+        "estimate",
+        "guarantee",
+        "high_stakes"
+      ],
+      "pos_win_rate": 1.0,
+      "neg_failure_rate": 0.0
+    },
+    {
+      "id": "m062",
+      "name": "Temporal Thinking in Climate Policy",
+      "family": "Domain-Specialized",
+      "description": "Intergenerational discounting, irreversibility, and tail-risk framing.",
+      "strengths": [
+        "long-horizon honesty",
+        "irreversibility weighting"
+      ],
+      "weaknesses": [
+        "discount-rate wars",
+        "paralysis by tail risk"
+      ],
+      "example_prompt": "Evaluate the policy at 2030, 2050, 2100 with explicit discounting and irreversibility.",
+      "triggers": [
+        "engineering",
+        "finance",
+        "medical",
+        "product",
+        "software",
+        "strategy",
+        "supply",
+        "decide",
+        "estimate",
+        "guarantee",
+        "high_stakes"
+      ],
+      "pos_win_rate": 1.0,
+      "neg_failure_rate": 0.0
+    },
+    {
+      "id": "m063",
+      "name": "Multi-Perspective in Legal Reasoning",
+      "family": "Domain-Specialized",
+      "description": "Model each party's interests, precedents, and likely rulings.",
+      "strengths": [
+        "predicts outcomes",
+        "finds leverage"
+      ],
+      "weaknesses": [
+        "adversarial cynicism"
+      ],
+      "example_prompt": "Model each party and the decision-maker: interests, constraints, precedents, likely outcome.",
+      "triggers": [
+        "engineering",
+        "finance",
+        "medical",
+        "organization",
+        "product",
+        "software",
+        "supply",
+        "decide",
+        "estimate",
+        "maximize",
+        "predict",
+        "adversarial",
+        "deadline",
+        "high_stakes"
+      ],
+      "pos_win_rate": 1.0,
+      "neg_failure_rate": 0.0
+    },
+    {
+      "id": "m064",
+      "name": "Ethical Frameworks in AI Deployment",
+      "family": "Domain-Specialized",
+      "description": "Alignment, dual-use, fairness, and accountability lenses on system release.",
+      "strengths": [
+        "systematic safety review",
+        "value-conflict surfacing"
+      ],
+      "weaknesses": [
+        "framework shopping",
+        "no resolution algorithm"
+      ],
+      "example_prompt": "Evaluate this deployment under safety, fairness, dual-use, and accountability lenses; state conflicts.",
+      "triggers": [
+        "engineering",
+        "finance",
+        "medical",
+        "organization",
+        "product",
+        "software",
+        "strategy",
+        "supply",
+        "decide",
+        "estimate",
+        "maximize",
+        "adversarial",
+        "deadline",
+        "high_stakes"
+      ],
+      "pos_win_rate": 1.0,
+      "neg_failure_rate": 0.0
+    },
+    {
+      "id": "m065",
+      "name": "Margin of Safety in Engineering Design",
+      "family": "Domain-Specialized",
+      "description": "Derate specifications; design for loads beyond nominal.",
+      "strengths": [
+        "survives model error",
+        "conservative standards"
+      ],
+      "weaknesses": [
+        "over-design cost",
+        "weight/complexity growth"
+      ],
+      "example_prompt": "Derate this design: what margin covers model error, material variance, and load uncertainty?",
+      "triggers": [
+        "engineering",
+        "finance",
+        "medical",
+        "product",
+        "science",
+        "software",
+        "guarantee",
+        "maximize",
+        "high_stakes"
+      ],
+      "pos_win_rate": 1.0,
+      "neg_failure_rate": 0.0
+    },
+    {
+      "id": "m066",
+      "name": "Strong Inference (Platt)",
+      "family": "Additional Expert Strategies",
+      "description": "Generate multiple competing hypotheses and devise experiments that discriminate.",
+      "strengths": [
+        "decisive experiments",
+        "avoids single-hypothesis fixation"
+      ],
+      "weaknesses": [
+        "demands experimental power"
+      ],
+      "example_prompt": "List 2+ competing hypotheses; design the experiment that would discriminate between them.",
+      "triggers": [
+        "engineering",
+        "finance",
+        "medical",
+        "product",
+        "science",
+        "security",
+        "software",
+        "supply",
+        "estimate",
+        "guarantee",
+        "maximize",
+        "deadline"
+      ],
+      "pos_win_rate": 1.0,
+      "neg_failure_rate": 0.0
+    },
+    {
+      "id": "m067",
+      "name": "Thought Experiment (Gedankenexperiment)",
+      "family": "Additional Expert Strategies",
+      "description": "Run idealized scenarios to isolate logical structure.",
+      "strengths": [
+        "clarifies principles",
+        "cheap"
+      ],
+      "weaknesses": [
+        "idealization drift",
+        "no empirical check"
+      ],
+      "example_prompt": "Run the idealized version of this problem to isolate its logical core.",
+      "triggers": [],
+      "pos_win_rate": 0.0,
+      "neg_failure_rate": 0.0
+    },
+    {
+      "id": "m068",
+      "name": "Hypothesis-Driven Consulting (MECE)",
+      "family": "Additional Expert Strategies",
+      "description": "Structure problems into mutually exclusive, collectively exhaustive trees; test hypotheses top-down.",
+      "strengths": [
+        "completeness + prioritization",
+        "client-ready structure"
+      ],
+      "weaknesses": [
+        "tree too rigid",
+        "premature pruning"
+      ],
+      "example_prompt": "Build the MECE tree; prioritize branches by expected impact; state the hypothesis to test first.",
+      "triggers": [
+        "engineering",
+        "finance",
+        "medical",
+        "product",
+        "science",
+        "software",
+        "strategy",
+        "supply",
+        "estimate",
+        "maximize",
+        "predict",
+        "deadline"
+      ],
+      "pos_win_rate": 1.0,
+      "neg_failure_rate": 0.0
+    },
+    {
+      "id": "m069",
+      "name": "80/20 Pareto Analysis",
+      "family": "Additional Expert Strategies",
+      "description": "Find the vital few inputs driving most outcomes.",
+      "strengths": [
+        "focus",
+        "quick wins"
+      ],
+      "weaknesses": [
+        "tail neglect",
+        "misapplied to flat distributions"
+      ],
+      "example_prompt": "Find the 20% of causes driving 80% of the outcome; act there first.",
+      "triggers": [
+        "engineering",
+        "finance",
+        "medical",
+        "product",
+        "science",
+        "software",
+        "diagnose",
+        "estimate",
+        "predict",
+        "deadline",
+        "high_stakes"
+      ],
+      "pos_win_rate": 1.0,
+      "neg_failure_rate": 0.0
+    },
+    {
+      "id": "m070",
+      "name": "Evidence-Weighted SWOT",
+      "family": "Additional Expert Strategies",
+      "description": "SWOT with every item graded by evidence strength, not vibes.",
+      "strengths": [
+        "kills checklist theater",
+        "prioritizable output"
+      ],
+      "weaknesses": [
+        "evidence grading is subjective"
+      ],
+      "example_prompt": "Build the SWOT, but grade every item by evidence strength and drop unsupported ones.",
+      "triggers": [
+        "engineering",
+        "finance",
+        "medical",
+        "organization",
+        "product",
+        "science",
+        "security",
+        "software",
+        "strategy",
+        "supply",
+        "decide",
+        "estimate",
+        "guarantee",
+        "maximize",
+        "predict",
+        "adversarial"
+      ],
+      "pos_win_rate": 1.0,
+      "neg_failure_rate": 0.0
+    },
+    {
+      "id": "m071",
+      "name": "Porter's Five Forces",
+      "family": "Additional Expert Strategies",
+      "description": "Industry structure: rivalry, entry, substitutes, supplier and buyer power.",
+      "strengths": [
+        "industry profitability logic",
+        "structural insight"
+      ],
+      "weaknesses": [
+        "static snapshot",
+        "ignores firm heterogeneity"
+      ],
+      "example_prompt": "Analyze the industry's five forces and what they imply for profitability.",
+      "triggers": [
+        "engineering",
+        "finance",
+        "medical",
+        "organization",
+        "security",
+        "software",
+        "strategy",
+        "supply",
+        "decide",
+        "estimate"
+      ],
+      "pos_win_rate": 1.0,
+      "neg_failure_rate": 0.0
+    },
+    {
+      "id": "m072",
+      "name": "Value Chain Analysis",
+      "family": "Additional Expert Strategies",
+      "description": "Decompose activity chain; find where value and cost concentrate.",
+      "strengths": [
+        "differentiation/cost sources",
+        "offshoring logic"
+      ],
+      "weaknesses": [
+        "descriptive",
+        "chain boundaries fuzzy"
+      ],
+      "example_prompt": "Decompose the value chain; where is value created and where is cost concentrated?",
+      "triggers": [
+        "engineering",
+        "finance",
+        "medical",
+        "product",
+        "science",
+        "supply",
+        "estimate",
+        "guarantee",
+        "maximize",
+        "adversarial",
+        "high_stakes"
+      ],
+      "pos_win_rate": 1.0,
+      "neg_failure_rate": 0.0
+    },
+    {
+      "id": "m073",
+      "name": "Game Theory / Strategic Interaction",
+      "family": "Additional Expert Strategies",
+      "description": "Model players, strategies, payoffs; solve for equilibria and commitments.",
+      "strengths": [
+        "predicts strategic behavior",
+        "commitment analysis"
+      ],
+      "weaknesses": [
+        "payoff assumptions fragile"
+      ],
+      "example_prompt": "Model the interaction: players, strategies, payoffs; find the equilibrium and any commitment moves.",
+      "triggers": [
+        "engineering",
+        "finance",
+        "medical",
+        "product",
+        "science",
+        "security",
+        "software",
+        "strategy",
+        "decide",
+        "estimate",
+        "maximize",
+        "adversarial"
+      ],
+      "pos_win_rate": 1.0,
+      "neg_failure_rate": 0.0
+    },
+    {
+      "id": "m074",
+      "name": "Nash Equilibrium Reasoning",
+      "family": "Additional Expert Strategies",
+      "description": "Find outcomes where no player benefits from unilateral deviation.",
+      "strengths": [
+        "stable-outcome prediction",
+        "exposes fragile plans"
+      ],
+      "weaknesses": [
+        "multiple equilibria",
+        "coordination blindness"
+      ],
+      "example_prompt": "Would any player deviate from this proposed outcome? If so, it is not stable.",
+      "triggers": [
+        "engineering",
+        "finance",
+        "medical",
+        "product",
+        "software",
+        "guarantee",
+        "adversarial",
+        "high_stakes",
+        "one_shot"
+      ],
+      "pos_win_rate": 1.0,
+      "neg_failure_rate": 0.0
+    },
+    {
+      "id": "m075",
+      "name": "Bounded Rationality & Satisficing (Simon)",
+      "family": "Additional Expert Strategies",
+      "description": "Accept the first option meeting the aspiration level under limits.",
+      "strengths": [
+        "fast under constraints",
+        "realistic search"
+      ],
+      "weaknesses": [
+        "aspiration level arbitrary"
+      ],
+      "example_prompt": "Set an aspiration level; find the first option meeting it instead of optimizing.",
+      "triggers": [
+        "engineering",
+        "finance",
+        "medical",
+        "organization",
+        "product",
+        "software",
+        "strategy",
+        "supply",
+        "decide",
+        "estimate",
+        "maximize",
+        "predict",
+        "deadline"
+      ],
+      "pos_win_rate": 1.0,
+      "neg_failure_rate": 0.0
+    },
+    {
+      "id": "m076",
+      "name": "Prospect Theory Awareness",
+      "family": "Additional Expert Strategies",
+      "description": "Correct for loss aversion, reference dependence, and probability weighting.",
+      "strengths": [
+        "predicts real behavior",
+        "de-biases decisions"
+      ],
+      "weaknesses": [
+        "over-correcting preferences"
+      ],
+      "example_prompt": "Check this decision for loss aversion and reference-point effects; restate it neutrally.",
+      "triggers": [
+        "engineering",
+        "finance",
+        "medical",
+        "organization",
+        "product",
+        "supply",
+        "decide",
+        "diagnose",
+        "guarantee",
+        "maximize",
+        "predict"
+      ],
+      "pos_win_rate": 1.0,
+      "neg_failure_rate": 0.0
+    },
+    {
+      "id": "m077",
+      "name": "Sunk Cost Recognition",
+      "family": "Additional Expert Strategies",
+      "description": "Ignore unrecoverable past costs; decide on forward-looking value.",
+      "strengths": [
+        "kills escalation",
+        "clean decisions"
+      ],
+      "weaknesses": [
+        "ignores reputation/commitment effects"
+      ],
+      "example_prompt": "Strip the sunk costs; decide on forward-looking value alone.",
+      "triggers": [
+        "finance",
+        "medical",
+        "organization",
+        "product",
+        "software",
+        "strategy",
+        "decide",
+        "estimate",
+        "maximize",
+        "predict",
+        "adversarial"
+      ],
+      "pos_win_rate": 1.0,
+      "neg_failure_rate": 0.0
+    },
+    {
+      "id": "m078",
+      "name": "Anchoring Avoidance",
+      "family": "Additional Expert Strategies",
+      "description": "Generate independent estimates before seeing others' numbers.",
+      "strengths": [
+        "calibrated estimates",
+        "resists framing"
+      ],
+      "weaknesses": [
+        "independent estimates still biased"
+      ],
+      "example_prompt": "Estimate independently first; only then consider the given number and how it would move you.",
+      "triggers": [
+        "finance",
+        "medical",
+        "product",
+        "software",
+        "strategy",
+        "supply",
+        "estimate",
+        "guarantee",
+        "maximize",
+        "adversarial",
+        "high_stakes",
+        "one_shot"
+      ],
+      "pos_win_rate": 1.0,
+      "neg_failure_rate": 0.0
+    },
+    {
+      "id": "m079",
+      "name": "Confirmation Bias Hunting",
+      "family": "Additional Expert Strategies",
+      "description": "Actively seek disconfirming evidence for the leading belief.",
+      "strengths": [
+        "kills echo chambers",
+        "robust beliefs"
+      ],
+      "weaknesses": [
+        "contrarian theater"
+      ],
+      "example_prompt": "What evidence would you seek if you wanted to disprove your current conclusion? Seek it.",
+      "triggers": [
+        "engineering",
+        "medical",
+        "organization",
+        "product",
+        "science",
+        "software",
+        "strategy",
+        "decide",
+        "diagnose",
+        "guarantee",
+        "maximize",
+        "predict"
+      ],
+      "pos_win_rate": 1.0,
+      "neg_failure_rate": 0.0
+    },
+    {
+      "id": "m080",
+      "name": "Survivorship Bias Analysis",
+      "family": "Additional Expert Strategies",
+      "description": "Ask what the failures look like before trusting the survivors' pattern.",
+      "strengths": [
+        "corrects success-story myths",
+        "base-rate realism"
+      ],
+      "weaknesses": [
+        "counterfactual data often missing"
+      ],
+      "example_prompt": "Where are the failures this pattern hides? What do they imply about the survivor data?",
+      "triggers": [
+        "engineering",
+        "finance",
+        "medical",
+        "product",
+        "software",
+        "strategy",
+        "decide",
+        "maximize",
+        "predict"
+      ],
+      "pos_win_rate": 1.0,
+      "neg_failure_rate": 0.0
+    },
+    {
+      "id": "m081",
+      "name": "Narrative Fallacy Detection",
+      "family": "Additional Expert Strategies",
+      "description": "Distrust neat stories; demand the data the story selects against.",
+      "strengths": [
+        "kills story-driven error",
+        "data discipline"
+      ],
+      "weaknesses": [
+        "can dismiss real patterns"
+      ],
+      "example_prompt": "What does this story leave out? Which data points contradict its arc?",
+      "triggers": [
+        "finance",
+        "medical",
+        "product",
+        "science",
+        "software",
+        "strategy",
+        "decide",
+        "diagnose",
+        "maximize"
+      ],
+      "pos_win_rate": 1.0,
+      "neg_failure_rate": 0.0
+    },
+    {
+      "id": "m082",
+      "name": "Motivated Reasoning Detection",
+      "family": "Additional Expert Strategies",
+      "description": "Ask whose conclusion is convenient and audit the reasoning for direction.",
+      "strengths": [
+        "self and others audit",
+        "incentive awareness"
+      ],
+      "weaknesses": [
+        "cynicism",
+        "hard to apply to self"
+      ],
+      "example_prompt": "Who benefits from this conclusion? Would the same evidence be read differently by someone with the opposite incentive?",
+      "triggers": [
+        "engineering",
+        "finance",
+        "medical",
+        "organization",
+        "product",
+        "security",
+        "software",
+        "decide",
+        "diagnose",
+        "estimate",
+        "maximize",
+        "adversarial",
+        "deadline"
+      ],
+      "pos_win_rate": 1.0,
+      "neg_failure_rate": 0.0
+    },
+    {
+      "id": "m083",
+      "name": "Principal-Agent Analysis",
+      "family": "Additional Expert Strategies",
+      "description": "Model incentive misalignment between decision-maker and beneficiary.",
+      "strengths": [
+        "predicts misbehavior",
+        "contract design"
+      ],
+      "weaknesses": [
+        "trust-eroding cynicism"
+      ],
+      "example_prompt": "Where do the incentives of the decision-maker diverge from the beneficiary? Redesign the contract.",
+      "triggers": [
+        "engineering",
+        "finance",
+        "medical",
+        "organization",
+        "strategy",
+        "decide",
+        "estimate",
+        "maximize",
+        "adversarial"
+      ],
+      "pos_win_rate": 1.0,
+      "neg_failure_rate": 0.0
+    },
+    {
+      "id": "m084",
+      "name": "Collective Action & Coordination",
+      "family": "Additional Expert Strategies",
+      "description": "Analyze free-rider problems and the institutions that solve them.",
+      "strengths": [
+        "solves public-goods puzzles",
+        "institution design"
+      ],
+      "weaknesses": [
+        "abstract",
+        "institution failure modes"
+      ],
+      "example_prompt": "Is this a free-rider problem? What institution, norm, or mechanism solves the coordination?",
+      "triggers": [
+        "engineering",
+        "finance",
+        "medical",
+        "organization",
+        "product",
+        "science",
+        "software",
+        "strategy",
+        "decide",
+        "diagnose",
+        "estimate",
+        "maximize",
+        "adversarial",
+        "high_stakes",
+        "one_shot"
+      ],
+      "pos_win_rate": 1.0,
+      "neg_failure_rate": 0.0
+    },
+    {
+      "id": "m085",
+      "name": "Tragedy of the Commons Analysis",
+      "family": "Additional Expert Strategies",
+      "description": "Detect shared-resource overuse; design exclusion, quotas, or ownership.",
+      "strengths": [
+        "commons governance",
+        "predicts depletion"
+      ],
+      "weaknesses": [
+        "over-applied",
+        "excludes local norms"
+      ],
+      "example_prompt": "Is this a shared resource heading to overuse? Design the governance that prevents it.",
+      "triggers": [
+        "engineering",
+        "finance",
+        "medical",
+        "organization",
+        "product",
+        "software",
+        "decide",
+        "diagnose",
+        "estimate",
+        "guarantee",
+        "predict"
+      ],
+      "pos_win_rate": 1.0,
+      "neg_failure_rate": 0.0
+    },
+    {
+      "id": "m086",
+      "name": "Organizational Feedback Loop Analysis",
+      "family": "Additional Expert Strategies",
+      "description": "Find where org dynamics reinforce or balance; locate policy resistance.",
+      "strengths": [
+        "org-change realism",
+        "policy resistance prediction"
+      ],
+      "weaknesses": [
+        "reductionist",
+        "data-poor"
+      ],
+      "example_prompt": "Map the org's feedback loops; where will the policy meet resistance and why?",
+      "triggers": [
+        "engineering",
+        "finance",
+        "medical",
+        "organization",
+        "strategy",
+        "estimate",
+        "guarantee",
+        "predict"
+      ],
+      "pos_win_rate": 1.0,
+      "neg_failure_rate": 1.0
+    },
+    {
+      "id": "m087",
+      "name": "BATNA Thinking (Negotiation)",
+      "family": "Additional Expert Strategies",
+      "description": "Know your and their best alternative to a negotiated agreement.",
+      "strengths": [
+        "walk-away power",
+        "agreement zone mapping"
+      ],
+      "weaknesses": [
+        "BATNA inflation games"
+      ],
+      "example_prompt": "What is each side's walk-away alternative? Where is the agreement zone, and who has leverage?",
+      "triggers": [
+        "engineering",
+        "finance",
+        "medical",
+        "organization",
+        "product",
+        "software",
+        "strategy",
+        "decide",
+        "estimate",
+        "maximize",
+        "adversarial",
+        "deadline",
+        "high_stakes"
+      ],
+      "pos_win_rate": 1.0,
+      "neg_failure_rate": 0.0
+    },
+    {
+      "id": "m088",
+      "name": "Pre-Commitment & Ulysses Contracts",
+      "family": "Additional Expert Strategies",
+      "description": "Bind future behavior against known temptation or drift.",
+      "strengths": [
+        "kills akrasia",
+        "credible commitments"
+      ],
+      "weaknesses": [
+        "inflexible",
+        "commitment regret"
+      ],
+      "example_prompt": "What future temptation will derail this? Design the pre-commitment that prevents it.",
+      "triggers": [
+        "engineering",
+        "finance",
+        "medical",
+        "organization",
+        "product",
+        "software",
+        "strategy",
+        "decide",
+        "estimate",
+        "guarantee",
+        "maximize",
+        "predict",
+        "adversarial",
+        "deadline"
+      ],
+      "pos_win_rate": 1.0,
+      "neg_failure_rate": 0.0
+    },
+    {
+      "id": "m089",
+      "name": "Optionality Preservation",
+      "family": "Additional Expert Strategies",
+      "description": "Avoid decisions that close more doors than they open.",
+      "strengths": [
+        "robustness to surprise",
+        "information value"
+      ],
+      "weaknesses": [
+        "permanent dithering"
+      ],
+      "example_prompt": "Which option keeps the most future doors open while still moving forward?",
+      "triggers": [
+        "finance",
+        "medical",
+        "organization",
+        "product",
+        "security",
+        "software",
+        "strategy",
+        "supply",
+        "decide",
+        "estimate",
+        "guarantee",
+        "maximize",
+        "predict",
+        "deadline",
+        "high_stakes"
+      ],
+      "pos_win_rate": 1.0,
+      "neg_failure_rate": 0.0
+    },
+    {
+      "id": "m090",
+      "name": "Minimum Viable Experiment (Build-Measure-Learn)",
+      "family": "Additional Expert Strategies",
+      "description": "Smallest test that produces a learning signal before commitment.",
+      "strengths": [
+        "cheap learning",
+        "validates assumptions"
+      ],
+      "weaknesses": [
+        "MVP theater",
+        "confuses test with product"
+      ],
+      "example_prompt": "What is the smallest experiment that would validate or kill the core assumption?",
+      "triggers": [
+        "engineering",
+        "finance",
+        "medical",
+        "product",
+        "science",
+        "software",
+        "strategy",
+        "decide",
+        "estimate",
+        "maximize",
+        "adversarial"
+      ],
+      "pos_win_rate": 1.0,
+      "neg_failure_rate": 0.0
+    },
+    {
+      "id": "m091",
+      "name": "Deliberate Practice & Chunking",
+      "family": "Additional Expert Strategies",
+      "description": "Decompose skill into chunks; practice at the edge of ability with feedback.",
+      "strengths": [
+        "skill acquisition",
+        "expertise building"
+      ],
+      "weaknesses": [
+        "plateaus",
+        "feedback-dependent"
+      ],
+      "example_prompt": "Break the skill into chunks; design practice at the edge with immediate feedback.",
+      "triggers": [
+        "engineering",
+        "medical",
+        "organization",
+        "product",
+        "science",
+        "software",
+        "supply",
+        "decide",
+        "diagnose",
+        "guarantee",
+        "maximize",
+        "predict",
+        "deadline"
+      ],
+      "pos_win_rate": 1.0,
+      "neg_failure_rate": 0.0
+    },
+    {
+      "id": "m092",
+      "name": "Spaced Repetition & Memory Science",
+      "family": "Additional Expert Strategies",
+      "description": "Schedule review at expanding intervals to cement durable knowledge.",
+      "strengths": [
+        "durable retention",
+        "efficient review"
+      ],
+      "weaknesses": [
+        "system overhead",
+        "not for comprehension alone"
+      ],
+      "example_prompt": "Turn this knowledge into spaced-repetition items with expanding intervals.",
+      "triggers": [
+        "engineering",
+        "medical",
+        "organization",
+        "product",
+        "software",
+        "diagnose",
+        "guarantee",
+        "maximize",
+        "deadline",
+        "high_stakes"
+      ],
+      "pos_win_rate": 1.0,
+      "neg_failure_rate": 0.0
+    },
+    {
+      "id": "m093",
+      "name": "Feynman Technique",
+      "family": "Additional Expert Strategies",
+      "description": "Explain simply; the gap between explanation and understanding is the learning target.",
+      "strengths": [
+        "diagnoses understanding gaps",
+        "simplifies communication"
+      ],
+      "weaknesses": [
+        "oversimplification risk"
+      ],
+      "example_prompt": "Explain this concept as if to a bright 12-year-old; note where the explanation breaks down.",
+      "triggers": [
+        "engineering",
+        "finance",
+        "medical",
+        "product",
+        "software",
+        "strategy",
+        "decide",
+        "diagnose"
+      ],
+      "pos_win_rate": 1.0,
+      "neg_failure_rate": 0.0
+    },
+    {
+      "id": "m094",
+      "name": "Critical Reading / Socratic Questioning of Texts",
+      "family": "Additional Expert Strategies",
+      "description": "Interrogate claims, evidence, and rhetoric of any source.",
+      "strengths": [
+        "source evaluation",
+        "rhetoric detection"
+      ],
+      "weaknesses": [
+        "can miss the forest"
+      ],
+      "example_prompt": "Interrogate this text: claims, evidence quality, hidden premises, rhetoric, and what it omits.",
+      "triggers": [
+        "engineering",
+        "finance",
+        "medical",
+        "organization",
+        "product",
+        "science",
+        "security",
+        "software",
+        "strategy",
+        "decide",
+        "estimate",
+        "maximize",
+        "adversarial",
+        "deadline",
+        "high_stakes"
+      ],
+      "pos_win_rate": 1.0,
+      "neg_failure_rate": 0.0
+    },
+    {
+      "id": "m095",
+      "name": "Fast-and-Frugal Decision Trees (Gigerenzer)",
+      "family": "Additional Expert Strategies",
+      "description": "Simple one-cue-at-a-time heuristics that beat complex models in context.",
+      "strengths": [
+        "robust, fast, transparent"
+      ],
+      "weaknesses": [
+        "cue selection fragile"
+      ],
+      "example_prompt": "Build the minimal decision tree: one cue at a time, stopping as soon as a decision is clear.",
+      "triggers": [
+        "medical",
+        "product",
+        "decide",
+        "diagnose",
+        "guarantee",
+        "predict"
+      ],
+      "pos_win_rate": 1.0,
+      "neg_failure_rate": 0.0
+    },
+    {
+      "id": "m096",
+      "name": "Ensemble Thinking (Diverse Views Averaging)",
+      "family": "Additional Expert Strategies",
+      "description": "Aggregate independent diverse estimates; reduce error by cancellation.",
+      "strengths": [
+        "accuracy gains",
+        "error cancellation"
+      ],
+      "weaknesses": [
+        "dependent inputs",
+        "crowd herding"
+      ],
+      "example_prompt": "Collect independent estimates from diverse sources; average them and state the spread.",
+      "triggers": [
+        "engineering",
+        "medical",
+        "organization",
+        "product",
+        "science",
+        "security",
+        "supply",
+        "diagnose",
+        "estimate",
+        "maximize",
+        "predict"
+      ],
+      "pos_win_rate": 1.0,
+      "neg_failure_rate": 0.0
+    },
+    {
+      "id": "m097",
+      "name": "Reference Class Forecasting (Kahneman)",
+      "family": "Additional Expert Strategies",
+      "description": "Forecast by locating the outcome's reference class and its base-rate distribution.",
+      "strengths": [
+        "kills planning fallacy",
+        "outside-view calibration"
+      ],
+      "weaknesses": [
+        "reference class selection"
+      ],
+      "example_prompt": "Find the reference class of similar projects/events; forecast from its distribution, not the inside view.",
+      "triggers": [
+        "engineering",
+        "finance",
+        "medical",
+        "organization",
+        "product",
+        "software",
+        "supply",
+        "diagnose",
+        "estimate",
+        "predict"
+      ],
+      "pos_win_rate": 1.0,
+      "neg_failure_rate": 0.0
+    },
+    {
+      "id": "m098",
+      "name": "Decision Pre-registration / Journaling",
+      "family": "Additional Expert Strategies",
+      "description": "Write decisions, expectations, and falsification criteria before outcomes.",
+      "strengths": [
+        "hindsight-bias armor",
+        "learning from outcomes"
+      ],
+      "weaknesses": [
+        "bureaucratic",
+        "post-hoc drift"
+      ],
+      "example_prompt": "Pre-register: the decision, the expected outcome distribution, and what would prove it wrong.",
+      "triggers": [
+        "engineering",
+        "finance",
+        "medical",
+        "organization",
+        "product",
+        "science",
+        "software",
+        "supply",
+        "estimate",
+        "guarantee",
+        "maximize",
+        "predict"
+      ],
+      "pos_win_rate": 1.0,
+      "neg_failure_rate": 0.0
+    },
+    {
+      "id": "m099",
+      "name": "Bayesian Knowledge Updating (Org Learning)",
+      "family": "Additional Expert Strategies",
+      "description": "Treat org beliefs as priors; update them with measured outcomes, not anecdotes.",
+      "strengths": [
+        "org calibration",
+        "kills anecdote-driven strategy"
+      ],
+      "weaknesses": [
+        "measurement politics"
+      ],
+      "example_prompt": "What is the org's current belief, what evidence would update it, and by how much?",
+      "triggers": [
+        "finance",
+        "medical",
+        "product",
+        "science",
+        "software",
+        "decide",
+        "estimate",
+        "guarantee",
+        "predict"
+      ],
+      "pos_win_rate": 1.0,
+      "neg_failure_rate": 0.0
+    },
+    {
+      "id": "m100",
+      "name": "First Principles + Falsification Combo (Hypothesis Rebuild)",
+      "family": "Additional Expert Strategies",
+      "description": "Rebuild from fundamentals, then attempt to falsify the rebuilt claim hardest.",
+      "strengths": [
+        "both construction and critique"
+      ],
+      "weaknesses": [
+        "doubles the work"
+      ],
+      "example_prompt": "Rebuild this from first principles, then try hardest to falsify your own rebuild.",
+      "triggers": [
+        "engineering",
+        "finance",
+        "medical",
+        "organization",
+        "product",
+        "science",
+        "security",
+        "software",
+        "supply",
+        "decide",
+        "estimate",
+        "maximize",
+        "deadline"
+      ],
+      "pos_win_rate": 1.0,
+      "neg_failure_rate": 0.0
+    },
+    {
+      "id": "m101",
+      "name": "Solo-Contract Bayesian Precision",
+      "family": "Counter Models (v7 residual closure)",
+      "description": "One-pass Bayesian update: prior, likelihood, posterior, verifications and interpretation in a single linear trace, with the load of the conditional-independence assumption quantified (Fréchet bounds) and decision-threshold flips computed. Counter to the style-pure Bayesian baseline on fully-measured likelihood cases (m006-POS-02).",
+      "strengths": [
+        "efficiency parity with the pure style",
+        "quantifies assumption load",
+        "flip-prior and negative-branch pricing"
+      ],
+      "weaknesses": [
+        "requires fully-measured likelihoods",
+        "single-pass form assumes one discipline suffices"
+      ],
+      "example_prompt": "Run the update in one pass: prior, likelihood, posterior, joint check, order-invariance, sensitivity, and quantify what the independence assumption is buying.",
+      "triggers": [],
+      "pos_win_rate": 0.0,
+      "neg_failure_rate": 0.0
+    },
+    {
+      "id": "m102",
+      "name": "Likelihood-Audit Gatekeeper",
+      "family": "Counter Models (v7 residual closure)",
+      "description": "One-pass audit of the likelihood before any update: name the unmeasured quantity, price the posterior across plausible likelihoods, derive the decision-threshold algebra (specificity floor, credence demand), and decide under ambiguity. Counter to the style-pure Bayesian baseline on unvalidated-likelihood cases (m006-NEG-02).",
+      "strengths": [
+        "audit-before-update discipline",
+        "specificity floor and credence-demand quantification",
+        "SAE ledger accounting"
+      ],
+      "weaknesses": [
+        "gives no point answer by design",
+        "threshold algebra depends on the stated policy"
+      ],
+      "example_prompt": "Audit the likelihood before updating: what is unmeasured, what does the posterior become under each plausible accuracy, and what claim would the treat-threshold demand?",
+      "triggers": [],
+      "pos_win_rate": 0.0,
+      "neg_failure_rate": 0.0
+    },
+    {
+      "id": "m103",
+      "name": "Sequential Constraint Engine",
+      "family": "Counter Models (v7 residual closure)",
+      "description": "One-pass constraint loop (find → exploit → subordinate → elevate → repeat) with the forced-lift chain and tie-lock theorem: after a lift the constraint re-manifests at the next cap, and each higher target rate has exactly one cheapest lift set. Prices ambiguous program definitions under all readings. Counter to the style-pure bottleneck baseline (m014-POS-01).",
+      "strengths": [
+        "tie-lock and forced-chain theorem",
+        "min-element pre-filter",
+        "interpretation-pricing of ambiguous specs"
+      ],
+      "weaknesses": [
+        "single-constraint frame",
+        "chain math assumes fixed program set"
+      ],
+      "example_prompt": "Run the loop in one pass: find the binding stage (math + WIP signature), exploit free, subordinate, lift only the binder, then name the next constraint and the exact lift set for each higher rate.",
+      "triggers": [],
+      "pos_win_rate": 0.0,
+      "neg_failure_rate": 0.0
+    },
+    {
+      "id": "m104",
+      "name": "Dynamic Five-Forces Verdict",
+      "family": "Counter Models (v7 residual closure)",
+      "description": "One-pass structural pass: five forces force-by-force with scenario evidence and explicit evidence grades, aggregate verdict, then the direction-robust dynamic reading (every force adverse or worsening), adverse-selection at the auction, and the redeployment priced by opportunity cost. Counter to the style-pure Five-Forces baseline on structural entry decisions (m071-POS-01).",
+      "strengths": [
+        "first-class structural enumeration",
+        "direction-robust (dynamic) verdict",
+        "adverse-selection and opportunity-cost pricing"
+      ],
+      "weaknesses": [
+        "structural unit of analysis only",
+        "trajectory claims need evidence"
+      ],
+      "example_prompt": "Run the five forces first-class in one pass: force-by-force evidence, aggregate verdict below the hurdle, the dynamic direction of each force, and the decision priced against the best alternative use.",
+      "triggers": [],
+      "pos_win_rate": 0.0,
+      "neg_failure_rate": 0.0
+    }
+  ]
+}

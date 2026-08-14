@@ -1,0 +1,46 @@
+[project]
+name = "thinking-agent"
+version = "0.1.0"
+description = "Thinking Agent v8 — governed, stateful, auditable problem-solving system (META->WHAT->WHY->HOW->DO->REVIEW + safety kernel + style router + self-directed learning)"
+requires-python = ">=3.12"
+dependencies = [
+    "langgraph>=1.1,<2",
+    "langchain-core>=1.2,<2",
+    "pydantic>=2.9",
+    "pydantic-settings>=2.6",
+    "httpx>=0.27",
+    "orjson>=3.10",
+    "structlog>=24.4",
+    "jinja2>=3.1",
+    "pyyaml>=6.0",
+    "tenacity>=9.0",
+    "defusedxml>=0.7",
+]
+
+[project.optional-dependencies]
+sqlite = ["langgraph-checkpoint-sqlite>=2.0"]
+postgres = ["langgraph-checkpoint-postgres>=2.0", "psycopg[binary]>=3.2"]
+providers = []
+dev = [
+    "pytest>=8.0",
+    "pytest-asyncio>=0.24",
+    "hypothesis>=6.100",
+    "respx>=0.21",
+    "freezegun>=1.5",
+    "ruff>=0.6",
+    "coverage>=7.6",
+]
+
+[project.scripts]
+thinking-agent = "thinking_agent.cli:main"
+
+[build-system]
+requires = ["setuptools>=70"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+testpaths = ["tests"]

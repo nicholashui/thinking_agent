@@ -1,0 +1,4 @@
+# file: C:\Project\thinking_agent\thinking_agent_v8\src\thinking_agent\control\budget_controller.py
+# hypothesis_version: 6.151.12
+
+[1800, 40000, 'BudgetController', 'agents_per_round', 'cognitive_calls', 'cognitive_calls_used', 'deadline exceeded', 'deadline_seconds', 'iteration ceiling', 'iterations', 'iterations_used', 'tokens', 'tokens_used']

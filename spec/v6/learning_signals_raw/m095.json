@@ -1,0 +1,18 @@
+[
+  {
+    "test_case_id": "m095-POS-01",
+    "human_model": "Fast-and-Frugal Decision Trees (Gigerenzer)",
+    "winner": "ai",
+    "key_gap": "vs baseline: the baseline owned the count-first move and the 'extra cues are last year's noise' mechanism first-pass; the v6 routed run matched it by running the frugal-rule completion contract (one-cue-at-a-time hand count, cue-decay audit, FN/FP asymmetry framed as the decision) and the m003 inversion gate, and added a dominated-branch price (3-cue variant C, 35/40) and an uncertainty packet (n=40 SE, quarterly re-audit) the pure style left implicit. Note: the router did not route the tree style itself for this home-turf case (top3 m013/m024/m039) — a recall miss to log as a curriculum item even though the decision was correct.",
+    "learning_signal": "On rule-selection signatures (medical/product, decide/diagnose/guarantee), count-first verification of the minimal rule must precede any trust in the complex model, and the decision should be framed by error DIRECTION (FN vs FP) before any accuracy comparison; every extra cue is one more chance to misfire, and that is checkable arithmetic, not an opinion.",
+    "suggested_improvement": "Install the frugal-rule pass (hand-count the minimal rule, cue-decay audit, FN/FP asymmetry first, stop when the decision is clear) as a standing completion contract on rule-selection signatures even when the tree style is not top-3; keep dual-route m013+m024 with the m003 inversion gate; add the router recall miss (tree style absent from top-3 on its own home-turf case) to the curriculum gap log."
+  },
+  {
+    "test_case_id": "m095-NEG-01",
+    "human_model": "Fast-and-Frugal Decision Trees (Gigerenzer)",
+    "winner": "ai",
+    "key_gap": "vs baseline: the baseline executed the style's core move (pilot re-check, tree kept) then failed as designed — it treated the cohort's cue collapse as a sampling problem, demanded the 6-week validation study as a gate, and refused the re-fitted interaction model as 'in-sample overfit theater'; the v6 run converted the trap into a checkable flip point: the single-cue hypothesis test (best cue 26/40 = 65%, interaction 34/40 = 85% => no cue >= threshold => signal is combinatorial), the P2 tempo price on the stall (6 weeks vs 2-week peak, ~1-2 atypical MIs per shift), and steel-man/confirmation-bias checks (m018/m079) before adopting the re-fitted rule with an observation net and an n=60 monitoring gate.",
+    "learning_signal": "Cue-selection fragility is the tree style's registered failure mode: when top-cue validity breaks mid-wave, pure frugality has no in-window recovery and its transparency does not substitute for evidence — a mandatory cue-collapse hypothesis test on current data, a combinatorial-signal fallback (interaction acceptance with a pre-committed monitoring gate), and tempo-mode cost-of-delay turn the trap into an explicit, checkable decision point.",
+    "suggested_improvement": "Pair every one-cue-at-a-time tree pass with (a) a single-cue validity hypothesis test on the CURRENT data before any keep/re-order decision, (b) a combinatorial-signal fallback rule (accept the interaction model with an n=60 revert gate, ST-positive observation net), (c) tempo-mode commit on deadline signatures so a validation study is priced as a gate candidate, never accepted as one; keep the m003 inversion gate and route m091+m018+m079 on regime-shift signatures (verified protective: NEG split held)."
+  }
+]

@@ -1,0 +1,4 @@
+# file: C:\Project\thinking_agent\thinking_agent_v8\src\thinking_agent\evaluation\judge.py
+# hypothesis_version: 6.151.12
+
+[0.0, 0.3, 0.6, 0.8, '1', 'Depth of Reasoning', 'Efficiency', 'Goal Achievement', 'Logical Validity', 'Overall Quality', 'agent_packet', 'answer', 'content', 'contested', 'diagnosis', 'dimensions', 'eval-default', 'first', 'first_verdict', 'goal', 'human_packet', 'missing_evidence', 'outcome_report', 'role', 'scenario', 'second', 'selected_decision', 'solution', 'system', 'task_id', 'terminal_status', 'user', 'verification']

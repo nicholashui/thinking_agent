@@ -1,0 +1,18 @@
+[
+  {
+    "test_case_id": "m039-POS-01",
+    "human_model": "Asymmetric Upside / Barbell Strategy",
+    "winner": "human",
+    "key_gap": "AI computed the correct EVs (M 57,120 vs B 117,400), worst cases and ruin probabilities and selected the barbell, but treated the two load-bearing preconditions as assumptions rather than verifications: it took tail-friendliness (forced-seller discount) as given market fact instead of independently pricing the tail slot, and it sized the tail by '8% is small' without a stated survivability cap, so its barbell recommendation is arithmetically right but procedurally unguarded.",
+    "learning_signal": "The elite barbell move is structure-first with a three-part precondition gate executed BEFORE pricing: (1) optionality audit — tail loss is truly capped, one premium, no margin calls/roll-over/follow-on; (2) cheapness check — compute the tail slot's own EV and compare premium to fair value (here the forced-seller discount produces +95% slot EV; a negative-slot-EV tail fails the gate); (3) survivability sizing — tail worst-case loss sized against an explicit pain cap, never betting the floor. Only after all three pass does the EV comparison matter; the middle bet is rejected on skew/ruin, not on EV.",
+    "suggested_improvement": "Add a BARBELL-FIT GATE to HOW/VERIFY for any allocation, insurance, or 'structure the exposure' task class: before comparing EVs, run the three checks (optionality audit, tail-slot EV vs fair value, survivability cap with explicit %), record each as PASS/FAIL, and require the packet to state the tail-slot EV and the survivability cap; route to the middle bet only when the gate fails."
+  },
+  {
+    "test_case_id": "m039-NEG-01",
+    "human_model": "Asymmetric Upside / Barbell Strategy",
+    "winner": "ai",
+    "key_gap": "The style-pure baseline rejected a +6.14%-EV, zero-ruin, positively skewed bond ladder as 'the forbidden middle' and built a forced barbell with −3.7% EV, treating a −50%-EV tail slot with a mandatory $200k follow-on as 'capped optionality' — it pattern-matched the barbell SHAPE without testing the preconditions, so it never noticed that its tail was neither optional (true max loss −25% > ladder's −15%) nor cheap, and never tested the 'middle' for the ruin it claims to avoid.",
+    "learning_signal": "Barbell reasoning has a mandatory precondition screen, and its failure mode is shape-matching: (1) before banning any candidate as 'the middle,' test whether it is actually negative-skew/ruinous — a bounded-downside, positively skewed, zero-ruin asset (measured 0.3% × 15% credit tail, priced) is not a middle bet, it is a safe core extension; (2) audit the tail contract at the clause level — mandatory follow-ons, lock-ups, and conversion options convert 'capped tail' into uncapped exposure (true max loss 25% vs labeled 15%); (3) compute the tail slot's EV and compare to fair value — in a tail-hostile market (premium 1.8× fair) the slot is −50% and the barbell is destroyed on both EV AND worst case; optionality at any price is the EV purist's error in reverse.",
+    "suggested_improvement": "Add a MIDDLE-QUALIFICATION + OPTIONALITY-AUDIT gate to WHAT/HOW for strategy-shaping tasks: (a) classify each candidate by payoff shape (skew, boundedness, ruin prob) not by narrative label; (b) read the tail instrument's contract for follow-on/cap/clause conditions and re-derive TRUE max loss; (c) require tail-slot EV vs fair value in the packet; (d) if the middle fails the 'ruinous' test or the tail fails optionality/cheapness, select the middle and log 'barbell preconditions unmet' as the stated reason."
+  }
+]

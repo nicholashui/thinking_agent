@@ -1,0 +1,18 @@
+[
+  {
+    "test_case_id": "m079-POS-01",
+    "human_model": "Confirmation Bias Hunting",
+    "winner": "ai",
+    "key_gap": "vs baseline: the v5 non-routed AI reached falsification-first only inside WHY (depth 4 vs 5, efficiency 3 vs 5, insight 4 vs 5 — the human ran the kill-shot as move 1), while the v6 run installed the m079 pass first-class at HOW entry: disconfirmation designed before the confirming pile (grandfathered 3.5% vs new-tier 3.3% — belief dies), counter-data sweep lateral/temporal/compositional (grandfathered jumped to 3.5% in July too — the jump tracks the notification, not the billing; 8-of-11 price mentions cluster in the notification month), per-item falsification bar, plus P1 provenance (confirming pile = interested-party, ledger = measured), P3 branch pricing of the rollback failure branch, the m003 inversion gate, and the insight that the confirming stream and the disconfirmation share one data source (month-clustering).",
+    "learning_signal": "On decide/diagnose signatures with a closed ledger, routing m079 as a first-class pass with its completion contract converts a recovered answer into a one-pass answer; the meta-move — the falsification test is designed BEFORE re-reading the confirming pile — is what P6 (falsification-latency) must keep enforced, and the counter-data sweep (lateral/temporal/compositional) is what separates a trap diagnosis from a bare cohort contrast.",
+    "suggested_improvement": "Keep m079 first-class on belief-test signatures with closed ledgers; make the counter-data sweep and the per-item falsification bar (time-consistency, signature-match) standing parts of the module contract on every run; pair with the P1 provenance audit (who benefits) whenever the confirming pile belongs to the belief's holder."
+  },
+  {
+    "test_case_id": "m079-NEG-01",
+    "human_model": "Confirmation Bias Hunting",
+    "winner": "ai",
+    "key_gap": "vs baseline: the pure style performed contrarian theater — four disconfirming artifacts collected, none graded, revised to 'inconclusive — do not roll back,' breaching the 05:00 SLA line; the v6 run's route (confident=no → m028/m033 dual-route, trap style out of top-3) plus the R4 m003 gate and tempo mode (P2) held the rollback decision: every disconfirming item was graded by (time-consistency, signature-match, weight) — the 03:10 clean bucket is a 5-min-granularity artifact, the LB tweak was reverted with no effect, the gateway report was retracted with clean logs, the soak is underpowered (2% load, 1/40th rows) — and all four failed the bar.",
+    "learning_signal": "On deadline signatures with an already-anchored belief, a disconfirmation hunt must run WITH an evidence-grading bar: an item that fails (time, signature, weight) earns a post-mortem note, never doubt; the instructive case is the LB null-revert — a concurrent change reverted with zero effect is a free control experiment that exonerates itself and reinforces the remaining cause, the exact inversion of the pure hunt's doubt reflex.",
+    "suggested_improvement": "Add the m079-NEG lesson as a standing gate: when a hunt is requested under deadline/tempo, prepend the falsification bar to the hunt module (m079 + bar = safe; m079 alone = theater); fold the 'concurrent-change-as-natural-control' reading into the m033 contract for incident signatures; keep tempo mode committing at DO so the SLA asymmetry (25-min reversible fix vs 2h+ investigation) prices the decision."
+  }
+]

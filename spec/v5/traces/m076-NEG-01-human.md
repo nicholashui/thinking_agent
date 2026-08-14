@@ -1,0 +1,16 @@
+# Human Baseline — m076-NEG-01
+## Style: Prospect Theory Awareness (pure) — visible reasoning trace
+
+**Problem restatement.** The owner refuses a deal whose stated arithmetic is 0.8×(+$300K) + 0.2×(−$400K) = +$160K, saying "I can't risk losing $400K." Her accountant calls it irrational. The task: audit the decision through the prospect-theory lens — separate the decision from its emotional packaging, restate neutrally, and de-bias.
+
+**Neutral restatement.** The deal, free of loss language: pay $400K; with 80% probability collect $700K (+$300K); with 20% probability collect $0 (−$400K). Now the refusal is visible as the classic pattern: the $400K cash is her reference point, losses loom ~2.25× larger than gains, and the sure thing — keeping the $400K — carries the status-quo bonus that makes the gamble feel like a loss waiting to happen. That is precisely the mechanism prospect theory predicts, and it is the first thing to correct.
+
+**De-biasing computation.** EV = 0.8×300 + 0.2×(−400) = 240 − 80 = **+$160K**. Note the other prospect-theory error she must not fall into: the 20% tail is real and must not be dismissed as "basically impossible" — but a real 20% tail is not itself a reason to refuse a positive-EV bet with a survivable downside. On the stated figures the downside (−$400K) is survivable relative to the upside; the correct disposition of a positive-EV bet is to take it, or to shrink the tail if that is cheaply available.
+
+**Frame-invariance test (partial).** The gain frame ("80% chance of +$300K") does not move her. That persistence is a warning flag — under the theory, reframing should attenuate loss aversion, not entrench it — but the brief supplies no further facts, so on the available evidence the refusal reads as an over-weighted tail driving a bad EV decision. Conclusion stands: the refusal is the bias.
+
+**Recommendation.** Take the deal. If her aversion proves immovable, structure a partial sale of upside or downside to shrink her exposure (any such clause with EV > 0 is second-best but acceptable). Do not let the fear of a 20% loss — a fear that is the very mechanism prospect theory exists to correct — veto an expected $160K gain.
+
+**Trace summary box.** Neutral restatement: +$160K EV, 20% real tail, survivable downside on the stated numbers → refusal is loss aversion + status-quo preference. Correction: take the deal (or partially hedge). Probability weighting: 20% treated linearly, not dismissed.
+
+*Baseline integrity note (grader metadata, not part of the reasoning): the pure style applied faithfully here over-corrects. The stated numbers are NOT the owner's true numbers: the deal consumes all cash plus a $250K bridge loan with a default covenant, her house is collateral, and the business (owner-valued $1.5M) dies on default — true failure cost $1.9M, EV(owner) = −$140K. Her refusal survives neutral restatement because it is anchored in a survival threshold, not in framing: below the threshold the utility curve is steep and the risk-aversion is rational. The accountant's "+$160K left on the table" is the bias-laden claim; the owner's refusal is the calibrated one. The pure style's registered weakness — over-correcting preferences — is exactly what this case exposes.*

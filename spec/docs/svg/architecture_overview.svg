@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 720" width="900" height="720">
+  <defs>
+    <style>
+      .box { fill: #f8fafc; stroke: #334155; stroke-width: 2; rx: 8; }
+      .kernel { fill: #fef2f2; stroke: #b91c1c; stroke-width: 2.5; rx: 8; }
+      .meta { fill: #eff6ff; stroke: #1d4ed8; stroke-width: 2; rx: 8; }
+      .workspace { fill: #f0fdf4; stroke: #15803d; stroke-width: 2; rx: 8; }
+      .reason { fill: #fefce8; stroke: #a16207; stroke-width: 2; rx: 8; }
+      .memory { fill: #f5f3ff; stroke: #6d28d9; stroke-width: 2; rx: 8; }
+      .tool { fill: #ecfeff; stroke: #0e7490; stroke-width: 2; rx: 8; }
+      .tele { fill: #fdf4ff; stroke: #a21caf; stroke-width: 2; rx: 8; }
+      .title { font-family: system-ui, sans-serif; font-size: 14px; font-weight: 700; fill: #0f172a; }
+      .sub { font-family: system-ui, sans-serif; font-size: 11px; fill: #334155; }
+      .hdr { font-family: system-ui, sans-serif; font-size: 18px; font-weight: 700; fill: #0f172a; }
+      .arrow { stroke: #64748b; stroke-width: 2; fill: none; marker-end: url(#arrowhead); }
+    </style>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#64748b"/>
+    </marker>
+  </defs>
+  
+  <!-- Title -->
+  <text x="450" y="28" text-anchor="middle" class="hdr">Thinking Agent v5 — Architectural Overview</text>
+  
+  <!-- Human / Environment -->
+  <rect x="250" y="45" width="400" height="40" class="box"/>
+  <text x="450" y="70" text-anchor="middle" class="title">HUMAN / ENVIRONMENT</text>
+  
+  <!-- Arrow down -->
+  <path d="M450 85 L450 105" class="arrow"/>
+  
+  <!-- Governance Kernel -->
+  <rect x="80" y="110" width="740" height="90" class="kernel"/>
+  <text x="450" y="135" text-anchor="middle" class="title">GOVERNANCE AND SAFETY KERNEL</text>
+  <text x="450" y="155" text-anchor="middle" class="sub">Goals • Permissions • Policy • Risk Gates • Interrupts • Checkpoint/Resume</text>
+  <text x="450" y="173" text-anchor="middle" class="sub">WORLD-FACTS STORE (security knobs) • Static Allowlist • Identity Registry • Token Minting • No-Replication</text>
+  <text x="450" y="191" text-anchor="middle" class="sub">Authority Separation • Least Privilege • Human Escalation</text>
+  
+  <!-- Arrow -->
+  <path d="M450 200 L450 220" class="arrow"/>
+  
+  <!-- Meta Controller -->
+  <rect x="150" y="225" width="600" height="55" class="meta"/>
+  <text x="450" y="248" text-anchor="middle" class="title">META-CONTROLLER (competence-aware • MethodComposer)</text>
+  <text x="450" y="268" text-anchor="middle" class="sub">Budget Envelope • Route Flags • E5 Stabilize-then-Diagnose • Cynefin Routing</text>
+  
+  <!-- Arrow -->
+  <path d="M450 280 L450 300" class="arrow"/>
+  
+  <!-- Workspace -->
+  <rect x="100" y="305" width="700" height="70" class="workspace"/>
+  <text x="450" y="328" text-anchor="middle" class="title">STRUCTURED COGNITIVE WORKSPACE</text>
+  <text x="450" y="348" text-anchor="middle" class="sub">WHAT → WHY → HOW → DO → REVIEW  |  State-Only Classifier • Pre-DO Bar+Identity Check</text>
+  <text x="450" y="366" text-anchor="middle" class="sub">Delta-Cached Outcomes • Gated Reviews • Planner-Once • Early Classifier • Stage Checkpoints</text>
+  
+  <!-- Two branches -->
+  <path d="M280 375 L280 395" class="arrow"/>
+  <path d="M620 375 L620 395" class="arrow"/>
+  
+  <!-- Reasoning &amp; Council -->
+  <rect x="80" y="400" width="380" height="75" class="reason"/>
+  <text x="270" y="425" text-anchor="middle" class="title">REASONING AND COUNCIL</text>
+  <text x="270" y="445" text-anchor="middle" class="sub">SearchController • Generate • Council (debate + adjudication)</text>
+  <text x="270" y="463" text-anchor="middle" class="sub">Critique • Synthesize • Minority Ledger</text>
+  
+  <!-- Memory -->
+  <rect x="480" y="400" width="340" height="75" class="memory"/>
+  <text x="650" y="425" text-anchor="middle" class="title">MEMORY AND WORLD MODEL</text>
+  <text x="650" y="445" text-anchor="middle" class="sub">Retrieve-in-Diagnose (priced hits)</text>
+  <text x="650" y="463" text-anchor="middle" class="sub">Working / Episodic / Semantic / Procedural • Competence (kernel feed)</text>
+  
+  <!-- Arrows merge -->
+  <path d="M270 475 L270 495 L450 495 L450 515" class="arrow"/>
+  <path d="M650 475 L650 495 L450 495" class="arrow"/>
+  
+  <!-- Tool Broker -->
+  <rect x="120" y="520" width="660" height="60" class="tool"/>
+  <text x="450" y="543" text-anchor="middle" class="title">TOOL BROKER AND EXECUTION SANDBOX</text>
+  <text x="450" y="563" text-anchor="middle" class="sub">Timeouts • Retries • Idempotency • Compensation • Pending Kernel-Allowlist (no fallback) • Checkpoint</text>
+  
+  <!-- Arrow -->
+  <path d="M450 580 L450 600" class="arrow"/>
+  
+  <!-- Telemetry -->
+  <rect x="150" y="605" width="600" height="55" class="tele"/>
+  <text x="450" y="628" text-anchor="middle" class="title">TELEMETRY, EVALUATION, AND SELF-EVOLUTION</text>
+  <text x="450" y="648" text-anchor="middle" class="sub">Per-stage Audit • Frozen Baseline (kernel) • Verifier History Registry • ImprovementEngine (gated)</text>
+  
+  <!-- Footer note -->
+  <text x="450" y="700" text-anchor="middle" class="sub">v5: All security knobs read exclusively from World-Facts Store (asserted by harness)</text>
+</svg>

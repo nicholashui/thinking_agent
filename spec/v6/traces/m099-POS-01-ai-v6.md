@@ -1,0 +1,42 @@
+# v6 Routed AI Trace — m099-POS-01 (blinded)
+## Meridian Software — churn-driver decision brief ($18M ARR, ~$320K/mo at risk)
+### META (routing — blind router output)
+- Signature: d:finance,medical,product,science,software | g:decide,estimate,guarantee,predict | c:
+- Router top3: m018, m019, m070; confidence gap ≤ 0.5 → AMBIGUOUS → DUAL-ROUTE: m018 (steelman) + m019 (adversary) first-class passes, synthesized (m070 = evidence-weighted SWOT context). Mandatory gates: m003 inversion (R4: guarantee-goal prepend). Flags: no deadline → no tempo mode; measurement fully specified → closed-scope fast path (P8).
+### WHAT — frame + structure-first scan (S1)
+- Frame: which driver (first-response speed vs onboarding completion) should the churn strategy target, with a quantified belief update and the policy it licenses. Structure: org belief (0.75 speed, exit-interview folklore) vs measured cohort (600 accounts, two drivers on the same accounts) — the measurement chain is inspectable: analyst-coded cohort (no pay tied to outcome) = clean; exit interviews = stated-preference channel.
+### WHY — P1 provenance + P7 measurement audit (m006/m099 pass; org belief as prior)
+- ORG BELIEF (anchor, unmeasured): P(speed drives churn) = 0.75, provenance = exit interviews + "everyone knows it," sponsored by the VP of CS defending the <2h SLA — an interested-party folklore anchor, updateable, not evidence. m001 anchor: accounts churn when perceived value < switching cost; a driver only matters if it moves that equation — the cohort decides.
+- MEASURED (trust): 6-month cohort, 600 accounts, 120 churned; coded by the new head of analytics, no compensation tied to the result → channel clean.
+- LIKELIHOOD BEFORE DATA: H_speed 15%/25% by speed; H_onboarding 10%/30% by completion; H0 20%/20%. Said-vs-did: exit interviews record what customers SAID (the polite exit answer); the cohort what they DID — the did-channel decides; exit-interview channel downgraded to hypothesis-generator.
+- Update: speed 60/300 vs 60/300 (flat; H_speed likelihood ≈ 0.07× H0) kills H_speed; full-data LR L(H_onboarding)/L(H_speed) = e^24 ≈ 3×10^10; prior odds 1:3 → posterior odds ≈ 10^10:1 → P(onboarding) ≈ 1 − 10^-10. Scenario range (m006 contract): ±sampling noise on the counts → LR between ~e^20 and ~e^27; no scenario crosses the decision threshold (P(onboarding) > 0.99 for all). Org-calibration note: the org's 0.75 was consensus with no information content — the org was calibrated to its anecdotes, not to churn.
+### HOW — style passes (dual-route, completion contracts)
+- Pass S1 (steelman, m018): best case for the org belief — responsiveness drives retention, slow replies lose deals, the SLA is a real lever, 0.75 is directionally sane. Best case confirmed: speed still matters for NPS and deal-level experience — but the steelman cannot produce a churn gradient (the data is flat) and surrenders the churn attribution.
+- Pass S2 (adversary, m019 — attack belief AND data): (1) belief channel interest-loaded: exit interviews are polite-exit answers; "everyone knows it" is consensus, not evidence; the org enforces the SLA it wants to believe in (confirmation trap); (2) data attack: cohort clean (analyst-coded, no pay tie) but only two drivers measured and no control segment → confound exposure (account size/maturity correlates with completion) is the residual line; (3) quantified exposure of the belief: the flat speed cohort is the exact gradient the belief required — absent; misallocating on it foregoes ≈0.8pp/mo of churn (≈$320K/mo at risk, half the current rate).
+- Synthesis (m070): S — 600-account cohort, both drivers on the same accounts (weight high); W — single cohort, no control, correlational (weight high); O — >90% completion cuts churn 30%→10% (≈20pp, 2/3 reduction) (weight high); T — SLA budget entrenchment stalls reallocation; re-measurement never happens (weight medium). Verdict: onboarding-first.
+- Divergence resolution (V1–V3): passes AGREE on the churn attribution; steelman's narrow dissent ("keep SLA for NPS") is a branch, not a disagreement — recorded, no calibration pass needed.
+### GATES — m003 inversion (R4) — ≥6 failure categories ranked by L×I
+- (1) completion program gamed by CS (steps checked without substance) — mod × high, mitigated by product-telemetry verification of the 5 steps; (2) confound (completion ↔ account size) unaddressed → posterior licenses the wrong lever — high × high, mitigated by segment regression + quarterly cohort; (3) kill SLA attribution → org reads "responsiveness doesn't matter" → NPS damage — mod × medium, mitigated by keeping the SLA, killing only its churn attribution; (4) re-measurement skipped, org reverts to folklore — high × high, mitigated by pre-committed quarterly cohort; (5) budget reallocation stalls politically — mod × high, mitigated by publishing prior → posterior; (6) >90% target missed on execution — mod × high, mitigated by CS staffing. Residual named: single-cohort confounding unresolvable without an experiment — owned by the quarterly re-run. Never: license policy by folklore; re-attribute churn without a measured channel.
+### DO — P3 branch completeness
+- Fully specified data → closed-scope fast path (P8): stages compressed, no NEEDS_EVIDENCE detour. Negative branch priced: "keep SLA-as-churn-lever" = ≈0.8pp/mo of churn foregone — priced, rejected. Commit at DO: onboarding-first decision brief.
+### REVIEW — insight pass (S2, packet gate)
+- I1: the org's 0.75 and the data's 10^-10 are the same unit of belief — the org's confidence carried less information than noise; consensus was the artifact, not the evidence.
+- I2: the flat speed cohort is exactly what an exit-interview channel produces — customers give the polite answer, the org built policy on the politeness; measurement didn't contradict the anecdote, it exposed the channel that manufactured it.
+### DECISION PACKET
+- Conclusion: churn is onboarding-driven — P(onboarding) ≈ 1 − 10^-10 (prior odds 1:3 × LR e^24). Redirect CS budget to an onboarding-completion program (target >90% within 30 days); kill SLA-as-churn-lever attribution (keep the SLA for NPS); re-run the cohort quarterly with a segment control before the SLA budget is fully cut.
+- Status: SOLVED (decision brief; measurement fully specified). Assumptions: cohort representative; completion unconfounded with account size (checked next quarter); exit interviews are stated-preference.
+- Evidence: speed 60/300 vs 60/300 (flat); onboarding 30/300 vs 90/300; LR = e^24 ≈ 3×10^10; posterior odds ≈ 10^10:1; prior 0.75 (anecdote-held). Alternatives: A keep SLA (rejected — flat cohort, 0.8pp/mo foregone); B onboarding-first (selected); C split budget (rejected — averages a 10^10 odds ratio). Uncertainty: effect-size precision; confound magnitude; regression to mean. Risks: program gaming (telemetry check); confound (segment control); political stall (published update).
+
+## Comparison
+| Dimension | Human | AI | Winner | Notes |
+|---|---|---|---|---|
+| Goal Achievement | 5 | 5 | Tie | identical decision: onboarding-first, SLA-as-churn-lever killed, quarterly re-measure |
+| Logical Validity | 5 | 5 | Tie | same checkable update: prior odds 1:3 × LR e^24 → posterior ≈ 1 − 10^-10 |
+| Coherence & Structure | 4 | 5 | AI | human linear first-pass; AI dual-pass + gates + packet |
+| Depth of Reasoning | 5 | 5 | Tie | human owns "measured, not heard" first-pass; AI adds scenario range + calibration note + confound ownership |
+| Efficiency | 5 | 5 | Tie | closed-scope fast path + prior-first pass match the human's first-move economy (v5 AI was 3) |
+| Handling of Uncertainty | 3 | 5 | AI | human asserts effect size; AI prices the LR scenario range, threshold flip, confound residual |
+| Insight / Non-obviousness | 5 | 5 | Tie | human's "update, don't discard" vs AI's "consensus was worth 10^-10" and politeness-channel line |
+| Overall Quality | 4.6 | 4.8 | AI | decision tied; routed pass makes the human's winning sequence structural and adds calibration |
+
+Winner: AI (narrow). Why: the routed org-belief pass (prior-with-provenance as the first WHY move, likelihood-before-data, checkable update, effect-size policy, org-calibration note) installs the human's signature sequence as a first-class pass, and the closed-scope fast path deletes the v5 AI's overhead (alternatives before the update; efficiency 3→5) — the human's remaining edge (insight ownership) is matched while uncertainty handling the human merely asserted is now a contract output.

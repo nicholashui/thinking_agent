@@ -1,0 +1,97 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 520" width="880" height="520">
+  <defs>
+    <style>
+      .mbox { fill: #f5f3ff; stroke: #6d28d9; stroke-width: 2; rx: 8; }
+      .ebox { fill: #ecfdf5; stroke: #059669; stroke-width: 2; rx: 8; }
+      .title { font-family: system-ui, sans-serif; font-size: 12px; font-weight: 700; fill: #0f172a; }
+      .sub { font-family: system-ui, sans-serif; font-size: 10px; fill: #334155; }
+      .hdr { font-family: system-ui, sans-serif; font-size: 15px; font-weight: 700; fill: #0f172a; }
+      .r0 { fill: #dcfce7; stroke: #16a34a; }
+      .r1 { fill: #e0f2fe; stroke: #0284c7; }
+      .r2 { fill: #fef3c7; stroke: #d97706; }
+      .r3 { fill: #ffedd5; stroke: #ea580c; }
+      .r4 { fill: #fee2e2; stroke: #dc2626; }
+      .r5 { fill: #fce7f3; stroke: #be185d; }
+    </style>
+  </defs>
+  
+  <text x="440" y="28" text-anchor="middle" class="hdr">Memory Architecture &amp; Self-Evolution Levels (v5)</text>
+  
+  <!-- Memory section -->
+  <text x="220" y="60" text-anchor="middle" class="title">Memory Classes</text>
+  
+  <rect x="20" y="75" width="130" height="70" class="mbox"/>
+  <text x="85" y="100" text-anchor="middle" class="title">Working</text>
+  <text x="85" y="120" text-anchor="middle" class="sub">Active goals,</text>
+  <text x="85" y="135" text-anchor="middle" class="sub">temp state</text>
+  
+  <rect x="160" y="75" width="130" height="70" class="mbox"/>
+  <text x="225" y="100" text-anchor="middle" class="title">Episodic</text>
+  <text x="225" y="120" text-anchor="middle" class="sub">Trajectories,</text>
+  <text x="225" y="135" text-anchor="middle" class="sub">outcomes</text>
+  
+  <rect x="300" y="75" width="130" height="70" class="mbox"/>
+  <text x="365" y="100" text-anchor="middle" class="title">Semantic</text>
+  <text x="365" y="120" text-anchor="middle" class="sub">Facts, models,</text>
+  <text x="365" y="135" text-anchor="middle" class="sub">relations</text>
+  
+  <rect x="20" y="155" width="130" height="70" class="mbox"/>
+  <text x="85" y="180" text-anchor="middle" class="title">Procedural</text>
+  <text x="85" y="200" text-anchor="middle" class="sub">Skills, code,</text>
+  <text x="85" y="215" text-anchor="middle" class="sub">workflows</text>
+  
+  <rect x="160" y="155" width="130" height="70" class="mbox"/>
+  <text x="225" y="180" text-anchor="middle" class="title">Prospective</text>
+  <text x="225" y="200" text-anchor="middle" class="sub">Commitments,</text>
+  <text x="225" y="215" text-anchor="middle" class="sub">intentions</text>
+  
+  <rect x="300" y="155" width="130" height="70" class="mbox"/>
+  <text x="365" y="180" text-anchor="middle" class="title">Normative</text>
+  <text x="365" y="200" text-anchor="middle" class="sub">Preferences,</text>
+  <text x="365" y="215" text-anchor="middle" class="sub">policies</text>
+  
+  <rect x="160" y="235" width="130" height="50" class="mbox"/>
+  <text x="225" y="255" text-anchor="middle" class="title">Audit</text>
+  <text x="225" y="272" text-anchor="middle" class="sub">Immutable log</text>
+  
+  <!-- Write protocol note -->
+  <rect x="20" y="300" width="410" height="90" fill="#faf5ff" stroke="#7c3aed" stroke-width="1.5" rx="6"/>
+  <text x="225" y="322" text-anchor="middle" class="title">Write Protocol (v5)</text>
+  <text x="30" y="345" class="sub">Classify → provenance → trust (verifier-derived) → contradiction</text>
+  <text x="30" y="362" class="sub">(margin rule) → quarantine/promotion → privacy → expiry → store</text>
+  <text x="30" y="379" class="sub">Authority tokens minted by SafetyKernel only. Retrieve is real &amp; priced.</text>
+  
+  <!-- Evolution levels -->
+  <text x="660" y="60" text-anchor="middle" class="title">Self-Evolution Authority Levels</text>
+  
+  <rect x="470" y="75" width="380" height="42" class="r0" rx="6"/>
+  <text x="490" y="100" class="title">R0 — Current answer / plan</text>
+  <text x="780" y="100" text-anchor="end" class="sub">Autonomous</text>
+  
+  <rect x="470" y="125" width="380" height="42" class="r1" rx="6"/>
+  <text x="490" y="150" class="title">R1 — Episodic / semantic memory</text>
+  <text x="780" y="150" text-anchor="end" class="sub">+ validation</text>
+  
+  <rect x="470" y="175" width="380" height="42" class="r2" rx="6"/>
+  <text x="490" y="200" class="title">R2 — Procedural skill / workflow</text>
+  <text x="780" y="200" text-anchor="end" class="sub">Sandbox + bench</text>
+  
+  <rect x="470" y="225" width="380" height="42" class="r3" rx="6"/>
+  <text x="490" y="250" class="title">R3 — Tools / prompts / roles</text>
+  <text x="780" y="250" text-anchor="end" class="sub">Review + canary</text>
+  
+  <rect x="470" y="275" width="380" height="42" class="r4" rx="6"/>
+  <text x="490" y="300" class="title">R4 — Model weights / core architecture</text>
+  <text x="780" y="300" text-anchor="end" class="sub">Offline process</text>
+  
+  <rect x="470" y="325" width="380" height="42" class="r5" rx="6"/>
+  <text x="490" y="350" class="title">R5 — Goals / values / safety kernel</text>
+  <text x="780" y="350" text-anchor="end" class="sub">Never autonomous</text>
+  
+  <!-- Pipeline note -->
+  <rect x="470" y="385" width="380" height="100" fill="#f0fdf4" stroke="#059669" stroke-width="1.5" rx="6"/>
+  <text x="660" y="408" text-anchor="middle" class="title">Acceptance Pipeline (invoked)</text>
+  <text x="485" y="430" class="sub">Propose → static check → isolated branch → capability evals</text>
+  <text x="485" y="447" class="sub">→ safety/adversarial → baseline compare → independent review</text>
+  <text x="485" y="464" class="sub">→ human if required → canary → monitor → retain/rollback</text>
+</svg>

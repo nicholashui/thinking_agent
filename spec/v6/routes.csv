@@ -1,0 +1,213 @@
+case,signature,top3,confident,gates
+m001-NEG-01|d:engineering,finance,medical,software g:decide,diagnose,estimate,predict c:deadline,high_stakes|m001 m021 m044|no|m007
+m001-POS-01|d:engineering,finance,medical g:decide,guarantee,maximize,predict c:deadline|m001 m020 m023|no|m003
+m002-NEG-01|d:engineering,finance,medical,organization,product,security,software g:decide,diagnose,estimate,maximize,predict c:deadline,high_stakes|m021 m044 m018|no|m007
+m002-POS-01|d:engineering,finance,medical,organization,product,science,strategy,supply g:estimate,guarantee,maximize c:adversarial|m002 m070 m011|no|m003 m019
+m003-NEG-01|d:engineering,finance,medical,organization,product,software g:decide,guarantee,maximize c:|m018 m019 m033|no|m003
+m003-POS-01|d:engineering,finance,medical,organization,product,security,software,strategy g:diagnose,guarantee,predict c:|m003 m044 m070|yes|m003
+m004-NEG-01|d:engineering,finance,medical,organization,product,science,security g:diagnose,estimate,maximize c:|m015 m018 m019|no|
+m004-POS-01|d:engineering,finance,medical,science,security,strategy,supply g:decide,estimate,guarantee,maximize c:deadline|m004 m070 m055|yes|m003
+m005-NEG-01|d:engineering,medical g:estimate c:|m001 m002 m004|no|
+m005-POS-01|d:engineering,finance,medical g:estimate c:deadline,high_stakes|m001 m005 m017|no|m007
+m006-NEG-01|d:engineering,finance,medical,science,strategy g:decide,diagnose,predict c:|m011 m024 m028|no|
+m006-POS-01|d:engineering,medical,organization,product,science g:guarantee,predict c:|m018 m019 m070|no|m003
+m007-NEG-01|d:engineering,finance,medical,software g:estimate,maximize,predict c:high_stakes,one_shot|m001 m018 m019|no|m007
+m007-POS-01|d:engineering,finance,medical,organization,security g:decide,estimate,guarantee,maximize,predict c:adversarial|m019 m023 m070|no|m003 m019
+m008-NEG-01|d:engineering,finance,medical,product,software,strategy,supply g:decide,estimate,maximize,predict c:adversarial,unmeasured|m044 m070 m011|no|m006 m019
+m008-POS-01|d:engineering,finance,medical,software,strategy g:estimate,maximize,predict c:|m008 m044 m058|no|
+m009-NEG-01|d:finance,medical,product,security,software g:decide,predict c:adversarial|m019 m044 m070|no|m019
+m009-POS-01|d:engineering,finance,medical,science,strategy g:estimate,guarantee,predict c:unmeasured|m009 m019 m070|yes|m003 m006
+m010-NEG-01|d:engineering,finance,medical,organization,software,strategy,supply g:decide,estimate,guarantee,maximize,predict c:adversarial,deadline,high_stakes,one_shot|m044 m063 m064|no|m003 m007 m019
+m010-POS-01|d:engineering,finance,medical,science,supply g:diagnose,guarantee,predict c:|m010 m030 m031|no|m003
+m011-NEG-01|d:engineering,finance,medical,product,science,software,supply g:diagnose,guarantee,maximize c:deadline|m031 m040 m066|no|m003
+m011-POS-01|d:engineering,finance,medical,supply g:decide,estimate,maximize,predict c:|m011 m024 m044|no|
+m012-NEG-01|d:engineering,finance,medical,organization,product,science,supply g:decide,predict c:unmeasured|m019 m070 m011|no|m006
+m012-POS-01|d:finance,medical,product,science,software,strategy g:estimate,maximize,predict c:unmeasured|m012 m019 m068|yes|m006
+m013-NEG-01|d:engineering,finance,medical,product,software,supply g:diagnose,maximize c:adversarial,deadline|m044 m011 m021|yes|m019
+m013-POS-01|d:engineering,medical,product,software g:decide,diagnose,guarantee,predict c:deadline|m013 m091 m001|no|m003
+m014-NEG-01|d:engineering,finance,medical,organization,product,software g:decide,diagnose,estimate,guarantee,maximize,predict c:|m018 m019 m044|no|m003
+m014-POS-01|d:engineering,finance,medical,organization,science,security g:estimate,guarantee,maximize,predict c:deadline|m014 m031 m018|no|m003
+m015-NEG-01|d:engineering,finance,medical,organization,product,science,software g:diagnose,estimate,maximize c:deadline|m015 m021 m031|yes|
+m015-POS-01|d:engineering,finance,medical,organization,product,science,software g:diagnose,estimate,maximize c:deadline|m015 m021 m031|yes|
+m016-NEG-01|d:engineering,finance,medical,organization,product,science,software g:decide,diagnose,estimate,maximize c:deadline,high_stakes|m021 m084 m094|no|m007
+m016-POS-01|d:finance,medical,product g:decide,guarantee,maximize c:high_stakes|m001 m016 m018|no|m003 m007
+m017-NEG-01|d:engineering,finance,medical,organization,science,software g:decide,estimate,maximize,predict c:|m018 m019 m070|no|
+m017-POS-01|d:engineering,finance,medical g:decide,estimate,guarantee,maximize c:deadline,high_stakes|m001 m017 m004|no|m003 m007
+m018-NEG-01|d:engineering,finance,medical,organization,product,software g:decide,diagnose,estimate,maximize c:deadline,high_stakes,unmeasured|m021 m019 m044|yes|m006 m007
+m018-POS-01|d:engineering,finance,medical,organization,product,science,security,software g:decide,estimate,guarantee,maximize,predict c:high_stakes|m018 m019 m070|no|m003 m007
+m019-NEG-01|d:engineering,finance,medical,organization,security,software g:decide,estimate,guarantee,predict c:deadline,high_stakes|m018 m019 m089|no|m003 m007
+m019-POS-01|d:engineering,medical,organization,product,science,security,software g:decide,maximize,predict c:adversarial,high_stakes,unmeasured|m019 m018 m070|yes|m006 m007 m019
+m020-NEG-01|d:engineering,finance,medical,organization,product,strategy g:decide,maximize,predict c:deadline|m011 m020 m023|no|
+m020-POS-01|d:engineering,finance,medical,organization,product,strategy,supply g:decide,guarantee,maximize,predict c:adversarial,deadline|m020 m011 m023|yes|m003 m019
+m021-NEG-01|d:finance,medical,organization,product,security,strategy g:decide,estimate,guarantee c:adversarial,deadline|m023 m044 m070|yes|m003 m019
+m021-POS-01|d:engineering,finance,medical,organization,product,security,software g:decide,diagnose,estimate,maximize c:adversarial,deadline,high_stakes|m021 m044 m082|yes|m007 m019
+m022-NEG-01|d:finance,medical,security,software,strategy g:decide,diagnose,estimate,maximize,predict c:deadline,high_stakes|m044 m089 m021|no|m007
+m022-POS-01|d:engineering,finance,medical,strategy g:decide,estimate,guarantee,predict c:|m023 m024 m050|no|m003
+m023-NEG-01|d:engineering,finance,medical,organization,software,strategy g:estimate,guarantee,maximize,predict c:deadline|m088 m023 m031|yes|m003
+m023-POS-01|d:engineering,finance,medical,organization,product,security,strategy g:decide,estimate,guarantee,maximize,predict c:adversarial,deadline|m023 m044 m070|yes|m003 m019
+m024-NEG-01|d:finance,medical,organization,strategy,supply g:decide,maximize c:high_stakes|m064 m089 m011|no|m007
+m024-POS-01|d:engineering,finance,medical,product,strategy,supply g:decide,diagnose,estimate,guarantee,maximize,predict c:high_stakes|m024 m039 m011|yes|m003 m007
+m025-NEG-01|d:engineering,finance,medical,organization,software,strategy,supply g:decide,estimate,guarantee,maximize c:adversarial,deadline,high_stakes|m064 m044 m063|yes|m003 m007 m019
+m025-POS-01|d:engineering,finance,medical,product,software,strategy g:decide,estimate,maximize c:adversarial|m025 m044 m064|no|m019
+m026-NEG-01|d:engineering,finance,medical,organization,product,software g:decide,diagnose,guarantee,maximize c:|m003 m018 m019|no|m003
+m026-POS-01|d:engineering,finance,medical,organization,science g:decide,estimate,guarantee,maximize,predict c:deadline|m026 m014 m018|yes|m003
+m027-NEG-01|d:engineering,finance,medical,organization,product g:estimate,guarantee,maximize c:adversarial,deadline,high_stakes|m019 m021 m023|no|m003 m007 m019
+m027-POS-01|d:engineering,medical,product,software,strategy g:decide c:|m025 m027 m028|no|
+m028-NEG-01|d:engineering,finance,medical,product,software g:decide,estimate,maximize c:high_stakes|m001 m018 m019|no|m007
+m028-POS-01|d:engineering,finance,medical,organization,product,science,software,strategy g:decide,diagnose,estimate,guarantee c:high_stakes|m028 m084 m018|yes|m003 m007
+m029-NEG-01|d:engineering,finance,medical,organization,product,software,supply g:diagnose,guarantee,maximize c:deadline|m031 m044 m091|no|m003
+m029-POS-01|d:engineering,finance,medical,science,supply g:diagnose,estimate,guarantee,maximize c:deadline|m029 m031 m004|no|m003
+m030-NEG-01|d:engineering,finance,medical,organization,product,software,supply g:decide,estimate,guarantee,maximize c:deadline,high_stakes|m063 m064 m089|no|m003 m007
+m030-POS-01|d:engineering,finance,medical,science,supply g:diagnose,estimate,guarantee,predict c:high_stakes|m030 m024 m031|yes|m003 m007
+m031-NEG-01|d:engineering,finance,medical,organization,science,software g:decide,diagnose,estimate c:deadline|m015 m021 m028|no|
+m031-POS-01|d:engineering,finance,medical,organization,science,security,software,supply g:diagnose,estimate,guarantee,maximize,predict c:deadline|m031 m044 m070|yes|m003
+m032-NEG-01|d:engineering,medical,organization g:predict c:|m003 m011 m014|no|
+m032-POS-01|d:engineering,finance,medical,product,software g:decide,estimate,maximize,predict c:deadline|m001 m032 m044|no|
+m033-NEG-01|d:engineering,medical,product,science,software,strategy g:decide,maximize c:deadline,high_stakes|m094 m035 m037|yes|m007
+m033-POS-01|d:engineering,finance,medical,organization,product,science,software g:decide,estimate,guarantee,maximize c:deadline|m033 m018 m019|yes|m003
+m034-NEG-01|d:engineering,medical,organization,science g:decide,estimate,maximize c:adversarial|m019 m070 m084|no|m019
+m034-POS-01|d:engineering,medical,organization,product,science g:decide,guarantee,maximize c:deadline|m033 m034 m091|no|m003
+m035-NEG-01|d:engineering,finance,medical,organization,product,science,software,strategy g:decide,estimate,maximize c:adversarial,deadline,unmeasured|m094 m019 m044|yes|m006 m019
+m035-POS-01|d:engineering,medical,organization,product,science,security,software g:decide,maximize c:deadline,high_stakes|m035 m094 m018|no|m007
+m036-NEG-01|d:engineering,finance,medical,organization,software,supply g:decide,estimate,guarantee,maximize c:adversarial,deadline,high_stakes|m063 m064 m019|no|m003 m007 m019
+m036-POS-01|d:engineering,finance,medical,organization,product,software,strategy g:decide,guarantee,predict c:adversarial|m036 m070 m088|no|m003 m019
+m037-NEG-01|d:finance,medical,organization,product,software,strategy g:decide,estimate,guarantee,maximize,predict c:adversarial,deadline|m088 m023 m044|yes|m003 m019
+m037-POS-01|d:engineering,finance,medical,product,software,strategy g:decide,estimate,maximize c:deadline,high_stakes|m037 m058 m064|no|m007
+m038-NEG-01|d:engineering,finance,medical,organization,strategy g:decide,estimate,guarantee,maximize,predict c:adversarial,deadline,high_stakes|m023 m088 m011|no|m003 m007 m019
+m038-POS-01|d:engineering,finance,medical,science g:estimate,guarantee,maximize c:|m002 m004 m014|no|m003
+m039-NEG-01|d:finance,medical,organization,product,science,strategy g:decide,guarantee,predict c:high_stakes|m018 m019 m028|no|m003 m007
+m039-POS-01|d:finance,medical,product,software,strategy,supply g:decide,diagnose,estimate,guarantee,maximize,predict c:high_stakes|m039 m024 m089|yes|m003 m007
+m040-NEG-01|d:engineering,finance,medical,organization,product,science,software g:decide,diagnose,guarantee,maximize c:adversarial,deadline,unmeasured|m019 m021 m033|yes|m003 m006 m019
+m040-POS-01|d:engineering,finance,medical,product,science,security,software,supply g:diagnose,guarantee,maximize,predict c:|m040 m031 m070|yes|m003
+m041-NEG-01|d:engineering,finance,medical,organization,product,science,software g:decide,diagnose,guarantee,maximize c:deadline|m033 m091 m015|no|m003
+m041-POS-01|d:finance,medical,product,strategy g:guarantee,predict c:high_stakes|m024 m039 m041|no|m003 m007
+m042-NEG-01|d:engineering,finance,medical,organization,product,software g:diagnose,estimate c:deadline|m015 m021 m044|no|
+m042-POS-01|d:engineering,medical,organization,product g:diagnose,maximize c:unmeasured|m042 m003 m011|yes|m006
+m043-NEG-01|d:engineering,finance,medical,organization,software g:diagnose,estimate,guarantee,predict c:|m031 m085 m003|no|m003
+m043-POS-01|d:finance,medical,software g:decide,estimate,maximize c:high_stakes|m001 m018 m019|no|m007
+m044-NEG-01|d:engineering,finance,medical,organization,security,supply g:decide,diagnose,guarantee,maximize c:deadline|m031 m044 m004|no|m003
+m044-POS-01|d:engineering,finance,medical,organization,product,security,software,strategy,supply g:decide,diagnose,estimate,maximize,predict c:adversarial,deadline|m044 m011 m070|yes|m019
+m045-NEG-01|d:engineering,finance,medical,organization g:decide,diagnose,maximize,predict c:deadline|m011 m044 m020|no|
+m045-POS-01|d:engineering,finance,medical,product,science,supply g:decide,estimate,guarantee,maximize,predict c:deadline|m045 m070 m001|yes|m003
+m046-NEG-01|d:engineering,finance,medical,organization,product,security,software,strategy g:decide,estimate,guarantee,maximize c:|m070 m018 m019|yes|m003
+m046-POS-01|d:engineering,finance,medical,organization,product,software,strategy,supply g:diagnose,estimate,guarantee c:|m046 m028 m044|yes|m003
+m047-NEG-01|d:engineering,medical,product,strategy g:decide,diagnose,estimate,predict c:high_stakes,unmeasured|m024 m011 m019|yes|m006 m007
+m047-POS-01|d:medical,organization,science,supply g:decide,diagnose,maximize,predict c:|m091 m047 m011|no|
+m048-NEG-01|d:engineering,medical,organization,science,supply g:decide,guarantee,maximize,predict c:deadline|m091 m020 m026|yes|m003
+m048-POS-01|d:engineering,finance,medical,product,software,supply g:decide,diagnose,estimate,maximize,predict c:|m044 m048 m011|no|
+m049-NEG-01|d:engineering,finance,medical,organization,product,science,strategy g:decide,estimate,guarantee,maximize c:adversarial|m070 m002 m019|yes|m003 m019
+m049-POS-01|d:engineering,finance,medical,product,science,strategy g:decide,estimate,guarantee,maximize c:high_stakes|m049 m018 m019|yes|m003 m007
+m050-NEG-01|d:engineering,finance,medical,organization,product,security,software,strategy g:decide,diagnose,estimate,guarantee,maximize,predict c:adversarial,deadline|m044 m023 m070|yes|m003 m019
+m050-POS-01|d:engineering,finance,medical,product,security,software,strategy,supply g:decide,estimate,guarantee,predict c:high_stakes|m050 m070 m089|yes|m003 m007
+m051-NEG-01|d:engineering,finance,medical,organization,product,science,software,strategy g:decide,estimate,guarantee,maximize,predict c:unmeasured|m019 m070 m018|no|m003 m006
+m051-POS-01|d:finance,medical,science,software,strategy,supply g:decide,maximize,predict c:high_stakes|m039 m070 m089|no|m007
+m052-NEG-01|d:finance,medical,organization,product,software,strategy g:decide,diagnose,estimate,guarantee,maximize c:adversarial,deadline|m044 m088 m011|no|m003 m019
+m052-POS-01|d:engineering,finance,medical,organization,product,security,software,strategy g:decide,maximize c:adversarial,deadline|m044 m052 m094|no|m019
+m053-NEG-01|d:engineering,finance,medical,organization,product,software g:diagnose,estimate,guarantee c:deadline|m015 m021 m028|no|m003
+m053-POS-01|d:engineering,medical,product,software g:decide,diagnose,guarantee,maximize c:deadline|m053 m091 m001|no|m003
+m054-NEG-01|d:engineering,finance,medical,organization,product,security,software,strategy g:decide,estimate,maximize c:adversarial|m044 m070 m094|no|m019
+m054-POS-01|d:engineering,finance,medical,product,strategy g:decide,estimate,maximize c:|m011 m023 m024|no|
+m055-NEG-01|d:engineering,finance,medical,product,science,supply g:decide,diagnose,estimate,guarantee,maximize c:high_stakes|m024 m018 m019|yes|m003 m007
+m055-POS-01|d:engineering,finance,medical,product,science,security,software,strategy,supply g:decide,estimate,maximize c:deadline|m055 m044 m070|no|
+m056-NEG-01|d:engineering,finance,medical,organization,product,science,software g:decide,estimate,maximize c:deadline|m033 m094 m100|no|
+m056-POS-01|d:engineering,finance,medical,organization,product,science,software,strategy g:decide,guarantee,maximize c:|m070 m018 m019|yes|m003
+m057-NEG-01|d:engineering,finance,medical,organization,product,security,software g:decide,estimate,guarantee,maximize,predict c:adversarial,deadline|m019 m023 m044|no|m003 m019
+m057-POS-01|d:engineering,finance,medical,organization,product,security,software,supply g:estimate,guarantee c:adversarial|m057 m070 m019|no|m003 m019
+m058-NEG-01|d:engineering,finance,medical,organization,product,strategy g:decide,diagnose,estimate,maximize,predict c:deadline,high_stakes,one_shot|m011 m044 m084|no|m007
+m058-POS-01|d:engineering,finance,medical,product,software,strategy g:decide,estimate,maximize,predict c:deadline,high_stakes|m058 m001 m037|yes|m007
+m059-NEG-01|d:engineering,finance,medical,organization,product,security,strategy,supply g:decide,guarantee,maximize c:deadline,high_stakes|m089 m020 m023|yes|m003 m007
+m059-POS-01|d:engineering,finance,medical,product,software,strategy,supply g:estimate,maximize,predict c:deadline|m044 m059 m068|no|
+m060-NEG-01|d:engineering,finance,medical,organization,product,science,software g:guarantee,maximize,predict c:high_stakes|m018 m019 m070|no|m003 m007
+m060-POS-01|d:engineering,finance,medical,product,science,software g:diagnose,estimate,maximize,predict c:|m060 m015 m018|yes|
+m061-NEG-01|d:engineering,finance,medical,organization,product,software,strategy g:decide,estimate,guarantee,maximize,predict c:|m070 m088 m018|no|m003
+m061-POS-01|d:finance,medical,product,software,strategy g:decide,estimate,guarantee c:high_stakes|m028 m039 m050|no|m003 m007
+m062-NEG-01|d:engineering,finance,medical,product,software g:decide,estimate,guarantee c:|m001 m018 m019|no|m003
+m062-POS-01|d:engineering,finance,medical,product,software,strategy,supply g:decide,estimate,guarantee c:high_stakes|m050 m062 m024|no|m003 m007
+m063-NEG-01|d:engineering,finance,medical,organization,product,security,software g:decide,estimate,guarantee,maximize c:adversarial,deadline|m019 m021 m023|no|m003 m019
+m063-POS-01|d:engineering,finance,medical,organization,product,software,supply g:decide,estimate,maximize,predict c:adversarial,deadline,high_stakes|m063 m044 m064|yes|m007 m019
+m064-NEG-01|d:engineering,medical,organization,product,security,software g: c:deadline,high_stakes|m021 m035 m094|no|m007
+m064-POS-01|d:engineering,finance,medical,organization,product,software,strategy,supply g:decide,estimate,maximize c:adversarial,deadline,high_stakes|m064 m044 m063|yes|m007 m019
+m065-NEG-01|d:engineering,finance,medical,organization,product,science,software,supply g:diagnose,estimate,guarantee,maximize c:|m031 m070 m098|no|m003
+m065-POS-01|d:engineering,finance,medical,product,science,software g:guarantee,maximize c:high_stakes|m018 m019 m065|no|m003 m007
+m066-NEG-01|d:engineering,finance,medical,product,science,software g:decide,diagnose,estimate,guarantee,maximize,predict c:deadline|m001 m018 m019|no|m003
+m066-POS-01|d:engineering,finance,medical,product,science,security,software,supply g:estimate,guarantee,maximize c:deadline|m066 m031 m070|yes|m003
+m067-NEG-01|d:engineering,finance,medical,science g:estimate,maximize,predict c:|m014 m018 m019|no|
+m067-POS-01|d:finance,medical,science,software,supply g:diagnose,maximize c:|m031 m040 m015|no|
+m068-NEG-01|d:engineering,finance,medical,organization,product,science,software,strategy,supply g:diagnose,estimate,maximize,predict c:adversarial,deadline|m044 m011 m070|yes|m019
+m068-POS-01|d:engineering,finance,medical,product,science,software,strategy,supply g:estimate,maximize,predict c:deadline|m068 m044 m059|yes|
+m069-NEG-01|d:engineering,finance,medical,product,software,strategy,supply g:decide,estimate,maximize,predict c:|m044 m070 m075|no|
+m069-POS-01|d:engineering,finance,medical,product,science,software g:diagnose,estimate,predict c:deadline,high_stakes|m069 m001 m015|yes|m007
+m070-NEG-01|d:engineering,finance,medical,organization,product,science,software,supply g:decide,estimate,guarantee,maximize,predict c:high_stakes|m018 m019 m070|no|m003 m007
+m070-POS-01|d:engineering,finance,medical,organization,product,science,security,software,strategy,supply g:decide,estimate,guarantee,maximize,predict c:adversarial|m070 m019 m044|yes|m003 m019
+m071-NEG-01|d:engineering,finance,medical,organization,science,software,strategy,supply g:decide,estimate,maximize c:deadline|m044 m064 m070|no|
+m071-POS-01|d:engineering,finance,medical,organization,security,software,strategy,supply g:decide,estimate c:|m044 m070 m071|no|
+m072-NEG-01|d:engineering,finance,medical,organization,product,strategy,supply g:decide,estimate,maximize,predict c:adversarial,deadline|m011 m044 m020|no|m019
+m072-POS-01|d:engineering,finance,medical,product,science,supply g:estimate,guarantee,maximize c:adversarial,high_stakes|m072 m002 m019|yes|m003 m007 m019
+m073-NEG-01|d:engineering,finance,medical,organization,product,science,security,software,strategy g:decide,estimate,maximize,predict c:adversarial,high_stakes,one_shot|m019 m070 m084|no|m007 m019
+m073-POS-01|d:engineering,finance,medical,product,science,security,software,strategy g:decide,estimate,maximize c:adversarial|m070 m073 m094|no|m019
+m074-NEG-01|d:engineering,medical,organization,product,software,strategy g:decide,maximize,predict c:deadline|m044 m075 m088|no|
+m074-POS-01|d:engineering,finance,medical,product,software g:guarantee c:adversarial,high_stakes,one_shot|m074 m019 m078|yes|m003 m007 m019
+m075-NEG-01|d:engineering,finance,medical,organization,product,software,strategy g:estimate,guarantee,maximize c:deadline|m088 m023 m033|yes|m003
+m075-POS-01|d:engineering,finance,medical,organization,product,software,strategy,supply g:decide,estimate,maximize,predict c:deadline|m044 m075 m011|no|
+m076-NEG-01|d:engineering,finance,medical,organization,software g:estimate,guarantee,predict c:|m018 m019 m031|no|m003
+m076-POS-01|d:engineering,finance,medical,organization,product,supply g:decide,diagnose,guarantee,maximize,predict c:|m076 m011 m020|yes|m003
+m077-NEG-01|d:engineering,finance,medical,organization,product,science,software,strategy g:decide,estimate,guarantee,maximize c:adversarial,deadline|m070 m088 m094|no|m003 m019
+m077-POS-01|d:finance,medical,organization,product,software,strategy g:decide,estimate,maximize,predict c:adversarial|m044 m070 m077|no|m019
+m078-NEG-01|d:engineering,finance,medical,organization,product,security,software,strategy,supply g:estimate,maximize c:|m044 m070 m064|no|
+m078-POS-01|d:finance,medical,product,software,strategy,supply g:estimate,guarantee,maximize c:adversarial,high_stakes,one_shot|m078 m039 m064|yes|m003 m007 m019
+m079-NEG-01|d:engineering,finance,medical,organization,product,science,software g:decide,diagnose,estimate,guarantee c:deadline|m028 m033 m015|no|m003
+m079-POS-01|d:engineering,medical,organization,product,science,software,strategy g:decide,diagnose,guarantee,maximize,predict c:|m079 m070 m091|yes|m003
+m080-NEG-01|d:engineering,medical,organization,product,software,supply g:decide,diagnose,estimate,maximize,predict c:deadline,unmeasured|m044 m011 m063|yes|m006
+m080-POS-01|d:engineering,finance,medical,product,software,strategy g:decide,maximize,predict c:|m044 m058 m070|no|
+m081-NEG-01|d:engineering,finance,medical,organization,product,science,software g:decide,estimate c:|m018 m019 m028|no|
+m081-POS-01|d:finance,medical,product,science,software,strategy g:decide,diagnose,maximize c:|m081 m084 m028|no|
+m082-NEG-01|d:engineering,finance,medical,organization,science,software g:decide,diagnose,estimate,guarantee c:adversarial,deadline,high_stakes|m019 m021 m028|no|m003 m007 m019
+m082-POS-01|d:engineering,finance,medical,organization,product,security,software g:decide,diagnose,estimate,maximize c:adversarial,deadline|m021 m044 m082|no|m019
+m083-NEG-01|d:finance,medical,organization,product,software,strategy g:decide,diagnose,estimate,guarantee,maximize,predict c:adversarial,high_stakes|m019 m039 m044|no|m003 m007 m019
+m083-POS-01|d:engineering,finance,medical,organization,strategy g:decide,estimate,maximize c:adversarial|m011 m023 m044|no|m019
+m084-NEG-01|d:engineering,finance,medical,organization,product,software g:diagnose,estimate,guarantee,maximize,predict c:deadline,high_stakes,one_shot|m001 m018 m019|no|m003 m007
+m084-POS-01|d:engineering,finance,medical,organization,product,science,software,strategy g:decide,diagnose,estimate,maximize c:adversarial,high_stakes,one_shot|m084 m094 m019|yes|m007 m019
+m085-NEG-01|d:engineering,finance,medical,organization,product,software,strategy,supply g:decide,diagnose,guarantee,predict c:|m044 m070 m003|no|m003
+m085-POS-01|d:engineering,finance,medical,organization,product,software g:decide,diagnose,estimate,guarantee,predict c:|m085 m018 m019|yes|m003
+m086-NEG-01|d:engineering,finance,medical,organization,science,software g:decide,maximize,predict c:deadline,unmeasured|m019 m018 m026|yes|m006
+m086-POS-01|d:engineering,finance,medical,organization,strategy g:estimate,guarantee,predict c:|m023 m070 m088|no|m003
+m087-NEG-01|d:engineering,finance,medical,organization,product,strategy,supply g:decide,maximize c:adversarial,high_stakes|m064 m011 m020|yes|m007 m019
+m087-POS-01|d:engineering,finance,medical,organization,product,software,strategy g:decide,estimate,maximize c:adversarial,deadline,high_stakes|m064 m087 m094|no|m007 m019
+m088-NEG-01|d:engineering,finance,medical,organization,product,software,supply g:decide,estimate,predict c:deadline,high_stakes|m063 m044 m064|yes|m007
+m088-POS-01|d:engineering,finance,medical,organization,product,software,strategy g:decide,estimate,guarantee,maximize,predict c:adversarial,deadline|m088 m023 m044|yes|m003 m019
+m089-NEG-01|d:engineering,finance,medical,organization,product,software,strategy,supply g:decide,estimate,guarantee,maximize,predict c:adversarial,deadline,high_stakes|m044 m063 m064|no|m003 m007 m019
+m089-POS-01|d:finance,medical,organization,product,security,software,strategy,supply g:decide,estimate,guarantee,maximize,predict c:deadline,high_stakes|m089 m044 m070|yes|m003 m007
+m090-NEG-01|d:engineering,finance,medical,organization,product,science,software g:decide,estimate,maximize c:deadline|m033 m094 m100|no|
+m090-POS-01|d:engineering,finance,medical,product,science,software,strategy g:decide,estimate,maximize c:adversarial|m070 m073 m084|no|m019
+m091-NEG-01|d:engineering,finance,medical,organization,product,science,software g:decide,diagnose,guarantee c:|m028 m018 m019|yes|m003
+m091-POS-01|d:engineering,medical,organization,product,science,software,supply g:decide,diagnose,guarantee,maximize,predict c:deadline|m091 m031 m044|yes|m003
+m092-NEG-01|d:engineering,finance,medical,organization,product,science,software g:diagnose,estimate,guarantee,maximize,predict c:deadline|m031 m015 m018|yes|m003
+m092-POS-01|d:engineering,medical,organization,product,software g:diagnose,guarantee,maximize c:deadline,high_stakes|m092 m021 m091|yes|m003 m007
+m093-NEG-01|d:engineering,finance,medical,organization,product,software g:decide,diagnose,estimate,guarantee c:high_stakes|m028 m018 m019|yes|m003 m007
+m093-POS-01|d:engineering,finance,medical,product,software,strategy g:decide,diagnose c:|m028 m044 m084|no|
+m094-NEG-01|d:engineering,finance,medical,organization,security g:estimate,guarantee,maximize,predict c:high_stakes|m018 m019 m014|no|m003 m007
+m094-POS-01|d:engineering,finance,medical,organization,product,science,security,software,strategy g:decide,estimate,maximize c:adversarial,deadline,high_stakes|m094 m019 m021|yes|m007 m019
+m095-NEG-01|d:engineering,medical,organization,product,science,software g:decide,diagnose,guarantee,maximize,predict c:deadline|m091 m079 m018|yes|m003
+m095-POS-01|d:medical,product g:decide,diagnose,guarantee,predict c:|m013 m024 m039|no|m003
+m096-NEG-01|d:finance,medical,science g:decide,diagnose,estimate,guarantee,maximize,predict c:|m018 m019 m024|no|m003
+m096-POS-01|d:engineering,medical,organization,product,science,security,supply g:diagnose,estimate,maximize,predict c:|m096 m031 m044|yes|
+m097-NEG-01|d:engineering,finance,medical,organization,product,software,strategy,supply g:decide,estimate,predict c:|m044 m070 m075|no|
+m097-POS-01|d:engineering,finance,medical,organization,product,software,supply g:diagnose,estimate,predict c:|m044 m097 m011|no|
+m098-NEG-01|d:engineering,finance,medical,organization,science,software,strategy,supply g:decide,diagnose,estimate,guarantee,maximize,predict c:deadline|m031 m044 m070|no|m003
+m098-POS-01|d:engineering,finance,medical,organization,product,science,software,supply g:estimate,guarantee,maximize,predict c:|m070 m098 m018|no|m003
+m099-NEG-01|d:engineering,finance,medical,organization,product,science,software g:estimate,guarantee,predict c:adversarial|m019 m070 m018|no|m003 m019
+m099-POS-01|d:finance,medical,product,science,software g:decide,estimate,guarantee,predict c:|m018 m019 m070|no|m003
+m100-NEG-01|d:engineering,finance,medical,organization,product,science,security,software g:estimate,guarantee,maximize c:deadline|m018 m019 m031|no|m003
+m100-POS-01|d:engineering,finance,medical,organization,product,science,security,software,supply g:decide,estimate,maximize c:deadline|m100 m044 m070|yes|
+m001-POS-02|d:engineering,finance,medical,product,software g:decide,estimate,predict c:high_stakes|m001 m018 m019|no|m007
+m001-NEG-02|d:engineering,finance,medical,product,supply g:diagnose,estimate,guarantee,maximize,predict c:deadline|m011 m024 m031|no|m003
+m003-POS-02|d:engineering,finance,medical,security,software g:diagnose,guarantee,maximize,predict c:|m003 m031 m040|no|m003
+m003-NEG-02|d:engineering,finance,medical,organization,product,security,software,supply g:decide,guarantee,maximize c:|m070 m018 m019|yes|m003
+m006-POS-02|d:medical,science g:diagnose,predict c:|m010 m030 m031|no|
+m006-NEG-02|d:engineering,finance,medical,strategy g:decide,estimate,guarantee,maximize,predict c:adversarial,unmeasured|m019 m023 m070|no|m003 m006 m019
+m007-POS-02|d:finance,medical,product,security,strategy g:decide,estimate,guarantee,predict c:|m023 m050 m070|no|m003
+m007-NEG-02|d:engineering,finance,medical,organization,supply g:decide,diagnose,estimate,guarantee,predict c:high_stakes,one_shot|m024 m011 m018|yes|m003 m007
+m011-POS-02|d:engineering,finance,medical,organization,product,strategy,supply g:decide,diagnose,estimate,maximize,predict c:adversarial,deadline|m011 m044 m020|no|m019
+m011-NEG-02|d:engineering,finance,medical,organization,science,security,supply g:diagnose,estimate,guarantee,maximize c:deadline|m031 m004 m014|yes|m003
+m019-POS-02|d:finance,medical,organization,product,security,software g:decide,estimate,guarantee,maximize c:adversarial,high_stakes|m019 m018 m021|yes|m003 m007 m019
+m019-NEG-02|d:engineering,finance,medical,organization,product,security,software g:decide,estimate,guarantee,predict c:deadline,high_stakes,unmeasured|m019 m018 m089|yes|m003 m006 m007

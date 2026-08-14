@@ -1,0 +1,4 @@
+# file: C:\Project\thinking_agent\thinking_agent_v8\src\thinking_agent\tools\broker.py
+# hypothesis_version: 6.151.12
+
+[100, 4000, '.', 'action_class', 'arguments', 'arxiv.org', 'calculator', 'content_hash', 'content_summary', 'eval', 'expr', 'expression too long', 'from_tool_receipt', 'http_retrieval', 'huggingface.co', 'idempotency_key', 'knowledge_lookup', 'observation_id', 'output_hash', 'output_summary', 'plan_task_id', 'query', 'receipt_id', 'sanitized', 'source', 'status', 'success', 'tasks', 'tool_name', 'trust', 'url']

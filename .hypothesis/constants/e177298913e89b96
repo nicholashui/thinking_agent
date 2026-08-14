@@ -1,0 +1,4 @@
+# file: C:\Project\thinking_agent\thinking_agent_v8\src\thinking_agent\api.py
+# hypothesis_version: 6.151.12
+
+[384, ',', ':memory:', 'ATTEMPTED', 'ESCALATED', 'PLANNED', '__interrupt__', 'answer', 'audit_refs', 'configs', 'configurable', 'ctx', 'decision_packet', 'deep', 'kernel', 'packet_id', 'plan-closed', 'quick', 'request', 'terminal_status', 'thread_id', 'updates']

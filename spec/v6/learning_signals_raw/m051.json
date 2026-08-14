@@ -1,0 +1,18 @@
+[
+  {
+    "test_case_id": "m051-POS-01",
+    "human_model": "Expected Value in Startup Portfolios (VC)",
+    "winner": "ai",
+    "key_gap": "vs baseline: the pure-style baseline solved the arithmetic exactly (B $215M vs A $185M, f* = 0.625, p* = 2.7%, counterfactual) but never established floor/dominance or input provenance. The routed pass added the ruin-screen floor analysis (A floor $0 vs B floor $50M — stochastic dominance), isolated the 1% tail as the single judgment input with the decision proven invariant to it (B−A = $30M at every p), and named target-reachability (3x unreachable by construction at the modeled tail).",
+    "learning_signal": "On fully specified power-law portfolio problems the style's arithmetic is exact and unbeatable on numbers; the v6 win came from floor comparison across alternatives plus provenance isolation of the one judgment parameter, not from better math.",
+    "suggested_improvement": "Keep the m007 ruin screen and P1 provenance audit on high_stakes portfolio signatures; add floor-per-alternative as a standing move in portfolio EV passes (A $0 vs B $50M, stochastic dominance check); make target-gap reachability an explicit packet line so a 3x-vs-2.15x gap is stated as a sourcing requirement, not an allocation failure."
+  },
+  {
+    "test_case_id": "m051-NEG-01",
+    "human_model": "Expected Value in Startup Portfolios (VC)",
+    "winner": "ai",
+    "key_gap": "vs baseline: the pure style recommended investing $10M on a claimed EV of $12.75M — 78.4% of it in an asserted 2% $2B probability with an empty reference class — treating an interested-party assertion as a measurement and calling a 27.5% margin robust against ±4x estimation error on the dominant parameter. The routed pass caught it with three independent mechanisms: m019 exploit vectors (false precision, reference-class substitution, interested-party benefit, fund-level rationalization), m006 provenance scenarios (p = 0.2-0.8% → EV $3.75M-$6.75M, all losses; threshold flip at p* = 1.45%), and the breakeven-ownership inversion s* = 78.4% > 50%.",
+    "learning_signal": "When a single low-probability bucket dominates an EV table, probability provenance is the decision, not the arithmetic; the style's documented failure (false precision on unmeasurable probabilities rationalizing a bad bet) is structurally caught by the unmeasured → m006 gate plus the m019 adversary pass, and the ownership-inversion breakeven (s* > 50% at the claimed price) is a cheap decisive diagnostic.",
+    "suggested_improvement": "Make provenance-audit-before-EV-table a standing completion contract for any EV pass whose dominant bucket has no measurement channel (extend R3 'unmeasured' to decision cases); add the breakeven-ownership inversion diagnostic to m007/m051 passes; keep token-sizing (bounded error ~$0.6M) as the tail-optionality fallback with a reference-class evidence gate before any repricing."
+  }
+]

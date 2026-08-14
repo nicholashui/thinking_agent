@@ -1,0 +1,34 @@
+[
+  {
+    "test_case_id": "m001-POS-01",
+    "human_model": "First Principles Thinking",
+    "winner": "ai",
+    "key_gap": "vs baseline: the baseline derived all numbers correctly but reached float-away, sigma-sensitivity and failure enumeration only as REVIEW-stage afterthoughts; the routed pass added a ranked pre-mortem (float-away as primary failure), a full 8-category inversion gate with never/always reframing, and a P1 provenance audit that converted the 12 mm memory into a 0.5%-agreement verification anchor before the arithmetic.",
+    "learning_signal": "On guarantee/engineering tasks the derive-from-fundamentals pass under-delivers on failure completeness and consequence-first reasoning; pairing it with a pre-mortem and an inversion gate closes both gaps at small cost.",
+    "suggested_improvement": "Keep m001+m020 dual-route on guarantee signatures; make the inversion gate (>=6 ranked failure categories, un-mitigable residual, never/always) a standing completion contract on design tasks; run float/ballast-style operational-consequence checks as WHY-stage frame items, not REVIEW corrections."
+  },
+  {
+    "test_case_id": "m001-NEG-01",
+    "human_model": "First Principles Thinking",
+    "winner": "ai",
+    "key_gap": "vs baseline: the baseline refused the measured base rates as evidence until derived and breached the SLA (healthy at T=47, window 20); the routed pass reframed first-principles as probe design (restarts = discriminating interventions) under OODA tempo and met the SLA at T=7. The routed pass still missed the baseline's mechanism win: it never confirmed the true root cause (connection leak in the deploy), stopping at symptom-level confirmation with a 60% suspicion.",
+    "learning_signal": "On deadline signatures, derive-before-act is SLA-fatal unless the derivation is re-scoped to probe design; measured base rates are ordering authority (P10), and a tempo pass (m021) must govern the sequence when a window exists.",
+    "suggested_improvement": "Dual-route m001+m021 on deadline signatures (R2 pair); add a tempo gate capping mechanism derivation at the probe plan, never the full diagnosis; keep a time-boxed post-window investigation in the packet so symptom-level confirmation is advanced toward mechanism."
+  },
+  {
+    "test_case_id": "m001-POS-02",
+    "human_model": "First Principles Thinking",
+    "winner": "ai",
+    "key_gap": "vs baseline: the v5 human baseline won this case on depth (derived-constant 15.7 kg/m2 verification) and calibrated uncertainty (priced range); the routed pass installed the calibration anchor and the m007 ruin screen (distribution, floor, provenance, decline/restructure) as first-class contracts, and steel-manned the labor-dominates counter-position, closing both gaps while staying compact.",
+    "learning_signal": "On fully-specified estimate signatures, the fundamentals calibration anchor plus a ruin screen convert the human baseline's two winning moves (independent-route verification, provenance-carrying uncertainty) from REVIEW-stage afterthoughts into HOW-stage mandatory outputs.",
+    "suggested_improvement": "Keep m001+m018 dual-route with m007 gate on high_stakes estimate signatures; make the derived-constant cross-check a standing contract item; consider quoting in per-kg terms so price volatility re-prices instantly."
+  },
+  {
+    "test_case_id": "m001-NEG-02",
+    "human_model": "First Principles Thinking",
+    "winner": "ai",
+    "key_gap": "vs baseline: the baseline spent the 20-min window deriving the energy chain and blocked the reset on a borderline cold-winding insulation reading (pump off at T+27); the routed pass reframed derive-from-scratch as probe design (cheap-fix-as-decisive-experiment), regret-ranked the ordering, and the m003 inversion gate enumerated six window-killing failure categories pre-DO with a priced re-trip branch (T+19 still inside) and a defined follow-up contract for the 5% residual.",
+    "learning_signal": "On deadline diagnosis signatures, measured base rates are ordering authority (P10) and an inversion gate must price the failure branches (window overrun, over-certification) before DO; tempo mode commits at the probe plan, never the full diagnosis.",
+    "suggested_improvement": "Keep m011+m024 dual-route with m003 gate on deadline signatures; retain reset-as-decisive-experiment and the re-trip follow-up contract in the packet; never let a cold-winding borderline reading block a reset without a load observation."
+  }
+]

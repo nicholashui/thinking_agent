@@ -1,0 +1,53 @@
+{
+  "generated_by": "Phase 0 asset freeze",
+  "assets": [
+    {
+      "name": "thinking_agent.v8.md",
+      "path": "spec\\thinking_agent.v8.md",
+      "sha256": "ebd3e976d301da15c141073623f7c864f428c862f502b063085688b9827f35f3",
+      "bytes": 409968
+    },
+    {
+      "name": "thinking_agent_impl.v2.md",
+      "path": "spec\\thinking_agent_impl.v2.md",
+      "sha256": "36cdd5f2c3cbdc758ff1cec5e7244b2f39b01dd938978cf8e740861296598d37",
+      "bytes": 119701
+    },
+    {
+      "name": "human_thinking_models.json",
+      "path": "spec\\human_thinking_models.json",
+      "sha256": "6823b66762f7616e5bd58f6c2214714f898a81ae1d165949e6739d1276285119",
+      "bytes": 45874
+    },
+    {
+      "name": "style_routing_kb.json",
+      "path": "spec\\style_routing_kb.json",
+      "sha256": "36b4e77d778db0187a7016b90a58d4025f60736688b2a8ed76ccf62eb865362a",
+      "bytes": 54240
+    },
+    {
+      "name": "legacy_harness.py",
+      "path": "spec\\validation\\harness.py",
+      "sha256": "a9acb0fc4b00b975a7b0713ebf827af281181b98246a4c6b3c84566a900ec74b",
+      "bytes": 129107
+    },
+    {
+      "name": "style_router.py",
+      "path": "spec\\validation\\style_router.py",
+      "sha256": "6445f693254b7ade502a2d243cb09e6aa46d93892d39895e6d357455c7aafb4c",
+      "bytes": 12209
+    },
+    {
+      "name": "case_verdicts.csv",
+      "path": "spec\\v5\\case_verdicts.csv",
+      "sha256": "120424a58321463fe2e942c00503e83bdf62964a24332d8c0cce9888a441dcda",
+      "bytes": 58660
+    }
+  ],
+  "verification": {
+    "models_total": 104,
+    "models_unique_ids": 104,
+    "records_measured": 212,
+    "records_design_markdown": 4
+  }
+}

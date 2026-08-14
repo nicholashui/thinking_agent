@@ -1,0 +1,42 @@
+# v6 Routed AI Trace — m085-POS-01 (blinded)
+## Balquinta Basin — binding governance design for a shared coastal aquifer
+### META (routing — blind router output)
+- Signature: d:engineering,finance,medical,organization,product,software | g:decide,diagnose,estimate,guarantee,predict | c: (none)
+- Router top3: m085, m018, m019; confident=yes → SINGLE-ROUTE: m085 first-class pass; m018/m019 = context (m018: steel-man the voluntary path's strongest form before rejecting; m019: attack the NEW governance, not the problem). Gate (R3, route): m003 inversion (guarantee goal → R4). Flags: no deadline → tempo OFF; P8 closed-scope fast path candidate (hydrology closed, fully specified, advisory).
+### WHAT — frame + structure-first scan (S1)
+- Frame: deliverable = a binding governance design that removes the depletion horizon, not a study or an appeal. Structure first (resource-governance scan, S1): classify BEFORE arithmetic — rivalrous (one co-op's acre-feet leave less for all) ∧ non-excludable (anyone may drill; no meters, no license) = OPEN-ACCESS common-pool resource, whose only stable equilibrium is over-extraction. The 11 written refusals are that equilibrium manifesting, not bad faith.
+### WHY — P1 input-provenance audit
+- MEASURED (agency-verified, closed): R = 10,000, E = 12,500, storage 200,000, intrusion threshold 30,000 ac-ft. The refusal letters are INTERESTED-PARTY in form but structurally predicted: the cost of restraint is private and complete, the benefit is shared 12 ways → each co-op's dominant move is to pump and wait for the other 11. H1 well-managed commons → falsified by the access check (no exclusion exists). H2 open-access tragedy → confirmed by the refusal record. H3 voluntary restraint works → falsified by the incentive structure before any psychology. Model: drawdown 2,500 ac-ft/yr → intrusion 30,000/2,500 = 12 years; empty in 80 — the 12-year line is the binding clock.
+### HOW — m085 first-class pass (completion contract)
+- OVERUSE DETECTED (contract item 1): rivalrous + non-excludable → over-extraction predicted; verified by observation (E exceeds R by 25%). Depletion quantified to the binding horizon: 12 years to intrusion.
+- OVER-APPLICATION GUARD (contract item 2 — local norms check): who has access today? Anyone; no entry restriction, no meters, no community rules with enforcement power. Verified OPEN ACCESS — the commons diagnosis holds; the guard passes and does not stop the prescription.
+- GOVERNANCE DESIGNED (contract item 3 — exclusion/quotas/ownership): total cap = recharge = 10,000 ac-ft/yr (extraction = inflow → steady state; intrusion line never reached); allocation 833 ac-ft/co-op or tradable rights with the 3 older co-ops grandfathered (trade moves water to highest value; a ledger keeps the aggregate hard-capped across transfers); enforcement as first-class: mandatory metering (no meter, no extraction), escalating penalties; transition: the cap cuts aggregate extraction 20% → compensation funded from license/trade revenue; uncertainty: recharge varies with drought → cap is a ratcheting schedule, not a fixed number. Success condition stated as horizon-removal: under the cap the intrusion line moves to never.
+- Pass 2 (m018 steel-man — context): the voluntary path's strongest form — "all 12 honor 10%, collectively 1,000 ac-ft/yr." Even at its strongest it fails on three verifiable grounds: cuts are unmeasurable (no meters), unsanctionable (no enforcement authority), and each co-op's best reply is to wait — the strongest version of the proposal is a promise, and a promise is exactly what the equilibrium already produced.
+- Pass 3 (m019 adversary — context, against the NEW design): (1) metering evasion via unregistered wells — closed by no-meter-no-extraction + well census; (2) quota-gaming busting the cap — closed by escalating penalties + ledger hard cap; (3) grandfathering capture by the 3 old co-ops — closed by trade + sunset; (4) drought-ratchet lag — closed by indexation to measured recharge; (5) ENFORCEMENT-CAPTURE — the agency that failed to meter now polices the ledger; exposure = cap at risk; mitigated by independent ledger audit. BASELINE-RISK: do nothing = sure intrusion in 12 years; the design's worst priced vector is bounded.
+### GATES — m003 inversion (R3; ≥6 ranked failure categories of the design, likelihood×impact)
+- (1) metering evasion / unregistered wells (H×H — the cap rests on measurement), (2) political failure of the 20% cut (H×H), (3) grandfathering capture (M×H), (4) quota-gaming (M×M), (5) ratchet lag (M×M), (6) enforcement capture (L×H). Residual un-mitigable: a determined coalition of co-ops can out-organize any design — governance cannot audit trust into existence; the answer is per-well metering + penalties, which keeps any coalition's defection visible. Never/always reframe: the decision is never "restraint or no restraint" — it is always "which enforcement architecture survives the refusals."
+### DO — P8 fast path (fully specified, closed hydrology; advisory)
+- Commit: binding cap 10,000 ac-ft/yr; quotas or tradable rights + grandfathering; meters, escalating penalties, ledger; transition compensation; drought ratchet. P3 failure branch priced: if metering is infeasible the cap is unenforceable and the design degrades to the voluntary path → intrusion in 12 years — the do-nothing-equivalent branch, priced and rejected.
+### REVIEW — insight pass (S2, packet gate)
+- I1: the 11 refusals are the strongest evidence FOR state governance — the refusals are the equilibrium talking, so the design must bind without the refusers' consent.
+- I2: the binding clock is intrusion (12 years), not exhaustion (80) — governance is priced against the resource's first irreversible failure, and horizon-removal (intrusion line → never) is the success condition, not harvest maximization.
+### DECISION PACKET
+- Conclusion: impose cap = recharge = 10,000 ac-ft/yr (833/co-op or tradable rights with grandfathering), metering + escalating penalties + ledger, transition compensation, drought ratchet → intrusion line moved from 12 years to never.
+- Status: SOLVED (design derived from verified hydrology and incentive structure; advisory only). Assumptions: hydrology as verified; metering physically implementable; co-ops comply under penalties.
+- Evidence: drawdown 2,500 ac-ft/yr; 30,000/2,500 = 12 yrs to intrusion; E/R = 1.25; 11/12 refusal record; no meters today.
+- Alternatives: A voluntary (falsified by the incentive structure) · B cap design (selected) · C tax-only (unenforceable without meters) · D nothing (intrusion in 12 yrs).
+- Uncertainty: recharge variability (ratchet); grandfathering levels (political datum, not hydrological); enforcement-cost scale unverified; coalition capture (bounded by metering).
+- Risks: evasion (meters + penalties); political failure of the 20% cut (compensation); dry-year shortage (ratchet); agency capture (independent ledger audit).
+## Comparison
+| Dimension | Human | AI | Winner | Notes |
+|---|---|---|---|---|
+| Goal Achievement | 5 | 5 | Tie | identical design: cap at recharge, quotas/trade, metering, transition, ratchet |
+| Logical Validity | 5 | 5 | Tie | same depletion math (2,500 drawdown; 12-yr intrusion line); AI adds falsified H1/H3 |
+| Coherence & Structure | 4 | 5 | AI | routed run opens with the excludability/rivalry classification (the v5 ordering gap); contract-labeled moves |
+| Depth of Reasoning | 5 | 5 | Tie | human's "the 11 refusals ARE the equilibrium" is now the AI's first move; steel-man + m003 residual add the coalition-capture vector |
+| Efficiency | 5 | 4.5 | Human | human is one pure pass; the gate machinery (m003/m019) costs a little |
+| Handling of Uncertainty | 3 | 5 | AI | human asserts the drought ratchet; AI prices ratchet, grandfathering politics, enforcement capture |
+| Insight / Non-obviousness | 5 | 5 | Tie | both land "quota without metering is a suggestion"; AI adds horizon-removal-as-success and refusals-as-evidence |
+| Overall Quality | 4.6 | 4.8 | AI (narrow) | margin 0.2 ≤ 0.3 → J1 second-judge flag noted |
+
+Winner: AI (narrow). Why: the m085 completion contract made the excludability/rivalry classification the S1 opening move and the refusal-derived design first-class outputs — exactly the ordering-and-ownership gap where the non-routed v5 AI lost this case (it opened as a budget problem and back-filled the commons structure); the m003/m019 gates add the enforcement-capture and coalition vectors the pure human trace never prices.

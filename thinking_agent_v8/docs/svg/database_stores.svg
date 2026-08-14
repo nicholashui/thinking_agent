@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 440" font-family="Segoe UI, sans-serif">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#5f6368"/>
+    </marker>
+  </defs>
+  <rect width="860" height="440" fill="#ffffff"/>
+
+  <text x="430" y="26" font-size="14" font-weight="bold" fill="#202124" text-anchor="middle">Three separated stores — checkpoints are NOT the source of truth for learning state</text>
+
+  <!-- checkpointer -->
+  <rect x="30" y="48" width="250" height="150" rx="8" fill="#e8f0fe" stroke="#1a73e8"/>
+  <text x="155" y="70" font-size="13" font-weight="bold" fill="#174ea6" text-anchor="middle">CHECKPOINTER DB</text>
+  <text x="155" y="89" font-size="11" fill="#174ea6" text-anchor="middle">LangGraph snapshots · interrupts</text>
+  <text x="155" y="106" font-size="11" fill="#174ea6" text-anchor="middle">InMemory / SQLite (0600 owner-only)</text>
+  <text x="155" y="128" font-size="11" fill="#174ea6" text-anchor="middle">writer: runtime</text>
+  <text x="155" y="150" font-size="10.5" fill="#174ea6" text-anchor="middle">carries: schema version · policy hash</text>
+  <text x="155" y="164" font-size="10.5" fill="#174ea6" text-anchor="middle">thread/task ids · (prod: integrity MAC)</text>
+  <text x="155" y="184" font-size="10.5" fill="#174ea6" text-anchor="middle">never: secrets, live clients, KB, ledger</text>
+
+  <!-- kernel -->
+  <rect x="305" y="48" width="250" height="150" rx="8" fill="#fce8e6" stroke="#d93025"/>
+  <text x="430" y="70" font-size="13" font-weight="bold" fill="#a50e0e" text-anchor="middle">KERNEL POLICY</text>
+  <text x="430" y="89" font-size="11" fill="#a50e0e" text-anchor="middle">configs/kernel/*.yaml — versioned</text>
+  <text x="430" y="106" font-size="11" fill="#a50e0e" text-anchor="middle">World Facts · bars · identities</text>
+  <text x="430" y="123" font-size="11" fill="#a50e0e" text-anchor="middle">allowlists · taxonomy · budgets</text>
+  <text x="430" y="145" font-size="11" fill="#a50e0e" text-anchor="middle">writer: operator ONLY</text>
+  <text x="430" y="162" font-size="10.5" fill="#a50e0e" text-anchor="middle">frozen once loaded</text>
+  <text x="430" y="176" font-size="10.5" fill="#a50e0e" text-anchor="middle">production: signed, fails closed</text>
+
+  <!-- application db -->
+  <rect x="580" y="48" width="250" height="150" rx="8" fill="#e6f4ea" stroke="#188038"/>
+  <text x="705" y="70" font-size="13" font-weight="bold" fill="#137333" text-anchor="middle">APPLICATION DB</text>
+  <text x="705" y="89" font-size="11" fill="#137333" text-anchor="middle">migrations/sqlite/001_init.sql</text>
+  <text x="705" y="108" font-size="11" fill="#137333" text-anchor="middle">task_runs · audit_events</text>
+  <text x="705" y="125" font-size="11" fill="#137333" text-anchor="middle">sdl_ledger_entries</text>
+  <text x="705" y="142" font-size="11" fill="#137333" text-anchor="middle">sdl_gap_map</text>
+  <text x="705" y="164" font-size="10.5" fill="#137333" text-anchor="middle">runtime + audit write runs/events</text>
+  <text x="705" y="178" font-size="10.5" fill="#137333" text-anchor="middle">JUDGE PIPELINE writes ledger + gap map</text>
+
+  <!-- ledger chain -->
+  <rect x="120" y="226" width="620" height="100" rx="8" fill="#fef7e0" stroke="#f9ab00"/>
+  <text x="430" y="248" font-size="12.5" font-weight="bold" fill="#b06000" text-anchor="middle">LEDGER HASH CHAIN (append-only)</text>
+  <g font-size="11" fill="#b06000" text-anchor="middle">
+    <rect x="150" y="262" width="110" height="44" rx="6" fill="#fff7e6" stroke="#f9ab00"/>
+    <text x="205" y="282">entry 1</text><text x="205" y="297">hash_prev: ∅</text>
+    <rect x="280" y="262" width="110" height="44" rx="6" fill="#fff7e6" stroke="#f9ab00"/>
+    <text x="335" y="282">entry 2</text><text x="335" y="297">→ h1</text>
+    <rect x="410" y="262" width="110" height="44" rx="6" fill="#fff7e6" stroke="#f9ab00"/>
+    <text x="465" y="282">entry 3</text><text x="465" y="297">→ h2</text>
+    <rect x="540" y="262" width="110" height="44" rx="6" fill="#fff7e6" stroke="#f9ab00"/>
+    <text x="595" y="282">entry 4</text><text x="595" y="297">→ h3</text>
+  </g>
+  <g stroke="#f9ab00" stroke-width="1.2" marker-end="url(#arrow)">
+    <line x1="260" y1="284" x2="277" y2="284"/>
+    <line x1="390" y1="284" x2="407" y2="284"/>
+    <line x1="520" y1="284" x2="537" y2="284"/>
+  </g>
+  <text x="430" y="318" font-size="10.5" fill="#b06000" text-anchor="middle">edits are new CORRECTION entries · verify_chain() recomputes every hash · tamper = detected</text>
+
+  <!-- production roles -->
+  <rect x="120" y="350" width="620" height="64" rx="8" fill="#f3e8fd" stroke="#9334e6"/>
+  <text x="430" y="370" font-size="12" font-weight="bold" fill="#7627bb" text-anchor="middle">PRODUCTION ROLES (separate credentials)</text>
+  <text x="430" y="389" font-size="11" fill="#7627bb" text-anchor="middle">agent_runtime (read-only) · kernel_writer · judge_writer · ledger_reader · operator_admin</text>
+  <text x="430" y="404" font-size="10.5" fill="#7627bb" text-anchor="middle">PostgreSQL in production; SQLite (WAL) in development — native processes only, no Docker</text>
+</svg>

@@ -1,0 +1,8 @@
+ Study the thinking model documented in the latest version of `thinking_agent.*.md` file. Use the model described in that thinking
+  agent to conduct a comprehensive self-review of the existing thinking agent framework to identify its strengths,
+  limitations, inefficiencies, and areas for enhancement. Based on your analysis, implement targeted improvements to
+  the core logic, workflow, and functionality ...etc of the thinking agent. Repeatedly execute and validate the
+  revised thinking process to ensure it operates reliably and delivers enhanced performance based on the thinking
+  agents' standard. Once you confirm that the updated thinking agent meets all functional and quality standards,
+  output the finalized, improved version of the agent based on the model described in that thinking agent and output
+  filename set to the next version of `thinking_agent.*.md`.

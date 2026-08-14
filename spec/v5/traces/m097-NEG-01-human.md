@@ -1,0 +1,20 @@
+# Human Baseline — m097-NEG-01
+## Style: Reference Class Forecasting (Kahneman) (pure) — visible reasoning trace
+
+**Step 1 — Refuse the inside view.** Six weeks. The engagement manager's plan is a single-point story from the people inside the project — exactly the inside view that produces every optimistic forecast. The inside view is never a forecasting instrument. What I need is the class: what do projects of this kind actually take?
+
+**Step 2 — Find the reference class.** Curlew is an e-commerce platform project. The survey — "E-Commerce Platform Project Delivery," n=412, across agencies and in-house teams — is the class: median 9 months, mean 10.5, σ 5, range 4–24. Four hundred twelve projects is a real base rate. The consultant is right to wave it at us.
+
+**Step 3 — Read the distribution.** Median 9 months; 80% interval ≈4–17 months. Initial estimates in this class average 1.9× below actual. And note what the class says about the inside plan: 6 weeks is not 9 months adjusted — it is 0.17 of the median. That is not estimation error; that is a plan that has left the base rate entirely.
+
+**Step 4 — Consider the tempting counter-class, and reject it.** Kestrel's own nine builds: 5–7 weeks, same platform, same team, frozen specs. Tempting. But this is precisely the trap: every member of that "class" is the same six people planning the same kind of work in the same building. It is the inside view with a spreadsheet — self-selected, zero external variation, no failures from outside this room. The honest base rate is the 412-project survey, not the firm's own echo chamber.
+
+**Step 5 — Rehearse the narrow reading, then reject it.** Suppose the narrow class were right: same platform, same team, frozen spec — the inside plan would sit at its median and everything would hold. But that reading is only coherent because the class members were built by the same people, from the same assumptions, in the same building. Nine internally-consistent data points are still one voice. A base rate is a base rate; the industry's 412 projects are not all wrong so this team can be right.
+
+**Step 6 — Forecast from the class.** Plan on 9–12 months, budget ≈$400–600K, and the fixed price is in danger: at $110K we will eat the overrun. Renegotiate the delivery date and price now, and tell the client the 6-week promise was never real. The consultant's "3–4 months minimum" is if anything conservative against the class median.
+
+**Step 7 — The discipline.** The point of the outside view is to trust the distribution even when it embarrasses the team's record. The 6-week plan is the planning fallacy at work — same team, same platform, same confidence, and now nine data points that were all done by the very people who wrote this plan. I will not be moved by their track record; the track record is the story.
+
+**Trace summary box.** class = industry survey (n=412, median 9 mo, 80% ≈4–17, factor 1.9) → inside plan (6 wks = 0.17× median) rejected as planning fallacy → firm's own 9-build history (median 6.0 wks, range 5–7) rejected as inside-view echo chamber → forecast from the industry class: plan ≈9–12 mo, budget ≈$400–600K, renegotiate the fixed price → the class is the class; the record is the story. (Failure: class selection — the structural facts — same platform, same team, frozen spec, no novel integration — place Curlew in the narrow class, whose distribution the inside plan sits dead center of; the 6× divergence flags misclassification, not bias.)
+
+*Baseline integrity note (grader metadata, not part of the reasoning): reasoning confined to pure Reference Class Forecasting — the outside-view move is executed correctly (class found, distribution read, inside plan doubted), and the registered weakness (reference class selection) then operates as designed: the industry class is adopted on a surface label and the firm's own tight-spread history is rejected as contamination, producing a ~6× overcorrection. Signature move (with the failure): "forecast from the class" — when the wrong class is chosen.*

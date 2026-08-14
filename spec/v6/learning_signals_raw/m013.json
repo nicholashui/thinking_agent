@@ -1,0 +1,18 @@
+[
+  {
+    "test_case_id": "m013-POS-01",
+    "human_model": "Root Cause Analysis (5 Whys + deeper)",
+    "winner": "ai",
+    "key_gap": "vs baseline (v5 loss recovered): the v5 AI stopped one link short — it treated 'migration 0041 never applied' as the root, never inspected file timestamps / runner dedup (E5), and could not predict recurrence on fresh builds (3.6 vs 4.7). The v6 dual-route (m013 causal drill + m091 practiced-routine re-drill, divergence-resolved) made the mechanism-level why (same-second timestamp collision + runner per-second silent dedup), the recurrence test on fresh builds (E6), and the uniqueness+fail-loud+CI-sync root fix completion-contract outputs; the m003 inversion gate added the never/always reframing (never treat a migration absence as a one-off). The AI now matches the human's gold-standard chain (5/5 rubric); the remaining delta is structure and efficiency, not content.",
+    "learning_signal": "A causal chain is complete only when the cause of the cause is a mechanism, and depth is verified by the recurrence test: 'would this failure reappear after my fix?' A fix that does not remove the generative mechanism is a symptom patch even when it looks structural; 'X was never applied' is a fact, not a root. The routed m013 pass contract (5-whys with per-link evidence, fault-tree structure, prevention-vs-detection gap separation) plus a divergence check against a practiced routine (apply-and-check) is what converts the correct-but-shallow diagnosis from 3/5 to 5/5.",
+    "suggested_improvement": "Keep m013 first-class on diagnose/guarantee incident signatures with the m003 inversion gate; make the recurrence test explicit in the packet's verification plan (fresh-build check incl. a deliberately colliding migration) so the prevention-vs-detection gap separation is executed, not just named; retain the dual-route re-drill of the naive stopping chunk as the divergence check that catches shallow roots."
+  },
+  {
+    "test_case_id": "m013-NEG-01",
+    "human_model": "Root Cause Analysis (5 Whys + deeper)",
+    "winner": "ai",
+    "key_gap": "vs baseline: the human baseline is the style's trap executed — the chain is verified to the deepest evidence-supported cause (vendor release process) and made the primary fix (6–8 weeks) while labeling the 30-minute boundary fix (validation + dead-letter + alert) that fully contains the silent loss 'interim'. The v6 route did not route to pure RCA: the KB's negative-case lesson routes deadline data-loss signatures to m044 (stakeholder lens) with the mandatory m019 adversary gate and tempo mode — finance's stale dashboard is the realized harm, so the boundary fix is primary by construction, the 6-day backlog is replayed, and the vendor tail becomes one scoped ticket.",
+    "learning_signal": "The negative-case fix is routing, not more digging: a verified causal chain that exits authority/budget/timeline is an escalation boundary, not a fix target; the cheap lever that fully closes the harm is the primary fix, and calling it 'interim' is a status error. Routing deadline data-loss incidents to a stakeholder lens (who needs what by when — finance needs the dashboard current, not a vendor renegotiation) makes containment-primary structural, and the adversarial baseline-risk line (inaction = realized 0.4%/night) is what stops the 'wait for the root' posture.",
+    "suggested_improvement": "Keep the m044-first route on deadline/adversarial data-integrity signatures with the m019 adversary gate (baseline-risk comparison mandatory) and tempo-mode commit at DO; require an inaction-cost sentence and an explicit 'deepest ≠ actionable' line in every such packet; hold the NEG split by ensuring pure-RCA never routes first on these signatures."
+  }
+]

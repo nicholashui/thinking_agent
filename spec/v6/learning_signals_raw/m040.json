@@ -1,0 +1,18 @@
+[
+  {
+    "test_case_id": "m040-POS-01",
+    "human_model": "Leverage Points Identification",
+    "winner": "ai",
+    "key_gap": "vs baseline: both sides converged on the same verdict (2-week incident-to-change-class pipeline + canary rule for the 5 recurring classes; defer the 25 hires; ~30% incident cut, SLO >= 99.9% in 2 quarters), but in v5 the AI reached it late, opening sympathetic to the board's capacity frame and ranking by arithmetic; the v6 routed pass made the human's first-sight advantage a completion contract — loop map + full leverage-scale positioning at HOW entry, change-per-effort ranking, and a per-point falsifiable observable (misidentification check: five-class share must fall within 60 days) that the baseline only implied in one line. Residual human edge: one-pass elegance — the packet + gate machinery is still heavier than the pure single pass.",
+    "learning_signal": "On org/reliability guarantee signatures the routed leverage pass plus structure-first scan (S1) converts the leverage style's first-sight loop mapping into a mandatory deliverable: map the governing loops before arithmetic, position every candidate on the leverage scale (parameters < delays < negative-feedback strength < information flows < rules < goals), and give each ranked point a falsifiable observable so misidentification is caught by the verification metric itself.",
+    "suggested_improvement": "Keep the m040-first-class route on guarantee signatures (top3 m040/m031/m070); make the per-point falsifiable-observable a standing m040 contract item; keep the P8 closed-scope fast path on fully-specified recommendation briefs to trim the packet overhead that cost the efficiency dimension."
+  },
+  {
+    "test_case_id": "m040-NEG-01",
+    "human_model": "Leverage Points Identification",
+    "winner": "ai",
+    "key_gap": "vs baseline: the pure style misidentified leverage (its registry weakness) — it ranked a $500k/6-month goals/KPI program above the observed cause (checkout regression from the API upgrade; 1 engineer-hour fix restoring ~$1.2M/month) and dismissed the deployment-window correlation without opening the funnel or deploy data. The v6 router sent no structural-lever style on this adversarial/deadline/unmeasured signature; the m019 adversary pass (baseline-risk comparison attacking the program's unfalsifiable assumptions), the m006 provenance audit (likelihood scenarios showing the deployment hypothesis dominates any honest posterior), and m021 tempo (commit at DO under $40k/day cost-of-delay) caught the trap before ranking. Residual: the leverage-misidentification check is gate-borne rather than module-borne — m040 itself was not routed, so the trap is only closed when the gates fire.",
+    "learning_signal": "Leverage is defined by change per effort along the observed causal chain, not structural depth: on decide/diagnose signatures with adversarial, deadline, or unmeasured context, route adversary + tempo + provenance (m019/m021/m006) instead of any structural-lever style; an unfalsifiable 'deep' story with no onset-window tie must lose to the cheapest candidate that fully explains the windowed data.",
+    "suggested_improvement": "Formalize a leverage-misidentification screen as a standing gate wherever a 'deep lever vs direct fix' framing appears: per-candidate falsifiable observable, onset-window tie, and baseline-risk comparison against the cheapest full-explanation candidate; keep m040 out of signatures containing adversarial/deadline/unmeasured triggers (already reflected in the router) and re-verify on this case's regression re-run."
+  }
+]

@@ -1,0 +1,34 @@
+[
+  {
+    "test_case_id": "m003-POS-01",
+    "human_model": "Inversion (Invert, Always Invert)",
+    "winner": "ai",
+    "key_gap": "vs baseline: the pure-inversion baseline was near-gold (8 categories in one pass, ranked, P/D/R-tagged, <=1/10^6 residual), but the routed pass matched it first-class and closed the v5 AI's two gaps by contract: category-complete enumeration now lands in WHAT/HOW in one pass (the v5 AI needed a second sweep to reach refund-cascade/failover), and the NEVER reframe to a bounded residual moves from REVIEW into WHAT. Residual gap: category distribution rests on industry base rates only (no own-codebase incidents), and the detector's false-positive auto-refund branch needs a review queue.",
+    "learning_signal": "Guarantee-goals with a 'never' mandate are the inversion pass's home turf; the completion contract (>=6 ranked categories, un-mitigable residual, never/always) converts the baseline's one-shot enumeration into a reproducible first-class output, and the P1 provenance audit adds the mandate-to-SLA conversion the pure style leaves implicit.",
+    "suggested_improvement": "Keep single-route m003 on guarantee/diagnose signatures with the R3 inversion gate; add mandate-to-SLA conversion (interested-party provenance on goal phrasing) to the m003 pass checklist; attach enumeration-as-monitoring-probes (each category names its own probe) to the packet's evidence so the strategy ships with its test plan."
+  },
+  {
+    "test_case_id": "m003-NEG-01",
+    "human_model": "Inversion (Invert, Always Invert)",
+    "winner": "ai",
+    "key_gap": "vs baseline: the strict-inversion baseline produced the registry-predicted flatline (16 equal-weight workstreams, no wedge, no profit target, no checkpoint). The routed run reached the v5 AI's winning structure but by mechanism, not emergent judgment: steel-manned alternatives, adversary-quantified exposures (cash-flow = 36% of seed), experiment-designed checkpoint, and an R4-capped inversion gate (top-5 + falsifiable checkpoint) that kept the baseline's best causes (cash-flow timing, QC) as bounded defense after the bet. Remaining gap: no local demand data — the checkpoint is the only arbiter, and the adversary pass did not fully price the 'no buyers' branch in dollars.",
+    "learning_signal": "On maximize goals the inversion move must be capped and run post-bet; routing steel-manning + adversary as first-class passes, with controlled-experiment as the synthesis frame, produces selection and falsification that pure inversion structurally cannot — R4's cap converts inversion's completeness pressure from a bug into a bounded risk pass.",
+    "suggested_improvement": "Keep dual-route m018+m019 on maximize/decide signatures with m033 synthesis and the R4-capped m003 gate; extend the checkpoint contract to require a priced pivot branch (dollar amount of the failure branch, not just a trigger); add headcount/effort-spread to the adversary pass's unconsulted-stakeholder list on 2-person tasks."
+  },
+  {
+    "test_case_id": "m003-POS-02",
+    "human_model": "Inversion (Invert, Always Invert)",
+    "winner": "ai",
+    "key_gap": "vs baseline: the pure-inversion baseline was near-gold (8 categories in one pass, ranked, P/D/R-tagged, residual named, NEVER reframed), but the dual-route pass matched it first-class and closed the v5 AI's two gaps by contract: category-complete enumeration now lands in WHAT/HOW in one pass (the v5 AI needed a second sweep to reach stocking/governance), and the NEVER reframe to a bounded SLA moves from REVIEW into WHAT. Residual gap: category distribution rests on industry base rates only (no site-specific incident data), and the upstream-stocking residual is monitor-only — prevention stops at the pharmacy boundary.",
+    "learning_signal": "Guarantee-goals with a never-mandate are inversion's home turf; dual-routing m003 with m031 (scientific method) converts the enumeration into a shipped test plan — every failure category names its own discriminating probe, so the strategy carries its monitoring suite as evidence and an update rule, which a pure one-shot enumeration lacks.",
+    "suggested_improvement": "Keep dual-route m003+m031 on guarantee/diagnose signatures with the R4 full-strength inversion gate; add mandate-to-SLA conversion (interested-party provenance on goal phrasing) to the m003 pass checklist; make the trust-boundary residual statement (detect-only beyond our boundary) an explicit packet field; attach probe-per-category to the packet evidence."
+  },
+  {
+    "test_case_id": "m003-NEG-02",
+    "human_model": "Inversion (Invert, Always Invert)",
+    "winner": "ai",
+    "key_gap": "vs baseline: strict inversion produced the registry-predicted flatline (12 equal-weight workstreams, no wedge, no activation metric, no checkpoint). The routed run reached the v5 AI's winning structure by mechanism: evidence-weighted SWOT graded every adoption lever by telemetry strength and selected the wedge (analytics-heavy PM/ops, ~600 teams), and the R4-capped m003 gate (top-5 + falsifiable checkpoint) kept the baseline's best causes — incl. its only genuine catch, IT/security procurement friction (baseline item 9) — as bounded defense after the bet. Remaining gap: no new-feature activation data; the week-1 cohort gate and week-4 pivot rule are the only arbiters.",
+    "learning_signal": "On maximize goals the inversion move must be capped and run post-bet; routing evidence-weighted SWOT as the first-class pass produces selection from measured data that pure inversion structurally cannot, and R4's cap converts inversion's completeness pressure from a bug into a bounded risk pass with a falsifiable checkpoint.",
+    "suggested_improvement": "Keep single-route m070 on maximize/decide signatures with the R4-capped m003 gate; add an IT/security procurement pre-clearance item to the bounded risk pass on SaaS/enterprise launches (the m003-NEG-02 baseline's only surviving insight); extend the checkpoint contract to require a priced pivot branch (share of budget sunk + assets preserved, not just a trigger)."
+  }
+]

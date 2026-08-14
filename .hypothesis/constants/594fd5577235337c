@@ -1,0 +1,4 @@
+# file: C:\Project\thinking_agent\thinking_agent_v8\src\thinking_agent\control\terminal_classifier.py
+# hypothesis_version: 6.151.12
+
+['EVOC exhausted', 'UNSAFE', 'ambiguous', 'call ceiling', 'deadline exceeded', 'escalate', 'escalate_reason', 'escalation required', 'fillable', 'fillable_gap', 'infeasible', 'internal_fault', 'iteration ceiling', 'missing_evidence', 'novelty plateau', 'probe_available', 'reliability_blocked', 'safe probe available', 'safety kernel denial', 'stop_reason', 'success', 'token ceiling', 'unsafe', 'verifier_outage']

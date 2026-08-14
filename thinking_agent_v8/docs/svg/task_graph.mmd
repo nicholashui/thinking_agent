@@ -1,0 +1,62 @@
+---
+config:
+  flowchart:
+    curve: linear
+---
+graph TD;
+	__start__([<p>__start__</p>]):::first
+	initialize(initialize)
+	meta(meta)
+	loop_guard(loop_guard)
+	stabilize(stabilize)
+	fast(fast)
+	what(what)
+	what_gate(what_gate)
+	why(why)
+	why_gate(why_gate)
+	early_classify(early_classify)
+	how(how)
+	how_gate(how_gate)
+	do_authorize(do_authorize)
+	do_execute(do_execute)
+	verify(verify)
+	review(review)
+	terminal(terminal)
+	epilogue(epilogue)
+	__end__([<p>__end__</p>]):::last
+	__start__ --> initialize;
+	do_authorize --> loop_guard;
+	do_execute -.-> terminal;
+	do_execute -.-> verify;
+	early_classify --> loop_guard;
+	fast --> verify;
+	how --> how_gate;
+	how_gate --> loop_guard;
+	initialize --> meta;
+	loop_guard -. &nbsp;do&nbsp; .-> do_authorize;
+	loop_guard -.-> do_execute;
+	loop_guard -.-> early_classify;
+	loop_guard -.-> fast;
+	loop_guard -.-> how;
+	loop_guard -.-> how_gate;
+	loop_guard -.-> review;
+	loop_guard -.-> stabilize;
+	loop_guard -.-> terminal;
+	loop_guard -.-> verify;
+	loop_guard -.-> what;
+	loop_guard -.-> what_gate;
+	loop_guard -.-> why;
+	loop_guard -.-> why_gate;
+	meta --> loop_guard;
+	review --> loop_guard;
+	stabilize --> loop_guard;
+	terminal --> epilogue;
+	verify --> review;
+	what --> what_gate;
+	what_gate --> loop_guard;
+	why --> why_gate;
+	why_gate --> loop_guard;
+	epilogue --> __end__;
+	classDef default fill:#f2f0ff,line-height:1.2
+	classDef first fill-opacity:0
+	classDef last fill:#bfb6fc

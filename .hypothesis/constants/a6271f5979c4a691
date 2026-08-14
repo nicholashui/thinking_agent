@@ -1,0 +1,4 @@
+# file: C:\Project\thinking_agent\thinking_agent_v8\src\thinking_agent\styles\contract_validator.py
+# hypothesis_version: 6.151.12
+
+[':', 'aggregate_verdict', 'all_branches_priced', 'artifact_in_packet', 'binding_constraint', 'blinding', 'control', 'exploit_vectors', 'five_forces_evidence', 'flip_prior', 'floor_or_kelly', 'forced_lift_chain', 'generic', 'intervention', 'local_data_first', 'm003', 'm006', 'm007', 'm011', 'm019', 'm022', 'm033', 'm097', 'm101', 'm102', 'm103', 'm104', 'one_shot_check', 'order_invariance', 'outputs', 'posterior_range', 'quantified_exposure', 'randomization', 'ruin_check', 'sae_ledger', 'specificity_floor', 'stocks_flows_loops', 'trap_checklist', 'unmitigable_residual']

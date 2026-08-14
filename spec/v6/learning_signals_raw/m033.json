@@ -1,0 +1,18 @@
+[
+  {
+    "test_case_id": "m033-POS-01",
+    "human_model": "Controlled Experiment Design",
+    "winner": "ai",
+    "key_gap": "vs baseline: the baseline solved the power x timeline conflict as a design input and audited the finance bar against the economics ($6.70/activation); the v5 AI discovered both only at verification/REVIEW and patched them. The routed m033 pass (completion contract: intervention/control/randomization/blinding/exact outcome measure/power-effect-size check/ecological-validity note) made both first-class HOW outputs, and the P1 provenance audit converted the interested-party bar into a derived, checked threshold. Baseline's residual edge is nil; AI wins narrowly on contract completeness (8-category inversion gate, ecological-validity note, uncertainty ledger).",
+    "learning_signal": "On design-with-deadline tasks the m033 completion contract converts REVIEW-stage patches into design inputs: horizon-vs-budget is solved jointly inside the pass (day-30 8,400/arm = 50d > 42d -> pre-registered day-14 surrogate primary 5,300/arm = ~27d), and interested-party bars are re-derived, not inherited. The surrogate-primary move generalizes to any long-outcome experiment under a budget.",
+    "suggested_improvement": "Keep m033 + contract on decide/estimate/deadline signatures (POS win confirmed); add 'convert interested-party thresholds via the same arithmetic before inheriting them' (P1) as a standing item on all threshold-driven designs; keep the workspace-cluster sensitivity check as the B2B ecological-validity default."
+  },
+  {
+    "test_case_id": "m033-NEG-01",
+    "human_model": "Controlled Experiment Design",
+    "winner": "ai",
+    "key_gap": "vs baseline: the pure style proposed a powered-but-infeasible 9-week reverse-rollback (n ~41,200/arm) for a 2-week board deadline - template rigidity + ecological-validity gap - and rejected the quasi-experimental evidence entirely. The routed run interrogated every claim's provenance first (m094: CFO claim, self-selected survey, before/after all labeled interested-party or confounded), applied m035/m037 robustness and competence boundary, and priced the deck's one-shot risk with an m007 distribution + floor + decline/restructure branch. Vs the v5 AI: same conclusion, but the merchant-dashboard comparator was found FIRST pass instead of after the broken-RCT detour.",
+    "learning_signal": "On irreversible-global-rollout attribution with a deadline, route to source-interrogation FIRST (m094) with the m007 one-shot ruin screen as the gate: 'claim provenance before design' names the natural placebo (untouched comparator line) before any design is drawn and forces a decline/restructure branch instead of rigor theater.",
+    "suggested_improvement": "Install 'claim provenance before design' + the m007 one-shot/ruin screen as standing gates on any attribution-with-deadline task (NEG win held at ~4.9); pre-analyze available comparison populations in WHAT; keep routing AWAY from m033 on NEG signatures (template rigidity), consistent with 97.2% router trap-avoidance."
+  }
+]

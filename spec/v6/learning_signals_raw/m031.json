@@ -1,0 +1,18 @@
+[
+  {
+    "test_case_id": "m031-POS-01",
+    "human_model": "Scientific Method (Hypothesis → Experiment → Update)",
+    "winner": "ai",
+    "key_gap": "vs baseline: the baseline's winning moves (14:02-vs-14:00 timing tell as a first-class falsifier, information-per-unit-cost test ordering, same-window control split, explicit update ledger) are now mandatory contract outputs of the routed experiment-design pass; the pass adds the window-budget argument (a 20-min APM profile cannot complete inside a 4-min window, so the 2-min probe is the only complete test), an m003 inversion gate (8 ranked failure categories), and a pre-registered next-window falsifier — closing the v5 AI's depth, efficiency and insight gaps against this baseline.",
+    "learning_signal": "On diagnose/deadline signatures with a windowed phenomenon, the scientific-method pass must treat the phenomenon's own time window as the experiment budget — a test longer than the window is not 'more thorough', it is incomplete; the folklore/anchor input is an interested-party provenance item to audit (P1), and a measured timing offset between anchor and data is a first-class falsifier, not a curiosity.",
+    "suggested_improvement": "Keep m031 single-route (confident=yes) with the m003 inversion gate on windowed-diagnosis signatures; add 'test time <= window length' as a standing completion-contract line; keep pre-registered post-fix falsifiers as a packet item so every fix is itself an experiment."
+  },
+  {
+    "test_case_id": "m031-NEG-01",
+    "human_model": "Scientific Method (Hypothesis → Experiment → Update)",
+    "winner": "ai",
+    "key_gap": "vs baseline: the baseline's only salvageable move — 'the nulls are only as good as the instruments' (instrumentation-drift hypothesis) — is absorbed as H5 with a 1-minute independent sampler; everywhere else the routed run diverges exactly where the baseline fails: the baseline's confirm-before-act protocol cost ~$13k per test under a $40k/hr burn and its dashboard-scoped hypothesis space never saw the outbound layer, while the dual-route pass (probe-sense-respond + tempo) widened the frame in 1 minute, found the T-2h geo-fence job, acted reversibly, and verified by recovery curve.",
+    "learning_signal": "On decide/deadline signatures with a burn rate, confirm-before-act is a purchase order, not a principle: each in-service test costs ~20 min of burn, so the first probe must target outside the current frame (outbound layer, non-deploy changes); three clean nulls inside the modeled space are frame-failure evidence, not eliminations; and any mitigation must carry a pre-registered post-action test so action is an experiment, not a reflex.",
+    "suggested_improvement": "Keep m015+m021 dual-route (confident=no) with m028 as context on burn-rate signatures; add the freeze/control-scope audit to P1 (what the freeze does and does not cover); keep the failure branch priced before DO (wrong-kill cost ≈ 5 min) and the 1-minute out-of-frame probe as the standing first move under a burn."
+  }
+]

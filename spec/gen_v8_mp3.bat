@@ -1,0 +1,1 @@
+ python gen_book_tts_hk.py -i docs/training_agent.v8.script.hk.txt -o docs/training_agent.v8.mp3

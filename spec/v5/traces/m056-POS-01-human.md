@@ -1,0 +1,16 @@
+# Human Baseline — m056-POS-01
+## Style: Design Thinking for Consumer Products (pure) — visible reasoning trace
+
+**Step 1 — EMPATHIZE: watch people, don't ask them.** Sit out the survey. Put the cameras in the kitchens and read the video log like field notes. What jumps out: nobody talks about knives, everybody behaves around them. O2 — 9 of 18 death-grip, 7 of 18 handle rotation when wet. O3 — 11 of 18 tip-loading, wrist rubbing mid-session. O4 — the only injuries are grip-slip lacerations, never dullness. O5 — 10 of 18 quietly switch tools mid-prep. And the tell: O6, "it's a good knife but I'm careful with it" — that hedge is fear in a polite costume.
+
+**Step 2 — DEFINE: the job is not sharp.** The user is not buying a sharper edge. The job-to-be-done is *confident, fatigue-free control through a long, wet prep session* — a knife you can hold with conviction when your hands are greasy and your shoulder is tired. The survey's "sharper" (61%) is a proxy complaint: it is how a person explains a fear they can't name. O1 confirms the mechanism — users re-sharpen in week 2–3 and still say "dull," so the edge was never the variable; the knife degrades in *feel*, not in steel.
+
+**Step 3 — IDEATE: diverge before you converge.** Concepts: (a) sharper V2 steel + lighter — the survey's answer, already prototyped as P1; (b) textured full-tang handle, bolster-less, balance point moved forward — control-first; (c) blade-geometry change (edge angle + tip flex) — attack the "goes dull" complaint directly; (d) hybrid scraper-knife — erase the O5 tool-switch; (e) grip-form gimmicks. Converge: (b) is the only one whose mechanism matches O2–O4; (c) deserves a check but not the headline; (a) solves a problem the data says doesn't exist.
+
+**Step 4 — PROTOTYPE: two objects, one variable.** P1 (survey-driven: sharper steel, lighter — as engineered). P2 (control-driven: same steel, bolster-less, textured wet-grip, balance +4 mm, 240 g). Same blade geometry otherwise. Counterbalanced: 8 households × 2 weeks each. One measurement that matters: grip-slip events per session, video-coded; perceived control 1–7 as a whisper test.
+
+**Step 5 — TEST: the data picks, I don't.** P2: 0.4 grip-slips/session, control 6.4. P1: 2.1 slips/session, control 4.9. Re-sharpen frequency identical for both — the edge story dies cleanly in the same experiment. Users didn't say P2 was sharper; they said it was *safer* and stopped death-gripping by day 3. The fear went down when the handle stopped rotating.
+
+**Trace summary box.** Empathize (O1–O6 field log) → define: JTBD = confident control through wet prep → ideate 5 concepts → prototype P1 vs P2 (one variable: control) → test: 0.4 vs 2.1 slips/session, 6.4 vs 4.9 control → select P2; survey's "sharper" reframed as proxy fear; marketing retargeted away from "sharpest edge ever."
+
+*Baseline integrity note (grader metadata, not part of the reasoning): reasoning confined to pure Design Thinking for Consumer Products — empathy by observation before preference data, JTBD definition, divergent ideation, physical prototyping, user-test iteration with a measured outcome. Signature moves: reading the hedge language (O6) as the decisive cue, and letting O1 falsify the "sharper" survey claim in the same breath as O4 falsifies it independently.*

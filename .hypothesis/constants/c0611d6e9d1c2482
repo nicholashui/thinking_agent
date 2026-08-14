@@ -1,0 +1,4 @@
+# file: C:\Project\thinking_agent\thinking_agent_v8\src\thinking_agent\sdl\curriculum_planner.py
+# hypothesis_version: 6.151.12
+
+[0.5, 1.0, 'cost', 'gap_weight', 'novelty', 'uncertainty']

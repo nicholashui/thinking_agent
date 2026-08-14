@@ -1,0 +1,16 @@
+# Human Baseline — m062-POS-01
+## Style: Temporal Thinking in Climate Policy (pure) — visible reasoning trace
+
+**Step 1 — Split the horizon before touching a number.** 2030: the district is intact, the choice is between paying for a wall and paying damages. 2050: under A the district and wetlands are protected; under B relocation is mid-flight and half the wetlands are already gone; under C the district is dying. 2100: under A the city is whole and the barrier is mid-life with a scheduled reinforcement; under B and C the land and the wetlands are gone. These are not the same decision at three dates — they are three different cities. Separate them, or the arithmetic will lie about the future.
+
+**Step 2 — Assign rates by what is being discounted, not by one number.** Ordinary money — construction, maintenance, avoided damages — discounts at the 3% social rate (the 4.5% bond yield is a private-finance instrument, the wrong lens for public damage avoidance). Irreversibility — wetlands, land, community — is not a cash flow; it is a stock that never comes back. Discounting a stock that cannot regenerate at market rates is how you argue future people out of existence. I apply the 1.5% declining-rate floor to the wetland services, and I do not discount the fact of loss at all — under B and C the geography is gone by ~2060 and no interest rate restores it.
+
+**Step 3 — Compute, horizon by horizon.** A: avoided damages PV ≈ 14.0B (rising 150M → 700M/yr, then flat) + wetland services ≈ 8.0B at the 1.5% floor − costs ≈ 1.87B → **NPV ≈ +20.1B**. B: avoided ≈ 11.9B (retreat still loses ~15% of value plus the wetlands) − costs ≈ 1.08B → **NPV ≈ +10.8B, and the wetland credit is zero because the wetland dies anyway**. C: 0 — the baseline; all its value is damage.
+
+**Step 4 — Prove the rate cannot move the answer.** Recompute A at 6%: ≈ +13.8B; even discounting the wetlands at market rates it stays positive past 8%; with the irreversibility floor the breakeven is effectively "never" — above 12%. B at 6% falls faster. The wedge between A and B is not the discount rate; it is that only A preserves the wetland and the land, and that wedge never closes. Anyone who wants to delay this decision to fight about 1.4% vs 5.5% is postponing a conclusion the numbers cannot overturn.
+
+**Step 5 — Decide, and kill the tail risk by design.** A: financed by a green bond at ≈ 2.8% (below the 3% social rate — the project earns its cost of capital), overdesigned to the 1-in-1000 surge, with a 2050 adaptive-gate review (raise crest, add gates, decide the $900M reinforcement on observed sea rise rather than projections).
+
+**Trace summary box.** horizons 2030/2050/2100 split first → dual-rate: 3% ordinary, 1.5% floor irreversible → A +20.1B, B +10.8B, C 0 → stress at 6% holds, breakeven > 12% → rate debate declared closed → green bond 2.8% + 2050 adaptive gate.
+
+*Baseline integrity note (grader metadata, not part of the reasoning): reasoning confined to pure Temporal Thinking in Climate Policy — horizon separation is the first move, ordinary vs irreversible flows get different rates with the reason stated, irreversibility is weighted as a non-discountable stock, the breakeven closes the rate question, and the conclusion is decisive with tail mitigation. Signature move: the irreversibility floor is introduced before any NPV is computed.*

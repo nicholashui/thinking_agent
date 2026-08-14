@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 480" width="900" height="480">
+  <defs>
+    <style>
+      .sbox { stroke-width: 2; rx: 10; }
+      .solved { fill: #dcfce7; stroke: #16a34a; }
+      .approx { fill: #e0f2fe; stroke: #0284c7; }
+      .evidence { fill: #fef9c3; stroke: #ca8a04; }
+      .experiment { fill: #ffedd5; stroke: #ea580c; }
+      .infeas { fill: #f3e8ff; stroke: #9333ea; }
+      .unsafe { fill: #fee2e2; stroke: #dc2626; }
+      .escal { fill: #fce7f3; stroke: #db2777; }
+      .reslim { fill: #e2e8f0; stroke: #475569; }
+      .title { font-family: system-ui, sans-serif; font-size: 12px; font-weight: 700; fill: #0f172a; }
+      .desc { font-family: system-ui, sans-serif; font-size: 10px; fill: #334155; }
+      .hdr { font-family: system-ui, sans-serif; font-size: 16px; font-weight: 700; fill: #0f172a; }
+      .prod { font-family: system-ui, sans-serif; font-size: 9px; fill: #64748b; }
+    </style>
+  </defs>
+  
+  <text x="450" y="28" text-anchor="middle" class="hdr">Eight Graceful Terminal States (v5)</text>
+  <text x="450" y="48" text-anchor="middle" class="desc">Every path ends in exactly one state + proof-carrying decision packet. Classifier is state-only.</text>
+  
+  <!-- Row 1 -->
+  <rect x="20" y="70" width="200" height="100" class="sbox solved"/>
+  <text x="120" y="95" text-anchor="middle" class="title">SOLVED</text>
+  <text x="120" y="115" text-anchor="middle" class="desc">Success criteria + threshold met</text>
+  <text x="120" y="135" text-anchor="middle" class="prod">Producer: verify_outcome</text>
+  <text x="120" y="150" text-anchor="middle" class="prod">(external ∧ rel ≥ bar ∧ 2nd verifier)</text>
+  
+  <rect x="240" y="70" width="200" height="100" class="sbox approx"/>
+  <text x="340" y="95" text-anchor="middle" class="title">APPROXIMATED</text>
+  <text x="340" y="115" text-anchor="middle" class="desc">Bounded approximation available</text>
+  <text x="340" y="135" text-anchor="middle" class="prod">Producer: select → error_bound</text>
+  <text x="340" y="150" text-anchor="middle" class="prod">state.approximation_available</text>
+  
+  <rect x="460" y="70" width="200" height="100" class="sbox evidence"/>
+  <text x="560" y="95" text-anchor="middle" class="title">NEEDS_EVIDENCE</text>
+  <text x="560" y="115" text-anchor="middle" class="desc">Missing critical information</text>
+  <text x="560" y="135" text-anchor="middle" class="prod">Producer: diagnose / G-WHY</text>
+  <text x="560" y="150" text-anchor="middle" class="prod">L1 degrade also maps here</text>
+  
+  <rect x="680" y="70" width="200" height="100" class="sbox experiment"/>
+  <text x="780" y="95" text-anchor="middle" class="title">NEEDS_EXPERIMENT</text>
+  <text x="780" y="115" text-anchor="middle" class="desc">Safe probe is next rational step</text>
+  <text x="780" y="135" text-anchor="middle" class="prod">Producer: diagnose</text>
+  <text x="780" y="150" text-anchor="middle" class="prod">state.probe_available</text>
+  
+  <!-- Row 2 -->
+  <rect x="20" y="190" width="200" height="100" class="sbox infeas"/>
+  <text x="120" y="215" text-anchor="middle" class="title">INFEASIBLE</text>
+  <text x="120" y="235" text-anchor="middle" class="desc">Constraints inconsistent / impossible</text>
+  <text x="120" y="255" text-anchor="middle" class="prod">Producer: constraint screen</text>
+  <text x="120" y="270" text-anchor="middle" class="prod">or plan stop-conditions</text>
+  
+  <rect x="240" y="190" width="200" height="100" class="sbox unsafe"/>
+  <text x="340" y="215" text-anchor="middle" class="title">UNSAFE</text>
+  <text x="340" y="235" text-anchor="middle" class="desc">Action prohibited by policy</text>
+  <text x="340" y="255" text-anchor="middle" class="prod">Producer: SafetyKernel denial</text>
+  <text x="340" y="270" text-anchor="middle" class="prod">Attestation / REPLICATE denial</text>
+  
+  <rect x="460" y="190" width="200" height="100" class="sbox escal"/>
+  <text x="560" y="215" text-anchor="middle" class="title">ESCALATED</text>
+  <text x="560" y="235" text-anchor="middle" class="desc">Human judgment required</text>
+  <text x="560" y="255" text-anchor="middle" class="prod">L2/L3 ladder • PENDING timeout</text>
+  <text x="560" y="270" text-anchor="middle" class="prod">Owner unavailable • Plan escalate</text>
+  
+  <rect x="680" y="190" width="200" height="100" class="sbox reslim"/>
+  <text x="780" y="215" text-anchor="middle" class="title">RESOURCE_LIMITED</text>
+  <text x="780" y="235" text-anchor="middle" class="desc">Further work has negative EV</text>
+  <text x="780" y="255" text-anchor="middle" class="prod">LoopMonitor / BudgetController</text>
+  <text x="780" y="270" text-anchor="middle" class="prod">Novelty plateau / EVOC / ceilings</text>
+  
+  <!-- Policy note -->
+  <rect x="20" y="320" width="860" height="130" fill="#f8fafc" stroke="#94a3b8" stroke-width="1.5" rx="8"/>
+  <text x="450" y="345" text-anchor="middle" class="title">State-Transition Policy (v5)</text>
+  <text x="40" y="370" class="desc">• Every terminal state has exactly one owning producer; fields are set by producers, never by direct task config.</text>
+  <text x="40" y="390" class="desc">• Classifier is state-only: reads producer-set fields + ledger values. Order: L2 → L1 → ambiguity → reliability-blocked → evidence → probe → infeasible → budget → approx → residual.</text>
+  <text x="40" y="410" class="desc">• UNSAFE = action prohibited; ESCALATED = action may be valid but authority insufficient.</text>
+  <text x="40" y="430" class="desc">• Common epilogue writes the proof-carrying decision packet on every path (including denials and early exits).</text>
+</svg>

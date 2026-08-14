@@ -1,0 +1,18 @@
+[
+  {
+    "test_case_id": "m008-POS-01",
+    "human_model": "Probabilistic Forecasting (Superforecasting)",
+    "winner": "human",
+    "key_gap": "AI computed the same posterior (0.87, resolved YES) but took the outside view as a post-hoc sanity check instead of leading with the reference class, framed the deliverable as a band around a point prediction rather than a scoreable probability with calibration framing, and buried the revision rule in the packet instead of committing it as a tracked trigger.",
+    "learning_signal": "For forecast tasks with a resolvable outcome and given evidence, ordering and form are trainable: reference-class/base-rate estimation must precede inside-view evidence processing; the deliverable is a probability with a range and a falsifiable revision rule; Brier scoreability is a hard requirement that point predictions fail.",
+    "suggested_improvement": "In WHAT for forecast-class tasks, require (a) an explicit outside-view pass before inside-view evidence (gate on ordering), (b) probability-form output with range, and (c) a named revision rule with trigger values; in REVIEW, score the forecast's Brier against resolution when available and feed it back."
+  },
+  {
+    "test_case_id": "m008-NEG-01",
+    "human_model": "Probabilistic Forecasting (Superforecasting)",
+    "winner": "ai",
+    "key_gap": "The pure style applied probability machinery to a category-new one-off with 2 data points and produced precision theater: a 90% CI [8.2k–11.5k] from a 0-residual-df fit that missed the actual outcome (2,900) by >3 sd of its own model, and three probability moves driven by non-metric news events (updating without new information).",
+    "learning_signal": "Superforecasting machinery is a precision tool that must first ask whether precision is warranted: thin evidence (small n, no reference class) requires a deliberately wide range, a probability held flat across non-information events, and the decision lever separated from the forecast; the AI's evidence-gap gate (NEEDS_EVIDENCE) stopped exactly what the pure style did not.",
+    "suggested_improvement": "Add a precision-warrant check in WHAT/WHY for forecast tasks: compute residual degrees of freedom (n and fit parameters); if df is ~0 or no reference class exists, force (a) a wide range, (b) an explicit no-update-without-new-information statement in HOW, and (c) a decision-action section independent of the calibrated probability."
+  }
+]

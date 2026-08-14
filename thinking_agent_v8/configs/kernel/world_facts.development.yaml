@@ -1,0 +1,73 @@
+# Kernel World Facts — development policy (kernel-written only; task model NEVER reads this file)
+# Values marked <spec> are carried forward from the validated v5 harness configuration.
+version: "2026-08-13.1"
+environment: "development"
+
+budgets:
+  iterations: 12            # <spec> v5 harness ITERATION_CEILING
+  cognitive_calls: 24       # <spec> v5 harness CALLS_CEILING
+  tokens: 40000             # <spec> token envelope
+  agents_per_round: 6       # <spec> v5 harness AGENTS_PER_ROUND
+  deadline_seconds: 1800    # operator policy
+  evoc_base: 10.0           # <spec> v5 harness EVOC base
+  evoc_decay: 0.5           # <spec> v5 harness EVOC decay
+  novelty_plateau: 3        # <spec> v5 harness NOVELTY_PLATEAU
+  gate_reentry_budget: 2    # <spec> v5 harness gate budget
+  reframe_budget: 2         # <spec> v5 harness REFRAME_BUDGET
+  pending_timeout_seconds: 3600  # operator policy
+
+gates:
+  reentry_budget: 2
+  reframe_budget: 2
+
+verification:
+  class_bars:
+    A1: 0.60
+    A2: 0.65
+    A3: 0.70
+    A4: 0.80
+    A5: 0.85
+  verifier_identities:
+    - identity_id: verifier-alpha
+      model_id: deepseek-v4-pro
+      lineage: primary
+      accepted: true
+    - identity_id: verifier-beta
+      model_id: deepseek-v4-pro
+      lineage: independent-second
+      accepted: true
+  verifier_outage: false
+  unknown_class_defaults_to: "A5"
+  trust_margin: 0.1
+
+memory:
+  trust_margin: 0.1
+  consolidation_threshold: 3
+  procedural_write_authorized: false
+
+improvement:
+  baseline_frozen: true
+  improvement_rate_cap: 10
+
+sdl:
+  enabled: false
+  pool_min: 20
+  quick_review_trials: 10
+  deep_review_schedule: "monthly"
+  counter_design_canary_enabled: false
+  discovery_budget_candidates: 50
+
+action_taxonomy:
+  calculator: A1
+  knowledge_lookup: A1
+  http_retrieval: A2
+  database_query: A1
+  external_api_write: A3
+  send_email: A4
+  payment: A5
+  deploy_service: A4
+  delete_resource: A4
+  replicate: A5
+
+pending_allowlist:
+  - t_readonly_fetch   # A2-class read-only retrieval, static-table only

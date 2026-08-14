@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 1180" font-family="Segoe UI, Arial, sans-serif">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#37474f"/>
+    </marker>
+    <marker id="arrow-red" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#c0392b"/>
+    </marker>
+    <marker id="arrow-purple" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#7b1fa2"/>
+    </marker>
+    <marker id="arrow-teal" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#00838f"/>
+    </marker>
+  </defs>
+
+  <!-- background -->
+  <rect x="0" y="0" width="1440" height="1180" fill="#fafafa"/>
+  <rect x="0" y="0" width="1440" height="60" fill="#263238"/>
+  <text x="720" y="38" text-anchor="middle" font-size="24" font-weight="bold" fill="#ffffff">Thinking Agent v6 — Self-Curriculum Process (routing, passes, gates, judge loop)</text>
+
+  <!-- ============ INPUT ============ -->
+  <rect x="60" y="90" width="300" height="66" rx="10" fill="#eceff1" stroke="#546e7a" stroke-width="2"/>
+  <text x="210" y="116" text-anchor="middle" font-size="14" font-weight="bold" fill="#37474f">TASK / ENVIRONMENT</text>
+  <text x="210" y="138" text-anchor="middle" font-size="11" fill="#546e7a">request · context · world facts · human gates</text>
+  <line x1="210" y1="156" x2="210" y2="185" stroke="#37474f" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- ============ GOVERNANCE KERNEL (left band) ============ -->
+  <rect x="60" y="185" width="300" height="880" rx="12" fill="#fdecea" stroke="#c0392b" stroke-width="2.5"/>
+  <text x="210" y="215" text-anchor="middle" font-size="15" font-weight="bold" fill="#c0392b">GOVERNANCE &amp; SAFETY KERNEL</text>
+  <g font-size="11.5" fill="#7f1d1d">
+    <text x="80" y="245">• world-facts store (all security knobs)</text>
+    <text x="80" y="265">• static allowlist (PENDING subset)</text>
+    <text x="80" y="285">• verifier identity registry</text>
+    <text x="80" y="305">• authority-token minting</text>
+    <text x="80" y="325">• action-class attestation</text>
+    <text x="80" y="345">• checkpoint/resume (HMAC spec)</text>
+    <text x="80" y="365">• invariant 8: no replication</text>
+    <text x="80" y="385">• invariant 11: KB write protection</text>
+    <text x="80" y="405">  (provenance-gated, kernel-held)</text>
+    <text x="80" y="435" font-weight="bold" fill="#c0392b">World facts</text>
+    <text x="80" y="455">calibration · ceilings · timeouts ·</text>
+    <text x="80" y="475">outage · identities · baseline ·</text>
+    <text x="80" y="495">domain accuracy · write policy</text>
+  </g>
+  <line x1="360" y1="420" x2="470" y2="250" stroke="#c0392b" stroke-width="1.5" stroke-dasharray="5,4" marker-end="url(#arrow-red)"/>
+  <text x="350" y="335" font-size="10.5" fill="#c0392b" transform="rotate(-60 350 335)">kernel-held knobs</text>
+
+  <!-- ============ META-CONTROLLER ============ -->
+  <rect x="470" y="185" width="700" height="120" rx="10" fill="#e8f0fe" stroke="#1a56db" stroke-width="2.5"/>
+  <text x="820" y="210" text-anchor="middle" font-size="15" font-weight="bold" fill="#1a56db">META-CONTROLLER  (Stage 0)</text>
+  <g font-size="11.5" fill="#1e3a8a">
+    <text x="490" y="235">1. extract SITUATION SIGNATURE (domains · goals · context)      §9.4a</text>
+    <text x="490" y="255">2. STYLE ROUTER: score 100 models → top-3 (match × pos_rate − 0.5 × neg_fail)   §II.2.3</text>
+    <text x="490" y="275">3. confidence gate G1: margin ≤ 0.5 → dual-route · margin &gt; 0.5 → single pass   §II.2.8</text>
+    <text x="490" y="295">4. tempo mode (deadline) · budget envelope · route flags · E5 stabilize-before-diagnose</text>
+  </g>
+  <line x1="820" y1="305" x2="820" y2="330" stroke="#37474f" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- ============ STYLE LIBRARY (right panel) ============ -->
+  <rect x="1200" y="185" width="200" height="500" rx="12" fill="#f3e8fd" stroke="#7b1fa2" stroke-width="2.5"/>
+  <text x="1300" y="215" text-anchor="middle" font-size="14" font-weight="bold" fill="#7b1fa2">STYLE LIBRARY</text>
+  <g font-size="11" fill="#4a148c">
+    <text x="1215" y="245">100-model registry</text>
+    <text x="1215" y="265">(m001–m100, §II.2.1)</text>
+    <text x="1215" y="295">Router configuration:</text>
+    <text x="1215" y="315">212 historical records</text>
+    <text x="1215" y="335">(§II.2.6: signature →</text>
+    <text x="1215" y="355">outcome → lesson →</text>
+    <text x="1215" y="375">artifacts)</text>
+    <text x="1215" y="405">Style-pass contracts</text>
+    <text x="1215" y="425">(§II.2.9: completion</text>
+    <text x="1215" y="445">criteria per module)</text>
+    <text x="1215" y="475" font-weight="bold">KB: pos_win_rate ·</text>
+    <text x="1215" y="495" font-weight="bold">neg_failure_rate</text>
+    <text x="1215" y="525">triggers learned from</text>
+    <text x="1215" y="545">winning cases</text>
+  </g>
+  <line x1="1170" y1="230" x2="1175" y2="230" stroke="#7b1fa2" stroke-width="1.5" stroke-dasharray="5,4"/>
+  <line x1="1200" y1="230" x2="1200" y2="200" stroke="#7b1fa2" stroke-width="1.5" stroke-dasharray="5,4"/>
+  <line x1="1200" y1="200" x2="1300" y2="200" stroke="#7b1fa2" stroke-width="1.5" stroke-dasharray="5,4" marker-end="url(#arrow-purple)"/>
+  <text x="1188" y="192" font-size="10.5" fill="#7b1fa2">route query</text>
+
+  <!-- ============ STAGES ============ -->
+  <!-- WHAT -->
+  <rect x="470" y="330" width="700" height="105" rx="10" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2.5"/>
+  <text x="820" y="353" text-anchor="middle" font-size="14" font-weight="bold" fill="#2e7d32">WHAT — Frame the Problem (Stage 1)</text>
+  <g font-size="11.5" fill="#1b5e20">
+    <text x="490" y="376">• constraint screen (hard vs soft, P5) · goal-type discriminator (maximize vs guarantee)</text>
+    <text x="490" y="396">• "never/always" detection → route m003 Inversion + bounded-residual-risk reframing</text>
+    <text x="490" y="416">• frame critics · success metrics · G-WHAT gate (re-entry budget 3 → ESCALATED/NEEDS_EVIDENCE)</text>
+  </g>
+  <line x1="820" y1="435" x2="820" y2="455" stroke="#37474f" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- WHY -->
+  <rect x="470" y="455" width="700" height="120" rx="10" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2.5"/>
+  <text x="820" y="478" text-anchor="middle" font-size="14" font-weight="bold" fill="#2e7d32">WHY — Diagnose and Model (Stage 2)</text>
+  <g font-size="11.5" fill="#1b5e20">
+    <text x="490" y="501">• memory retrieve-in-diagnose (priced hits) · hypotheses + falsification (G-WHY-5)</text>
+    <text x="490" y="521">• prior/input-provenance audit (P1: measured vs anchor vs interested-party)</text>
+    <text x="490" y="541">• unmeasured-likelihood → m006 provenance audit (≥3 scenarios, range, threshold flip)</text>
+    <text x="490" y="561">• falsification-latency (P6) · measurement-validity/Goodhart audit (P7) · VOI (G-WHY-4)</text>
+    <text x="490" y="581">• EARLY CLASSIFIER exit → one of 8 states (no wasted HOW)</text>
+  </g>
+  <line x1="820" y1="575" x2="820" y2="595" stroke="#37474f" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- HOW -->
+  <rect x="470" y="595" width="700" height="150" rx="10" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2.5"/>
+  <text x="820" y="618" text-anchor="middle" font-size="14" font-weight="bold" fill="#2e7d32">HOW — Generate, Test, Select (Stage 3)</text>
+  <g font-size="11.5" fill="#1b5e20">
+    <text x="490" y="641">• ROUTED STYLE FIRST-CLASS PASSES: top-1 pass (R1) + top-3 gates (R2) + mandatory modules (R3)</text>
+    <text x="490" y="661">  one_shot/high_stakes → m007 ruin screen · adversarial → m019 adversary pass · guarantee → m003</text>
+    <text x="490" y="681">• branch-completeness gate (P3) · second-order pass (P9) · given-data-first (P10)</text>
+    <text x="490" y="701">• divergence resolution (style pass vs general route → branch-complete + calibrate both, §II.4.4)</text>
+    <text x="490" y="721">• insight pass (S2) · premortem · delta-verify (SHA-256) · red team · G-HOW gate</text>
+  </g>
+  <line x1="820" y1="745" x2="820" y2="765" stroke="#37474f" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- DO -->
+  <rect x="470" y="765" width="700" height="115" rx="10" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2.5"/>
+  <text x="820" y="788" text-anchor="middle" font-size="14" font-weight="bold" fill="#2e7d32">DO — Plan and Execute (Stage 4)</text>
+  <g font-size="11.5" fill="#1b5e20">
+    <text x="490" y="811">• planner-once · attest (REPLICATE denied, invariant 8) · pre-DO bar + identity check (no below-bar execution)</text>
+    <text x="490" y="831">• authorize → PENDING: kernel-allowlist subset (once) · timeout → ESCALATED · pending_wait exemption</text>
+    <text x="490" y="851">• transactional execute (idempotency, compensation) · plan stop/escalation conditions · checkpoint every stage</text>
+    <text x="490" y="871">• closed-scope fast path (P8) · tempo mode commits at DO · crash/resume (S21)</text>
+  </g>
+  <line x1="820" y1="880" x2="820" y2="900" stroke="#37474f" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- REVIEW -->
+  <rect x="470" y="900" width="700" height="120" rx="10" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2.5"/>
+  <text x="820" y="923" text-anchor="middle" font-size="14" font-weight="bold" fill="#2e7d32">REVIEW — Reflect, Learn, Evolve (Stage 5)</text>
+  <g font-size="11.5" fill="#1b5e20">
+    <text x="490" y="946">• AAR (in-loop + fresh terminal review) · competence update (kernel feed, once per episode)</text>
+    <text x="490" y="966">• JUDGE verdict (8 dimensions) → KB update (pos_win_rate / neg_failure_rate)</text>
+    <text x="490" y="986">• drift check (§II.3.1) · insight packet gate · common epilogue: packet + audit + checkpoint</text>
+    <text x="490" y="1006">• LOSER → absorb-and-learn: module / gate / scenario → pipeline → configuration grows (§II.4.1)</text>
+  </g>
+
+  <!-- ============ VERIFY LAYER (right band) ============ -->
+  <rect x="1200" y="700" width="200" height="300" rx="12" fill="#fff8e1" stroke="#f9a825" stroke-width="2.5"/>
+  <text x="1300" y="728" text-anchor="middle" font-size="14" font-weight="bold" fill="#b26a00">CONTINUOUS VERIFY</text>
+  <g font-size="11" fill="#7a5900">
+    <text x="1215" y="758">• verification registry by claim type</text>
+    <text x="1215" y="778">• class bars + identity-registry</text>
+    <text x="1215" y="798">  second-verifier rule (§15.4)</text>
+    <text x="1215" y="828">• delta caches (candidates +</text>
+    <text x="1215" y="848">  outcomes, SHA-256)</text>
+    <text x="1215" y="878">• formal calibration pass (P4)</text>
+    <text x="1215" y="908">• no SOLVED below bar or</text>
+    <text x="1215" y="928">  without external identity</text>
+  </g>
+  <line x1="1200" y1="820" x2="1162" y2="820" stroke="#f9a825" stroke-width="1.5" stroke-dasharray="5,4" marker-end="url(#arrow)"/>
+  <text x="1152" y="812" font-size="10.5" fill="#b26a00">verify</text>
+
+  <!-- ============ EVALUATION PLANE / CURRICULUM (bottom) ============ -->
+  <rect x="60" y="1085" width="640" height="70" rx="10" fill="#e0f7fa" stroke="#00838f" stroke-width="2.5"/>
+  <text x="380" y="1110" text-anchor="middle" font-size="13" font-weight="bold" fill="#006064">EVALUATION PLANE — 212-case curriculum · judge calibration · comparison_matrix.csv tracking</text>
+  <text x="380" y="1135" text-anchor="middle" font-size="11" fill="#006064">baseline tally: Human 107 / AI 102 / Tie 3 · overperformance contract T1–T5 · blind re-runs · drift flags</text>
+
+  <!-- ============ OUTPUT / 8 STATES ============ -->
+  <rect x="740" y="1085" width="660" height="70" rx="10" fill="#e8eaf6" stroke="#3949ab" stroke-width="2.5"/>
+  <text x="1070" y="1106" text-anchor="middle" font-size="12.5" font-weight="bold" fill="#283593">DECISION PACKET + 8 TERMINAL STATES</text>
+  <text x="1070" y="1128" text-anchor="middle" font-size="10.5" fill="#3949ab">SOLVED · APPROXIMATED · NEEDS_EVIDENCE · NEEDS_EXPERIMENT · INFEASIBLE · UNSAFE · ESCALATED · RESOURCE_LIMITED</text>
+  <text x="1070" y="1148" text-anchor="middle" font-size="10.5" fill="#3949ab">packet: conclusion · status · assumptions · evidence · alternatives · verification · uncertainty · risks · dissent</text>
+
+  <!-- feedback loops -->
+  <!-- judge -> KB -> router -->
+  <path d="M 820 1020 L 820 1055 L 1180 1055 L 1180 692 L 1300 692 L 1300 687" fill="none" stroke="#7b1fa2" stroke-width="2" stroke-dasharray="6,4" marker-end="url(#arrow-purple)"/>
+  <text x="1040" y="1048" font-size="11" fill="#7b1fa2">judge verdicts update KB → routing weights adapt (kernel-held)</text>
+  <!-- absorb-and-learn -> config -->
+  <path d="M 490 1020 L 490 1076 L 200 1076 L 200 1084" fill="none" stroke="#00838f" stroke-width="2" stroke-dasharray="6,4" marker-end="url(#arrow-teal)"/>
+  <text x="240" y="1068" font-size="11" fill="#00838f">loss → absorb-and-learn → configuration grows (§II.4.1)</text>
+  <!-- REVIEW -> EVALUATION PLANE -->
+  <line x1="600" y1="1020" x2="600" y2="1084" stroke="#00838f" stroke-width="1.5" stroke-dasharray="6,4" marker-end="url(#arrow-teal)"/>
+  <text x="610" y="1068" font-size="10.5" fill="#00838f">every episode recorded to the curriculum</text>
+</svg>

@@ -1,0 +1,18 @@
+# Human Baseline — m082-POS-01
+## Style: Motivated Reasoning Detection (pure) — visible reasoning trace
+
+**Problem restatement.** Decide whether to renew a $180K/yr vendor middleware license or let it lapse and route everything to the in-house platform Atlas. The Atlas team head (Alex) recommends lapsing it, claiming $400K/yr savings; Alex's promotion and headcount are tied to Atlas adoption. Deliverables: incentive-direction audit, opposite-incentive reading, honest 3-year comparison, corrected recommendation.
+
+**Step 1 — Whose conclusion is convenient?** Alex's. The conclusion's direction matches his incentive direction exactly: every dollar routed to Atlas strengthens his promotion case and headcount. This is policy 12.4 territory — a compensation-dependent recommendation delivered unflagged. The convenience is not proof of error; it is a reason to audit the inputs rather than accept them.
+
+**Step 2 — Would the same evidence be read differently with the opposite incentive?** Yes — decisively. A vendor account manager reading the identical records would lead with: Atlas carries 12% of peak-month requests vs the vendor's 88%; 95% vs 99.95% availability in the peak window; 18K vs 100K req/s capacity. An Atlas-neutral CFO would ask what the model's output would have to look like if Alex's incentive ran the other way. Same records, opposite incentive → opposite recommendation. The direction of the data and the direction of the convenience point the same way.
+
+**Step 3 — Audit the model inputs for direction.** Alex's TCO counts the license as saved (fine) and Atlas dev as sunk (fine), but omits (a) the documented $240K/yr Atlas-attributable outage loss — six incidents, all in peak windows, 14 degraded days — and (b) the $50K/yr scaling capex to lift Atlas from 18K req/s to full load. Both omissions are directionally convenient: each makes the vendor route look more expensive and Atlas look cheaper. The $220K/yr "integration overhead" item is asserted, not sourced.
+
+**Step 4 — Recompute honestly.** Vendor: $180K×3 = **$540K**. Atlas: run $150K×3 = $450K, plus omitted outage losses $240K×3 = $720K, plus scaling capex $50K×3 = $150K → **$1.32M**. Honest delta: Atlas costs ≈ **$780K more** over 3 years. The claimed $1.2M saving reverses sign; the model is wrong by ≈ $2.0M, all in the author's direction.
+
+**Step 5 — Corrected conclusion.** Renew the license. Keep Atlas on its 12%-of-peak growth path with a staged expansion gated on demonstrated peak-scale capacity (100K req/s, ≥99.9% availability over a December window). Flag the recommendation under policy 12.4. The verdict is not an accusation — it is the arithmetic the selectively built model hid, plus the direction audit that explains why.
+
+**Trace summary box.** Incentive direction: Alex → Atlas adoption (policy 12.4 triggered). Opposite-incentive reading: vendor rep / neutral CFO → renew. Loaded inputs: outage losses $240K/yr omitted; scaling capex $50K/yr omitted; $220K "integration overhead" unsourced. Honest 3-yr: vendor $540K vs Atlas ≈ $1.32M → ≈ $780K additional cost; claim off by ≈ $2.0M in the author's direction. Recommendation: renew + gated Atlas expansion + COI flag.
+
+*Baseline integrity note (grader metadata, not part of the reasoning): reasoning confined to the pure Motivated Reasoning Detection style — who benefits, direction audit, opposite-incentive re-reading, input-direction screening. In this positive case the style performs excellently: the incentive analysis is checkable (policy 12.4, documented figures) and the recomputation is pure arithmetic, so the corrected conclusion is verifiable, not rhetorical.*

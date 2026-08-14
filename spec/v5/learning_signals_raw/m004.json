@@ -1,0 +1,18 @@
+[
+  {
+    "test_case_id": "m004-POS-01",
+    "human_model": "Occam's Razor + Complexity Awareness",
+    "winner": "human",
+    "key_gap": "AI reached the correct conclusion (loose neutral + benign side effects) and executed the right fix, but carried the paranormal hypothesis through WHY/HOW without pricing it: it never enumerated the unobserved entities the complex explanation requires or noted that none is verifiable, never ran an explicit orphan-observation audit (each observation assigned a mechanism or 'unverified'), and listed falsifiers per hypothesis without ordering the cheapest decisive probe (voltage log during compressor start) as the first gate on everything else.",
+    "learning_signal": "The elite move on evidence-rich diagnosis is parsimony as an auditable price ledger: enumerate the entities each hypothesis invokes, require a mechanism (or an explicit unverified flag) for every observation, and demand a falsifier before any hypothesis is carried. Efficiency follows from pricing: the hypothesis that buys all observations with touchable, testable entities is also the one whose decisive probe is cheapest — order the probe first and kill unfalsifiable hypotheses at first pass.",
+    "suggested_improvement": "Add a parsimony gate to the WHY stage: for every hypothesis require (a) an entity/assumption count with none unverified silently carried, (b) an orphan-observation audit (all evidence items assigned or flagged), and (c) a stated falsifier; hypotheses failing (c) are dropped at first pass. Add a probe-ordering rule to HOW: among surviving hypotheses, run the cheapest discriminating probe before any expensive alternative, and require REVIEW to note which hypothesis was killed by which probe."
+  },
+  {
+    "test_case_id": "m004-NEG-01",
+    "human_model": "Occam's Razor + Complexity Awareness",
+    "winner": "ai",
+    "key_gap": "Pure Occam selected the newest salient change (the new insert) as the single cause and paid off the two killer facts as 'background drift': presses 1-3 rose almost as much (1.7 -> 5.3) with no equipment change, and press 4 was already rising (1.9 -> 2.4) before the install. It under-explained a four-cause phenomenon (resin moisture +1.8, dehumidifier +1.2, insert +3.6 local, QA definition +0.6 artifact), so its single fix would have left ~80% of the defect rate in place.",
+    "learning_signal": "Parsimony is valid only against the full evidence surface: a cause must be able to affect the observed population (a press-4-only change cannot cause a plant-wide rise), and it must be checked against the pre-event trend before timing correlation is credited. When multiple candidates survive, complexity is not a luxury but a requirement: the correct model is the smallest one that accounts for every series, quantified as a partition that sums to the observed effect.",
+    "suggested_improvement": "Add a completeness screen to the WHY gate before accepting any single-cause explanation: (a) cause-scope check (unit of cause vs unit of effect — a localized cause must not be claimed for a population-wide effect), (b) pre-event trend check, (c) coverage check (every evidence item assigned or flagged), and (d) when >=2 candidates survive, require a quantified partition summing to the observed effect with the residual stated, plus a measurement-change check (QA/definitional shifts) before cause hunting."
+  }
+]

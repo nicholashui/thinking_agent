@@ -1,0 +1,34 @@
+[
+ {
+  "test_case_id": "m011-POS-01",
+  "human_model": "Systems Thinking",
+  "winner": "human",
+  "key_gap": "AI computed the equilibria correctly (catch 1,200 t/yr at E 10,000 → 800 t/yr at E 20,000; linear prediction 2,400 refuted) and rejected the expansion, but stopped at the steady state: it dismissed the collapse threshold (E_crit = 25,000) as out of range although the proposal sits at 80% of it, ran no transition analysis under the 2-season recruitment delay (overshoot/oscillation risk), and recommended gear-efficiency investment — a flow-level fix that its own model shows raises catchability q and moves the collapse threshold down to 12,500 boat-years, leaving the system ~60% closer to the cliff. Human: full behavior-mode map (equilibrium, threshold, delay, overshoot), leverage hierarchy (rule > flow, Meadows), and a robust recommendation (effort cap/quota at MSY E = 12,500, biomass surveys).",
+  "learning_signal": "Equilibrium arithmetic is necessary but not sufficient for systems policy: after computing the steady state, map the behavior modes — collapse thresholds (state the operating point's distance to the cliff), delays (transition overshoot and oscillation, and what lagged indicator management will wrongly steer by), and the leverage hierarchy (change the rule/parameter before tuning flows) — before recommending. A recommendation that tunes flows while the system operates near a threshold is fragile: it can raise short-term output while lowering the effort required to collapse.",
+  "suggested_improvement": "Add a systems-policy gate at the HOW/REVIEW boundary: (1) after any equilibrium computation, compute the threshold (parameter value where the equilibrium ceases to exist) and state the operating point's distance to it — do not dismiss it as 'extreme'; (2) if the model contains a stated delay, describe the transition path (overshoot, oscillation) and its implication for management timing; (3) locate the recommendation on the leverage hierarchy (constraints/rules/parameters > flows > buffers) and justify any flow-level intervention; (4) stress-test the recommendation against the model that produced it — e.g., 'what does doubling catchability q do to the collapse threshold?'"
+ },
+ {
+  "test_case_id": "m011-NEG-01",
+  "human_model": "Systems Thinking",
+  "winner": "ai",
+  "key_gap": "Pure Systems Thinking built a complete loop diagram from the single aggregate series (complaints 120 → 240/day) and prescribed speed targets + 15% capacity, reinterpreting the contradictory local measurements — unchanged GPS median (28 vs 27.5 min), spike starting in the app-update week, 80% 'delivery time' tags, 2% dispute-verified share — as 'lagging instruments the medians cannot see': the diagram substituted for data. The AI tested the loop edge (complaints ↔ actual delivery time) against the GPS audit, identified the expectation-shift confound (live tracking shows ETAs of 12 min that arrive at 28), rejected the speed-up (which feeds a safety → attrition → capacity → slower-delivery loop), and made measurement the deliverable (tag segmentation, dispute verification, A/B of the tracking display, churn monitoring).",
+  "learning_signal": "A causal loop diagram is a hypothesis, not evidence: before prescribing, every loop edge must be tested against measurement, and the proxy-vs-state distinction must be drawn — an aggregate count (complaints) is a proxy whose meaning can change via a funnel/expectation shift (visible ETAs) while the underlying state (delivered time) is unchanged. The 'fix that backfires' is the failure mode of diagram-driven policy: prescribing a loop-strengthening intervention on an unfalsified edge created the very safety→attrition→capacity loop the analyst claimed to be balancing.",
+  "suggested_improvement": "Add a measurement gate (proxy audit) before any loop-based prescription: (1) list each measured series used as loop evidence and classify it as state or proxy; (2) for each proxy, name the funnel/expectation change that would alter its meaning and check timing markers (rollout weeks, tag mixes, verification shares) against it; (3) for each loop edge, name the measurement that would refute it and require one refutation check per edge; (4) reject interventions aimed at a proxy's level rather than the state's (fix the ETA display over speed targets)."
+ },
+ {
+  "test_case_id": "m011-POS-02",
+  "human_model": "Systems Thinking",
+  "winner": "human",
+  "key_gap": "Same 65->85 verdict; human saw the feedback/equilibrium structure at first sight; AI arrived via mechanical equilibrium math.",
+  "learning_signal": "The AI initially entertained the linear more-capacity-helps frame; a WHAT-stage structural scan fixes first-pass insight.",
+  "suggested_improvement": "Add a structural scan in WHAT (stocks/flows/loops/equilibria/perverse incentives) before arithmetic."
+ },
+ {
+  "test_case_id": "m011-NEG-02",
+  "human_model": "Systems Thinking",
+  "winner": "ai",
+  "key_gap": "Human's causal-loop diagram substituted for measurement (dismissed the $150 printer); AI's evidence gate + falsification found it.",
+  "learning_signal": "Diagrams are not data: every systemic frame must name its falsifying observable and check the most local data first.",
+  "suggested_improvement": "Gate systemic frames on data: falsifying observable + local-data-first + cheap-fix-as-decisive-experiment."
+ }
+]

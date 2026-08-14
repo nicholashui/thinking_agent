@@ -1,0 +1,4 @@
+# file: C:\Project\thinking_agent\thinking_agent_v8\src\thinking_agent\reasoning\machinery.py
+# hypothesis_version: 6.151.12
+
+[400, ',', 'INFEASIBLE', 'adjudicator', 'alternative', 'alternative_id', 'alternatives', 'auction', 'base rate', 'bottleneck', 'bounded', 'branch', 'capacity', 'causal', 'cause', 'challenger', 'confound', 'constraint', 'content', 'decision', 'decision tree', 'default', 'delay', 'description', 'distribution', 'effect', 'engineering', 'failure_branch', 'feedback', 'finance', 'findings', 'flow', 'frame', 'incentive', 'insight_pass', 'intervention', 'loop', 'min', 'minority_reports', 'no risks declared', 'organization', 'pm0', 'premortem', 'proposer', 'red_team', 'reference class', 'reference_class', 'reject', 'request', 'reward', 'risk_hash', 'risks', 'role', 'roles', 'scenario', 'science', 'selected:', 'serial', 'stakeholder', 'stock', 'strategy', 'supply', 'system', 'systems', 'task_metadata', 'throughput', 'tree', 'user']

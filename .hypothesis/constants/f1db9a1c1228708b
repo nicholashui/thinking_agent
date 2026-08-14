@@ -1,0 +1,4 @@
+# file: C:\Project\thinking_agent\thinking_agent_v8\src\thinking_agent\kernel\policy_audit.py
+# hypothesis_version: 6.151.12
+
+['*.py', '__pycache__', 'action_taxonomy', 'agents_per_round', 'baseline_frozen', 'calibration', 'calls_ceiling', 'class_bars', 'config', 'control', 'deadline_seconds', 'deep_review_schedule', 'evoc', 'evoc_base', 'evoc_decay', 'gate_reentry_budget', 'identities', 'iterations', 'kernel', 'metadata', 'novelty_plateau', 'outage', 'pending_allowlist', 'pending_timeout', 'pool_min', 'quick_review_trials', 'reframe_budget', 'request', 'sdl_enabled', 'state', 'task_request', 'tokens', 'trust_margin', 'utf-8', 'verifier_identities', 'verifier_outage', 'write_authorization']

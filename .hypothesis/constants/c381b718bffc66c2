@@ -1,0 +1,4 @@
+# file: C:\Project\thinking_agent\thinking_agent_v8\src\thinking_agent\state\task_state.py
+# hypothesis_version: 6.151.12
+
+['StateGraph', 'alternative_id', 'candidate_id', 'claim_id', 'do', 'evidence_id', 'generation', 'how', 'hypothesis_id', 'idempotency_key', 'identity_and_runtime', 'lesson_id', 'loop_and_budget', 'observation_id', 'proposal_id', 'review_and_result', 'risk_hash', 'routing', 'style_id', 'verifier_identity', 'what_why']

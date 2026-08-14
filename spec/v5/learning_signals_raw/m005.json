@@ -1,0 +1,18 @@
+[
+  {
+    "test_case_id": "m005-POS-01",
+    "human_model": "Fermi Estimation / Back-of-the-Envelope",
+    "winner": "human",
+    "key_gap": "AI reached the same order (1.5x10^2 tuners, band 10^2-2.7x10^2) and correctly killed the 'fewer than 50' claim, but ran a full META/WHY/HOW protocol plus an abandoned per-capita alternative that fabricated four invented factors; its uncertainty output was a single band instead of a per-factor error budget. The human's five-line factor chain with ranked per-factor uncertainty (ownership fraction -> utilization -> tuning frequency) is the canonical artifact for this task class.",
+    "learning_signal": "For well-scoped order-of-magnitude estimates, the deliverable is the factor decomposition and its per-factor error budget, not the reasoning protocol. Process scaffolding (hypothesis search, multi-alternative verification) adds steps without adding correctness on low-stakes estimation, and invented-factor alternatives add noise without information; process depth should scale with stakes and with factor derivability.",
+    "suggested_improvement": "In WHAT/DO for estimation tasks, require a factor table (factor | value | unit | uncertainty contribution | dominance rank) as a mandatory packet element, and gate alternative generation to routes with at least one non-fabricated factor; reject invented-factor alternatives at WHY instead of running them to verification. Scale protocol depth to task stakes: fast path for low-stakes estimates."
+  },
+  {
+    "test_case_id": "m005-NEG-01",
+    "human_model": "Fermi Estimation / Back-of-the-Envelope",
+    "winner": "ai",
+    "key_gap": "The pure-Fermi baseline opened with volume x liquid density (1x10^12 kg, ~6 orders high) and recovered only via a late physical insight (rainout budget); the AI never committed the invalid chain because HOW mandated alternatives plus an independent physical verifier before DO. Both ended inside the reference band (5x10^5 kg), but the human's recovery depended on an insight the style itself does not supply - the default Fermi reflex (multiply by the nearest known density) is the trap.",
+    "learning_signal": "The dominant failure mode of back-of-envelope estimation is an invalid factor, not invalid arithmetic; verification that recomputes the same chain certifies the wrong answer. Mandatory independent physical calibration (what would this factor imply about the world?) defuses the trap and forces honest parameterization; when the crux factor is non-derivable domain knowledge, the correct terminal state is a banded approximation, not a point estimate.",
+    "suggested_improvement": "Add a factor-validity gate in HOW for all estimation tasks: each selected factor must pass an independent dimensional or physical plausibility check (e.g., implied water column, rainout budget) before DO; when the crux factor is non-derivable, end in APPROXIMATED with the error_bound from its plausible range rather than SOLVED with a point estimate."
+  }
+]

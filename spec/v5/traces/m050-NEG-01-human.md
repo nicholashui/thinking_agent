@@ -1,0 +1,16 @@
+# Human Baseline — m050-NEG-01
+## Style: Inversion in Product Design (Safety) (pure) — visible reasoning trace
+
+**Step 1 — Invert the brief.** Hearth holds 1.5 L of water at 100 °C, driven by a live element, in homes containing children, pets, absent users, and flammable counters. Every way a human is harmed or Hearth fails must be designed against. This is the whole design, not a review item.
+
+**Step 2 — Enumerate every harm and every failure.** Child scalding. Tip-over while boiling. Boil-dry if the thermostat ever fails. App failure leaving the kettle on while the user is away. App compromise turning the element on remotely. Spill onto the countertop and PCB. Dishwasher misuse. EMF near sleeping rooms. Pet-chewed cord. Resale to an abuser. Kettle microwaved. Steam-ignited paper towel. Bricked firmware mid-update. Remote start during an update. Each is a way a user can be harmed or the product can fail; inversion admits no "unlikely" without a countermeasure.
+
+**Step 3 — Design against each.** (1) Child scalding → biometric child-lock lid + double-insulated wall (€4.5, +350 g). (2) Tip-over → weighted anti-tip base + tip switch (€2.1, +400 g). (3) Boil-dry → triple redundancy: mechanical thermostat + thermal fuse + smart thermistor + app alert + cloud alert (€2.8). (4) App failure while away → GSM fallback relay + per-unit SIM (€6 + €0.80/mo). (5) App compromise → physical hardware-disconnect relay + air-gapped update chain (€1.2). (6) Spill → IP54 + conformal-coated PCB (€1.1). (7) Dishwasher misuse → dishwasher-proof seals (€1.3). (8) EMF → shielding foil (€0.9). (9) Pet-chewed cord → armored cord (€0.7). (10) Resale misuse → firmware kill-switch (€0.5). (11) Microwave/refurb → printed warning set (€0.1). (12) Remote start during update → physical-button-only update (absorbed into 5).
+
+**Step 4 — Sum the cost.** BOM €22 → €43.5. Mass 1.1 kg → 2.0 kg. Engineering and certification +5 months, launch T+7 → T+12. Retail must rise to ≈ €79 because at €59 the margin is ≈ 6%. The competitor ships at T+14 — the launch lands inside their shadow, and the category's price point erodes before Hearth reaches volume.
+
+**Step 5 — The style's verdict.** The product's first duty is that no user is harmed. Every item above removes a real, enumerated harm path; deleting any one knowingly ships a path to harm. The extra cost is not bloat — it is completeness. Ship all twelve. Take the price increase and the delay; treat the lost preorders and the window as the price of a defensible safety posture. If that makes Hearth unviable at €59, then Hearth as specified was never safe enough to ship cheap.
+
+**Trace summary box.** 12 harm paths enumerated → 12 countermeasures → BOM €22 → €43.5, +5 months, retail €79 → margin and window gone → ship anyway: completeness is the product.
+
+*Baseline integrity note (grader metadata, not part of the reasoning): this trace runs the pure style straight into its registry-documented weakness — feature bloat from risk aversion. Equal-weight enumeration (severity × likelihood × exposure never triaged), every enumerated path mitigated, cost counted but never weighed against the risk removed, and the protections IEC 60335-2-15 already mandates treated as insufficient by default. It is faithful, and it kills a lean, viable design.*

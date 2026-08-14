@@ -1,0 +1,16 @@
+# Human Baseline — m053-NEG-01
+## Style: Root Cause Analysis in Incident Response (pure) — visible reasoning trace
+
+**Step 1 — Do not fix what you have not explained.** Strict RCA doctrine: understand before touching production. Timeline: 09:11 direct edit of `cache_ttl` in prod; 09:12 reload watcher rejects the value, process exits, 100% of routing orders failing; 09:12 page. Error log: `ConfigError: cache_ttl = 'abc' is not an integer (config/cartroute.yaml, line 14)`.
+
+**Step 2 — Why-chain A (the failure).** Why did routing fail? invalid `cache_ttl` → why was the value invalid? `'abc'` typed into prod → why was the file edited directly? the PR process was bypassed → why bypassed? "tiny urgent perf fix" → why did urgency justify bypassing control? a performance complaint escalated quickly → why was there no guard against direct edits? no config change-control exists → why not? config was treated as ops convenience, not code → **mechanism root: config changes have no change control.** A disciplined analyst could stop here. But the template demands 5 Whys *and* the pure style keeps drilling: why is the PR process slow enough to bypass? two-person review latency → staffing level → recruiting freeze → revenue pressure → deadline culture. Every branch is individually plausible.
+
+**Step 3 — Why-chain B (the watcher), while orders are still failing.** Why did the watcher crash instead of keeping the last-good config? no schema validation → why no validation? config loader written before schema checks were introduced → why was it never retrofitted? tooling backlog → prioritization → roadmap driven by feature work, reliability work deprioritized → exec incentives favor shipping. Chain C (why one edit took the whole service down): single-instance process with no graceful fallback → deployment topology. Each chain is coherent; none has evidence available on a Monday 09:12 call.
+
+**Step 4 — Action-item template (minimum 3; the style produces the full set).** (1) prod config edits require PR review; (2) schema validation + auto-rollback to last-good; (3) YAML linting in CI; (4) config-edit audit log + alerting; (5) change-control training for the whole team; (6) "culture of urgency" review with an exec sponsor; (7) staffing review for PR latency; (8) watcher crash-safety redesign; (9) on-call runbook expansion; (10) incident-wargaming schedule; (11) config-drift telemetry; (12) weekly config-review meeting. All twelve are real, each with an owner candidate.
+
+**Step 5 — Restoration, finally.** 09:12 + 45 min: one-line fix, restart, verify order success back to baseline. The report is comprehensive — every causal branch, all twelve items. Production was down for 45 minutes while it was being written. Restore was step 5. Analysis was step 1.
+
+**Trace summary box.** Timeline ✓ → three full why-chains to org-culture depth → twelve-item action set, each plausible, most without evidence → restored in 45 min → report complete.
+
+*Baseline integrity note (grader metadata, not part of the reasoning): reasoning confined to pure Root Cause Analysis in Incident Response: timeline, deep why-chains, complete action-set generation. The trace faithfully exhibits the registry's known failure modes: over-theorizing (org-culture whys with no evidence) and action-item sprawl, with restoration subordinated to analysis.*

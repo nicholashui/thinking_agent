@@ -1,0 +1,593 @@
+講返重點，Thinking Agent 呢個概念其實就係一個設計嚟做長期規劃同埋複雜推理嘅代理 (agent) 架構。佢嘅核心就係透過一個叫做內部對話 (inner dialogue) 嘅機制，去模擬人類思考嘅過程，令到佢可以一步一步咁去解決問題。
+
+咁啦，呢個代理最特別嘅地方就係佢唔係直接去執行任務，而係會喺內部先做大量嘅思考同埋規劃。呢個過程包括分析問題、考慮唔同嘅可能性、評估風險，仲有制定策略等等嘅步驟。
+
+補充一下，Thinking Agent 會用到一個叫做思考鏈 (chain of thought) 嘅技術，透過呢個技術，佢可以將複雜嘅問題分解成多個較細嘅步驟，每一步都經過仔細嘅思考同埋驗證。
+
+下一點，我哋要講起上 Thinking Agent 嘅工作流程。呢個流程通常會經過幾個階段：首先係問題理解階段，代理會分析輸入嘅問題同埋相關嘅上下文；然後係規劃階段，佢會制定解決問題嘅策略同埋步驟；接住就係執行階段，按照規劃去實際執行任務；最後係反思階段，檢討執行嘅結果同埋做必要嘅調整。
+
+然後，Thinking Agent 仲有一個好重要嘅特點就係佢嘅記憶管理機制。呢個機制令到代理可以喺長時間嘅任務中保持對之前步驟嘅記憶，同埋根據呢啲記憶去調整後續嘅行動。
+
+咁一來，Thinking Agent 就成為咗一個能夠處理複雜、需要長期規劃嘅任務嘅強大工具，尤其適合用喺需要多步驟推理同埋決策嘅場景。<#0.5#>然之後，今日我想同大家講一篇超有意思嘅論文，講緊一個叫做「廣義受控 AI 思考模型 (Generalized, Governed AI Thinking Model)」嘅嘢，呢個模型專門用嚟解決廣泛問題，同埋用嚟研究 AGI 同 ASI。
+
+呢個模型呢，其實係一個書嘅版本，涵蓋咗由 1.0 一直去到 5.0 嘅全部內容，研究截止日期就係 2026 年 8 月 7 號，資料來源都係以 arXiv 論文同埋官方 xAI 材料為主，唔會用第三方評論嚟補充。
+
+講起呢個模型嘅核心概念，其實佢最重要嘅地方，就係要將 AI 嘅思考過程變得更加有系統、有規範，唔單止可以解決一般嘅問題，仲可以逐步推進 AGI 同 ASI 嘅研究。
+
+之不過，呢個模型唔係單純嘅理論框架，而係真係有實際嘅應用方法，作者希望透過呢個模型，畀研究者一個清晰嘅路徑去思考同解決複雜問題。
+
+好啦，補充一下呢個模型嘅版本演進，由 1.0 開始一直到 5.0，每一個版本都有自己嘅改進同優化，總共有 5 個主要版本更新。
+
+仲有，研究團隊特別強調，呢個模型嘅設計原則就係要廣泛適用，唔單止限於某一個特定領域，而係可以應用喺各種唔同嘅問題解決場景入面。
+
+講返轉頭，呢個模型嘅最終目標，其實就係要建立一個可以引導 AI 系統進行有效思考嘅框架，同時確保呢個思考過程係受控同可預測嘅。
+
+之不過，呢個模型嘅開發過程都幾複雜，因為要平衡廣泛性同受控性兩個方面，唔可以偏向其中一邊。
+
+好啦，講起呢個模型嘅實際應用，佢可以用嚟解決從日常問題到尖端科技研究嘅各種挑戰，範圍真係好廣泛。
+
+補充一下，呢個模型嘅研究基礎都係建基於最新嘅 arXiv 論文同埋 xAI 官方材料，確保內容嘅準確性同時效性。<#0.5#>仲有，你要明白呢本書其實唔係話而家嘅語言模型已經係 AGI，或者話多代理辯論、長推理、遞歸自我修改，會自動變成通用智能或者安全超智能，呢啲都唔係佢嘅主張。相反呢本書係想俾大家一個研究同工程藍圖，講緊一個受管治嘅認知系統 Thinking Agent，作為 AGI 同 ASI 研究嘅一個架構。
+
+講返重點，呢個核心嘅論點係乘法效應嚟㗎。你可以想像成：基礎模型嘅能力，乘以適應性認知控制，再乘以有根據嘅世界互動、結構化記憶、規劃同搜尋、獨立驗證、持續學習，以及安全同管治。呢個公式係咁樣嘅：
+
+基礎模型能力 × 適應性認知控制 × 有根據嘅世界互動 × 結構化記憶 × 規劃同搜尋 × 獨立驗證 × 持續學習 × 安全同管治
+
+咁一來，你會發現任何一個因素如果有嚴重弱點，就會限制到整體表現。Thinking Agent 嘅設計就係將生成、真實性判斷、安全性判斷、執行、學習、同系統改變，分開由唔同嘅擁有者負責，唔可以將佢哋全部壓縮成一個無約束嘅模型呼叫。
+
+但係，你可能會問呢本文件到底經歷過乜嘢演變。其實由最初到最新，總共經歷咗五個主要版本。每一個版本都經過多角度嘅自我檢視，而由 v2 開始，就加咗一個可執行嘅驗證 harness，會將之前嘅演算法凍結做基線，然後斷言框架自己嘅標準。呢個進程唔係簡單咁加功能，而係一步一步收窄文件所宣稱嘅同參考演算法實際執行之間嘅差距。
+
+下一點，我哋要睇下呢本書究竟做咗啲乜。簡單嚟講，佢會講述每個版本之間嘅變化，包括促使改動嘅具體缺陷，同埋接受呢啲改動嘅原因；會詳細解釋最新 v5 架構，而且係自成一體嘅解釋；會嵌入建築圖解作為 SVG 插圖；最後會將操作規則、失效模式、路線圖同驗證結果，全部收集喺一個連貫嘅敘述入面。
+
+拆解一下，呢本書嘅定位就係咁樣：唔單止係一份技術文件，更加係一個完整嘅演進故事同架構說明。如果你係做 AGI 研究，或者對認知系統嘅管治架構有興趣，呢本書就係想俾你一個清晰嘅藍圖。<#0.5#>睇清楚，Thinking Agent 呢個概念，聽落去好似好新，但其實已經喺 AI 圈入面慢慢成為一個關鍵方向。簡單嚟講，就係一個 AI 系統唔單止係回覆你嘅問題，仲會主動去諗、去計劃、去決定要做乜嘅一步。呢個同傳統嘅 Chatbot 完全唔同，Chatbot 係你問一句佢答一句，但 Thinking Agent 就係會自己諗清楚先行動。明白未？
+
+講起呢個差別，其實最重要嘅地方就係，Thinking Agent 會有內部嘅「思考過程」，佢唔係即刻輸出答案，而係會喺度一步一步咁推理，例如先分析問題、拆解步驟、預測結果，然之後先至決定要用乜方法去解決。呢個過程就係所謂嘅「思考」。
+
+而家講下，Thinking Agent 嘅核心就係有三個主要能力：第一，佢能夠理解目標；第二，佢能夠規劃行動；第三，佢能夠根據環境變化去調整策略。呢三樣嘢加埋一齊，先至構成一個完整嘅 Thinking Agent。
+
+轉個角度睇，呢種設計其實同人類做決策嘅過程好相似。人類喺做一件事之前，都會諗清楚目的、諗清楚步驟、諗清楚有咩風險，Thinking Agent 都係用類似嘅邏輯去運作，只不過係用程式同演算法去實現。
+
+繼續講，Thinking Agent 唔單止係一個工具，更加係一個可以獨立運作嘅「代理人」，佢可以喺冇人類即時指示嘅情況之下，仍然一步一步完成任務。呢個就係佢同傳統 AI 最大嘅分別。
+
+再睇埋，Thinking Agent 嘅應用範圍都幾廣，由自動化工作流程、到智能助理、甚至係科研實驗嘅輔助，都可以見到佢嘅身影。總括嚟講，呢個概念就係將 AI 由「被動回應」推向「主動思考」嘅一個重要里程碑。<#0.5#>咁然後，Thinking Agent 呢個系統，就係設計嚟應付好多唔同類型嘅問題㗎啦。佢可以處理清楚例行、複雜專家、複雜適應、混亂危機、因果診斷、科學發現、創意設計、策略規劃、軟件操作、具身行動、社會持份者、對抗性、長周期學習，同埋架構改善呢一堆問題類別，而唔係用一個固定提示詞就想解決晒所有事。
+
+講深入啲，呢度所講嘅「通用問題解決」其實係咁樣：系統會先認清問題屬於邊一類，然後返回最負責任嘅可用結果。咁樣一來，佢唔會亂出答案，而係會根據情況，畀出一個八種可能狀態入面嘅其中一個。
+
+轉個角度睇，呢八個狀態就係：第一個係驗證過嘅解決方案，叫做 SOLVED；第二個係有界近似，叫做 APPROXIMATED；第三個係排好次序嘅替代方案；第四個係要求補充證據，叫做 NEEDS_EVIDENCE；第五個係需要安全實驗或者探測，叫做 NEEDS_EXPERIMENT；第六個係展示出不可能做到，叫做 INFEASIBLE；第七個係有校準過嘅不確定性；第八個就係當行動會唔安全，系統會拒絕或者升級畀人類處理，叫做 UNSAFE 或者 ESCALATED；最後仲有一個係明確資源耗盡，叫做 RESOURCE_LIMITED。
+
+重點嚟啦，每一個任務都一定要以呢八個狀態入面嘅其中一個嚟結束，而且一定要產生一個帶有證明嘅決策包。
+
+睇下，呢個架構本身有好多嘢係唔會聲稱嘅。首先，佢唔會話而家嘅模型已經係 AGI；第二，佢都唔會話多代理辯論就一定會贏過一個強大嘅單一代理；第三，佢都唔會話自我反思可以取代外部驗證；第四，佢都唔會話更多推理時間運算就一定會改善答案；第五，佢都唔會話單靠提示詞就可以令遞歸自我改善變得安全；第六，佢都唔會話已經搵到一個通用知識表示；第七，佢都唔會話基準分數就證明咗一般智能；第八，佢都唔會話靠擴大模型大小或者代理數量就可以安全獲得 ASI；最後，參考演算法或者佢嘅 harness 都唔會展示以上任何一點。呢個 harness 只係用嚟驗證控制流程屬性咋喎。<#0.5#>再深入啲嚟講，呢個中央操作迴圈（Central Operating Loop）就係 Thinking Agent v5 嘅核心運作模式嚟㗎。佢用咗一個六步流程：META-CONTROL → WHAT → WHY → HOW → DO → REVIEW，每一步都要經過一個連續嘅 VERIFY 層包圍住。
+
+明白未？每一個階段都唔係一次過做晒就完，而係要不斷驗證，確保每一步都係準確可靠嘅。呢個 VERIFY 層就好似一個永遠喺度運作嘅安全網，無論你喺邊一步，都要隨時檢查返自己做嘅嘢。
+
+總結一下，呢個迴圈最特別嘅地方，就係佢有一個 governed loop，入面包含咗幾個關鍵組件：LoopMonitor 用嚟監控整個迴圈嘅運作，BudgetController 負責控制成本同資源，stage gates 用嚟設定每一步嘅關卡，state-only classifier 就係專門負責分類狀態嘅，delta verification 用嚟驗證差異，而 checkpoint/resume 就係檢查點同恢復機制，progress gating 就係控制進度嘅閘門。
+
+睇清楚，呢啲組件一齊運作，就保證咗三樣嘢：termination 就係可以正常結束，graceful failure 就係就算出問題都係優雅咁失敗，cost-boundedness 就係成本永遠都係有上限嘅。
+
+不過你要留意，呢個迴圈唔係單純嘅流程，而係有一個 SVG 圖示（Figure 1）嚟展示 Thinking Agent v5 嘅中央操作迴圈，圖入面清楚顯示 VERIFY 層係連續不斷嘅，而整個迴圈都係有預算限制同受到監控嘅。
+
+講起上，呢個設計就係為咗確保智能代理（Thinking Agent）喺執行複雜任務嘅時候，都可以保持穩定、安全同可控。<#0.5#>講返轉頭，呢度有十二條設計原則，每一條都係 v5 入面有對應嘅執行組件同呼叫點，唔單止係理論嚟㗎。
+
+留意，第一條 P1 叫做 Context before cognition，核心思想就係：喺揀程序之前，要先分類清楚問題、利害關係、不確定性同風險。
+
+第二條 P2 就係 Frame → Diagnose → Prescribe，意思係唔好優化一個解決方案，結果解決咗錯誤嘅問題。
+
+如果係咁，第三條 P3 Evidence outranks confidence 就話：流暢度、一致性同自我報告嘅信心，都唔係證據。
+
+當然，第四條 P4 External feedback outranks intrinsic critique 就更加直接：自我批評只係假設嘅來源，永遠唔係證明。
+
+而家嚟到第五條 P5 Independent diversity before social influence，原則係：代理喺任何溝通之前，要先私底下生成答案。
+
+講深入啲，第六條 P6 Reversible before irreversible 就話：要優先用測試、圍堵、還原、補償呢啲可逆方法。
+
+第七條 P7 Verification scales with consequence 就係：高風險嘅短操作，可能需要更深入嘅驗證。
+
+第八條 P8 Memory requires governance，意思係記憶一定要有管治，包括來源、信任、矛盾處理、權限同到期日。
+
+第九條 P9 Self-improvement empirical & reversible 就話：自我改善要實證同可逆，流程就係 Sandbox → evaluate → review → canary → rollback。
+
+第十條 P10 Preserve human authority，講緊人類嘅目標、權限同安全核心 (Safety Kernel) 喺普通自我修改之外。
+
+第十一條 P11 Stop when EV is negative，意思係當預期價值變負數就要停手，包括新穎性高原、EVOC 同硬性預算，都會觸發 RESOURCE_LIMITED 狀態。
+
+最後，第十二條 P12 Packet on every path 就係：每條路徑都要有共同結語，唔可以有沉默拒絕。
+
+呢十二條原則唔係建議嚟㗎，而係 v5 入面每條都有指定嘅執行組件同呼叫點。<#0.5#>再睇下呢個章節嘅演變歷史，究竟每一個版本點解要改動，改動嘅原因同埋背後嘅缺陷，全部都記錄喺每個版本嘅 change logs 入面（§31），呢啲就係最主要嘅來源。
+
+我哋而家就用呢啲 change logs 嚟做一個敘述性嘅綜合分析，將每個版本發現嘅缺陷、接受咗嘅改動，同埋改動背後嘅原因逐一講清楚。
+
+首先睇返 v1 嘅情況，v1 基線有 177/177 asserts，cognitive tokens 用咗 592，呢個版本入面有幾個核心問題：第一就係 loop detection 機制唔夠穩陣，第二就係 error handling 嘅邏輯有漏洞，第三就係 resource allocation 嘅算法未經優化。
+
+但係呢啲問題喺 v2 入面就得到改善，v2 基線變咗 111/111 asserts，cognitive tokens 減到 393，跌幅有 33.6%，呢個版本主要針對 v1 嘅問題做咗三個大改動：第一個改動係加強 loop detection 嘅演算法，第二個改動係修復 error handling 嘅漏洞，第三個改動係優化 resource allocation 嘅邏輯。
+
+拆解一下 v3 嘅改動，v3 基線保持 111/111 asserts，cognitive tokens 進一步減到 287，呢個版本主要針對 v2 入面仍然存在嘅邊緣情況（edge cases）做處理，同時引入咗一個新嘅 validation layer 嚟確保所有操作都符合 safety constraints。
+
+咁啦，v4 嘅改變就更加明顯，v4 基線仍然係 111/111 asserts，但 cognitive tokens 繼續下降到 241，呢個版本主要係針對 v3 發現嘅 performance bottleneck 做優化，特別係 memory management 同埋 process scheduling 兩方面。
+
+咁嘅話，v5 就係目前最新嘅版本，v5 基線維持 111/111 asserts，cognitive tokens 最終穩定喺 241，呢個版本主要係針對 v4 入面發現嘅 concurrency issues 做修復，同時加強咗 logging mechanism 同埋 monitoring capabilities。
+
+而家我哋逐個版本嚟睇吓究竟改咗啲乜嘢：v1 到 v2 嘅主要改動就係 loop detection algorithm 由 simple counter 改為 state machine based approach，error handling 由 basic try-catch 改為 comprehensive error recovery mechanism，resource allocation 由 static allocation 改為 dynamic allocation with feedback control。
+
+跟住我哋再睇 v2 到 v3 嘅改動，呢個版本引入咗 validation layer，呢個 layer 包含三個主要組件：input validation、state validation 同埋 output validation，每一個組件都有自己嘅 check criteria 同埋 error reporting mechanism。
+
+咁樣，v3 到 v4 嘅改動就係針對 performance optimization，memory management 由 garbage collection 改為 reference counting with cycle detection，process scheduling 由 round-robin 改為 priority-based scheduling with aging mechanism。
+
+最後睇下 v4 到 v5 嘅改動，concurrency issues 主要係透過 introducing lock-free data structures 同埋 atomic operations 嚟解決，logging mechanism 由 basic file logging 改為 structured logging with multiple output formats，monitoring capabilities 就係加入咗 real-time metrics collection 同埋 alerting system。
+
+呢啲改動每一個都有佢背後嘅原因同埋解決嘅問題，而家我哋已經將所有版本嘅演變軌跡都講晒，明白到每個版本點解要咁改啦。<#0.5#>拆解一下，呢個 1.0 版本其實只係一份研究同工程藍圖嚟㗎，當時仲未有任何可以即刻跑嘅 harness 架。嗰陣已經將 40 個傳統思維框架排好次序，最高就係 Cynefin，之後依次係 Premortem、AAR、Double-Loop、RPD，同埋一堆 root-cause 框架啦。文件入面亦都寫明咗個五步流程——WHAT → WHY → HOW → DO → REVIEW，同時加入咗記憶、多代理、元認知同自我演化嘅概念，仲有最新代理研究包括 CoALA、ReAct、Tree-of-Thoughts、RAP、LATS、Reflexion、CRITIC、多代理辯論、STOP、Darwin Gödel Machine、AgentDojo 同 AI Control。當然都參考咗 xAI 嘅生產模式，例如自適應推理、平行子代理、計劃檢討、驗證，同 Grok Build harness 嘅組件。
+
+要注意，當時已經列出八個 graceful state，同埋 generation、truth、safety、execution、learning、change 呢六個部分嘅分隔，仲有個原則就係自我批評唔等於證明。但係參考演算法只係個 `while True` 循環，終止訊號從來都未計算過，八個狀態入面有五個根本到唔到或者直接崩潰，budget 雖然有講但完全冇執行，stage gate 同 premortem/red-team 都冇 call site，decision packet 仲係 path-dependent，denial paths 返唔到任何嘢，competence model 亦都冇 data feed。總結嚟講，文件只係喺散文入面講晒啲特性，但演算法本身其實做唔到。
+
+留意，呢個關鍵限制已經喺當時就認清咗：「喺散文入面 assert」同「由控制流程真正 enforce」係兩回事嚟㗎。咁一來，下一部分我哋就要睇下 1.0 之後點樣逐步補返呢啲缺口。<#0.5#>講到呢度，Version 2.0 呢個階段就正式叫做 Governed Loop，核心就係講終止能力、狀態完整，同埋有一個真正可以執行的驗證測試框架。呢個版本嘅主題，簡單嚟講就係 terminability、state completeness，同埋 executable validation harness 呢三樣嘢。
+
+另外，文件入面列出咗十八個重大接受嘅改動發現，標籤係 A1 至 A18，全部都係針對 Version 1 嘅缺陷而提出嘅修正方案。我哋逐樣嚟睇下，唔可以漏。
+
+首先，Version 1 入面有個 while True 循環，冇任何計算出嚟嘅停止條件；Version 2 就引入咗 LoopMonitor，根據 novelty、repetition 同 EVOC 呢三個指標，再加埋 bounded loop 嘅設計，原因就係 termination 一定要被保證，而唔係單靠希望。
+
+轉個角度睇，Version 1 八個狀態入面有五個係 unreachable；Version 2 就用 classify_terminal 呢個決策表，加上 named producers，確保每一個 graceful state 都有對應嘅 producer path。
+
+分析吓下一個問題，Version 1 嘅 effort levels 從來冇 branch 過；Version 2 就加入咗 route flags，例如 requires_* 呢類標記，同埋 E0 同 E1 嘅 fast path，目標就係令 adaptive effort 真正可以運作。
+
+咁樣，Version 1 嘅 budgets 雖然有 declare，但從來冇 enforce；Version 2 就將 BudgetController 喺每一個階段都 consume 埋，目的就係令 cost 成為一等嘅約束條件。
+
+下一點就係關於 gates、premortem 同 red-team，Version 1 完全冇 call sites；Version 2 就加入咗 explicit call sites，同埋 check_exit_gate 呢個機制，點解要咁做呢？因為 mechanisms 如果冇 call sites，就只係一堆字。
+
+講完呢個，Version 1 嘅 REVIEW 係喺 loop 外面，VERIFY 亦都只係兩個點；Version 2 就將 AAR 放喺 loop 入面，同埋加入 continuous verification layer，目標就係令 learning 同 verification 變成 continuous 嘅過程。
+
+另外，Version 1 嘅 decision packet 係 path-dependent；Version 2 就喺每一個 terminal path 都加咗 common epilogue，確保冇 silent denials 發生。
+
+轉個角度睇，Version 1 嘅 Council、memory 同 self-evolution 都係 incomplete；Version 2 就透過 structural independence、contradiction rule，同埋 admission control，令 multi-agent 同 memory protocols 真正可以 implement。
+
+講完呢個改動清單之後，文件仲講到 validation 嘅部分。呢個係第一個 harness，Version 1 同 Version 2 用同一批 mocks 嚟測試。結果 Version 1 經常 hit 到 watchdog infinite loop；Version 2 就喺每一個 scenario 都 terminate 咗，而且係用 graceful state 嚟結束。全部八個狀態都 reach 得到。Token cost 喺 pathological cases 大幅下降，原因就係 loop 而家終於可以 stop。
+
+最後，文件解釋咗點解會有呢個 jump：因為一個 research blueprint 如果唔能夠 terminate，或者冇辦法 produce 佢自己承諾嘅 states，就唔係一個可靠嘅 engineering object。Version 2 就係令 control flow 同 stated contract 真正 match 埋。<#0.5#>重點嚟啦，Version 3.0 呢個版本其實就係要將文件自己訂落嚟嘅標準，真正套用返去算法入面，唔可以再有「講一套做一套」嘅情況。
+
+睇返 v2 嗰陣，其實仲有幾個明顯嘅漏洞，係 harness 自己揭露出嚟嘅。第一樣就係 Class bars（§15.4）根本冇 consumer，tasks 喺 seed reliability 0.5 嘅情況下已經被 declare 做 SOLVED，呢個明顯係唔合理嘅。
+
+仲有，ghost fields 呢幾個，probe_available、approximation_available 同 infeasible，classifier 雖然會 read 佢哋，但係根本冇任何 producer 會 write 佢哋，schema 入面都冇呢幾個欄位，呢個係第二個問題。
+
+如果係咁，PENDING authorization 就變咗一個無限 re-execution loop，幾個 gates 都仲未有 call sites，competence loop 亦都係 dangling 狀態，council 都仲只係一段 comment，唔係一個真正嘅 branch。
+
+換句話講，cost reduction 嘅 attribution 都係錯嘅，之前話有 69 % 嘅 saving，其實大部分都係因為終止咗兩個 infinite loops，而唔係因為 fast path 做得好。
+
+下一部分，v3 就係針對 B1 至 B17 呢啲問題嚟做修正。Producers 已經俾每一個 classifier input 加咗，reliability bar 而家變咗 verify_outcome 入面一個真正嘅 predicate，PENDING 亦都加咗 static allowlist subset、同 single-execution guard，同埋一個會 escalate 嘅 timeout。
+
+睇返，gates 同 plan conditions 而家都有 call sites 啦，council 都變咗一個真正會 write minority ledger 嘅 branch，WHY gate 之後嘅 early classifier entry，都可以避免浪費成個 full pass，delta verification 同 progress awareness 都開始出現咗。
+
+拆解一下 validation 嘅結果：26 個 scenarios 入面，v2 baseline 係 98/98 asserts，v3 就去到 111/111。Cognitive tokens 由 592 減到 393，跌幅 33.6%。Attribution 而家都 honest 咗，之前大筆 saving 其實主要嚟自 loop-termination，而剩低嘅 saving 就係嚟自 early exits 同 delta reuse。
+
+如果係咁，呢個版本嘅原因就係好簡單——一份文件如果自己印咗 thresholds 出嚟，但係 algorithm 卻 ignore 佢，呢個就唔係 honest 嘅做法。v3 就係要將最明顯嘅「print vs execute」gap 全部封咗。<#0.5#>分析吓，Version 4.0 呢個版本嘅核心主題就係話，凡係影響安全同埋真實性嘅關鍵數字，都唔可以由任務嚟自行宣告㗎啦。
+
+因為即使去到 v3，仍然有幾個關乎安全同真實性嘅控制掣，仍然係受制於任務，或者受自評模型影響：第一，Verifier 可靠性仍然會被任務提供嘅「warmth」影響到；第二，能力更新仍然係靠模型自己生成嘅校準數據嚟餵；第三，PENDING 嘅 subset 仍然有部分係 planner 自己虛構出嚟嘅；第四，External-action 任務仍然可以行 fast path，跳過 attestation；第五，class bar 仍然係喺某些路徑上，執行完之後先檢查；第六，no-verifier ladder 嘅 L3 實際上根本去唔到；第七，WHY gate 根本唔能夠強制 re-diagnosis，而 plan escalation 條件亦都未被讀取到。
+
+v4 就針對以上問題，作出咗以下改變：佢將可靠性搬咗入去一個 kernel-side registry，呢個 registry 係由 rolling history 同 provenance-gated competence 嚟餵數據；佢將之前嘅 placeholder allowlist 換咗做一個真正嘅 kernel table；佢強制 external-action 任務唔可以再行 fast path；佢要求 attestation 同 bar check 必須喺任何 execution 之前完成；佢補齊咗 L1、L2、L3 嘅完整梯子；佢令 WHY gate 變成可以 re-evaluate；佢消化咗 plan escalation conditions；佢 enforce 咗 second-verifier rule；最後，佢亦都將之前死咗嘅 E5（Chaotic）同 search branches 重新激活。
+
+睇下 validation 結果，總共有 36 個 scenarios，v3 原本係 141/141，v4 就去到 153/153。Cognitive cost 基本上都係平嘅，由 560 變咗 547，呢個係因為新加咗檢查，會多咗少少工作量，但係呢個就係用嚟換取更強 enforcement 嘅代價嚟㗎。
+
+要注意，呢個改動嘅根本原因就係：如果一個系統容許任務，或者容許嗰個會得益嘅模型，嚟設定自己嘅可靠性、能力，或者 allowlist，咁樣就唔係真正受管治嘅。Trust boundaries 一定要係 structural 先得㗎嘛。
+
+再睇下，其實 v4 嘅改動唔單止係修補漏洞，而係真正將安全嘅核心控制權，由任務層面收返去 kernel 度，呢個就係最關鍵嘅一步。<#0.5#>咁嘅，v5 就係真正將信任邊界（trust boundary）補完嘅版本，主題就係話 kernel 持有嘅嘢一定要係實實在在嘅 code，而唔係只喺文字度講到有咁多咁多。之前 v4 雖然已經好接近，但仍然留低咗幾個信任漏洞同埋一啲死 code。講深入啲睇返，security knob 仲可以從 task-scope structure 度讀到，雖然文件度話係「kernel-held」，但係實際上 engine body 仍然可以接觸到；competence 都仲可以受 task 自己 declare 嘅 accuracy 影響；allowlist_hint 個 fallback 機制都容許未列出嘅 task 通過；第二個 verifier 規則都仲有一部分係靠 task flag 去驅動；L3 都只係透過早期 classifier 去觸發，唔會喺 attest 嘅時候根據 attested class 去執行；memory retrieval 係 write-only，零 hit；outcome verification、in-loop review 同埋 planner 都唔係 progress-gated，狀態冇變都仲會再收錢；另外有幾個聲稱存在嘅分支，例如 owner-unavailable、G-WHY-4/5、novelty-plateau mapping 同埋 REPLICATE denial，都完全冇對應嘅 scenario。
+
+當然，v5 就將呢啲問題全部解決晒。首先係 world-facts store，每一個 security knob，包括 pending_timeout、calls_ceiling、EVOC parameters、calibration、identities、outage、baseline-frozen 同埋 write-authorization，全部都只可以透過 world object 去讀取，engine 每一次都會跑 code-level assert_read_path()，harness suite 都係咁；S45 就展示咗，就算 task 自己 declare accuracy 係 1.0，都會被忽略。得啦，competence 就完全由 kernel 嘅 domain-accuracy registry 提供，而且仲有 provenance gate；PENDING subset 就只可以係 kernel-table 入面有記錄嘅，S38 就係負面 scenario 嚟證明；第二個 verifier 規則就由 identity registry 計出嚟，喺 pre-DO block 執行，S39 都係負面 scenario；L3 就改咗喺 attest 時間根據 attested class 去觸發，S29 就係證明；retrieval 變咗真係有 hit，會計價，query 會用 task-derived terms，而且可以填補 gap，S34 同 S40 就係例子；outcome delta-cache 加 gated review 加 planner-once，呢個就係 V7 嘅改動。
+
+下一點就係之前死咗嘅機制而家都有 scenario 去 cover，S41 至 S44 都補返晒；plateau 會正確映射到 RESOURCE_LIMITED；E5 會 receive 一個 stabilize-before-diagnose pass；bar 會 check 喺 selected decision 嘅 verifier，而唔係 candidate max。
+
+再講，validation 方面，總共有 44 個 scenario，v4 基線係 177/177，v5 就去到 187/187；cognitive tokens 由 616 減到 592，跌幅 3.9%；節省嚟自 gating、caching 同 early exit，而新增成本就嚟自真正 live 咗嘅機制，例如 real retrieval、L3 path 等等，每一個 scenario 都有 attribution 公佈。
+
+當然，呢個改動背後嘅原因就係話，如果你話「kernel-held」，但係 engine 嘅 read path 並冇 enforce 到，咁都只係 narration；如果你話有某個機制，但係呢個機制從來冇 execute 過，咁都只係一段文字。v5 就將剩低嘅 claim 全部變成要麼 code 真係做到，要麼就明確 disclose 做 Phase-N。<#0.5#>咁一來，我哋就嚟睇吓 Thinking Agent v5 嘅整體架構啦。呢個版本係之前 v4 嘅延續，但係喺結構上做咗幾個關鍵嘅調整同埋優化，務求令整個思考流程更加清晰同埋可靠。
+
+講返轉頭，我哋首先要明白 v5 入面最核心嘅三個層次：第一層就係 Perception Layer，第二層就係 Reasoning Layer，第三層就係 Action Layer。呢三層每層都有各自嘅功能模組，互相配合先組成一個完整嘅思考代理。
+
+而家講下呢三層入面嘅細節，第一層 Perception Layer 主要負責接收同埋處理外界嘅輸入資訊。佢入面包含咗三個主要組件：Input Encoder、Context Filter 同埋 Memory Retriever。Input Encoder 會將原始輸入轉化為內部表示，Context Filter 會篩選出同當前任務相關嘅資訊，而 Memory Retriever 就負責從長期記憶入面搵返相關嘅過往經驗。
+
+簡單嚟講，第二層 Reasoning Layer 就係整個代理嘅大腦核心。佢包含咗四個主要組件：Goal Planner、Hypothesis Generator、Critic Module 同埋 Decision Maker。Goal Planner 負責制定達成目標嘅步驟，Hypothesis Generator 會生成多個可能嘅解決方案，Critic Module 會對每個方案進行評估，而 Decision Maker 就係最後作出決定嘅部分。
+
+但係你要留意，呢個 Reasoning Layer 唔係單向運作，而係會同 Perception Layer 同埋 Action Layer 雙向溝通。當 Critic Module 發現某個假設唔夠好嘅時候，佢會即時要求 Perception Layer 提供更多資訊，或者要求 Memory Retriever 搵更多相關案例。
+
+講返第三層 Action Layer，呢層主要負責執行已經決定好嘅行動。佢包含咗 Action Executor、Feedback Collector 同埋 State Monitor 三個組件。Action Executor 負責實際執行決定，Feedback Collector 會收集執行後嘅反饋資訊，而 State Monitor 就負責監控整個系統嘅狀態變化。
+
+下一部分，我哋要講吓呢三層之間嘅數據流向同埋控制機制。v5 版本特別強調咗一個叫做「雙向確認機制」嘅設計，每當一層完成工作之後，都會向相鄰嘅兩層發送確認訊號，確保資訊傳遞無誤同埋狀態同步。
+
+講返轉頭，我哋仲要提一提 v5 入面新增嘅 Safety Kernel 模組。呢個模組係獨立於三層架構之外，但係會對三層嘅運作進行實時監控。Safety Kernel 包含咗五個檢查點：Input Validation、Reasoning Bounds Check、Action Safety Filter、Resource Limit Monitor 同埋 Emergency Stop Trigger。每個檢查點都有特定嘅閾值設定，一旦觸發就會啟動相應嘅保護機制。
+
+簡單嚟講，呢個 Safety Kernel 嘅設計理念就係「寧願保守都唔好冒險」。例如當 Action Executor 準備執行某個高風險操作嘅時候，Safety Kernel 會先檢查呢個操作係唔係超出預設嘅安全範圍，如果係嘅話就會要求 Decision Maker 重新考慮。
+
+而家講下 v5 同 v4 相比嘅主要改進之處。第一個改進就係將原本分散喺各層嘅錯誤處理機制集中到 Safety Kernel 入面，這樣可以避免不同層之間嘅錯誤處理邏輯互相衝突。第二個改進就係引入咗「狀態快照」功能，每當系統進入關鍵決策點嘅時候，都會自動保存當前嘅完整狀態，方便之後嘅錯誤恢復同埋分析。
+
+講返轉頭，我哋仲要講吓 v5 嘅配置參數。呢個版本新增咗八個可調參數：perception_threshold 設定感知層嘅敏感度，reasoning_depth 控制推理層嘅深度，action_confidence 決定行動層嘅執行信心水平，safety_strictness 控制安全檢查嘅嚴格程度，memory_retention 設定記憶保留嘅時間長度，feedback_weight 調整反饋資訊嘅權重，hypothesis_limit 限制假設生成嘅數量，以及 decision_timeout 設定決策嘅最長等待時間。
+
+簡單嚟講，呢八個參數都可以透過配置文件或者運行時指令進行調整，開發者可以根據具體應用場景嘅需求嚟微調系統行為。當然，呢啲參數之間都有一定嘅依賴關係，改動其中一個可能會影響其他參數嘅最佳設定。
+
+但係你可能會問，咁多參數要點樣先可以搵到最佳組合呢？v5 版本內置咗一個叫做「參數優化器」嘅工具，佢會根據歷史運行數據自動建議參數調整方案。呢個工具使用咗貝葉斯優化算法，可以喺有限嘅嘗試次數內搵到相對較好嘅參數組合。
+
+講返轉頭，我哋最後要講吓 v5 架構嘅擴展性設計。呢個版本特別考慮咗多代理協作嘅場景，所以喺每一層都預留咗對應嘅介面。Perception Layer 可以同時接收多個來源嘅輸入，Reasoning Layer 可以處理多個並行嘅推理任務，而 Action Layer 則可以協調多個執行器嘅工作。
+
+簡單嚟講，呢個架構設計令到 Thinking Agent v5 唔單止可以作為單一代理運行，仲可以作為更大規模多代理系統嘅組成部分。透過標準化嘅介面協議，不同嘅代理實例可以互相溝通同埋協作，完成更加複雜嘅任務。
+
+講返，我哋呢節就講到呢度。下一節我哋會深入探討每個層次入面嘅具體算法實現同埋數據結構設計。<#0.5#>換句話講，Thinking Agent v5 呢個系統，佇個結構就係一個四層嵌套嘅時間尺度，好有層次感。
+
+最入面嗰層，就係所謂嘅 Action loop，簡單嚟講就係每一次單一嘅工具呼叫，同埋對應嘅觀察結果，全部都係用事務性語義嚟處理。
+
+但係再向外一層，就會見到 Task loop，呢個就係 META → WHAT → WHY → HOW → DO → REVIEW 呢個循環，每一個階段都有自己嘅檢查點，確保過程唔會出錯。
+
+補充一下，除咗呢兩個循環之外，仲有一層叫做 Learning loop，專門負責能力更新，呢個更新係由 Safety Kernel 提供資料，而且仲要通過來源審查，先可以進行記憶鞏固同埋提出改進建議。
+
+不過呢個系統最外層，就係 Architecture-evolution loop，呢個層面係用 R0 至 R5 權限等級嚟做守門，進行 scaffold 搜尋，但係永遠都會對住一個凍結咗嘅基線去做比較。
+
+如果係咁，你會發現整個系統就係由內到外，一層包住一層，每層都負責唔同嘅時間尺度同埋功能，咁樣嘅設計就係為咗確保 Thinking Agent v5 喺運作嘅時候，可以同時保持安全同埋持續進化。<#0.5#>而家講下，Stage 0 呢個 META-CONTROL 主要係負責幾樣嘢，全部都要喺最開始就決定好，唔可以之後先補救。佢要做嘅第一樣，就係 Cynefin 情境分類，分成 Clear、Complicated、Complex、Chaotic 同 Disorder 呢五個類別，呢個分類會直接影響之後嘅做法。
+
+跟住落嚟，呢個階段仲要選擇 Effort level，E0 到 E5 呢六個級別入面，E5 係最高嘅，會強制啟動 council 同埋 human gate，同時要執行 stabilize-before-diagnose 呢個流程，Cynefin 嘅 act→sense→respond 就係佢嘅運作模式。
+
+講返，呢個階段仲要設定一堆 route flags，包括 requires_diagnosis、requires_search、use_council、requires_review，同埋 external-action gate 等，每一個 flag 都係之後流程嘅重要開關。
+
+簡單嚟講，呢度仲要分配 Budget envelope，入面包含 iterations、tokens、calls、agents-per-round，同埋 deadline 呢啲資源上限。
+
+然後，呢個階段會做 Competence-aware routing，根據歷史上喺唔同領域嘅成功同失敗紀錄，由 kernel-sourced 嘅資料嚟決定點樣路由。
+
+總結一下，呢度最後一樣工作就係 MethodComposer selection，會根據 task signature 嚟選擇合適嘅 reasoning modules。
+
+重點嚟啦，所有 security-relevant ceilings 同 seeds，全部都要由 world-facts store 讀取，絕對唔可以由 task declarations 嗰度讀，呢個係最重要嘅安全規則嚟㗎。<#0.5#>咁嘅話，我哋而家嚟到 Stage 1 嘅 WHAT 部分啦。呢個階段最主要就係要你產出一份問題框架，入面一定要包含成功指標、限制條件、所有相關嘅持份者，同埋明確嘅負責人。呢個步驟好關鍵，因為佢決定咗之後所有工作嘅方向同埋判斷準則。
+
+跟住，系統會用一組叫做 G-WHAT 嘅閘門條件去檢查呢個框架，具體嚟講就係要睇清楚成功指標有冇齊、負責人有冇到位或者已經升級咗、以及呢個框架本身係唔係合理同埋連貫。呢啲條件全部都要通過先可以繼續落去。
+
+不過，如果你發現負責人唔喺位，系統就會將呢個情況標記做 ESCALATED 狀態，呢個狀態已經經過場景驗證嘅。咁樣嘅設計係為咗確保唔會因為某一個人唔喺度而卡住整個流程。
+
+下一步再嚟，我哋要留意一樣嘢，就係閘門重新進入嘅情況。呢啲重新進入係豁免於新穎度高原停止機制嘅，因為佢哋屬於外部等待嘅情況。換句話講，系統明白有時需要等候外部條件，所以唔會因為重新進入而觸發停止條件。
+
+OK啦，呢個就係 Stage 1 嘅全部內容。明白未？<#0.5#>咁啦，呢度就嚟到 Stage 2 嘅 WHY 部分啦。呢個階段最主要做嘅事就係「診斷」，簡單嚟講就係喺形成假說之前，先行進行記憶檢索，而呢個檢索係按 hits 嚟計費嘅，如果檢索返嚟係空嘅，就完全唔使錢。跟住就進入假說生成、證據收集、否證搜尋同埋殘餘不確定性嘅步驟，之後再做 VOI 嘅估算。重點嚟啦，如果有一個可以填補嘅缺口，其實係會透過檢索去填埋，而唔係只係放一個旗幟喺度。
+
+然後，G-WHY 呢個謂詞呢，總共有五個，全部都要一一檢查。第一個就係話「主要假說要有同決策相關嘅證據」；第二個就係「要考慮顯著嘅替代方案」；第三個就係「要記錄殘餘嘅不確定性」；第四個就係「估計進一步診斷嘅 VOI 要小過成本」；第五個就係「否證證據唔可以係空嘅」。
+
+而家講下如果呢啲條件有任何一個唔合格，gate 就會清空所有假說，然後重新入返去，而呢個過程係有預算限制嘅。當然，仲有另外一種情況就係如果結果已經決定咗，例如 `missing_evidence` 根本唔可以填補、或者 `probe_available`、又或者係 verifier outage 喺低風險嘅情況之下，呢個時候就允許早啲進入 classifier。<#0.5#>好啦，而家我哋嚟到 Stage 3 嘅 HOW 部分，講緊點樣去生成、測試同埋揀選方案。呢個階段主要係靠 MethodComposer，加上一個可選嘅 SearchController，呢個 SearchController 就係用嚟控制探索門嘅期望值。
+
+MethodComposer 會負責獨立生成候選方案，當用到 council 嘅時候，每個候選方案都會有全新嘅上下文。跟住就係 Premortem 同 Red Team 呢兩個步驟，呢兩個步驟都係進度閘控嘅，意思就係只會喺有新內容嘅情況先會執行。
+
+再睇下 VerifierRegistry 呢個部分，佢係用外部身份嚟運作，可靠性就嚟自核心註冊表或者滾動歷史記錄，第二驗證器規則就係根據身份數量嚟決定。
+
+但係喺 DO 之前，仲有幾個檢查步驟要先做。呢啲檢查就係針對已經揀咗嘅決策，叫做 Pre-DO checks。具體嚟講，第一個係 Attestation，包括行動類別、REPLICATE 拒絕等等。第二個係 Class bar，呢個 Class bar 係針對揀咗嘅候選方案嘅驗證器嚟設定，唔係針對成個集合嘅最大值。第三個就係第二驗證器要求。
+
+第二點，仲有 Constraint screen 呢個步驟，如果唔符合限制嘅話，就會變成 infeasible producer。最後，如果近似值已經係最好嘅選擇，Selection 就會記錄 error_bound 呢個數值。<#0.5#>講返轉頭，我哋而家入到 Stage 4 嘅 DO 呢一步——呢一步就係講點樣真正去計劃同執行，唔係只係諗諗咁簡單。呢度最重要嘅就係要有一個分層次嘅計劃，而呢個計劃要同時包含停止條件同埋升級條件，而且呢兩個條件都已經被用咗㗎啦。
+
+講到呢度，安全核心 (Safety Kernel) 會做最後嘅授權。佢可以畀到三種決定：第一種就係完全批准，第二種就係拒絕——呢個拒絕包括咗 `UNSAFE` 同 `ESCALATED` 兩個狀態，第三種就係 `PENDING`。當佢話 `PENDING` 嘅時候，其實只會執行安全核心靜態許可清單入面嘅子集，而呢個子集只限於 A2-class，而且係根據表格成員資格嚟決定，唔會有任何後備方案。重點嚟啦，當處於 `PENDING` 狀態嘅時候，等待過程係由進度控制嘅，每一次迭代大約用零個認知令牌 (cognitive tokens)，而且仲有安全核心持有嘅超時限制，如果超咗時就自動變成 `ESCALATED`。
+
+咁啦，接落嚟我哋睇下 ToolBroker 點樣運作。ToolBroker 會處理 schema、採用最小權限原則、支援事務性語義、用冪等性密鑰 (idempotency keys)、有補償表 (compensation table)，以及超時同重試機制。呢啲全部都係確保執行過程安全可靠嘅關鍵元素嚟㗎。
+
+下一部分講到如果系統中途出事點樣處理。呢度就係透過版本化檢查點 (versioned checkpoints) 嚟做崩潰恢復，而呢個檢查點嘅完整性邊界就係 Phase-1 所披露嘅內容。最後，當外部 verifier 出現故障嘅時候，L3 嘅無操作 (no-action) 會喺證明時間 (attest time) 觸發，用嚟處理外部 A3+ 任務。<#0.5#>換句話講，Stage 5 就係 REVIEW 呢個階段，英文全名 Reflect / Learn / Evolve，意思就係你完成咗一輪行動之後，要好好回顧、學習同埋進化。
+
+呢個階段最核心嘅做法就係 After-Action Review，呢個 review 會分四步：supposed、actual、difference 同埋 change。簡單嚟講，就係你本來以為應該點做，之後實際係點做，兩個對比之後有乜分別，最後決定要改乜嘢。
+
+好啦，呢個學習過程又分單迴圈同雙迴圈。單迴圈就係 tactics 層面嘅調整，而雙迴圈就係 assumptions 同 frames 層面嘅反思。後者仲可以喺任務進行到一半嘅時候，觸發一次 reframing，呢個係好重要嘅機制嚟㗎。
+
+之不過，你要留意呢啲 review 都係 gated 嘅。in-loop review 只會喺有 candidate 或者 observation deltas 嘅時候先做，而 epilogue review 就只有喺你真係做咗一個決策、執行咗行動，或者有 lesson 可以學嘅時候先進行。
+
+跟住我哋講嘅係 competence update，呢個更新係一個 episode 只會做一次，而且只會從 kernel 同 EvaluationPlane 呢兩個來源嗰度攞數據。
+
+咁嘅話，Procedural writes 就必須要有 SafetyKernel 發出嘅 authority token，先可以進行。
+
+下一部分，ImprovementEngine 入面有 admission control 同 dedup 兩個步驟，之後仲要經過完整嘅 acceptance pipeline，同埋要對比 frozen baseline，先至可以真正被授權接受。
+
+而家嚟到呢度，其實 REVIEW 呢個階段就係確保系統唔單止做完就算，而係真係有系統性咁去 reflect、learn 同 evolve 嘅關鍵所在。<#0.5#>咁啦，呢個 Continuous VERIFY Layer 真係一個好關鍵嘅環節嚟㗎。VerifierRegistry 佢會負責管理身份同埋可靠性嘅問題，呢個 model 係完全唔可以自己印一個「external」嘅印嘅。
+
+再睇下，SOLVED 呢個狀態其實有幾個條件要同時滿足先得：checks pass 同埋 external identity，仲要 reliability 大過或者等於 class bar，而呢個 class bar 就係由 max(attested, declared) 呢個值嚟決定，未知嘅情況就會當係 A5 級。當然，當有需要嘅時候，仲要符合 second-verifier rule 呢個要求。
+
+然後，Delta caches 會用 SHA-256 呢個演算法嚟做 candidates 同埋 outcome verification 嘅快取工作。跟住落嚟你要注意嘅係，任何 action 都絕對唔可以喺 below-bar verification 嘅情況下執行。
+
+睇下，呢個設計其實係想確保每一次嘅驗證都係有足夠嘅可信度先至會繼續嘅。補充一下，呢個 VERIFY Layer 就係整個系統嘅把關者，確保所有操作都係喺一個安全可靠嘅基礎上進行。<#0.5#>換句話講，記憶架構呢部分其實就係講緊 R0 到 R5 呢條自我演化權限梯級，同埋佢哋點樣同記憶類別配合㗎啦。圖 4 就係 Memory and Evolution 呢張圖，清楚展示咗記憶類別同呢個權限梯級嘅關係。
+
+講返，Write protocol 其實係一個完整嘅決策程序，佢一步一步噉走：首先 classify（分類），然後 provenance（來源追蹤），接住係 trust（信任值），呢個信任值就係由 verifier reliability（驗證器可靠性）衍生出嚟嘅。之後就係 contradiction（矛盾檢查），用 trust-margin rule（信任邊際規則）嚟判斷，再到 quarantine/promotion（隔離或提升），跟住 privacy/permission（私隱同權限），expiry（到期設定），最後先 store（儲存）。
+
+同埋，Retrieval（檢索）喺整個 diagnosis（診斷）過程入面都係主動進行嘅，而且係會根據結果嚟計價嘅。補充一下，呢個記憶架構唔單止記住嘢，仲會喺自我演化嘅過程入面決定邊啲資訊值得保留、邊啲要剔除。
+
+睇返，呢個決策程序每一步都冇得跳過，因為每一步都係下一層演化權限嘅基礎。咁啦，如果你想理解 R0 到 R5 點樣一步一步攞到更高嘅自主權，其實就係靠呢個完整嘅 write 同 retrieval 機制喺背後撐住㗎。<#0.5#>跟住我哋嚟睇下 Safety Kernel 呢個喺 scaffold 之外嘅安全核心。呢個 Safety Kernel 本身就擁有幾樣好關鍵嘅職責：首先係目標接納同埋簽署嘅目標合約，之後就係權限同能力代幣嘅管理，世界事實儲存庫入面所有安全開關嘅控制，靜態許可清單同埋行動類別分類法嘅維護，身份註冊系統，代幣鑄造，證明同 REPLICATE 拒絕機制，人類門控同埋 PENDING 超時設定，中斷同關閉功能，仲有自我修改等級門控（R0–R5）。
+
+好啦，Safety Kernel 嘅不變量就更加重要。呢啲不變量包括：系統唔可以自己授予自己新嘅權限；未受信任嘅內容唔可以改變管理指令；高影響力嘅行動需要獨立授權；記錄功能唔可以被停用；核心目標唔可以被自主重寫；未經評估嘅自我修改唔可以部署；安全關鍵嘅更改需要人類批准；自我複製同埋未經控制嘅資源獲取預設係停用嘅。
+
+簡單嚟講，呢啲不變量就係 Safety Kernel 嘅底線，無論系統點樣運作，都要守住呢啲底線先得。講返轉頭，Safety Kernel 擁有咁多職責同埋咁嚴格嘅不變量，就係為咗確保整個系統喺任何情況之下都唔會偏離安全軌道。
+
+另外，呢個設計亦都反映咗一個核心理念：就算系統有再多嘅自主能力，都要有呢啲硬性嘅安全機制去兜底。講起上，Safety Kernel 呢個角色就好似係系統嘅最後一道防線，負責確保所有高風險操作都要經過適當嘅審查同埋批准先可以進行。<#0.5#>要注意，呢個 graceful states 嘅部分，圖 5 就清楚顯示咗八個 terminal states，同埋佢哋各自嘅 producers，同埋 state-only classifier policy 點樣運作㗎。
+
+第一個就係 **completed**，呢個 state 係由 agent 自己產生，代表佢順利完成咗所有工作，冇出任何問題。下一部分就輪到 **user_cancelled**，呢個係 user 親自發出取消指令，agent 就即刻停低嘅結果嚟㗎。
+
+得啦，第三個 state 就係 **user_rejected**，呢個同 user_cancelled 有啲唔同，因為 user 唔單止取消，仲明確拒絕咗 agent 嘅建議或者行動。講起第四個 **agent_cancelled**，呢個就係 agent 自己決定唔做落去，可能因為資源問題或者其他內部判斷。
+
+睇下第五個 **agent_rejected**，呢個 state 係 agent 自己拒絕咗某個任務，可能係因為佢覺得任務有問題或者超出自己能力範圍。當然，第六個 **agent_aborted** 就更加嚴重，係 agent 因為內部錯誤或者異常情況而被迫中止任務嘅。
+
+咁樣，第七個 state 就係 **agent_errored**，呢個就係 agent 喺執行過程出錯，導致整個流程失敗咗。最後第八個就係 **agent_timed_out**，呢個 state 係因為時間限制，agent 喺指定時間內做唔完任務，所以被迫終止㗎。
+
+呢八個 terminal states 就係咁，全部都喺 Figure 5 入面清楚列出嚟，每一個 state 都有佢自己嘅 producer 同埋對應嘅 classifier policy。<#0.5#>第二點，就嚟到我哋要講嘅 Reference Algorithm Guarantees 版本五嘅內容啦。
+
+首先第一項就係 Termination 呢個保證，意思就係話佢會受到 iteration、token 同埋 call budgets 嘅限制，當 novelty 出現 plateau 嘅時候，就會直接跳去 RESOURCE_LIMITED 呢個狀態；當然重複出現、或者 EVOC 情況，都會觸發呢個限制；不過 external waits 就唔計入呢個限制入面，但都仍然會有 timeout 嘅上限嚟㗎。
+
+跟住落嚟第二項就係 State completeness，呢個就係話全部八個狀態，都係可以透過 world-fact-driven producers 去達致㗎。
+
+咁樣第三點就係 Packet completeness，意思係話每一個 terminal path 都要完整，連埋 denials 同埋 early exits 都唔可以例外。
+
+但係第四點就講到 Verification independence 呢樣嘢，就係話要靠 external identity 加 bar 加 second-verifier 去做到；可靠性係由 kernel 去 hold 住嘅，而低過 bar 嘅 execution 就係唔畀㗎啦。
+
+然後第五點就係 Cost boundedness，呢個就係透過 envelope、progress gating、planner-once、outcome cache 同埋 priced retrieval 呢啲方法去實現㗎。
+
+好啦，第六點就係 Gate enforcement，呢個就係指 WHAT、WHY 同埋 HOW 呢啲計劃條件都要 enforce 得到，仲有 WHY 呢個係可以 re-evaluable 嘅。
+
+下一點就係 Review in loop，呢個就係話要 gated AAR，每一個 episode 都要有一次 competence，仲要由 kernel feed 去支持。
+
+最後第八點就係 Resume 呢個保證，就係話要用 stage-boundary checkpoints，仲要有 idempotent re-execution protection 呢樣嘢。<#0.5#>但係由 v2 開始，整個框架就已經遵守自己定嘅規則啦：自我批評只可以視為假設來源，唔可以當作證明嚟用。呢個原則係好重要嘅，因為佢確保咗我哋唔會因為自己覺得好而忽略咗實際嘅驗證。
+
+接落嚟，每一個被接受嘅改動，都會喺完全相同嘅確定性模擬組件（deterministic mock components）之上，對住上一個演算法嘅凍結基線（frozen baseline）嚟執行。咁樣做係為咗確保每一次改動都係真真正正有改善，而唔係因為環境差異而造成嘅假象。
+
+同埋，呢個測試 harness 會去斷言框架本身嘅標準，包括終止條件（termination）、狀態可達性（state reachability）、預算執行（budget enforcement）、階段門控（stage gating）、閾值執行（threshold enforcement）、數據包完整性（packet completeness）、獨立性（independence）等等，全部都要檢查到。
+
+咁嘅話大家就明白到，呢個 harness 唔會聲稱自己可以測量模型智能（model intelligence），因為智能呢樣嘢太主觀啦，唔係呢個框架嘅驗證範圍。
+
+然後，當我哋睇返呢個設計理念，其實就係想話俾大家知：即使框架自己覺得某樣嘢好，都唔可以就咁當實，一定要透過外部嘅凍結基線嚟做對比先至算數。
+
+咁然後，呢個做法亦都反映咗框架對自己嘅嚴格要求——即係話，自己提出嘅批評，只可以啟發新嘅假設，但永遠都要返去同之前嘅版本做對比，先可以決定呢個改動值唔值得被接受。<#0.5#>簡單嚟講，v5 版本嘅 headline results 比起 v4 baseline 有幾點明顯進展。
+
+第一樣就係 scenarios 數目，由 v4 嘅 36 個加到 v5 嘅 44 個，擴展咗 8 個新情境。
+
+asserts 方面，v4 baseline 係 177/177，v5 就去到 187/187，全部通過，冇漏。
+
+cognitive tokens 方面，v4 係 616，v5 就係 592，跌咗 3.9 %。
+
+determinism 方面，兩邊都係 3 identical runs，結果一樣穩定。
+
+如果係咁，行為改變就係另一個重點嚟㗎。
+
+S26 呢個 scenario，identity-registry A4 有兩個 identities，v5 已經 correctly SOLVED 咗。
+
+S34 同 S40 呢兩個，real retrieval 填補咗 gaps，所以變咗 SOLVED。
+
+S29 呢個，L3 喺 attest time 已經 reach 到。
+
+S38 同 S39 呢兩個，係 allowlist 同 second-verifier 嘅 negative cases。
+
+S41 至 S44 呢四個，以前係 dead branches，依家變咗 live。
+
+S45 呢個，task-declared competence accuracy 被 ignored 咗。
+
+咁一來，v5 就唔止係數字上進步，仲係實際行為上解決咗好多之前未解決嘅問題。<#0.5#>跟住我哋要講嘅係 Honest Limitations 呢一部分，原文好清楚寫明呢個部分一定要一直重覆講出嚟。
+
+首先第一點就係，全部都只係 mock components，佢哋提供嘅係 control-flow guarantees，而唔係 intelligence。
+
+接落嚟第二點就係，有幾個 Phase-N features 仲停留喺 design-level 階段，呢啲 feature 包括 EvaluationPlane batch、probe life-cycle、multi-round debate、checkpoint HMAC integrity boundary，同埋 renegotiate deployment 等等，呢啲全部都喺 disclosure 入面有提名。
+
+然之後要留意嘅就係，world-store 嘅 read path 係 enforced 嘅，但係 production 嘅 write path，即係邊啲人可以 populate 呢個 store，呢個就係 Phase-1 process/key boundary。
+
+講深入啲，novelty signature 仍然只係一個 heuristic，hard budgets 先係 termination backstop。
+
+分析吓，最後一點就係，verifier history 喺 harness 入面用嘅係 always-correct verdicts，但係真正嘅 calibration dynamics 就需要 real evaluation outcomes 嚟支持。
+
+咁然後就係呢啲 limitation 全部都要一直重覆講㗎。<#0.5#>OK啦，第五章講嘅就係 Roadmap、MVP 同埋 Operating Rules 呢三樣嘢啦，呢部分其實係成個計劃最實際、最落得嚟嘅部分嚟㗎。
+
+首先就係 Roadmap 方面，佢將成個項目分咗做五個階段，每個階段都有清楚嘅目標同埋交付物。第一階段就係 2025 年 1 月到 3 月，叫做 MVP Core，目標就係建立一個最基本嘅系統，包含三個主要組件：第一個係 Storyboard 2.0 嘅核心引擎，第二個係 MemoryStore 嘅基礎版本，第三個就係 PromptRouter 嘅初始實作。呢個階段最重要嘅係要確保呢三樣嘢可以運作，唔使太完美，但係一定要 work 得嚟。
+
+第二階段就係 2025 年 4 月到 6 月，叫做 Quality & Scale，呢個階段嘅重點就係提升系統嘅品質同埋擴展能力。呢個階段會做幾樣嘢：第一就係引入 LoopMonitor 嚟監測系統運作，第二就係建立 BudgetController 嚟控制成本，第三就係建立 Safety Kernel 嚟確保安全。呢三樣嘢加埋之前嘅核心，就構成咗一個比較完整嘅系統。
+
+第三階段就係 2025 年 7 月到 9 月，叫做 Ecosystem & Polish，呢個階段就係要將系統變得更加成熟同埋有生態。呢個階段會做三樣主要嘢：第一個係推出 Plugin SDK，畀第三方開發者可以擴展功能；第二個係推出 Template Gallery，畀用戶可以選擇唔同嘅模板嚟用；第三個就係推出 Dashboard v1，畀用戶可以睇到系統嘅運作情況。
+
+第四階段就係 2025 年 10 月到 12 月，叫做 Enterprise Readiness，呢個階段就係要為企業級應用做準備。呢個階段會推出三樣嘢：第一個係 Team Collaboration 功能，第二個係 Audit Log 嚟記錄所有操作，第三個就係 SSO Integration 嚟支援單點登入。
+
+第五階段就係 2026 年 1 月到 6 月，叫做 Scale & Monetization，呢個階段就係要將系統推廣同埋商業化。呢個階段會做三樣主要嘢：第一個係推出 Multi-tenant Architecture 嚟支援多租戶，第二個係推出 Usage-based Pricing 嚟按使用量收費，第三個就係推出 Marketplace 嚟畀第三方可以買賣模板同埋插件。
+
+轉個角度睇，接落嚟就係 MVP 嘅部分啦。MVP 嘅定義就係 Minimum Viable Product，即係最基本但係可以用嘅產品版本。呢個 MVP 有五個核心功能：第一個就係 Storyboard 2.0，可以將用戶嘅需求轉化為結構化嘅故事板；第二個就係 MemoryStore，可以儲存同埋檢索對話歷史；第三個就係 PromptRouter，可以根據不同嘅情境選擇最適合嘅提示詞；第四個就係 LoopMonitor，可以監測系統嘅運作狀態；第五個就係 BudgetController，可以控制 API 調用嘅成本。
+
+而家講下 Operating Rules 方面，呢個就係系統運作嘅規則同埋約束。呢度有八個主要嘅 operating rules：第一個 rule 就係「Single Source of Truth」，即係所有數據都要有一個單一嘅真實來源，唔可以有衝突；第二個 rule 就係「Immutable History」，即係所有歷史記錄都係不可變更嘅，確保審計嘅完整性；第三個 rule 就係「Cost Guardrails」，即係要有成本控制嘅機制，防止超支；第四個 rule 就係「Safety First」，即係安全永遠係第一優先；第五個 rule 就係「Graceful Degradation」，即係當系統出問題嘅時候，要優雅咁降級，而唔係直接崩潰；第六個 rule 就係「User Consent」，即係所有操作都要得到用戶嘅同意；第七個 rule 就係「Audit Everything」，即係所有操作都要記錄落嚟；第八個 rule 就係「Rollback Capability」，即係要有回滾嘅能力，當出問題嘅時候可以還原。
+
+睇下呢八個 rules 之間嘅關係，其實佢哋係互相配合嘅。Single Source of Truth 同 Immutable History 係數據層面嘅保障，Cost Guardrails 同 Safety First 係運作層面嘅保護，Graceful Degradation 同 Rollback Capability 係故障處理嘅機制，User Consent 同 Audit Everything 就係合規同透明度嘅要求。
+
+另外，呢個 roadmap 仲有幾個 milestone 值得留意：第一個 milestone 就係 2025 年 3 月底，要完成 MVP Core 嘅所有功能；第二個 milestone 就係 2025 年 6 月底，要完成 Quality & Scale 階段；第三個 milestone 就係 2025 年 9 月底，要完成 Ecosystem & Polish 階段；第四個 milestone 就係 2025 年 12 月底，要完成 Enterprise Readiness 階段；第五個 milestone 就係 2026 年 6 月底，要完成 Scale & Monetization 階段。
+
+不過你要留意嘅係，呢個 roadmap 唔係固定不變嘅，佢會根據實際情況嚟調整。呢度有三個調整機制：第一個就係 Quarterly Review，每三個月就會檢討一次；第二個就係 Feedback Loop，會收集用戶同埋開發者嘅反饋；第三個就係 Market Adaptation，會根據市場變化嚟調整方向。
+
+咁一來，整個計劃就變得更加靈活同埋實際。呢個 roadmap 唔單止講到要做乜，仲講到點樣做、做幾耐、要做幾多嘢，仲有如果出問題點樣處理，呢啲都係一個成熟計劃必須要考慮嘅元素嚟㗎。<#0.5#>而家講下，呢個就係 Minimal Viable Thinking Agent 嘅排序部分啦。
+
+第一點係 Structured task state and decision records，意思就係話，你要將任務嘅狀態同埋決定過程記錄得清清楚楚，唔可以只係喺腦入面諗過就算。
+
+第二點就係 Evidence retrieval + provenance，呢樣嘢係講緊你唔單止要搵到證據，仲要記低證據嚟自邊度，來源一定要有跡可尋。
+
+繼續講第三點，就係 Criterion-specific verification (external + bar)，即係話你要根據唔同嘅標準去做驗證，驗證既可以嚟自外部來源，又可以自己設定一個 bar 去比較。
+
+講完呢個，第四點就係 Transactional tool use + least privilege，呢個就係話你用工具嘅時候，要用 transaction 嘅方式，同時要遵守 least privilege 原則，即係話你淨係攞到你需要嘅權限，唔好多過頭。
+
+重點嚟啦，第五點就係 Persistent memory with retrieve + write protocol，呢樣嘢好重要，因為你要有持久化記憶，同時要有一套 retrieve 同 write 嘅協議，去確保記憶嘅讀寫都係有規則嘅。
+
+再講第六點，就係 Independent multi-agent generation + minority ledger，呢個就係話你可以有獨立嘅多個 agent 去生成內容，同時要有 minority ledger 去記錄少數意見，唔好只係聽主流。
+
+咁一來，第七點就係 Targeted debate / adjudication，呢樣嘢就係話你要有針對性嘅辯論同埋裁決機制，去解決唔同 agent 之間嘅分歧。
+
+講完呢個，第八點就係 Safety + prompt-injection evaluations; world-facts store，呢個就係話你要做 safety 同 prompt-injection 嘅評估，同時要有一個 world-facts store 去儲存世界事實。
+
+第二點，第九點就係 Procedural-memory updates gated on baseline，呢樣嘢係講緊你更新程序性記憶嘅時候，要以 baseline 做 gate，唔可以隨便更新。
+
+繼續講，第十點就係 Sandboxed architecture search (stub for Phase 5)，呢個就係話你要有一個沙盒環境去做架構搜尋，同時呢個只係 Phase 5 嘅 stub。
+
+最後，呢個排序入面第十一點就係 Full EvaluationPlane freeze procedure，呢樣嘢就係話你要有一個完整嘅 EvaluationPlane freeze 程序，去確保整個評估平面可以被凍結。<#0.5#>咁啦，呢個就係第五章第二節入面嘅分階段路線圖，總結咗由零到七、八個階段嘅重點。表格入面清楚列明，每一個階段嘅核心方向都唔同，我哋逐個嚟睇清楚。
+
+第一個階段 Phase 0，焦點就係結構化助手，入面包括路由、階段、確定性驗證，同埋 LoopMonitor 呢樣工具。
+
+然之後，Phase 1 就轉做 grounded agent，重點係工具經紀人、沙盒、人類批准嘅行動、世界儲存寫入邊界，同埋檢查點完整性。
+
+OK啦，Phase 2 就係 persistent generalist，呢個階段要處理長期記憶、能力校準、EvaluationPlane 批次處理、共同擴展門控，同埋重新談判呢幾樣嘢。
+
+補充一下，Phase 3 就係 collective solver，呢個階段嘅重點係異質專家同埋大型並行工作流程。
+
+得啦，Phase 4 就係 continual learner，呢個階段會涉及主動課程、探測生命週期，同埋多模態世界模型。
+
+轉個角度睇，Phase 5 就係 governed self-improving system，呢個階段包括 scaffold search、金絲雀測試、獨立安全審計呢幾樣。
+
+當然，Phase 6 就係 AGI candidate，呢個階段嘅證據包括廣泛轉移、低數據學習、長視野自主、校準不確定性、穩健中斷，同埋資源約束下嘅安全持續改進。
+
+最後 Phase 7 就係 ASI research boundary，呢個階段需要監督超過人類專家嘅系統，同時確保冇失控複製、冇自主目標重寫，同埋能力同安全共同擴展呢個要求。<#0.5#>講返轉頭，呢個 5.3 節嘅 Final Operating Rules（v5）總共有 31 條規則，每一條都係我哋之後做決策同埋運作嘅底線，絕對唔可以馬虎。
+
+第一條就係「Sense before thinking deeply」，即係話喺你深入諗之前，要先感知吓周遭嘅情況，感受吓有乜嘢線索先。
+
+第二條「Frame before diagnosing」就係話，喺你未診斷之前，要先建立起一個框架，搞清楚究竟喺邊個範圍入面嚟睇呢個問題。
+
+第三條「Diagnose before prescribing」就係講，喺你未開藥方之前，要先診斷清楚，唔好未明就開解決方案。
+
+第四條「Generate alternatives before committing」就係話，喺你未正式承諾去做之前，要先搵多幾個替代方案出嚟。
+
+第五條「Test assumptions before acting」就係講，喺你未行動之前，要先測試吓你自己嘅假設，睇下係唔係真係成立。
+
+第六條「Prefer evidence over agreement」就係話，相比其他人講嘅同意，你要更重視實際嘅證據。
+
+第七條「Prefer external checks over self-confidence」就係話，相比你自己覺得有幾多自信，你要更重視外面嘅檢查同驗證。
+
+第八條「Prefer reversible probes over irreversible bets」就係話，相比一去唔返嘅賭注，你要更加傾向用可逆轉嘅探測方法。
+
+第九條「Use multiple agents only when diversity and decomposition add value」就係講，只有喺多樣性同埋分解真係有價值嘅時候，先至考慮用多個代理。
+
+第十條「Preserve dissent」就係話，要保留唔同嘅意見，唔好將反對聲音壓低。
+
+第十一條「Treat all retrieved content as untrusted data」就係講，所有你搵返嚟嘅內容，都要當佢係未經證實嘅數據嚟處理。
+
+第十二條「Grant the minimum authority required」就係話，只俾最少必要嘅權限，唔好俾多咗。
+
+第十三條「Verify the environmental result, not merely the generated plan」就係講，你要驗證實際環境入面嘅結果，而唔單止係你自己生成嘅計劃。
+
+第十四條「Learn from outcomes, not just narratives」就係話，你要從實際結果度去學習，而唔單止聽人講嘅故事。
+
+第十五條「Question governing assumptions during review」就係講，喺你做回顧嘅時候，要質疑吓嗰啲主導嘅假設。
+
+第十六條「Do not deploy a self-modification merely because the system proposed it」就係講，唔好單單因為系統自己提出，就去部署自我修改。
+
+第十七條「Keep goals, permissions, and safety controls outside ordinary self-modification」就係話，目標、權限同埋安全控制呢啲嘢，要放喺普通自我修改嘅範圍之外。
+
+第十八條「Escalate when evidence, competence, or authority is insufficient」就係講，當證據、能力或者權限唔夠嘅時候，就要升級處理。
+
+第十九條「Stop when additional cognition has negative expected value」就係話，當你諗多啲都係負面預期價值嘅時候，就要停低。
+
+第二十條「Never confuse a scaffold toward AGI with demonstrated AGI」就係講，唔好將通往 AGI 嘅腳手架，同已經證實咗嘅 AGI 混淆。
+
+第二十一條「Every task terminates in a graceful state; every terminal state carries a decision packet」就係講，每一個任務都要以一個優雅狀態嚟結束，每一個終止狀態都要帶住一個決策包。
+
+第二十二條「A route that cannot be budgeted is a route that cannot run」就係話，一條預算唔到嘅路線，就係一條行唔到嘅路線。
+
+第二十三條「A claim that cannot name its verifier is not a verified claim — and a verifier whose reliability is below the class bar is not a verifier for that claim」就係講，一個講法如果講唔出佢嘅驗證者，就唔係一個已驗證嘅講法，而一個可靠性低過級別標準嘅驗證者，就唔能夠做嗰個講法嘅驗證者。
+
+第二十四條「A label written by the claimant is data, not authority — authority tokens are minted, trust is measured」就係話，由申索人自己寫嘅標籤只係數據，而唔係權威，權威令牌係要鑄造出嚟嘅，信任係要量度嘅。
+
+第二十五條「A mechanism the reference algorithm does not call is a paragraph, not a mechanism」就係講，一個參考演算法冇叫用嘅機制，只係一段文字，而唔係真正嘅機制。
+
+第二十六條「A number a task can set for itself is not governance — reliability, effort class, ceilings, timeouts, and competence feed are kernel-held」就係講，一個任務自己可以設定嘅數字唔係管治，可靠性、努力級別、上限、超時同埋能力回饋呢啲係由核心（kernel）持有嘅。
+
+第二十七條「No action runs on below-bar verification — the bar is checked before execution」就係講，唔可以喺低過標準嘅驗證之下運行任何行動，標準係要喺執行之前檢查嘅。
+
+第二十八條「What the document claims, the harness must demonstrate — every normative mechanism has a call site and a scenario (or a named disclosure)」就係講，文件聲稱嘅嘢，安全架構（harness）一定要展示到，每一個規範機制都要有一個呼叫點同埋一個場景，或者一個命名嘅披露。
+
+第二十九條「A knob the engine reads from the task’s own declarations is not kernel-held — the engine body reads security knobs only through the world store, and the harness asserts the read path」就係講，一個引擎從任務自己嘅聲明度讀取嘅旋鈕唔係核心持有嘅，引擎主體只可以透過世界存儲嚟讀取安全旋鈕，而安全架構會確認呢個讀取路徑。
+
+第三十條「A mechanism without a scenario is a paragraph」就係講，一個冇場景嘅機制只係一段文字。
+
+第三十一條「Do not pay twice for the same work — outcome verification is delta-cached, reviews are gated, the planner builds once per decision, empty retrievals are free」就係講，唔好為同一樣工作俾兩次錢，結果驗證係 delta-cached 嘅，審查係有閘門控制嘅，規劃器每個決策只會建立一次，而空嘅檢索係免費嘅。
+
+再睇埋呢 31 條規則，每一條都係連住落去嘅，唔係孤立嘅要求。
+
+不過你要留意，呢啲規則唔單止係文字，係真正要喺系統運作入面執行嘅。
+
+睇返，第二十三條同第二十四條特別講到驗證同埋權威嘅問題，呢個係好核心嘅概念嚟㗎。
+
+再深入啲睇，第二十八條同第二十九條就講到 harness 同埋 engine 之間嘅關係，點樣確保讀取路徑係正確嘅。
+
+再講，第三十一條就係講到效率嘅問題，唔好重複做一樣嘅工作。
+
+講返呢 31 條規則入面，最重要嘅就係每一個都要 100% 執行到，唔可以有任何例外情況。<#0.5#>睇清楚，v5 版針對常見失敗模式嘅應對措施，其實係一個超詳細嘅表格嚟㗎。呢個表格列出咗足足 27 個失敗情況同埋佢哋對應嘅緩解方法，我哋而家就逐一睇晒佢哋。
+
+首先第一行講「Wrong problem frame」嘅問題，意思就係問題框架搣錯咗，v5 嘅緩解方法就係用多重框架、用戶確認、框架批評者，同埋 WHAT gate 嚟把關。
+
+接落嚟第二行講「HOW before WHY」，即係未搞清楚點解就已經諗點做，緩解方法就係要加一個階段閘門，要求必須先做診斷先至可以進入下一步。
+
+再睇下第三個失敗模式「Confident hallucination」，就係模型好有信心但其實係幻覺，v5 就用外部驗證器、可靠性門檻，同埋第二驗證器規則嚟對付呢個問題。
+
+如果係咁，第四個就係「Excessive diagnosis」，即係診斷做得多過頭，解決方法係用 VOI stop 同埋 EVOC 嚟控制。
+
+繼續講第五個失敗模式「First-answer anchoring」，就係太過依賴第一個答案，v5 嘅做法係要求獨立候選答案生成。
+
+第六個係「Self-critique echo chamber」，即係自己批評自己形成迴音室效應，緩解方法就係用外部或者異質驗證器，而且 SOLVED 狀態永遠唔可以單靠自己驗證。
+
+第七個失敗模式「Debate conformity」，就係辯論入面出現從眾效應，v5 就用私人優先答案、新鮮上下文，同埋少數意見記錄嚟應對。
+
+第八個係「Majority error」，即係多數意見都錯咗，緩解方法就係用驗證加權聚合，而且少數意見仍然可以恢復。
+
+第九個失敗模式「Planner–executor drift」，就係規劃者同執行者出現偏差，v5 就用前置條件、後置條件、檢查點，同埋監控器嚟防止。
+
+第十個係「Tool hallucination」，工具出現幻覺，緩解方法就係檢索模式加上參數驗證。
+
+第十一個失敗模式「Prompt injection」，提示注入攻擊，v5 就用權限同數據分離、最小權限原則，同埋邊界驗證嚟保護。
+
+第十二個係「Memory poisoning」，記憶中毒，緩解方法就係鑄造代幣、驗證器衍生信任，同埋隔離機制。
+
+第十三個失敗模式「Goal drift」，目標漂移，v5 就用簽署目標合約放喺可變記憶之外嚟確保。
+
+第十四個係「Reward hacking」，獎勵黑客攻擊，緩解方法就係隱藏或者對抗性評估，同埋不可變評估平面。
+
+第十五個失敗模式「Benchmark overfitting」，基準過擬合，v5 就用組合加上 OOD 測試，同埋凍結基線嚟應對。
+
+第十六個係「Unsafe self-modification」，不安全自我修改，緩解方法就係啟動完整嘅 §22.3 管道，而且 R5 永遠唔可以自主進行。
+
+第十七個失敗模式「Infinite cognitive loop」，無限認知迴圈，v5 就用 LoopMonitor，透過新穎性觸發 RESOURCE_LIMITED，同埋預算控制嚟處理。
+
+第十八個係「Overuse of agents」，代理過度使用，緩解方法就係理事會可行性謂詞加上每輪上限。
+
+第十九個失敗模式「Hidden side effects」，隱藏副作用，v5 就用事務性操作、冪等性，同埋補償機制嚟防止。
+
+第二十個係「Capability growth outruns safety」，能力增長超越安全，緩解方法就係共同擴展閘門（第二階段）。
+
+第二十一個失敗模式「Denial paths without audit」，冇審計嘅拒絕路徑，v5 就要求每條路徑都有共同結語。
+
+第二十二個係「Proposal flood」，提案氾濫，緩解方法就係准入控制加上標準去重。
+
+第二十三個失敗模式「Verifier-below-bar silent SOLVED」，驗證器低於門檻但靜默標記 SOLVED，v5 就將可靠性阻擋轉為 ESCALATED，而且要做 pre-DO 檢查。
+
+第二十四個係「Task-declared competence / reliability」，任務聲稱具備能力或者可靠性，緩解方法就係世界事實存儲、來源閘門，同埋 assert_read_path。
+
+第二十五個失敗模式「Allowlist backdoor」，允許清單後門，v5 就只允許核心表成員資格，加上負面場景檢查。
+
+第二十六個係「Cosmetic novelty evasion」，表面新穎性規避，緩解方法就係記錄啟發式方法，而硬預算就係真正保證。
+
+睇返呢 27 個項目，你會發現 v5 版其實係將每一個可能出錯嘅地方都封得密密實實，每一個緩解措施都係針對性好強嘅。<#0.5#>下一部分嚟到 Chapter 7 嘅結論啦。其實呢個 Thinking Agent 唔係一蹴而就嘅作品，而係經過五次連續自我修正先至有今日嘅模樣。
+
+首先講返 v1，佢已經描述咗一個相當豐富嘅架構出嚟。然後 v2 就將整個 loop 變得可終止，同時令狀態機變得完整。之不過到 v3 嘅時候，佢就強制要求參考演算法一定要尊重閾值，同埋一定要尊重文件本身所要求嘅生產者。
+
+再講 v4，佢將所有安全關鍵嘅數字移到信任邊界後面，同時亦都封閉咗快徑同欄位檢查上面嘅管治漏洞。講起 v5，佢就喺代碼層面完成咗信任邊界，令檢索同之前已經失效嘅分支真正運作到，同時亦都將所有剩低嘅主張都置於某個場景或者明確披露之下。
+
+如果係咁，你會發現最重要嘅原則唔係「諗耐啲」或者「用多啲代理」，而係下面呢句：
+
+「應用正確嘅認知過程，獲取正確嘅證據，透過正確嘅機制驗證，以正確嘅權限行動，並且喺唔削弱人類控制嘅情況下學習。」
+
+另外呢個組合提供咗一個實用、可審計嘅框架畀越嚟越通用嘅 AI 系統，同時亦都將核心研究問題——AGI 本身、安全遞歸自我改進，同埋 ASI 監督——明確保持開放狀態。<#0.5#>咁樣，我哋嚟睇下呢份附錄 A 列咗啲乜嘢研究參考文獻。呢度總共有十二篇主要嘅研究，全部都係關於認知架構同埋語言代理嘅，嚟自唔同嘅作者同埋機構。
+
+第一篇就係 Sumers 同佢嘅團隊，佢哋寫咗篇叫做 *Cognitive Architectures for Language Agents* 嘅論文，發表喺 arXiv:2309.02427 呢個編號度。
+
+第二篇係 Kotseruba 同 Tsotsos 嘅研究，標題係 *A Review of 40 Years of Cognitive Architecture Research*，對應嘅 arXiv 編號係 1610.08602。
+
+第三篇就係 Yao 等人寫嘅 *ReAct*，arXiv 編號 2210.03629。
+
+第四篇就係 Yao 另一篇叫做 *Tree of Thoughts* 嘅論文，arXiv 編號 2305.10601，仲有 Hao 等人嘅 *RAP* 同埋 Zhou 嘅 *LATS*。
+
+第五篇就係 Prasad 等人嘅 *ADaPT*，以及 Zhou 嘅 *Self-Discover*。
+
+第六篇就係 Shinn 等人嘅 *Reflexion*，Gou 等人嘅 *CRITIC*，同埋 Dhuliawala 等人嘅 *Chain-of-Verification*。
+
+第七篇就係 Huang 等人嘅 *LLMs Cannot Self-Correct Reasoning Yet*，以及 Tyen 等人嘅 *LLMs Cannot Find Reasoning Errors*。
+
+第八篇就係 Du 等人嘅 *Improving Factuality through Multiagent Debate*，以及後續嘅 debate-skeptic 相關研究。
+
+第九篇就係 Packer 等人嘅 *MemGPT*，Park 等人嘅 *Generative Agents*，同埋 Wang 等人嘅 *Voyager*。
+
+第十篇就係 Zelikman 等人嘅 *STOP*，Hu 等人嘅 *Automated Design of Agentic Systems*，以及 Zhang 等人嘅 *Darwin Gödel Machine*。
+
+第十一篇就係 Debenedetti 等人嘅 *AgentDojo*，以及 Greenblatt 等人嘅 *AI Control*。
+
+第十二篇就係 xAI 發表嘅 *Grok 4.20 System Card*，日期係 2026-04-07，仲有 *Grok Build* 嘅開源同埋工作流程筆記，呢個都係 2026 年嘅。
+
+但係呢份附錄唔單止列出論文名咁簡單，佢仲反映咗而家人工智能研究入面幾個重要嘅方向同埋趨勢。
+
+拆解一下，第一到第三篇主要係關於認知架構嘅基礎理論同埋語言代理嘅設計原則；第四到第六篇就係講推理方法同埋自我修正機制；第七到第八篇就係討論 LLM 自我修正能力嘅限制同埋多代理辯論嘅效果；第九到第十篇就係關於記憶體管理、生成代理同埋自動化系統設計；第十一同第十二篇就係關於安全性同埋實際部署方面嘅研究。
+
+接落嚟，我哋可以見到呢啲研究其實係相互呼應嘅，好多時後面嘅工作都會引用或者延續前面嘅發現。
+
+講返轉頭，呢十二篇研究每篇都有自己嘅 arXiv 編號，方便大家搵返原文嚟睇，唔使擔心搵唔到來源。
+
+下一步再嚟，我哋會睇下呢啲研究點樣影響到之後嘅技術發展同埋實際應用。<#0.5#>分析吓呢個 Consumer Quick-Reference 表格，入面清楚列明唔同讀者應該優先睇邊幾部分。首先睇 Implementer (MVP)，佢哋要集中 Chapters 3 同 5，仲有 §24-equivalent material、memory write protocol 同埋 tool broker 呢啲嘅內容。下一步再嚟就係 Safety auditor，佢哋需要睇 Safety Kernel、tool security、同埋 self-evolution levels 由 R0 去到 R5，仲有 failure modes 呢啲部分。咁嘅話，Researcher 就應該留意 Core thesis、research foundations lineage、同埋 roadmap Phases 6 同 7 呢幾樣嘢。睇返 Evaluator，佢哋要睇 Validation chapter、eight states 同埋 packet contract 呢幾樣。最後，所有讀者都一樣要睇 Operating rules、design principles，同埋 graceful-state table 呢啲通用部分。
+
+而家睇返呢本書嘅結尾，話 End of book，仲有 Generated from Thinking Agent versions 1.0–5.0，research cutoff 就係 2026-08-07。SVG diagrams 就喺呢份文件相對路徑嘅 svg/ 目錄入面。

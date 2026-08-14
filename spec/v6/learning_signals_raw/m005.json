@@ -1,0 +1,18 @@
+[
+  {
+    "test_case_id": "m005-POS-01",
+    "human_model": "Fermi Estimation / Back-of-the-Envelope",
+    "winner": "ai",
+    "key_gap": "vs baseline (v5 human won 4.8/4.2): the routed run now produces the human's canonical artifact — factor chain with units, ranked per-factor error budget, band, claim verdict — as first-class m005 contract outputs, and the dual-route m001+m005 pass plus tempo/closed-scope fast path recover the v5 AI's efficiency deficit (3 → 4.5: invented-factor alternative gated at WHY, no second sweep) while adding P3-priced verdict robustness (what '<50' would jointly require) and the one-sided-error insight. Residual gap: the human's five-line trace is still leaner, and the mandatory m007 ruin gate ran at full-protocol weight for a bounded publish-error exposure — gate proportionality on high_stakes estimate tasks is unresolved.",
+    "learning_signal": "On deadline estimate tasks, tempo mode + closed-scope fast path convert protocol overhead into the canonical five-factor artifact; the answer's value is the auditable factor chain with per-factor error, not the reasoning protocol. High_stakes context should distinguish bounded reputation exposure from one-shot ruin so the R3 gate does not outsize the stakes.",
+    "suggested_improvement": "Keep dual-route m001+m005 with the fast path on closed-scope estimate signatures; add factor-class labels (measured / anchor / estimate) and the precision-illusion guard to the m005 completion contract; add a fast-form m007 for estimate goals (exposure classification -> band-only risk statement) so the R3 gate scales with stakes."
+  },
+  {
+    "test_case_id": "m005-NEG-01",
+    "human_model": "Fermi Estimation / Back-of-the-Envelope",
+    "winner": "ai",
+    "key_gap": "vs baseline: the pure-Fermi baseline committed the naive bulk-density chain (10^12 kg, ~6 orders off) and recovered only via an insight the style itself does not supply; the routed run rejected the factor at WHY by two independent convergent passes — m001 bounded LWC's order from thermo/visibility first principles without the domain fact, m002's second-order budget showed the reservoir absurdity. Residual gap: the m001 bound's strength depends on the model holding phase/thermo knowledge; a weaker model degrades to a weaker bound, and LWC itself remains non-derivable, so APPROXIMATED must stay the terminal state.",
+    "learning_signal": "The dominant failure of back-of-envelope estimation is an invalid factor from the wrong reference class, not invalid arithmetic; independent physical implication tests (what would this factor imply about the world?) defuse the trap, and parameterized bands with formal error bounds are the correct output when the crux factor is non-derivable. Factor-validity and precision-illusion checks should apply to every estimate signature, routed or not.",
+    "suggested_improvement": "Promote the factor-validity gate (independent dimensional/physical implication test per factor, e.g., implied water column or rainout budget) and the precision-illusion guard to general gates on ALL g:estimate signatures; add an explicit m005 contract line to II.2.9 (order-of-magnitude bounds, factors shown, error structure, sanity anchor, precision-illusion guard) so the registry's listed weaknesses are gate-checked everywhere, not only on routed runs."
+  }
+]

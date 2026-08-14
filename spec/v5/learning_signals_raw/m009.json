@@ -1,0 +1,18 @@
+[
+  {
+    "test_case_id": "m009-POS-01",
+    "human_model": "Base Rate Neglect Avoidance",
+    "winner": "human",
+    "key_gap": "AI computed the exact correct posterior (8/65 ≈ 12.3%) and rejected the VP anecdote, but only as a double-counting argument: it never formalized 'information = posterior change,' never priced the restatement at exactly LR = 1, and its flip-point (LR ≥ 19) came from a single direct division rather than the human's prior-odds decomposition with an instrument-validity anchor (unstructured interviews LR ≈ 2–4), so its packet asserts base-rate discipline without demonstrating it systematically.",
+    "learning_signal": "The elite base-rate move after any screening computation is a four-part evidence inventory: (1) state the anchor frequency before case evidence; (2) score every case detail by its measured likelihood ratio and declare redundant evidence (restatement LR = 1) explicitly — salience is not information; (3) decompose the flip-point as target odds ÷ prior odds to get the required LR; (4) anchor the required LR against known instrument validity (LR ≈ 19 is a strong instrument; LR ≈ 2–4 is an interview) to make 'how strong is enough' concrete.",
+    "suggested_improvement": "Add to HOW/VERIFY for base-rate task classes a mandatory evidence-inventory sub-step: classify each piece of case evidence as measured instrument / restatement-of-same-observation (excluded, LR = 1) / unmeasured (excluded unless modeled), price included items by LR, and require three packet entries: the posterior, the zero-information demonstration for salience items, and the required-LR flip-point (target odds ÷ prior odds)."
+  },
+  {
+    "test_case_id": "m009-NEG-01",
+    "human_model": "Base Rate Neglect Avoidance",
+    "winner": "ai",
+    "key_gap": "The style-pure baseline anchored on the flag's 2% base rate, classified the 693/700 forged-document cohort as 'vendor-collected anecdote with unknown selection effects,' adjusted only to 5–8%, and ordered the wire released — a ≈99%-fraudulent wire cleared because the wrong reference class's base rate was treated as binding. It never asked which population the case's strongest quantified evidence actually selects.",
+    "learning_signal": "Base-rate discipline has a load-bearing qualifier: the base rate applies to the reference class the STRONGEST quantified evidence selects, not the instrument that happened to surface the case. The correction is not abandoning priors — it is re-classification (coarse flag 2% → pattern cohort 99%) when the evidence comes from a more specific, independently measured instrument, plus a dependence/redundancy test between signals instead of dismissing strong cohorts as selection artifacts. The reversibility asymmetry (hold is reversible, release is not) resolves the residual decision.",
+    "suggested_improvement": "Add a reference-class audit gate to WHAT/WHY for any decision given a coarse base rate: enumerate candidate reference classes (instrument-defined vs evidence-defined), identify which one the strongest quantified evidence selects, and require an explicit wrong-class-cost check (how many × off the decision-driving probability is if the coarse rate is used). Add the reversibility asymmetry test (is the action reversible? is inaction?) to the DO decision step."
+  }
+]

@@ -1,0 +1,18 @@
+[
+  {
+    "test_case_id": "m058-POS-01",
+    "human_model": "Real Options in R&D Investment",
+    "winner": "ai",
+    "key_gap": "vs baseline: the baseline executed the style's signature moves (payoff-mix kill floor, dominant-failure-mode gate design, quasi-option read on C, triggered redeployment) perfectly; the non-routed v5 AI reached them only partially at REVIEW (blanket 15% floor, generic milestones, no quasi-option, descriptive redeployment). The routed m058 pass made all four first-class completed outputs, and the m007 ruin screen added worst-case survivability (max €7M Stage-1 loss vs €80M all-in commitment) and threshold stability the baseline left implicit.",
+    "learning_signal": "On staged-funding-option tasks the EV arithmetic is the floor, not the skill: the discriminating moves are payoff-mix-calibrated kill thresholds, decision-relevant gate design, quasi-option recognition, and triggered redeployment. A style pass that does not produce these outputs has not run.",
+    "suggested_improvement": "Install the m058 staged-funding completion contract (information bought per stage, payoff-mix kill floor pre-committed before Stage 1, dominant-failure-mode gate design, quasi-option read, winners-first redeployment triggers) as a standing module on finance/strategy portfolio signatures; pair with the m007 ruin screen on high_stakes; probability floors may be a floor but never the primary kill rule."
+  },
+  {
+    "test_case_id": "m058-NEG-01",
+    "human_model": "Real Options in R&D Investment",
+    "winner": "ai",
+    "key_gap": "vs baseline: the pure style priced a phantom option — staged EV $58.5M on fabricated 75%/80% (no base rates on a novel node), timeline compressed 25→18 months via a qualification overlap the design-freeze requirement forbids, and no audit of readout decision-relevance or of the exercise alternative (abandonment = company failure). The routed run reproduced the correct decision as completed contracts: m011's chain-sum calendar check before any EV, m006 provenance audit (posterior ≈ prior), the three-pre-conditions audit (time/information/exit), and m007's certain-ruin floor; the router's refusal to route the option style on a one_shot signature is itself the protective move.",
+    "learning_signal": "Real-options framing must run three pre-conditions before any EV: time to exercise (calendar check on the critical path), decision-relevant information (the readout must enter the posterior), and a real exercise alternative (abandon must not equal failure of the company). Option styles must not route one_shot/deadline signatures without these gates.",
+    "suggested_improvement": "Add a mandatory option pre-conditions audit (time / information / exit) before any staged EV on one_shot or deadline signatures (R3-class, m007-adjacent); keep m058 off one_shot routes — dual-route m011+m044 instead; make the m006 provenance audit fire on any unvalidated likelihood."
+  }
+]

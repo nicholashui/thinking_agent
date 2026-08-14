@@ -1,0 +1,18 @@
+[
+  {
+    "test_case_id": "m047-POS-01",
+    "human_model": "Bayesian Updating in Medical Diagnosis",
+    "winner": "ai",
+    "key_gap": "vs baseline: the baseline produced every checkable number and the interpretive core in a pure linear trace; the v6 AI matched it point-for-point only through the routed dual pass (m047 test-characteristics ordering + m091 chunked verification) with P3 branch pricing — the exact structure the non-routed v5 run lacked (it stopped at the positive branch, never priced LR-, ran sensitivity as an ad hoc spot check, and scored 4.0 vs human 4.9). Residual baseline edge: its clinical translation was more economical (one line per move); the routed pass needed its contract stack to reach the same depth.",
+    "learning_signal": "On diagnose/decide signatures with medical domain and fully-specified inputs, the m047 completion contract (test-characteristics ordering with criterion stated + population decomposition + >=3 likelihood scenarios + decision-threshold flip) combined with branch-completeness (P3) is what converts 'correct numbers' into 'correct decision support': the negative branch of the selected test (LR-) is load-bearing in low-prevalence screening and can move the disposition more than another positive would.",
+    "suggested_improvement": "Keep the m047/m091 dual-route as the standing route for fully-specified medical posterior problems; enforce that the P8 closed-scope fast path may compress stage structure but never the contract deliverables (negative branch priced, formal >=2-prior band, LR+ ranking stated, threshold flip) — speed applies to narration, not to completion."
+  },
+  {
+    "test_case_id": "m047-NEG-01",
+    "human_model": "Bayesian Updating in Medical Diagnosis",
+    "winner": "ai",
+    "key_gap": "vs baseline: the baseline audited the prior's reference class and the likelihoods' provenance in one disciplined pass and refused point precision; the v6 AI reached the same content only through the mandatory m006 provenance audit (unmeasured context) + m007 ruin screen, which forced the likelihood band (1.5%-5.1%), the 92.3% wrong-prior harm floor, and NEEDS_EVIDENCE terminal status — the exact correction the non-routed v5 run missed (it treated quoted Se/Sp as validated exacts, reported SOLVED with false precision, and scored 3.9 vs human 4.9).",
+    "learning_signal": "Likelihoods need provenance audits exactly like priors: enriched development cohorts (50% prevalence by construction), single-center samples, and missing CIs make Se/Sp hypotheses about likelihoods, not likelihoods — recompute the posterior over credible bounds, label the point estimate 'unvalidated', and forbid point-precision terminal status: SOLVED requires validated likelihoods, otherwise NEEDS_EVIDENCE with the safe decision still delivered.",
+    "suggested_improvement": "Standing rule for unmeasured/high_stakes medical signatures: keep m006 + m007 gates mandatory and map terminal status to likelihood provenance — (1) any posterior whose likelihoods lack target-population validation terminates in NEEDS_EVIDENCE with the band, the wrong-prior extreme as cautionary floor, and the validation pathway stated; (2) the m007 ruin screen's probability-provenance check (FALLS -> no point estimate trusted) runs before any disposition is committed."
+  }
+]

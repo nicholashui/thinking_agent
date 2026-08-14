@@ -1,0 +1,18 @@
+[
+  {
+    "test_case_id": "m010-POS-01",
+    "human_model": "Calibration & Confidence Intervals",
+    "winner": "ai",
+    "key_gap": "vs baseline: the baseline quoted every interval correctly, but the routed run added what it did not: a 7-category ranked inversion gate (edge events with directions and magnitudes), explicit reference-class anchoring (the n=9 Friday class as the forecast's reference population), and a calibration-tracking contract that records realization coverage instead of asserting it; the baseline's audit was a one-shot description, not a process.",
+    "learning_signal": "On forecast signatures the calibration style's completion contract (prediction-not-SEM, t for n<30, edge-case bounds, reference-class anchoring, tracking) converts 'honest interval' from a memo into a calibrated process; the canonical loss on this case is quoting an SE-of-mean CI as a forecast interval, which the m010 pass now makes structurally impossible.",
+    "suggested_improvement": "Keep m010+m030 dual-route on diagnose/predict signatures; make prediction-not-SEM + edge-bound direction + realization-coverage tracking a standing completion contract on all forecast tasks; route the m030 constraint pass whenever a reference class has small n (n<30) so scarcity of the reference class, not the sd, frames the interval."
+  },
+  {
+    "test_case_id": "m010-NEG-01",
+    "human_model": "Calibration & Confidence Intervals",
+    "winner": "ai",
+    "key_gap": "vs baseline: the baseline described uncertainty flawlessly (90%+ interval [$270K, $450K], E[cost] $324K, open tail) then declined with 'no defensible number exists', forfeiting EV +$39.7K; the routed run kept the honest interval as a WHY-stage deliverable but routed the decision AWAY from m010 (not in top-3) to commitment-capable styles (m044/m063) that converted it into a $387K bid, with the mandatory gates (m007 ruin/floor, m019 adversary/exploit vectors, m003 inversion) formalizing the risk articulation.",
+    "learning_signal": "On deadline/one_shot/adversarial signatures the calibration style's known weakness (ranges so wide they are useless; discipline substituting for commitment) is neutralized by routing away from it while retaining its output as the decision input; decline is never a width reaction, always an EV decision — the interval prices the bid, it does not veto it.",
+    "suggested_improvement": "Keep m010 out of the top-3 on decide/one_shot signatures (trap routing holds, 97.2%); pair any routed commitment style with the m007 ruin screen and m019 adversary pass as mandatory gates; install the 'width-as-EV-input-not-veto' reframing and the contract-structure lever (volume-exposure/exit clause re-prices risk transfer) as standing insight-pass items on fixed-price bid cases."
+  }
+]
